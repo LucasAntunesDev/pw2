@@ -1,7 +1,16 @@
 <?php
-$melhor_time = "Inter";
-if ($melhor_time === "Inter"){
-    echo "É o melhor time";
-}else{
-    echo "Não é o melhor time";
+$time = "Inter";
+
+switch ($time){
+    case "Inter":
+        echo "Acertou";
+        break;
+    case "Esportivo":
+        echo "Errou";
+        break;
+    case "Grêmio":
+        echo "Errou";
+        break;
+    default:
+        echo "Errou";
 }
