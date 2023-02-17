@@ -9,7 +9,7 @@ function funcao(&$valor = 5){
     return $valor;
 }
 
-$value = 18;
+$value = 40; #Valor que será incrementado ou drecementado
 
-$funcao2 = funcao($value);
-echo $funcao2;
+$chama_funcao = funcao($value);
+echo $chama_funcao;

@@ -8,11 +8,13 @@ function maior_valor($v1, $v2, $v3, $v4, $v5)
     return max($valores);
 }
 
-$valor1 = 6;
-$valor2 = 8;
-$valor3 = 10;
-$valor4 = 100;
-$valor5 = 250;
+#Valores:
+$valor1 = random_int(0,1000);
+$valor2 = random_int(0,1000);
+$valor3 = random_int(0,1000);
+$valor4 = random_int(0,1000);
+$valor5 = random_int(0,1000);
 
 $maior = maior_valor($valor1, $valor2, $valor3, $valor4, $valor5);
+echo "Os valores são: $valor1, $valor2, $valor3, $valor4 e $valor5</br>";
 echo "O maior valor é $maior!";
