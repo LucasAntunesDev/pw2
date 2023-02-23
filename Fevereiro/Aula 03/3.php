@@ -8,6 +8,7 @@ function funcao(&$valor = 5){
     else $valor--;
     return $valor;
 }
+#A refrência muda o $valor baseado na variável $value, que foi criada fora da função
 
 $value = 40; #Valor que será incrementado ou drecementado
 
