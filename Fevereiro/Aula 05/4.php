@@ -29,10 +29,10 @@ c. A média dos preços dos produtos com preço superior a R$100,00. -->
         'Mouse Logitech M190' => array(
             'Preço' => '60'
         ),
-        'e' => array(
+        'Alguma coisa que custo R$20' => array(
             'Preço' => '20'
         ),
-        'c' => array(
+        'Alguma coisa que custo R$30' => array(
             'Preço' => '30'
         ),
     );
@@ -62,7 +62,7 @@ c. A média dos preços dos produtos com preço superior a R$100,00. -->
 
     $media = $soma / $maior_que_100;
     $nome_entre_50_e_100 = implode(' , ', $nome_entre_50_e_100);
-    
+
     echo "<hr>";
     echo "<pre>";
     echo "São <b>$menor_que_50 produtos</b> mais baratos que R$50,00<br>";
