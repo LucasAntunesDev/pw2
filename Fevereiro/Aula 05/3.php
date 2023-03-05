@@ -4,7 +4,7 @@
 a. Crie um vetor de 15 posições e preencha com valores aleatórios entre 0 e 9
 b. Calcule a Média, a Moda e a Mediana desse vetor -->
 
-<html>
+<html lang="pt-BR">
 
 <head>
     <meta charset='utf-8'>
@@ -42,7 +42,7 @@ b. Calcule a Média, a Moda e a Mediana desse vetor -->
     foreach ($vetor as $valor) {
         $soma += $valor;
     }
-    $media = $soma / 15;
+    $media = $soma / count($vetor);
 
     $moda = 0;
     #Moda
