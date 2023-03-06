@@ -38,11 +38,12 @@ b. Calcule a Média, a Moda e a Mediana desse vetor -->
     $mediana = $vetor[$meio_array];
 
     #Média
-    $soma = 0;
-    foreach ($vetor as $valor) {
-        $soma += $valor;
-    }
-    $media = $soma / count($vetor);
+    $soma = array_sum($vetor);
+    $quantidade = sizeof($vetor);
+    // foreach ($vetor as $valor) {
+    //     $soma += $valor;
+    // }
+    $media = $soma / $quantidade;
 
     $moda = 0;
     #Moda
