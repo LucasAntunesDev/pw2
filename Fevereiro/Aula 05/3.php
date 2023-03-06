@@ -53,7 +53,6 @@ b. Calcule a Média, a Moda e a Mediana desse vetor -->
             $ocorrencia[$valor] = 0;
         }
         $ocorrencia[$valor]++;
-        // echo "<p>Ocorrencia do $valor: $ocorrencia[$valor]</p>";
         $moda = array_keys($ocorrencia, max($ocorrencia));
     }
     $moda = implode(' - ', $moda);
@@ -68,7 +67,7 @@ b. Calcule a Média, a Moda e a Mediana desse vetor -->
     echo "<hr>
         <h3>Moda</h3> 
         <p>
-            A(s) moda(s) é/são: <b>$moda</b>
+            Moda: <b>$moda</b>
         </p>
         <hr>";
 
@@ -80,6 +79,7 @@ b. Calcule a Média, a Moda e a Mediana desse vetor -->
         <hr>";
 
     ?>
+
 </body>
 
 </html>

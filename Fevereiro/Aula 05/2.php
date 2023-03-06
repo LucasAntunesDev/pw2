@@ -41,6 +41,8 @@
         $divisores == 2 ? $existe_primo = true : $existe_primo = false;
     }
     echo "<hr>";
+    print_r($vetor);
+    echo "<br>";
     if ($existe_primo == true) {
         echo "<p>Os números primos são:</p>";
 

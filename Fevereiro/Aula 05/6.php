@@ -40,4 +40,5 @@ echo "<pre>";
 echo "<p>São <b>$pares</b> números pares</p>";
 echo "<p>A soma dos números ímpares é <b>$soma_impares</b></p>";
 echo "<p>A média de todos os elementos é <b>$media</b></p>";
+print_r($array);
 echo "</pre>";

@@ -7,7 +7,7 @@ vetores. Não deve conter números repetidos. Imprima os três vetores criados. 
 <?php
 $n = 20;
 $m = 10;
-
+//Criação dos arrays m e n
 for ($i = 0; $i < $n; $i++) {
     $array_n[$i] = rand(0, 150);
 }
@@ -15,7 +15,7 @@ for ($i = 0; $i < $n; $i++) {
 for ($i = 0; $i < $m; $i++) {
     $array_m[$i] = rand(0, 100);
 }
-
+//Interseção dos dois arrays
 $intersecao = array_intersect($array_n, $array_m);
 sort($intersecao);
 

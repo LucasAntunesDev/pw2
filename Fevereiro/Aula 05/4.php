@@ -22,18 +22,17 @@ c. A média dos preços dos produtos com preço superior a R$100,00. -->
         'Playstation 5' => array(
             'Preço' => '5000'
         ),
-        //Só pra agradar o professor :)
-        'Camisa do Grêmio' => array(
-            'Preço' => '300'
+        'Jogo Elden Ring' => array(
+            'Preço' => '250'
         ),
         'Mouse Logitech M190' => array(
             'Preço' => '60'
         ),
-        'Alguma coisa que custo R$20' => array(
-            'Preço' => '20'
+        'Caneta' => array(
+            'Preço' => '10'
         ),
-        'Alguma coisa que custo R$30' => array(
-            'Preço' => '30'
+        'Caderno' => array(
+            'Preço' => '24'
         ),
     );
 
@@ -46,7 +45,6 @@ c. A média dos preços dos produtos com preço superior a R$100,00. -->
         foreach ($preco as $p) {
             echo "preço => $p <br>";
             if ($p >= 50 && $p < 101) {
-                $entre_50_e_100++;
                 echo "$p está entre 50 e 100<br>";
                 $nome_entre_50_e_100[$produto] = $produto;
             } else if ($p < 50) {
