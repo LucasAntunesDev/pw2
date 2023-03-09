@@ -25,7 +25,7 @@
 
     foreach ($vetor as $chave => $valor) {
         $divisores = 0;
-        echo "<p>Lendo o número $valor</p>";
+        // echo "<p>Lendo o número $valor</p>";
         for ($num = $valor; $num >= 1; $num--) {
             $valor % $num == 0 ? $divisores++ : '';
 
