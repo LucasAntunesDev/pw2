@@ -1,24 +1,35 @@
 <?php
 $num1 = $_POST['num1'];
 $num2 = $_POST['num2'];
-$menor = 0;
-//descobre qual número é menor e maior
-$num1 < $num2 ? $menor = $num1 && $maior = $num2 : $menor = $num2 && $maior = $num1;
-// echo $menor;
-// echo $maior;
-#O multiplicador será o menor número, 
-##a fim de fazer o loop funcionar no menor número de vezes
+//Descobre qual número é menor e maior
+if ($num1 < $num2) {
+    $menor = $num1;
+    $maior = $num2;
+} else if ($num1 > $num2) {
+    $menor = $num2;
+    $maior = $num1;
+} else {
+    $maior = $num1;
+    $menor = $num1;
+}
+
+/*O multiplicador será o menor número, 
+a fim de fazer o loop funcionar no menor número de vezes*/
 $multiplicador = $menor;
 $multiplicado = $maior;
-// while($menor <= 15){
-//     $menor += $menor;
-// }
-echo 'teste';
-for($i = 0; $i <= $menor; $i++){
-    $maior =+ $maior;
-} 
-echo "o resutlado é $menor";
+//Determina se os números são iguais
+$num1 != $num2 ? $iguais = false : $iguais = true;
 
+if ($num1 != $num2) for ($i = 1; $i < $multiplicador; $i++) $multiplicado += $maior;
+else for ($i = 1; $i < $num2; $i++) $num1 += $num2;
+    
+if ($iguais) {
+    echo "Os números são $num2 e $num2<br>";
+    echo "O resultado da multiplicação é $num1";
+} else {
+    echo "Os números são $num1 e $num2<br>";
+    echo "O resultado da multiplicação é $multiplicado";
+}
 
 
 
