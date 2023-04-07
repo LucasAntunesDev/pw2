@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+</head>
+
+<body>
+    <h1>Sistema de Cadastro de Clientes</h1>
+
+    <form action="">
+        <fieldset>
+            <legend>Dados cadastrais</legend>
+            <label for="nome">
+                Nome:
+                <input type="text" id="nome" name="nome">
+            </label>
+            <br>
+            <label for="idade">
+                Idade:
+                <input type="text" id="idade" name="idade">
+            </label>
+            <br>
+            <label for="sexo">
+                Sexo:
+                <label for="m">
+                    <input type="radio" value="m" name="sexo" id="m">
+                    Masculino
+                </label>
+                <label for="f">
+                    <input type="radio" value="f" name="sexo" id="f">
+                    Feminino
+                </label>
+            </label>
+            <br>
+            <label for="cidade">
+                <select name="cidade" id="cidade">
+                    <option name="Selecione uma cidade" value="-1" id="-1">Selecione uma cidade</option>
+                    <option name="bg" value="bg" id="bg">Bento Gonçalves</option>
+                    <option name="bg" value="gb" id="gb">Garibaldi</option>
+                </select>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Interesses</legend>
+            <label for="informatica">
+                <input type="checkbox" name="informatica" id="informatica">
+                Informática
+            </label>
+            <label for="artes">
+                <input type="checkbox" name="artes" id="artes">
+                Artes
+            </label>
+            <label for="matematica">
+                <input type="checkbox" name="matematica" id="matematica">
+                Matemática
+            </label>
+            <br>
+            <label for="obs">
+                Observações
+                <textarea name="obs" id="obs"></textarea>
+            </label>
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+<script src="script5.js"></script>
+
+</html>
