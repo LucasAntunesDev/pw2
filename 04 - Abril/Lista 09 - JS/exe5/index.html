@@ -11,7 +11,7 @@
 <body>
     <h1>Sistema de Cadastro de Clientes</h1>
 
-    <form action="">
+    <form action="#" onsubmit="return validar()">
         <fieldset>
             <legend>Dados cadastrais</legend>
             <label for="nome">
@@ -24,7 +24,7 @@
                 <input type="text" id="idade" name="idade">
             </label>
             <br>
-            <label for="sexo">
+            <label for="sexo" id="sexos">
                 Sexo:
                 <label for="m">
                     <input type="radio" value="m" name="sexo" id="m">
