@@ -7,11 +7,14 @@ const validar = () => {
   const info = document.getElementById("informatica");
   const artes = document.getElementById("artes");
   const matematica = document.getElementById("matematica");
+  const bento = document.getElementById("bg").value;
+  const garibaldi = document.getElementById("gb").value;
+  const cidade = document.getElementById("cidade").value;
 
   nome.style.background = "white";
   idade.style.background = "white";
 
-  if (nome.value.length === 0) {
+  if (nome.value.length === 0 || nome.value == null) {
     nome.style.background = "red";
     alert("O campo está vazio!");
     nome.focus();
@@ -32,16 +35,10 @@ const validar = () => {
     alert("Você é maior de 18 anos!");
     idade.focus();
     return false;
-  }
-  else if (isNaN(idade.value)) {
-    idade.style.background = 'crimson';
-    alert("O campo idade deve conter apenas números");
+  } else if (isNaN(idade.value)) {
+    idade.style.background = "crimson";
+    alert("Você não digitou a idade com um valor numérico");
     idade.focus();
-    return false;
-  }
-  if (observacoes.value == "") {
-    alert("Não há nenhuma observação sobre o cliente");
-    observacoes.focus();
     return false;
   }
   if (feminino.checked == false && masculino.checked == false) {
@@ -58,10 +55,11 @@ const validar = () => {
     info.focus();
     return false;
   }
-
-  const bento = document.getElementById("bg").value;
-  const garibaldi = document.getElementById("gb").value;
-  const cidade = document.getElementById("cidade").value;
+  if (observacoes.value == "") {
+    alert("Não há nenhuma observação sobre o cliente");
+    observacoes.focus();
+    return false;
+  }
 
   switch (cidade) {
     case bento:
@@ -73,5 +71,6 @@ const validar = () => {
       return false;
   }
 
-  (alert('Enviado com sucesso!')); return true;
+  alert("Enviado com sucesso!");
+  return true;
 };

@@ -1,75 +1,122 @@
 <!DOCTYPE html>
 <html lang="PT-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro de Clientes</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Sistema de Cadastro de Clientes</h1>
 
     <form action="#" onsubmit="return validar()">
-        <fieldset>
-            <legend>Dados cadastrais</legend>
-            <label for="nome">
-                Nome:
-                <input type="text" id="nome" name="nome">
-            </label>
-            <br>
-            <label for="idade">
-                Idade:
-                <input type="text" id="idade" name="idade">
-            </label>
-            <br>
-            <label for="sexo" id="sexos">
-                Sexo:
-                <label for="m">
-                    <input type="radio" value="m" name="sexo" id="m">
-                    Masculino
-                </label>
-                <label for="f">
-                    <input type="radio" value="f" name="sexo" id="f">
-                    Feminino
-                </label>
-            </label>
-            <br>
-            <label for="cidade">
-                <select name="cidade" id="cidade">
-                    <option name="Selecione uma cidade" value="-1" id="-1">Selecione uma cidade</option>
-                    <option name="bg" value="bg" id="bg">Bento Gonçalves</option>
-                    <option name="gb" value="gb" id="gb">Garibaldi</option>
-                </select>
-            </label>
-        </fieldset>
+      <fieldset>
+        <legend>Dados cadastrais</legend>
+        <label for="nome">
+          Nome:
+          <input type="text" id="nome" name="nome" />
+        </label>
+        <br />
+        <label for="idade">
+          Idade:
+          <input type="text" id="idade" name="idade" />
+        </label>
+        <br />
+        <label for="sexo" id="sexos">
+          Sexo:
+          <label for="m">
+            <input type="radio" value="m" name="sexo" id="m" />
+            Masculino
+          </label>
+          <label for="f">
+            <input type="radio" value="f" name="sexo" id="f" />
+            Feminino
+          </label>
+        </label>
+        <br />
+        <label for="cidade">
+          <select name="cidade" id="cidade">
+            <option name="Selecione uma cidade" value="-1" id="-1">
+              Selecione uma cidade
+            </option>
+            <option name="bg" value="bg" id="bg">Bento Gonçalves</option>
+            <option name="gb" value="gb" id="gb">Garibaldi</option>
+          </select>
+        </label>
+      </fieldset>
 
-        <fieldset>
-            <legend>Interesses</legend>
-            <label for="informatica">
-                <input type="checkbox" name="informatica" id="informatica">
-                Informática
-            </label>
-            <label for="artes">
-                <input type="checkbox" name="artes" id="artes">
-                Artes
-            </label>
-            <label for="matematica">
-                <input type="checkbox" name="matematica" id="matematica">
-                Matemática
-            </label>
-            <br>
-            <label for="obs">
-                Observações
-                <textarea name="obs" id="obs"></textarea>
-            </label>
-        </fieldset>
-        <br>
-        <input type="submit" value="Enviar">
+      <fieldset>
+        <legend>Interesses</legend>
+        <label for="informatica">
+          <input type="checkbox" name="informatica" id="informatica" />
+          Informática
+        </label>
+        <label for="artes">
+          <input type="checkbox" name="artes" id="artes" />
+          Artes
+        </label>
+        <label for="matematica">
+          <input type="checkbox" name="matematica" id="matematica" />
+          Matemática
+        </label>
+        <br />
+        <label for="obs">
+          Observações
+          <textarea name="obs" id="obs"></textarea>
+        </label>
+      </fieldset>
+      <br />
+      <input type="submit" value="Enviar" />
     </form>
 
-</body>
-<script src="script5.js"></script>
+    <style>
+      * {
+        font-family: monospace;
+        font-weight: bold;
+        accent-color: rgb(22, 117, 54);
+      }
 
+      h1 {
+        text-align: center;
+        font-size: 3rem;
+      }
+
+      input {
+        border-radius: 1.5rem;
+        padding: 0.2rem;
+        border: solid 1px black;
+        margin-bottom: 1rem;
+      }
+
+      textarea {
+        border-radius: 0.5rem;
+      }
+
+      fieldset {
+        border-radius: 0.4rem;
+        border: solid 1px black;
+        margin-block: 1rem;
+        box-shadow: #83838348 1px 2px 3px;
+        max-width: 50vw;
+        margin-inline: auto;
+      }
+
+      input[type="submit"] {
+        background: rgb(22, 117, 54);
+        padding: 0.4rem;
+        color: white;
+        border: none;
+      }
+
+      form {
+        margin: 0 auto;
+      }
+
+      input[type="submit"]:hover {
+        background: rgb(32, 146, 70);
+      }
+    </style>
+  </body>
+  <script src="script5.js"></script>
 </html>
