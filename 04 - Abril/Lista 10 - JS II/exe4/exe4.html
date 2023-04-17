@@ -7,9 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="#">
-
+    <form action="#" method="post" onchange="return validar()">
+        <select name="escritores" id="escritores"> 
+            <option value="">Selecione um escritor</option>
+            <option value="machado" id="machado">Machado de Assis</option>
+            <option value="fernando-pessoa" id="fernando-pessoa">Fernando Pessoa</option>
+            <option value="jose-de-alencar" id="jose-de-alencar">José de Alencar</option>
+            <option value="camoes" id="camoes">Luís de Camões</option>
+            <option value="eco" id="eco">Umberto Eco</option>
+        </select>
     </form>
+
+    <div id="obras">
+        <h1 id="nome"></h1>
+        <h3 id="nasc"></h3>
+        <h3 id="obra"></h3>
+    </div>
+
+    <style>
+        h1,h3{
+            font-family: monospace;
+        }
+    </style>
 </body>
 <script src="exe4.js"></script>
 </html>
