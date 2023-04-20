@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercício 3</title>
 </head>
 <body>
     <form action="#" onsubmit="return validar()">
@@ -12,24 +12,53 @@
             Digite o seu nome:
             <input type="text" name="nome" id="nome">
         </label>
-        <br>
+
         <label for="email">
             Digite o seu email:
             <input type="text" name="email" id="email">
         </label>
-        <br></br>
+        
         <label for="senha">
             Digite a senha:
-            <input type="text" name="senha" id="senha">
+            <input type="password" name="senha" id="senha">
         </label>
         
         <label for="nome">
             Confirme a senha:
-            <input type="text" name="senha-confirm" id="senha-confirm">
+            <input type="password" name="senha-confirm" id="senha-confirm">
         </label>
-        <br>
+        
         <button type="submit">Enviar</button>
     </form>
+
+    <style>
+        body{
+            font-family: monospace;
+        }
+        input[type=text], input[type=password]{
+            border: solid 1px black;
+            border-radius: 0.5rem;
+            padding: 0.3rem;
+        }
+        button{
+            background: rgb(19, 129, 65);
+            color: white;
+            border-radius: 0.6rem;
+            padding: 0.5rem;
+            border: none;
+        }
+        button:hover{
+            background: rgb(40, 173, 96);
+            cursor: pointer;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+    </style>
 </body>
 <script src="exe3.js"></script>
 </html>

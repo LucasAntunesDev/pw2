@@ -10,11 +10,17 @@ const validar = ()=>{
     nome.focus();
     return false;
   }
+  else{
+    nome.style.background = "rgb(19, 129, 65)";
+  }
   if(email.value.length === 0 || email.value == null){
     email.style.background = "crimson";
     alert("O campo email está vazio!");
     email.focus;
     return false;
+  }
+  else{
+    nome.style.background = "rgb(19, 129, 65)";
   }
   if(senha.value.length === 0 || senha.value == null){
     senha.style.background = "crimson";
@@ -22,16 +28,25 @@ const validar = ()=>{
     senha.focus;
     return false;
   }
+  else{
+    nome.style.background = "rgb(19, 129, 65)";
+  }
   if(senhaConfirmar.value.length === 0 || senhaConfirmar.value == null){
     senhaConfirmar.style.background = "crimson";
     alert("O campo confirmar senha está vazio!");
     senhaConfirmar.focus;
     return false;
   }
+  else{
+    nome.style.background = "rgb(19, 129, 65)";
+  }
   if(senhaConfirmar.value !== senha.value){
     senhaConfirmar.style.background = "crimson";
     alert("As senhas não são iguais!");
     senhaConfirmar.focus;
     return false;
+  }
+  else{
+    nome.style.background = "rgb(19, 129, 65)";
   }
 }
