@@ -10,4 +10,5 @@ const validar =  () =>{
         alert(1)
         return false
     }
+    return false
 }

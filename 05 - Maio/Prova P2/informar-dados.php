@@ -12,17 +12,9 @@
 
 <body>
 
-    <header id="header" class="flex-col">
-        <div id="logo-header">
-            <img src="https://www.tse.jus.br/++theme++justica_eleitoral/imagens/favicon.ico" alt="">
-        </div>
-
-        <ul class="flex-row" class="gap-1">
-            <li><a href="">Campo 1</a></li>
-            <li><a href="">Campo 3</a></li>
-            <li><a href="">Campo 2</a></li>
-        </ul>
-    </header>
+    <?php
+    include('header.php');
+    ?>
 
     <h1>Informe seus dados</h1>
 
@@ -43,8 +35,8 @@
                 </label>
                 <!-- CPF -->
                 <label for="cpf">
-                    CPF
-                    <input type="number" step="any" min="0" name="" id="" placeholder="Ex.: 025.743.450-66">
+                    CPF:
+                    <input type="number" step="any" min="0" name="cpf" id="cpf" placeholder="Ex.: 025.743.450-66">
                 </label>
             </div>
 
