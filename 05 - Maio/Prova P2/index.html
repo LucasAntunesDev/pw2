@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon"="10px" href="https://www.tse.jus.br/++theme++justica_eleitoral/imagens/favicon.ico">
+</head>
+
+<body>
+    
+    <header id="header" class="flex-col">
+        <div id="logo-header">
+            <img src="https://www.tse.jus.br/++theme++justica_eleitoral/imagens/favicon.ico" alt="">
+        </div>
+
+        <ul>
+            <li><a href="">Campo 1</a></li>
+            <li><a href="">Campo 3</a></li>
+            <li><a href="">Campo 2</a></li>
+        </ul>
+    </header>
+
+    <h1>Sobre o processo eleitoral</h1>
+
+    <form action="#" class="flex-col" onsubmit="return validar()">
+        <!-- Nome Completo -->
+        <input type="text" name="nome" id="nome"
+        placeholder="Digite o seu nome">
+        <!-- RG -->
+        <input type="number" step="any" min="0" name="rg" id="rg"
+        placeholder="Digite o seu RG">
+        <!-- CPF -->
+        <input type="number" step="any" min="0" name="" id=""
+        placeholder="Ex.: 025.743.450-66">
+        <!-- Sexo -->
+        <select name="sexo" id="sexo">
+            <option value="">Seleecione seu sexo</option>
+            <option value="masc">Masculino</option>
+            <option value="fem">Feminino</option>
+        </select>
+        <!-- Etnia -->
+        <select name="etnia" id="etnia">
+            <option value="">Selecione sua etnia</option>
+            <option value="indigena">Indígena</option>
+            <option value="negro">Negro</option>
+            <option value="branco">Branco</option>
+        </select>
+        <!-- UF -->
+        <select name="" id="">
+            <option value="">Selecione uma UF</option>
+        </select>
+        <!-- Telefone -->
+        <input type="number" step="any" min="0" name="" id="">
+        <!-- Email -->
+        <input type="email" name="" id="">
+        
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+
+<!-- <script src="script.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</html>
