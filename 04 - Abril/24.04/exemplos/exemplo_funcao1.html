@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Exemplos</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+			//Declaro as funções
+			function funcao1(){
+				alert("Função 1")
+			}
+			
+			function funcao2(parametro1){
+				alert("Função 2 "+parametro1)
+				if(parametro1=="info 1"){
+					return true
+				}else{
+					return false
+				}
+				
+			}
+			
+			function funcao3(parametro1,parametro2){
+				alert("Função 3 "+parametro1+" , "+parametro2)
+				funcao1()
+			}
+			
+			//Chamada das funções
+			//funcao1();
+			//let ret = funcao2("info 1")
+			//document.write(ret)
+			funcao3("info 1"," info 2");
+		</script>
+	</head>
+	<body>
+		<p>Exemplo de uso de funções</p>
+	</body>
+</html>

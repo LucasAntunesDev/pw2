@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Exemplo IMC</title>
+		<meta http-equiv="content-type" content="text/html charset=UTF-8">
+		<script type="text/javascript">
+			function calculaIMC()
+			{
+				let peso = document.forms["form1"].elements["peso"].value
+				let altura = document.forms["form1"].elements["altura"].value
+				if(peso == ""){
+					alert("Preencha o campo PESO corretamente")
+					document.forms["form1"].elements["peso"].focus()
+					return false
+				} else if(altura == ""){
+					alert("Preencha o campo ALTURA corretamente")
+					document.forms["form1"].elements["altura"].focus()
+					return false
+				}
+				
+				let resultado = parseFloat(peso)/(parseFloat(altura)*parseFloat(altura))
+				alert("Seu IMC é " + resultado)
+					
+			}
+		</script>
+	</head>
+	<body>
+		<form id="form1" name="form1">
+			<label for="peso">Peso:</label>
+			<input type="text" id="peso" name="peso" ><br/>
+			<label for="altura">Altura:</label>
+			<input type="text" id="altura" name="altura" ><br/><br/>
+			<input type="button" value="Calcular" id="calcular" name="calcular" onclick="calculaIMC()"/>
+		</form>
+	</body>
+</html>
+
+	

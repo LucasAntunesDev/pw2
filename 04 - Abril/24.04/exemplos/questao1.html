@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Questão 1</title>
+		<script type="text/javascript">
+			function validaForm()
+			{
+				const formNome=document.getElementById("nome")
+			    const formIdade= document.getElementById("idade")
+				
+				// mudamos a cor do texto do formulário
+				if(parseInt(formIdade.value) <18){
+					
+					formNome.style.background="red"
+					formIdade.style.background="red"
+				} else {
+					formNome.style.background="green"
+					formIdade.style.background="green"
+				}
+                 return false
+			}
+		</script>
+	</head>
+	<body>
+		<form id="form1" name="form1" onsubmit="return validaForm()">
+			<label for="nome">Nome:</label>
+			<input type="text" id="nome" name="nome" ><br/>
+			<label for="idade">Idade:</label>
+			<input type="text" id="idade" name="idade" ><br/>
+			<input type="submit" id="enviar" name="enviar" value="Enviar" />
+		</form>
+	</body>
+</html>

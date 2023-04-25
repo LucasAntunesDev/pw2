@@ -1,0 +1,49 @@
+<script lvar anguage="javascript" type="text/javascript">
+			function validaForm()
+			{
+				const fnome = document.getElementById("nome")
+				const fidade = document.getElementById("idade")
+				const fsexomasc = document.getElementById("masc")
+				const fsexofem = document.getElementById("fem")
+				const fcidade = document.getElementById("cidade")
+				
+                   /*Verifica se o campo de nome esta vazio*/
+				if (fnome.value=="" || fnome.value==null)	{
+					alert ("Por favor preencha o campo " + fnome.name)					
+					fnome.focus() //volta ao campo que está errado
+					return false //retorna falso e continua na página
+				}
+				/*Verifica se o campo de nome tem mais de 4 caracteres*/
+				if (fnome.value.length <4){
+					alert ("Insira um nome válido.")
+					fnome.focus() //volta ao campo que está errado
+					return false //retorna falso e continua na página
+				}
+				/*Verifica se é string ou numero*/
+				if (!isNaN(fidade.value)){
+					alert ("Insira somente números para a idade.")
+					fidade.focus() //volta ao campo que está errado
+					return false //retorna falso e continua na página
+				}
+				/*Verifica se é menor de 18 anos*/
+				if (parseInt(fidade.value)<18){
+					alert ("Idade abaixo de 18 anos.")
+					fidade.focus() //volta ao campo que está errado
+					return false //retorna falso e continua na página
+				}
+				/*Validando Radio*/
+				if (!(fsexomasc.checked || fsexofem.checked))	{
+					alert("Selecione o sexo Masculino ou Feminino.")
+					fsexomasc.focus()
+					return false
+				}
+				/*Validando select*/
+				if (fcidade.value == "")	{
+					alert("Escolha uma cidade.")
+					fcidade.focus()
+					return false
+				}
+				/* Caso todas as validações tenham sido realizadas, permite-se o envio do formulário*/
+				return true
+			}
+		</script>

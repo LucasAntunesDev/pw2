@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Exemplo IMC</title>
+		<meta http-equiv="content-type" content="text/html charset=UTF-8">
+		<script type="text/javascript">
+			function setStyle()
+			{
+				// O usuário digita o nome e a idade
+				let nome = prompt('Por favor, informe seu nome:')
+				let idade = parseInt(prompt('Por favor, informe sua idade:'))
+				
+				// guardamos em variáveis um ponteiro para os campos do formulário
+				let formNome=document.getElementById("nome")
+				let formIdade=document.getElementById("idade")
+				
+				// mudamos o valor do texto do formulário
+				formNome.value = nome
+				formIdade.value = idade
+				
+				// mudamos a cor do texto do formulário
+				if(idade <18){
+					formNome.style.background="red"
+					formIdade.style.background="red"
+				} else {
+					formNome.style.background="green"
+					formIdade.style.background="green"
+				}
+			}
+		</script>
+	</head>
+	<body onload="setStyle()">
+		<form id="form1" name="form1">
+			<label for="nome">Nome:</label>
+			<input type="text" id="nome" name="nome" ><br/>
+			<label for="idade">Idade:</label>
+			<input type="text" id="idade" name="idade" ><br/><br/>
+		</form>
+	</body>
+</html>
+
+	

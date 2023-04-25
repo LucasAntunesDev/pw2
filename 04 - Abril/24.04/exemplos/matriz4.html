@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Array</title>
+		<meta http-equiv="content-type" content="text/html charset=UTF-8">
+		<script language="javascript" type="text/javascript">
+			
+			
+			/* Verifica Numeros */
+			/*Verifica se é string ou numero*/
+			function criaArray() 
+			{
+				const frutas = new Array("Banana", "Maçã", "Melão")
+
+				alert(frutas.pop())
+
+				alert(frutas.length) // Agora somente com 2 elementos no vetor.
+				
+				// for percorrendo todas as posições de um array.
+				for(i=0;i<frutas.length;i++){
+					document.write(frutas[i]+"<br />")
+				}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<h1>Exercício 4</h1>
+		<input type="button" id="enviar" name="enviar" value="Enviar" onclick="criaArray()"/>
+		
+	</body>
+</html>

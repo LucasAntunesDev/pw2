@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Exemplos</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+			function upperCase()
+			{
+				var x=document.getElementById("fname")
+				x.value=x.value.toUpperCase()
+			}
+		</script>
+	</head>
+	<body>
+		<form id="form1" name="form1">
+			Informe seu nome: 
+			<input type="text" id="fname" onchange="upperCase();"/><br />
+			Idade:
+			<input type="text" id="fidade" /> 
+		</form>
+		
+	</body>
+</html>
+

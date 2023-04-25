@@ -1,0 +1,301 @@
+<html>
+	<head>
+		<title>Validação de Formulários</title>
+		<meta http-equiv="content-type" content="text/html charset=UTF-8">
+		<script language="javascript" type="text/javascript">
+			
+			
+			/* Verifica Numeros */
+			/*Verifica se é string ou numero*/
+			function VerificaNumeros(campo,campoErro) 
+			{
+				const msg="Insira somente números para o campo " + campo.name
+				if (isNaN(campo.value))
+				{
+					
+					alert (msg) // Mostra erro como alerta
+					campoErro.innerHTML = msg + "<br />" // Mostra erro na tela
+					campo.focus() //volta ao campo que está errado
+					return false //retorna falso e continua na página
+				}
+				return true
+			}
+			
+			/* Mostra / Esconde campos na tela */
+			function MudaCidade(campo) {
+				
+				const fCidade = document.getElementById("cidade")
+				fCidade.options.length = 0
+				switch (campo.value) 
+				{
+					case "rs":
+						 let opt = document.createElement("option")
+						 opt.setAttribute ("value", "bg")
+						 let t = document.createTextNode ("Bento Gonçalves")
+						 opt.appendChild (t)
+						 fCidade.appendChild (opt)
+						 
+						 let opt = document.createElement("option")
+						 opt.setAttribute ("value", "poa")
+						 let t = document.createTextNode ("Porto Alegre")
+						 opt.appendChild (t)
+						 fCidade.appendChild (opt)
+						 
+						 let opt = document.createElement("option")
+						 opt.setAttribute ("value", "rg")
+						 let t = document.createTextNode ("Rio Grande")
+						 opt.appendChild (t)
+						 fCidade.appendChild (opt)
+						 
+						 break
+					case "sc":
+						 let opt = document.createElement("option")
+						 opt.setAttribute ("value", "fl")
+						 let t = document.createTextNode ("Florianópolis")
+						 opt.appendChild (t)
+						 fCidade.appendChild (opt)
+						
+						break
+					case "sp":
+						 let opt = document.createElement("option")
+						 opt.setAttribute ("value", "sp")
+						 let t = document.createTextNode ("São Paulo")
+						 opt.appendChild (t)
+						 fCidade.appendChild (opt)
+						 
+						 let opt = document.createElement("option")
+						 opt.setAttribute ("value", "sn")
+						 let t = document.createTextNode ("Santos")
+						 opt.appendChild (t)
+						 fCidade.appendChild (opt)
+						break
+				}
+			}
+				
+			/* Mostra / Esconde campos na tela */
+			function MostraEscondeCampos(campo) {
+				
+				let fFieldCachorro = document.getElementById("field_cachorro")
+				let fFieldGato = document.getElementById("field_gato")
+				
+				
+				switch (campo.value) 
+				{
+					case "cachorro":
+						fFieldCachorro.style.display="block"
+						fFieldGato.style.display="none"
+						break
+					case "gato":
+						fFieldCachorro.style.display="none"
+						fFieldGato.style.display="block"
+						break
+					default:
+						fFieldCachorro.style.display="none"
+						fFieldGato.style.display="none"
+						
+				}
+				
+			}
+			
+			/* Muda o texto para maiúsculo */
+			function LetraMaiuscula(campo)
+			{
+				campo.value=campo.value.toUpperCase()
+			}
+			
+			/* Verifica se o campo obrigatório esta vazio */
+			function VerificaCampoObrigatorio(campo,campoErro)
+			{
+				let msg="Por favor preencha o campo " + campo.name
+				if (campo.value=="" || campo.value==null)
+				{
+					alert (msg) // Mostra erro como alerta
+					campoErro.innerHTML = msg + "<br />" // Mostra erro na tela
+					campo.focus() //volta ao campo que está errado
+					return false //retorna falso e continua na página
+				}
+				
+				return true				
+			}
+			
+			function validaForm()
+			{
+				let fNome = document.getElementById("nome")
+				let fCpf = document.getElementById("cpf")
+				let fRg = document.getElementById("rg")
+				let fTelefone = document.getElementById("telefone")
+				let fCelular = document.getElementById("celular")
+				let fEstado = document.getElementById("estado")
+				let fCidade = document.getElementById("cidade")
+				let fEndereco = document.getElementById("endereco")
+				let fAnimal = document.getElementById("animal")
+				
+				let fNomeCachorro = document.getElementById("nome_cachorro")
+				let fRacaCachorro = document.getElementById("raca_cachorro")
+				let fPesoCachorro = document.getElementById("peso_cachorro")
+				
+				let fNomeGato = document.getElementById("nome_gato")
+				let fPeloGato = document.getElementById("pelo_gato")
+				let fCorGato = document.getElementById("cor_gato")
+				
+				
+				/* -- Mensagens de Erro */
+				let fNomeErro = document.getElementById("msgErroNome")
+				let fCpfErro = document.getElementById("msgErroCPF")
+				let fRgErro = document.getElementById("msgErroRG")
+				let fTelefoneErro = document.getElementById("msgErroTelefone")
+				let fCelularErro = document.getElementById("msgErroCelular")
+				let fEstadoErro = document.getElementById("msgErroEstado")
+				let fCidadeErro = document.getElementById("msgErroCidade")
+				let fEnderecoErro = document.getElementById("msgErroEndereco")
+				let fAnimalErro = document.getElementById("msgErroAnimal")
+				
+				let fNomeCachorroErro = document.getElementById("msgErroNomeCachorro")
+				let fRacaCachorroErro = document.getElementById("msgErroRacaCachorro")
+				let fPesoCachorroErro = document.getElementById("msgErroPesoCachorro")
+				
+				let fNomeGatoErro = document.getElementById("msgErroNomeGato")
+				let fPeloGatoErro = document.getElementById("msgErroPeloGato")
+				let fCorGatoErro = document.getElementById("msgErroCorGato")
+			
+				
+				let retorno = true
+				
+				// Verifica os campos obrigatórios
+				retorno=VerificaCampoObrigatorio(fNome,fNomeErro)
+				
+				if(retorno==true) {
+					fNomeErro.innerHTML=""
+					retorno=VerificaCampoObrigatorio(fCpf,fCpfErro)
+				}
+				if(retorno==true) {
+					fCpfErro.innerHTML=""
+					retorno=VerificaCampoObrigatorio(fEstado,fEstadoErro)
+				}
+				
+				if(retorno==true){
+					fEstadoErro.innerHTML=""
+					retorno=VerificaCampoObrigatorio(fCidade,fCidadeErro)
+				}
+				if(retorno==true){
+					fCidadeErro.innerHTML=""
+					retorno=VerificaCampoObrigatorio(fEndereco,fEnderecoErro)
+				}
+				
+				// Verifica campos numéricos */
+				if(retorno==true){
+					fEnderecoErro.innerHTML=""
+					retorno=VerificaNumeros(fCpf,fCpfErro)
+				}
+				if(retorno==true)
+					retorno=VerificaNumeros(fRg,fRgErro)
+					
+				if(retorno==true)
+					retorno=VerificaNumeros(fTelefone,fTelefoneErro)
+					
+				if(retorno==true)
+					retorno=VerificaNumeros(fCelular,fCelularErro)
+				
+				return retorno
+				
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Sistema de Cadastro de Clientes</h1>
+		<form id="formulario"  name="formulario" method="post" action="" onsubmit="return validaForm()">
+		<!-- com onsubmit="return validaForm()" ele só enviara os dados qnd for true -->
+		<fieldset>
+				<legend>Dados do Cliente</legend>
+				
+				<label for="nome">Nome: *</label>
+				<input type="text" id="nome" name="nome" onblur="LetraMaiuscula(this)"/><br />
+				<label id="msgErroNome" style="color:red"></label>
+
+				<label for="cpf">CPF: *</label>
+				<input type="text" id="cpf" name="cpf"/>
+				
+				
+				<label for="rg">RG:</label>
+				<input type="text" id="rg" name="rg"/><br />
+				<label id="msgErroCPF" style="color:red"></label>
+				<label id="msgErroRG" style="color:red"></label>
+				
+				<label for="telefone">Telefone:</label>
+				<input type="text" id="telefone" name="telefone"/>
+				<label for="celular">Celular:</label>
+				<input type="text" id="celular" name="celular"/><br />
+				<label id="msgErroTelefone" style="color:red"></label>
+				<label id="msgErroCelular" style="color:red"></label>
+				
+				<label for="estado">Estado: *</label>
+				<select id="estado" name="estado" onchange="MudaCidade(this)">
+					<option value="">Selecione um estado ...</option>
+					<option value="rs">Rio Grande do Sul</option>
+					<option value="sc">Santa Catarina</option>
+					<option value="sp">São Paulo</option>
+				</select><br />
+				<label id="msgErroEstado" style="color:red"></label>
+			
+				<label for="cidade">Cidade: *</label>
+				<select id="cidade" name="cidade">
+					<option value="">Selecione ...</option>
+				</select><br />
+				<label id="msgErroCidade" style="color:red"></label>
+				
+				<label for="endereco">Endereço: *</label>
+				<input type="text" id="endereco" name="endereco" onblur="LetraMaiuscula(this)"/><br />
+				<label id="msgErroEndereco" style="color:red"></label>
+				
+				<label for="animal">Animal:</label>
+				<select id="animal" name="animal" onchange="MostraEscondeCampos(this)">
+					<option value="">Selecione um animal ...</option>
+					<option value="cachorro">Cachorro</option>
+					<option value="gato">Gato</option>
+				</select><br />
+				<label id="msgErroAnimal" style="color:red"></label>
+				
+			</fieldset>	
+			
+			
+			<fieldset id="field_cachorro" name="field_cachorro" style="display:none">
+				<legend>Cachorro</legend>
+				
+				<label for="nome_cachorro">Nome:</label>
+				<input type="text" id="nome_cachorro" name="nome_cachorro" onblur="LetraMaiuscula(this)"/><br />
+				<label id="msgErroNomeCachorro" style="color:red"></label>
+				
+				<label for="raca_cachorro">Raça:</label>
+				<select id="raca_cachorro" name="raca_cachorro">
+					<option value="">Selecione uma raça ...</option>
+					<option value="pastor">Pasto Alemão</option>
+					<option value="lata">Vira Lata</option>
+				</select><br />	
+				<label id="msgErroRacaCachorro" style="color:red"></label>
+				
+				<label for="peso_cachorro">Peso:</label>
+				<input type="text" id="peso_cachorro" name="peso_cachorro"/><br />		
+				<label id="msgErroPesoCachorro" style="color:red"></label>
+			</fieldset>	
+			
+			<fieldset id="field_gato" name="field_gato" style="display:none">
+				<legend>Gato</legend>
+				
+				<label for="nome_gato">Nome:</label>
+				<input type="text" id="nome_gato" name="nome_gato" onblur="LetraMaiuscula(this)"/><br />
+				<label id="msgErroNomeGato" style="color:red"></label>
+				
+				<label for="pelo_gato">Pelo:</label>
+				<input type="text" id="pelo_gato" name="pelo_gato" onblur="LetraMaiuscula(this)"/><br />			
+				<label id="msgErroPeloGato" style="color:red"></label>
+				
+				<label for="cor_gato">Cor:</label>
+				<input type="text" id="cor_gato" name="cor_gato" onblur="LetraMaiuscula(this)"/><br />		
+				<label id="msgErroCorGato" style="color:red"></label>
+				
+			</fieldset>	
+			
+			<input type="submit" id="enviar" name="enviar" value="Enviar" />
+		</form>
+	</body>
+</html>

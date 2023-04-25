@@ -1,0 +1,123 @@
+<html>
+	<head>
+		<title>Exemplo DOM</title>
+		<meta http-equiv="content-type" content="text/html charset=UTF-8">
+		<script type="text/javascript">
+			function createForm()
+			{
+				
+				// Cria o formulário
+				let myForm=document.createElement('form')
+				myForm.name='formulario'
+				myForm.id="formulario"
+				myForm.method='post'
+				myForm.action=""
+
+				// Cria o label para o nome
+				let lblNome=document.createElement('label')
+				lblNome.for='fNome'
+				lblNome.innerHTML="Nome:"
+				
+				//Adicina o label de nome ao formulário
+				myForm.appendChild(lblNome)
+				
+				// Cria o campo de nome
+				let myNome=document.createElement('input')
+				myNome.type='text'
+				myNome.name='fNome'
+				myNome.id='fNome'
+				myNome.placeholder='Digite o seu nome'
+				
+				//Adicina o campo de nome ao formulário
+				myForm.appendChild(myNome)
+				
+				//Adiciona a nova linha
+				let myBr = document.createElement("br")
+				myForm.appendChild(myBr)
+								
+				// Cria o label para a idade
+				let lblIdade=document.createElement('label')
+				lblIdade.for='fIdade'
+				lblIdade.innerHTML="Idade:"
+				
+				//Adicina o label de idade ao formulário
+				myForm.appendChild(lblIdade)
+				
+				// Cria o campo de idade
+				let myIdade=document.createElement('input')
+				myIdade.type='number'
+				myIdade.name='fIdade'
+				myIdade.id='fIdade'
+				myIdade.placeholder='Digite a sua Idade'
+				
+				//Adicina o campo de idade ao formulário
+				myForm.appendChild(myIdade)
+				
+				//Adiciona a nova linha
+				let myBr2 = document.createElement("br")
+				myForm.appendChild(myBr2)
+				
+				// Cria o label para a senha
+				let lblSenha=document.createElement('label')
+				lblSenha.for='fSenha'
+				lblSenha.innerHTML="Senha:"
+				
+				//Adicina o label de senha ao formulário
+				myForm.appendChild(lblSenha)
+				
+				// Cria o campo de senha
+				let MySenha=document.createElement('input')
+				MySenha.type='password'
+				MySenha.name='fSenha'
+				MySenha.id='fSenha'
+				MySenha.placeholder='Digite a sua Senha'
+				
+				//Adicina o campo de senha ao formulário
+				myForm.appendChild(MySenha)
+				
+				//Adiciona a nova linha
+				let myBr3 = document.createElement("br")
+				myForm.appendChild(myBr3)
+				
+				// Cria o label para o email
+				let lblEmail=document.createElement('label')
+				lblEmail.for='fEmail'
+				lblEmail.innerHTML="Email:"
+				
+				//Adicina o label de email ao formulário
+				myForm.appendChild(lblEmail)
+				
+				// Cria o campo de email
+				let myEmail=document.createElement('input')
+				myEmail.type='email'
+				myEmail.name='fEmail'
+				myEmail.id='fEmail'
+				myEmail.placeholder='Digite o seu email'
+				
+				//Adicina o campo de email ao formulário
+				myForm.appendChild(myEmail)
+				
+				//Adiciona a nova linha
+				let myBr4 = document.createElement("br")
+				myForm.appendChild(myBr4)
+				
+				// Cria o campo de submit
+				let myBotao=document.createElement('input')
+				myBotao.type='submit'
+				myBotao.name='fEnviar'
+				myBotao.id='fEnviar'
+				myBotao.value='Enviar'
+				
+				//Adicina o campo de submit ao formulário
+				myForm.appendChild(myBotao)
+				
+				//Adiciona o formulário inteiro ao <body> da minha página
+				document.body.appendChild(myForm)
+			}
+		</script>
+	</head>
+	<body onload="createForm()">
+	</body>
+</html>
+
+	

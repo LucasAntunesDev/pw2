@@ -1,0 +1,153 @@
+<html>
+	<head>
+		<title>Validação de Formulários</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<script language="javascript" type="text/javascript">
+			function validaForm()
+			{
+				const fnome = document.getElementById("nome");
+				const fidade = document.getElementById("idade");
+				const fsexomasc = document.getElementById("masc");
+				const fsexofem = document.getElementById("fem");
+				const fcidade = document.getElementById("cidade");
+				const finformatica = document.getElementById("informatica");
+				const fartes = document.getElementById("artes");
+				const fmatematica = document.getElementById("matematica");
+				const fobservacoes = document.getElementById("observacoes");
+				
+				/*Verifica se o campo de nome esta vazio*/
+				if (fnome.value=="" || fnome.value==null)
+				{
+					alert ("Por favor preencha o campo " + fnome.name); //fnome mostra o nome na janela de alerta
+					fnome.focus(); //volta ao campo que está errado
+					return false; //retorna falso e continua na página
+				}
+
+				/*Verifica se o campo de nome tem mais de 4 caracteres*/
+				if (fnome.value.length <4) //verifica se tem mais de 4 caracteres
+				{
+					alert ("Insira um nome válido.");
+					fnome.focus(); //volta ao campo que está errado
+					return false; //retorna falso e continua na página
+				}
+
+				/*Verifica se é string ou numero*/
+				if (!isNaN(fnome.value))
+				{
+					alert ("Insira somente letras para o nome.");
+					fnome.focus(); //volta ao campo que está errado
+					return false; //retorna falso e continua na página
+				}
+				
+				
+				/*Verifica se o campo de idade esta vazio*/
+				if (fidade.value=="" || fidade.value==null)
+				{
+					alert ("Por favor preencha o campo " + fidade.name); //fidade mostra o idade na janela de alerta
+					fidade.focus(); //volta ao campo que está errado
+					return false; //retorna falso e continua na página
+				}
+				
+				/*Verifica se é string ou numero*/
+				if (isNaN(fidade.value))
+				{
+					alert ("Insira somente números para a idade.");
+					fidade.focus(); //volta ao campo que está errado
+					return false; //retorna falso e continua na página
+				}
+				
+				/*Verifica se é menor de 18 anos*/
+				if (parseInt(fidade.value)<18)
+				{
+					alert ("Idade abaixo de 18 anos.");
+					fidade.focus(); //volta ao campo que está errado
+					return false; //retorna falso e continua na página
+				}
+
+				
+				/*Validando Radio*/
+				if (!(fsexomasc.checked || fsexofem.checked)) //Verifica se o radio esta ativado
+				{
+					alert("Selecione o sexo Masculino ou Feminino.");
+					fsexomasc.focus();
+					return false;
+				}
+
+			
+				/*Validando select*/
+				if (fcidade.value == "")
+				{
+					alert("Escolha uma cidade.");
+					fcidade.focus();
+					return false;
+				}
+
+				
+				/*Validando checkbox*/
+				if (finformatica.checked == false && fartes.checked == false && fmatematica.checked == false ) 
+				{
+					alert("Favor escolher uma opção de interesse.");
+					finformatica.focus();
+					return false;
+				}
+				
+				
+				/*Validando textarea*/
+				if (fobservacoes.value == "")
+				{
+					alert("Digite alguma observação.");
+					fobservacoes.focus();
+					return false;
+				}
+				/* Caso todas as validações tenham sido realizadas, permite-se o envio do formulário*/
+				return true;
+
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Sistema de Cadastro de Clientes</h1>
+		<form id="formulario"  name="formulario" method="post" action="" onsubmit="return validaForm();">
+		<!-- com onsubmit="return validaForm();" ele só enviara os dados qnd for true -->
+		<fieldset>
+				<legend>Dados Cadastrais</legend>
+				
+				<label for="nome">Nome:</label>
+				<input type="text" id="nome" name="nome"/><br />
+				
+				<label for="nome">Idade:</label>
+				<input type="text" id="idade" name="idade"/><br />
+				
+				<label for="sexo">Sexo:</label>
+				<input type="radio" id="masc" name="sexo" value="Masculino" />
+				<label for="masc">Masculino</label>
+				 <input type="radio" id="fem" name="sexo" value="Feminino" />
+				<label for="fem">Feminino</label><br />
+
+	
+				<label for="cidade">Cidade:</label>
+				<select id="cidade" name="cidade">
+					<option value="">Selecione uma cidade ...</option>
+					<option value="bg">Bento Gonçalves</option>
+					<option value="poa">Porto Alegre</option>
+					<option value="rg">Rio Grande</option>
+				</select><br />
+			</fieldset>	
+			<fieldset>
+				<legend>Interesses</legend>
+				
+				<input type="checkbox" id="informatica" name="informatica" />
+				<label for="informatica">Informática</label>
+				<input type="checkbox" id="artes" name="artes" />
+				<label for="artes">Artes</label>
+				<input type="checkbox" id="matematica" name="matematica" />
+				<label for="matematica">Matemática</label><br />
+				
+				<label for="observacoes">Observações</label>
+				<textarea id="observacoes" name="observacoes" ></textarea><br />
+			</fieldset>	
+			
+			<input type="submit" id="enviar" name="enviar" value="Enviar" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>Exemplo DOM</title>
+		<meta http-equiv="content-type" content="text/html charset=UTF-8">
+		<script type="text/javascript">
+			function createForm()
+			{
+				
+				// Cria o formulário
+				let myForm=document.createElement('form')
+				myForm.name='formulario'
+				myForm.id="formulario"
+				myForm.method='post'
+				myForm.action=""
+
+				// Cria o label para o nome
+				let lblNome=document.createElement('label')
+				lblNome.for='fNome'
+				lblNome.innerHTML="Nome:"
+				
+				//Adicina o label de nome ao formulário
+				myForm.appendChild(lblNome)
+				
+				// Cria o campo de nome
+				let myNome=document.createElement('input')
+				myNome.type='text'
+				myNome.name='fNome'
+				myNome.id='fNome'
+				myNome.placeholder='Digite o seu nome'
+				
+				//Adicina o campo de nome ao formulário
+				myForm.appendChild(myNome)
+				
+				//Adiciona a nova linha
+				let myBr = document.createElement("br")
+				myForm.appendChild(myBr)
+								
+				// Cria o label para o sexo
+				let lblSexo=document.createElement('label')
+				lblSexo.for='fSexo'
+				lblSexo.innerHTML="Sexo:"
+				
+				//Adicina o label de sexo ao formulário
+				myForm.appendChild(lblSexo)
+				
+				// Cria o campo de select
+				let mySexo=document.createElement('select')
+				mySexo.name='fSexo'
+				mySexo.id='fSexo'
+				
+				let optionMasc = document.createElement("option")
+				optionMasc.text = "Masculino"
+				optionMasc.value = "Masculino"
+				mySexo.add(optionMasc)
+				
+				let optionFem = document.createElement("option")
+				optionFem.text = "Feminino"
+				optionFem.value = "Feminino"
+				mySexo.add(optionFem)
+				
+				mySexo.onchange = function(){
+					if(mySexo.value=="Masculino"){
+					
+						myForm.style.background="blue"
+					}
+					else{
+						myForm.style.background="pink"
+					}
+				}
+				
+				//Adicina o campo de select ao formulário
+				myForm.appendChild(mySexo)
+				
+				
+				//Adiciona o formulário inteiro ao <body> da minha página
+				document.body.appendChild(myForm)
+			}			
+			
+		</script>
+	</head>
+	<body onload="createForm()">
+	</body>
+</html>
+
+	

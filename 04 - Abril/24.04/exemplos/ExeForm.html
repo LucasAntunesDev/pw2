@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Exemplo Formulário</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+			function verificaAnos()
+			{
+				//Associa os campos dos formulários em variáveis
+				let formNome = document.getElementById("nome").value
+				let formCurso = document.getElementById("curso").value
+				let formAno = document.getElementById("ano").value
+				let restaAnos = 0
+				if(formCurso=="Info"){
+					restaAnos = 4 - formAno 
+				}else if (formCurso=="Agro"){
+					restaAnos = 3 - formAno 
+				}
+				alert("O aluno "+formNome+" ainda tem "+restaAnos+ " anos")
+			}
+		</script>
+	</head>
+	<body>
+		<form id="form1" name="form1" action="" >
+			<label for="nome">Nome:</label>
+			<input type="text" id="nome" name="nome" ><br/>
+			<label for="curso">Curso:</label>
+			<input type="text" id="curso" name="curso" ><br/>
+			<label for="ano">Anos de curso:</label>
+			<input type="text" id="ano" name="ano" ><br/>
+			<button id="enviar" name="enviar" onclick="verificaAnos()">Enviar</button>
+		</form>
+	</body>
+</html>
+
+	
