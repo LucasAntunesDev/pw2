@@ -6,11 +6,11 @@ const idade = prompt('Entre com a sua idade:')
 
 if (idade >= 18){
   input.style.display = 'block';
-  input.style.background = 'green';
+  input.style.background = 'rgb(19, 129, 65)';
   input.value = nome
 }else{
   input.style.display = 'block';
-  input.style.background = 'red';
+  input.style.background = 'crimson';
   input.value = nome
   
 }
