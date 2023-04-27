@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="estilo.css">
+
 <header id="header" class="flex-col">
         <div id="logo-header">
             <img src="https://www.tse.jus.br/++theme++justica_eleitoral/imagens/favicon.ico" alt="">
