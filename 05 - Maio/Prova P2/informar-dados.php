@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início</title>
-    <!-- <link rel="stylesheet" href="estilo.css"> -->
+    <link rel="stylesheet" href="estilo.css">
     <link rel="icon"="10px" href="https://www.tse.jus.br/++theme++justica_eleitoral/imagens/favicon.ico">
 </head>
 
@@ -78,10 +78,8 @@
         <button type="submit">Enviar</button>
     </form>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="validarInfos.js"></script>
 </body>
-
-<!-- <script src="jquery.js"></script> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="validarInfos.js"></script>
 
 </html>

@@ -19,15 +19,15 @@
     <div id="candidatos">
         <div class="infoCandidato">
             D'alessandro: 10
-            <img src="Dale.png" alt="">
+            <img src="assets/Dale.png" alt="">
         </div>
         <div class="infoCandidato">
             Fernandão: 06
-            <img src="Fernandao.png" alt="">
+            <img src="assets/Fernandao.png" alt="">
         </div>
         <div class="infoCandidato">
             Falcão: 79
-            <img src="Falcao.png" alt="">
+            <img src="assets/Falcao.png" alt="">
         </div>
     </div>
     <div id="container">
@@ -94,10 +94,17 @@
 
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<!-- 
+    <script>
+        alert($("#1").val())
+        // alert(document.getElementById("1").value)
+    </script> -->
+
 </body>
 
+<!-- <script src="script.js"></> -->
+
 <!-- <script src="script.js"></script> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="script.js"></script>
 
 </html>

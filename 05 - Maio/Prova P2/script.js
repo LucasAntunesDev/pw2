@@ -19,9 +19,9 @@ function $(id) {
   let nomePartidoCandidato2 = "Mundial"
   let nomePartidoCandidato3 = "Brasileirão"
   
-  let fotoCandidato1 = "Dale.png";
-  let fotoCandidato2 = "Fernandao.png"
-  let fotoCandidato3 = "Falcao.png"
+  let fotoCandidato1 = "assets/Dale.png";
+  let fotoCandidato2 = "assets/Fernandao.png"
+  let fotoCandidato3 = "assets/Falcao.png"
   
   let candidatoExiste = false;
   let fim = $("fim")
