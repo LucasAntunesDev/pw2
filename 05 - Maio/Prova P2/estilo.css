@@ -1,5 +1,6 @@
 :root {
  --azul: #1b305a;
+ --azul2:rgb(35, 60, 110);
  --verde1: #059669;
  --verde2: #86efac;
  --verdeDark: #047450;
@@ -112,7 +113,7 @@ select {
 }
 
 #header-links a {
- transition: color 0.1s;
+  transition: all 0.1s;
 }
 
 #header-links a {
@@ -120,9 +121,10 @@ select {
 }
 
 #header-links a:hover {
- font-weight: bold;
+ /* font-weight: bold; */
  transition: all 0.1s;
- border-bottom: var(--amarelo500) solid 2px;
+ color: var(--amarelo500);
+ transition: all 0.1s;
 
  /* text-decoration: underline 'yellow; */
 }
@@ -155,6 +157,13 @@ p {
  border-radius: 0.5rem;
  width: 20rem;
  color: white;
+ transition: all 0.5s;
+}
+
+.div-candiatos:hover{
+  background: var(--azul2);
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 .candidato-foto {
@@ -250,4 +259,13 @@ button.accordion-button{
 button.accordion-button {
   background: red !important;
   width: 20rem;
+}
+
+#logo-header img:hover{
+  transition: all .1s;
+  scale: 1.1;
+}
+
+#logo-header img{
+  transition: all .1s;
 }
