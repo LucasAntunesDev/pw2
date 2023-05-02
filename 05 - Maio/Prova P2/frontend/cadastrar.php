@@ -16,7 +16,7 @@
 
     <h1>Informe seus dados</h1>
 
-    <form action="#" class="flex-col" onsubmit="return validar()">
+    <form action="../backend/guardar-infos.php" method="post" class="flex-col" onsubmit="return validar()">
 
         <fieldset>
             <div id="cpf-rg-div">
@@ -81,8 +81,7 @@
         $("#cabecalho").load("cabecalho.html");
         </script>
     </script>
-    <script src="js/validarInfos.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> -->
+    <!-- <script src="js/validarInfos.js"></script> -->
 </body>
 
 </html>

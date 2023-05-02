@@ -6,17 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Votar candidatos</title>
+    <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="urna.css">
     <link rel="icon"="10px" href="https://www.tse.jus.br/++theme++justica_eleitoral/imagens/favicon.ico">
 </head>
 
 <body>
-
-    <?php
-    include('header.php');
-    ?>
-
-    <div id="candidatos">
+    <!-- <div id="candidatos">
         <div class="infoCandidato">
             D'alessandro: 10
             <img src="assets/Dale.png" alt="">
@@ -29,7 +25,15 @@
             Falcão: 79
             <img src="assets/Falcao.png" alt="">
         </div>
-    </div>
+    </div> -->
+    <?php
+
+    include('cabecalho.html');
+
+    $nome = file_get_contents('../nome.json');
+    echo "$nome, em quem você irá votar?";
+    ?>
+
     <div id="container">
         <div id="esquerda">
             <div id="fim">
@@ -60,7 +64,7 @@
         </div>
         <div id="direita">
             <div id="jusEleitoral">
-                <img id="tseBrasao" src="TSE BW.svg" alt="">
+                <img id="tseBrasao" src="assets/TSE BW.svg" alt="">
                 JUSTIÇA<br>ELEITORAL
             </div>
             <div class="tabela">
@@ -94,13 +98,11 @@
 
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<!-- 
+    <script src="js/jquery.js"></script>
     <script>
-        alert($("#1").val())
-        // alert(document.getElementById("1").value)
-    </script> -->
-
+        $("#cabecalho").load("cabecalho.html");
+    </script>
+    <script src="js/script.js"></script>
 </body>
 
 <!-- <script src="script.js"></> -->
