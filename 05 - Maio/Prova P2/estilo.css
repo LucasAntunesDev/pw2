@@ -167,33 +167,6 @@ p {
  border-radius: 0.5rem;
 }
 
-#cd1,
-#cd2,
-#cd3,
-#cd4 {
- background-repeat: no-repeat;
- background-position-x: center;
- background-size: contain;
-}
-
-#cd1 {
- background-image: url(https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222);
- /* background-repeat: no-repeat;
-  background-position-x: center; */
-}
-
-#cd2 {
- background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Paul_McCartney_Headshot_%28cropped%29.jpg/170px-Paul_McCartney_Headshot_%28cropped%29.jpg);
-}
-
-#cd3 {
- background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4e/George_Harrison_1974_colorized.jpg);
-}
-
-#cd4 {
- background-image: url(https://media.gq-magazine.co.uk/photos/5f03235bfcb5fd13a37e5c1d/1:1/w_1080,h_1080,c_limit/20200706-ringo-10.jpg);
-}
-
 .none {
  visibility: hidden;
 }
@@ -203,37 +176,6 @@ main {
  flex-direction: row;
  justify-content: space-around;
  flex-wrap: wrap;
-}
-/* 
-:is(.candidato-foto, #ivan){
-  background-image: url(assets/Ivan.png);
-} */
-
-.mais-infos {
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
-}
-
-.mais-infos span:nth-child(1) {
- background: var(--verde1);
- padding-inline: 1rem;
- padding-block: 0.5rem;
- border-radius: 0.5rem;
- margin-block: 1rem;
-}
-
-.mais-infos:hover {
- cursor: pointer;
- border-radius: 0.5rem;
-}
-
-#info1,
-#info2,
-#info3,
-#info4 {
- display: none;
 }
 
 .accordion-body{

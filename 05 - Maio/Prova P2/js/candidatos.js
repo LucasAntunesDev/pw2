@@ -28,6 +28,16 @@ numero3.html("3");
 const numero4 = $("#numero4");
 numero4.html("4");
 
+//Coloca a foto de cada candidato via DOM
+const foto1 = $("#foto1");
+foto1.attr("src", "https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222");
+const foto2 = $("#foto2");
+foto2.attr("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Paul_McCartney_Headshot_%28cropped%29.jpg/170px-Paul_McCartney_Headshot_%28cropped%29.jpg");
+const foto3 = $("#foto3");
+foto3.attr("src", "https://upload.wikimedia.org/wikipedia/commons/4/4e/George_Harrison_1974_colorized.jpg");
+const foto4 = $("#foto4");
+foto4.attr("src", "https://media.gq-magazine.co.uk/photos/5f03235bfcb5fd13a37e5c1d/1:1/w_1080,h_1080,c_limit/20200706-ringo-10.jpg");
+
 const info = $(".mais-infos");
 info.click(function(){
     // info.toggle(function(){
