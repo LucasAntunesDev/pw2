@@ -15,6 +15,8 @@
     <div id="cabecalho"></div>
 
     <?php
+    session_start();
+
     $nome = $_SESSION['nome'];
 
     if (!isset($nome)) {
