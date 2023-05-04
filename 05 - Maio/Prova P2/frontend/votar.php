@@ -28,9 +28,10 @@
     </div> -->
     <?php
 
+    session_start();
     include('cabecalho.html');
-
-    $nome = file_get_contents('../nome.json');
+    // $nome = file_get_contents('../nome.json');
+    $nome = $_SESSION['nome'];
     echo "$nome, em quem você irá votar?";
     ?>
 
@@ -103,6 +104,7 @@
         $("#cabecalho").load("cabecalho.html");
     </script>
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 <!-- <script src="script.js"></> -->

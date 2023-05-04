@@ -14,7 +14,15 @@
 
     <div id="cabecalho"></div>
 
-    <h1>Parciais</h1>
+    <?php
+    $nome = $_SESSION['nome'];
+
+    if (!isset($nome)) {
+       echo '<h1>Parciais</h1>';
+    }else{
+        echo "<h1>$nome, essas são as parciais</h1>";
+    }
+    ?>
 
     <main>
         <ul>

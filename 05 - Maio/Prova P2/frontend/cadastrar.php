@@ -42,16 +42,16 @@
             <div id="selects">
                 <!-- Sexo -->
                 <select name="sexo" id="sexo">
-                    <option value="">Selecione seu sexo</option>
-                    <option value="masc">Masculino</option>
-                    <option value="fem">Feminino</option>
+                    <option value="" id="">Selecione seu sexo</option>
+                    <option value="masc" id="masc">Masculino</option>
+                    <option value="fem" id="fem">Feminino</option>
                 </select>
                 <!-- Etnia -->
                 <select name="etnia" id="etnia">
-                    <option value="">Selecione sua etnia</option>
-                    <option value="indigena">Indígena</option>
-                    <option value="negro">Negro</option>
-                    <option value="branco">Branco</option>
+                    <option value="" id="">Selecione sua etnia</option>
+                    <option value="indigena" id="indigena">Indígena</option>
+                    <option value="negro" id="negro">Negro</option>
+                    <option value="branco" id="branco">Branco</option>
                 </select>
                 <!-- UF -->
                 <select name="" id="">
@@ -81,7 +81,8 @@
         $("#cabecalho").load("cabecalho.html");
         </script>
     </script>
-    <!-- <script src="js/validarInfos.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/validarInfos.js"></script>
 </body>
 
 </html>

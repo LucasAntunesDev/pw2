@@ -101,7 +101,14 @@ function $(id) {
       $('infosCandidato').style.display = "none"
       fim.style.display = "flex"
       $('foto').style.display = 'none'
-      setInterval(function () {window.location.href = 'parciais.html'},1000)
+      Swal.fire({
+        icon: 'success',
+        title: 'Voto registrado',
+        // text: `Você votou em ${candi}`,
+        showConfirmButton: false,
+        timer: 1500
+      })
+      setInterval(function () {window.location.href = 'parciais.php'},1000)
     }else{
       setInterval(function () {location.reload()},1000)
     }
