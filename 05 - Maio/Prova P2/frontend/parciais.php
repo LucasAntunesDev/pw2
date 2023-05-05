@@ -47,7 +47,7 @@
                 </div>
             </li>
             <li>
-                <span>Ringo Starr 3%</span>
+                <span>Ringo Starr 2%</span>
                 <div class="porcentagem ">
                     <div id="porcentagem-4"></div>
                 </div>

@@ -113,7 +113,10 @@ button:hover {
  border: solid 1px rgb(68, 68, 68);
  height: 30px;
  width: 50px;
- margin: 5px 5px 5px 5px;
+ margin: 5px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
  box-shadow: black 2px 2px 2px;
 }
 

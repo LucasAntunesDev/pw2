@@ -35,7 +35,7 @@
                     <div id="digitos">
                         <form action="none">
                             <input size="1" id="num1" value="" maxlength="1" type="text" readonly="readonly" />
-                            <input size="1" id="num2" value="" maxlength="1" type="text" readonly="readonly" />
+                            <!-- <input size="1" id="num2" value="" maxlength="1" type="text" readonly="readonly" /> -->
                         </form>
                     </div>
                     <div id="infos2">
@@ -79,7 +79,6 @@
             </div>
 
             <div class="tr" id="branco-corrige-confirma">
-                <button id="branco" onclick="votoBranco()" type="button">BRANCO</button>
                 <button onclick="corrige()" id="corrige" type="button">CORRIGE</button>
                 <button id="confirma" onclick="votar()" type="button">CONFIRMA</button>
             </div>
