@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="select2.min.css">
+    <link rel="shortcut icon" href="https://www.tse.jus.br/++theme++justica_eleitoral/imagens/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div id="cabecalho"></div>
+
+    <h1>Informe seus dados</h1>
+
+    <form action="../backend/guardar-infos.php" method="post" class="flex-col" onsubmit="return validar()">
+
+        <fieldset>
+            <div id="cpf-rg-div">
+                <!-- Nome Completo -->
+                <label for="nome">
+                    Nome:
+                    <input type="text" name="nome" id="nome" placeholder="Digite o seu nome">
+                </label>
+
+                <!-- RG -->
+                <label for="rg">
+                    RG:
+                    <input type="text" name="rg" id="rg" maxlength="14" placeholder="Digite o seu RG">
+                </label>
+                <!-- CPF -->
+                <label for="cpf">
+                    CPF:
+                    <input type="text" name="cpf" id="cpf" maxlength="14" placeholder="Ex.: 025.743.450-66">
+
+                </label>
+
+            </div>
+
+
+            <div id="selects">
+                <!-- Sexo -->
+                <div class="div-select">
+                    <label for="sexo">
+                        Sexo:
+                    </label>
+                    <select name="sexo" id="sexo">
+                    <option value="-1"></option>
+                    <option name="masc" value="masc" id="masc">Maculino</option>
+                    <option name="fem" value="fem" id="fem">Feminino</option>
+                </select>
+
+                </div>
+                
+                <!-- Etnia -->
+                <div class="div-select">
+                    <label for="etnia">
+                        Etnia
+                    </label>
+                    <select name="etnia" id="etnia">
+                    <option value="-1"></option>
+                        <option name="indigena" value="indigena" id="indigena">Indígena</option>
+                        <option name="negro" value="negro" id="negro">Negro</option>
+                        <option name="branco" value="branco" id="branco">Branco</option>
+                    </select>
+                    </select>
+                </div>
+
+                <!-- UF -->
+                <div class="div-select">
+                    <label for="uf">
+                        UF:
+                    </label>
+                    <select name="uf" id="uf">
+                    <option value="-1"></option>
+                        <option value="ac" id="ac">Acre</option>
+                        <option value="al" id="al">Alagoas</option>
+                        <option value="ap" id="ap">Amapá</option>
+                        <option value="am" id="am">Amazonas</option>
+                        <option value="ba" id="ba">Bahia</option>
+                        <option value="ce" id="ce">Ceará</option>
+                        <option value="df" id="df">Distrito Federal</option>
+                        <option value="es" id="es">Espírito Santo</option>
+                        <option value="go" id="go">Goiás</option>
+                        <option value="ma" id="ma">Maranhão</option>
+                        <option value="mt" id="mt">Mato Grosso</option>
+                        <option value="ms" id="ms">Mato Grosso do Sul</option>
+                        <option value="mg" id="mg">Minas Gerais</option>
+                        <option value="pa" id="pa">Pará</option>
+                        <option value="pb" id="pb">Paraíba</option>
+                        <option value="pr" id="pr">Paraná</option>
+                        <option value="pe" id="pe">Pernambuco</option>
+                        <option value="pi" id="pi">Piauí</option>
+                        <option name="rj id=" rj" value="rj" id="rj">Rio de Janeiro</option>
+                        <option value="rn" id="rn">Rio Grande do Norte</option>
+                        <option name="rs" value="rs" id="rs">Rio Grande do Sul</option>
+                        <option value="ro id=" ro">Rondônia</option>
+                        <option value="rr id=" rr">Roraima</option>
+                        <option value="sc id=" sc">Santa Catarina</option>
+                        <option value="sp" id="sp">São Paulo</option>
+                        <option value="se" id="se">Sergipe</option>
+                        <option value="to" id="to">Tocantins</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div id="tel-email">
+                <!-- Telefone -->
+                <label for="tel">
+                    Telefone:
+                    <input type="text" name="tel" id="tel" placeholder="EX.: 99431746">
+                </label>
+                <!-- Email -->
+                <label for="email">
+                    Email:
+                    <input type="email" name="email" id="email" placeholder="EX.: fulano@gmail.com">
+                </label>
+            </div>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mask.js"></script>
+    <script>
+        $("#cabecalho").load("cabecalho.html");
+    </script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/validarInfos.js"></script>
+</body>
+
+</html>

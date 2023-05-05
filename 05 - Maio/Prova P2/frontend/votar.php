@@ -6,30 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Votar candidatos</title>
+    <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="urna.css">
     <link rel="icon"="10px" href="https://www.tse.jus.br/++theme++justica_eleitoral/imagens/favicon.ico">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
+    <div id="cabecalho"></div>
 
     <?php
-    include('header.php');
+
+    session_start();
+    // include('cabecalho.html');
+    // $nome = file_get_contents('../nome.json');
+    $nome = $_SESSION['nome'];
+    echo "<div id='pergunta-voto'>$nome, em quem você irá votar?</div>";
     ?>
 
-    <div id="candidatos">
-        <div class="infoCandidato">
-            D'alessandro: 10
-            <img src="assets/Dale.png" alt="">
-        </div>
-        <div class="infoCandidato">
-            Fernandão: 06
-            <img src="assets/Fernandao.png" alt="">
-        </div>
-        <div class="infoCandidato">
-            Falcão: 79
-            <img src="assets/Falcao.png" alt="">
-        </div>
-    </div>
     <div id="container">
         <div id="esquerda">
             <div id="fim">
@@ -60,7 +54,7 @@
         </div>
         <div id="direita">
             <div id="jusEleitoral">
-                <img id="tseBrasao" src="TSE BW.svg" alt="">
+                <img id="tseBrasao" src="../assets/TSE BW.svg" alt="">
                 JUSTIÇA<br>ELEITORAL
             </div>
             <div class="tabela">
@@ -83,7 +77,7 @@
                     <button onclick="inserir(0)" class="botao" type="button">0</button>
                 </div>
             </div>
-            <!--Tabela<!-->
+
             <div class="tr" id="branco-corrige-confirma">
                 <button id="branco" onclick="votoBranco()" type="button">BRANCO</button>
                 <button onclick="corrige()" id="corrige" type="button">CORRIGE</button>
@@ -94,13 +88,12 @@
 
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<!-- 
+    <script src="js/jquery.js"></script>
     <script>
-        alert($("#1").val())
-        // alert(document.getElementById("1").value)
-    </script> -->
-
+        $("#cabecalho").load("cabecalho.html");
+    </script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 <!-- <script src="script.js"></> -->

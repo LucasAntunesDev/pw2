@@ -7,41 +7,39 @@ function $(id) {
   let partidoCandidatoSelecionado;
   let fotoCandidatoSelecionado;
   
-  let codigoCandidato1 = 10
-  let codigoCandidato2 = 06
-  let codigoCandidato3 = 79
+  let codigoCandidato1 = 1
+  let codigoCandidato2 = 2
+  let codigoCandidato3 = 3
+  let codigoCandidato4 = 4
   
-  let nomeCandidato1 = "D'Alessandro"
-  let nomeCandidato2 = "Fernandão"
-  let nomeCandidato3 = "Falcão"
+  let nomeCandidato1 = "John Lennon"
+  let nomeCandidato2 = "Paul McCartney"
+  let nomeCandidato3 = "George Harrinson"
+  let nomeCandidato4 = "Ringo Starr"
   
-  let nomePartidoCandidato1 = "Libertadores"
-  let nomePartidoCandidato2 = "Mundial"
-  let nomePartidoCandidato3 = "Brasileirão"
+  let nomePartidoCandidato1 = "Partido do Vocal"
+  let nomePartidoCandidato2 = "Partido do Baixo"
+  let nomePartidoCandidato3 = "Partido da Guitarra"
+  let nomePartidoCandidato4 = "Partido da Bateria"
   
-  let fotoCandidato1 = "assets/Dale.png";
-  let fotoCandidato2 = "assets/Fernandao.png"
-  let fotoCandidato3 = "assets/Falcao.png"
+  let fotoCandidato1 = "https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222";
+  let fotoCandidato2 = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Paul_McCartney_Headshot_%28cropped%29.jpg/170px-Paul_McCartney_Headshot_%28cropped%29.jpg"
+  let fotoCandidato3 = "https://upload.wikimedia.org/wikipedia/commons/4/4e/George_Harrison_1974_colorized.jpg"
+  let fotoCandidato4 = "https://media.gq-magazine.co.uk/photos/5f03235bfcb5fd13a37e5c1d/1:1/w_1080,h_1080,c_limit/20200706-ringo-10.jpg"
   
   let candidatoExiste = false;
   let fim = $("fim")
   
   function inserir(valor) {
     let num1 = $("num1").value
-    let num2 = $("num2").value
   
     if (num1 == "") {
       $("num1").value = valor;
       $("num1").style.border = "solid 2px gray"
-    } else if (num2 == "" || num1 != "") {
-      $("num2").value = valor
-      $("num1").style.border = "solid 1px black"
-      $("num2").style.border = "solid 2px gray"
     }
   
     var valor1 = parseInt($("num1").value);
-    var valor2 = parseInt($("num2").value);
-    let candidato = (valor1 * 10) + valor2;
+    let candidato = valor1;
   
     switch (candidato) {
       case codigoCandidato1:
@@ -70,11 +68,20 @@ function $(id) {
         candidatoExiste = true;
         break;
   
+      case codigoCandidato4:
+        $('foto').src = fotoCandidato4
+        $('foto').style.visibility = "visible"
+        $('nomeCandidato').innerHTML = nomeCandidato4
+        $('partido').innerHTML = nomePartidoCandidato4
+        candidatoExiste = true;
+        break;
+  
       default:
         codigoCandidatoSelecionado = undefined
         nomeCandidatoSelecionado = undefined
         partidoCandidatoSelecionado = undefined
         candidatoExiste = false;
+        alert('Esse candidato não existe!')
     }
   }
   
@@ -94,8 +101,20 @@ function $(id) {
       $('infosCandidato').style.display = "none"
       fim.style.display = "flex"
       $('foto').style.display = 'none'
+      Swal.fire({
+        icon: 'success',
+        title: 'Voto registrado',
+        // text: `Você votou em ${candi}`,
+        showConfirmButton: false,
+        timer: 1500
+      })
+      setInterval(function () {window.location.href = 'parciais.php'},1000)
+    }else{
+      setInterval(function () {location.reload()},1000)
     }
-    // setInterval(function () {location.reload()},1000)
+    // window.location.href
+    // window.location.href = 'parciais.html'
+    // document.write('<?php $nome = file_get_contents("nome.json"); echo "$nome"')
   }
   function votoBranco() {
     if (fim.style.display = "none") {
@@ -103,5 +122,5 @@ function $(id) {
       fim.style.display = "flex"
       $('foto').style.display = 'none'
     }
-    // setInterval(function () {location.reload()},1000)
+    setInterval(function () {location.reload()},1000)
   }
