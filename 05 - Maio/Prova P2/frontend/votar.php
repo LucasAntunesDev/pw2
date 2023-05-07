@@ -18,13 +18,17 @@
     <?php
 
     session_start();
-    // include('cabecalho.html');
-    // $nome = file_get_contents('../nome.json');
     $nome = $_SESSION['nome'];
+
+    //Redireciona para a página de cadastro caso
+    //este não tenha sido feito
+    if (!isset($_SESSION['nome'])) {
+        header(('location:cadastrar.php?erro=1'));
+    }
     echo "<div id='pergunta-voto'>$nome, em quem você irá votar?</div>";
     ?>
 
-    <div id="container">
+    <main id="container">
         <div id="esquerda">
             <div id="fim">
                 <p>FIM</p>
@@ -53,7 +57,7 @@
 
         </div>
         <div id="direita">
-            <div id="jusEleitoral">
+            <div id="justica-eleitoral">
                 <img id="tseBrasao" src="../assets/TSE BW.svg" alt="">
                 JUSTIÇA<br>ELEITORAL
             </div>
@@ -85,7 +89,7 @@
         </div>
         <!--Direita<!-->
 
-    </div>
+    </main>
 
     <script src="js/jquery.js"></script>
     <script>
@@ -94,9 +98,5 @@
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
-
-<!-- <script src="script.js"></> -->
-
-<!-- <script src="script.js"></script> -->
 
 </html>

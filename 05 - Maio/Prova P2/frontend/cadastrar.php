@@ -17,7 +17,7 @@
 
     <h1>Informe seus dados</h1>
 
-    <form action="../backend/guardar-infos.php" method="post" class="flex-col" onsubmit="return validar()">
+    <form action="../backend/verifica.php" method="post" class="flex-col" onsubmit="return validar()">
 
         <fieldset>
             <div id="cpf-rg-div">

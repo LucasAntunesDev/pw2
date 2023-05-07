@@ -1,7 +1,3 @@
-// function $(id) {
-//     return document.getElementById(id);
-//   }
-
 let codigoCandidatoSelecionado;
 let nomeCandidatoSelecionado;
 let partidoCandidatoSelecionado;
@@ -32,7 +28,14 @@ let fotoCandidato4 =
  "https://media.gq-magazine.co.uk/photos/5f03235bfcb5fd13a37e5c1d/1:1/w_1080,h_1080,c_limit/20200706-ringo-10.jpg";
 
 let candidatoExiste = false;
-let fim = $("#fim");
+
+const mostrarCandidato = (candidato, foto, partido) =>{
+  $("#foto").attr("src", foto);
+  $("#foto").css("visibility", "visible");
+  $("#nomeCandidato").html(candidato);
+  $("#partido").html(partido);
+  candidatoExiste = true;
+}
 
 function inserir(valor) {
  let num1 = $("#num1").val();
@@ -47,35 +50,19 @@ function inserir(valor) {
 
  switch (candidato) {
   case codigoCandidato1:
-   $("#foto").attr("src", fotoCandidato1);
-   $("#foto").css("visibility", "visible");
-   $("#nomeCandidato").html(nomeCandidato1);
-   $("#partido").html(nomePartidoCandidato1);
-   candidatoExiste = true;
-
+  mostrarCandidato(nomeCandidato1, fotoCandidato1, nomePartidoCandidato1)
    break;
 
   case codigoCandidato2:
-   $("#foto").attr("src", fotoCandidato2);
-   $("#foto").css("visibility", "visible");
-   $("#nomeCandidato").html(nomeCandidato2);
-   $("#partido").html(nomePartidoCandidato2);
-   candidatoExiste = true;
+    mostrarCandidato(nomeCandidato2, fotoCandidato2, nomePartidoCandidato2)
    break;
 
   case codigoCandidato3:
-   $("#foto").attr("src", fotoCandidato3);
-   $("#foto").css("visibility", "visible");
-   $("#nomeCandidato").html(nomeCandidato3);
-   $("#partido").html(nomePartidoCandidato3);
-   candidatoExiste = true;
+    mostrarCandidato(nomeCandidato3, fotoCandidato3, nomePartidoCandidato3)
    break;
 
   case codigoCandidato4:
-   $("#foto").attr("src", fotoCandidato4);
-   $("#foto").css("visibility", "visible");
-   $("#nomeCandidato").html(nomeCandidato4);
-   $("#partido").html(nomePartidoCandidato4);
+    mostrarCandidato(nomeCandidato4, fotoCandidato4, nomePartidoCandidato4)
    candidatoExiste = true;
    break;
 
@@ -96,7 +83,7 @@ function inserir(valor) {
 
 function corrige() {
  $("#num1").val("");
- $("#foto").src("");
+ $("#foto").attr("src","");
  $("#nomeCandidato").html("");
  $("#partido").html("");
  $("#foto").css("visibility", "hidden");
@@ -104,15 +91,13 @@ function corrige() {
 }
 
 function votar() {
- let votoConfirmado = $("#esquerda");
- if (candidatoExiste === true) {
+ if (candidatoExiste) {
   $("#infosCandidato").css("display", "none");
-  fim.css("display", "flex");
+  // fim.css("display", "flex");
   $("#foto").css("display", "none");
   Swal.fire({
    icon: "success",
    title: "Voto registrado",
-   // text: `Você votou em ${candi}`,
    showConfirmButton: false,
    timer: 1500,
   });
@@ -127,14 +112,4 @@ function votar() {
  // window.location.href
  // window.location.href = "parciais.html"
  // document.write("<?php $nome = file_get_contents("nome.json"); echo "$nome"")
-}
-function votoBranco() {
- if (fim("display", "none")) {
-  $("#infosCandidato").css("display", "none");
-  fim.css("display", "flex");
-  $("#foto").css("display", "none");
- }
- setInterval(function () {
-  location.reload();
- }, 1000);
 }

@@ -17,13 +17,14 @@
     <?php
     session_start();
 
-    $nome = $_SESSION['nome'];
-
-    if (!isset($nome)) {
-       echo '<h1>Parciais</h1>';
-    }else{
+    //Se o usuário estiver logado, mostra o seu nome
+    if (isset($_SESSION['nome'])) {
+        $nome = $_SESSION['nome'];
         echo "<h1>$nome, essas são as parciais</h1>";
+    } else {
+        echo '<h1>Parciais</h1>';
     }
+
     ?>
 
     <main>
@@ -35,7 +36,7 @@
                 </div>
             </li>
             <li>
-                <span>Paul Mcartney 44%</span>
+                <span>Paul McCartney 44%</span>
                 <div class="porcentagem ">
                     <div id="porcentagem-2"></div>
                 </div>
