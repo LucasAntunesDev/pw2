@@ -29,9 +29,9 @@ const validar = () => {
 
  const uf = $("#uf").val();
 
- if ($("#nome").val().length == "" || $("#nome").val() == null) {
-  $("#nome").css("background", "crimson");
-  $("#nome").focus();
+ if (nome.val().length == "" || nome.val() == null) {
+  nome.css("background", "crimson");
+  nome.focus();
 
   Swal.fire({
    icon: "error",
@@ -40,26 +40,49 @@ const validar = () => {
    confirmButtonColor: "#059669",
   });
 
+  nome.focus();
+
   return false;
  }
 
- if ($("#rg").val().length == "" || $("#rg").val() == null) {
-  $("#rg").css("background", "crimson");
+ if (rg.val().length == "" || rg.val() == null) {
+  rg.css("background", "crimson");
   Swal.fire({
    icon: "error",
    title: "Oops...",
    text: "O campo RG está vazio!",
    confirmButtonColor: "#059669",
   });
-  $("#rg").focus();
+  rg.focus();
+  return false;
+ } else if (rg.val().length < 12) {
+  rg.css("background", "crimson");
+  Swal.fire({
+   icon: "error",
+   title: "Oops...",
+   text: "O campo RG não está completo!",
+   confirmButtonColor: "#059669",
+  });
+  rg.focus();
   return false;
  }
+
  if ($("#cpf").val().length == "" || $("#cpf").val() == null) {
   $("#cpf").css("background", "crimson");
   Swal.fire({
    icon: "error",
    title: "Oops...",
    text: "O campo CPF está vazio!",
+   confirmButtonColor: "#059669",
+  });
+  $("#cpf").focus();
+  return false;
+ } else if ($("#cpf").val().length < 14) {
+  $("#cpf").css("background", "crimson");
+  Swal.fire({
+   icon: "error",
+   title: "Oops...",
+   text: "O campo CPF não está completo!",
    confirmButtonColor: "#059669",
   });
   $("#cpf").focus();
@@ -160,6 +183,7 @@ const validar = () => {
     text: "Você precisa selecionar uma UF!",
     confirmButtonColor: "#059669",
    });
+
    return false;
  }
 
@@ -172,6 +196,16 @@ const validar = () => {
    confirmButtonColor: "#059669",
   });
   $("#tel").focus();
+  return false;
+ } else if (tel.val().length < 14) {
+  tel.css("background", "crimson");
+  Swal.fire({
+   icon: "error",
+   title: "Oops...",
+   text: "O campo RG não está completo!",
+   confirmButtonColor: "#059669",
+  });
+  tel.focus();
   return false;
  }
 
@@ -195,11 +229,7 @@ const validar = () => {
   timer: 1500,
  });
 
- // setInterval(function () {window.location.href = '../backend/guardar-infos.php'},1000)
- setInterval(function () {
+ setInterval(() => {
   return true;
  }, 2000);
- // return false;
- //  setInterval(function () =>  {true, 1700})
- //  return true;
 };

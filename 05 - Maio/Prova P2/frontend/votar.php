@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Votar candidatos</title>
-    <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="urna.css">
-    <link rel="icon"="10px" href="https://www.tse.jus.br/++theme++justica_eleitoral/imagens/favicon.ico">
     <link rel="stylesheet" href="estilo.css">
+    <link rel="icon"="10px" href="https://www.tse.jus.br/++theme++justica_eleitoral/imagens/favicon.ico">
 </head>
 
 <body>
@@ -38,8 +37,7 @@
                     <h5>Número:</h5>
                     <div id="digitos">
                         <form action="none">
-                            <input size="1" id="num1" value="" maxlength="1" type="text" readonly="readonly" />
-                            <!-- <input size="1" id="num2" value="" maxlength="1" type="text" readonly="readonly" /> -->
+                            <input size="1" id="numero" value="" maxlength="1" type="text" readonly="readonly" />
                         </form>
                     </div>
                     <div id="infos2">

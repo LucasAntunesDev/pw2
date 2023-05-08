@@ -38,14 +38,14 @@ const mostrarCandidato = (candidato, foto, partido) =>{
 }
 
 function inserir(valor) {
- let num1 = $("#num1").val();
+ let numero = $("#numero").val();
 
- if (num1 == "") {
-  $("#num1").val(valor);
-  $("#num1").css("border", "solid 2px gray");
+ if (numero == "") {
+  $("#numero").val(valor);
+  $("#numero").css("border", "solid 2px gray");
  }
 
- var valor1 = parseInt($("#num1").val());
+ var valor1 = parseInt($("#numero").val());
  let candidato = valor1;
 
  switch (candidato) {
@@ -76,13 +76,14 @@ function inserir(valor) {
     title: "Oops...",
     text: "Esse candidato não existe!",
     confirmButtonColor: "#059669",
+    footer: '<a href="candidatos.html">Ver candidatos</a>'
    });
-   $("#num1").val("");
+   $("#numero").val("");
  }
 }
 
 function corrige() {
- $("#num1").val("");
+ $("#numero").val("");
  $("#foto").attr("src","");
  $("#nomeCandidato").html("");
  $("#partido").html("");
@@ -93,7 +94,6 @@ function corrige() {
 function votar() {
  if (candidatoExiste) {
   $("#infosCandidato").css("display", "none");
-  // fim.css("display", "flex");
   $("#foto").css("display", "none");
   Swal.fire({
    icon: "success",
@@ -109,7 +109,4 @@ function votar() {
    location.reload();
   }, 1000);
  }
- // window.location.href
- // window.location.href = "parciais.html"
- // document.write("<?php $nome = file_get_contents("nome.json"); echo "$nome"")
 }

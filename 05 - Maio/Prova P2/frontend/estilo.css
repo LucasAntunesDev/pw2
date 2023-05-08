@@ -59,8 +59,12 @@ a {
  text-decoration: none;
 }
 
-a {
+header a {
  color: white;
+}
+
+a{
+  color: var(--azul);
 }
 
 #cpf-rg-div,
@@ -73,7 +77,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+#votar-link {
  text-align: center;
 }
 
@@ -171,13 +176,32 @@ p {
  width: 20rem;
  color: white;
  transition: all 0.5s;
+ box-shadow: 0 10px 15px -3px rgb(0 0 0 / 22%), 0 4px 6px -4px rgb(0 0 0 / 9%);
 }
 
 .div-candiatos:hover {
- background: var(--azul2);
- transition: all 0.5s;
- cursor: pointer;
+  background: var(--azul2);
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px #64748b, 0 4px 6px -4px rgb(0 0 0 / 9%);
 }
+
+.div-candiatos span{
+  margin-block: 0.2rem;
+  font-weight:500;
+}
+
+.div-candiatos span:nth-child(2){
+  margin-bottom: 1.2rem;
+  font-size: x-large;
+  font-weight: bold;
+  text-shadow: 2px 3px 3px var(--slate900);
+}
+
+.div-candiatos span:nth-child(4){
+  margin-bottom: 1rem;
+}
+
 
 .candidato-foto {
  margin-block: 1.5rem;
@@ -333,4 +357,21 @@ label{
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.swal2-footer a{
+  color: #545454;
+}
+
+.swal2-footer a:hover{
+  color: #848484;
+}
+
+#votar-link{
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+#votar-link:hover{
+  color: var(--azul2);
 }
