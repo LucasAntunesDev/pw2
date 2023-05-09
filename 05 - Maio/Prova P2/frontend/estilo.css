@@ -23,18 +23,50 @@ body {
   color: var(--azul);
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
+#header,
+#cpf-rg-div,
+#selects,
+#tel-email,
+fieldset,
+#pesquisas-infoscolumn,
+.div-candiatos,
+main,
+.mais-infos,
+.div-select,
+#selects,
+.flex-row,
 .flex-col {
   display: flex;
+}
+
+#header,
+#cpf-rg-div,
+#selects,
+#tel-email,
+main,
+#selects,
+.flex-row {
+  flex-direction: row;
+}
+
+fieldset,
+#pesquisas-infos,
+.div-candiatos,
+.mais-infos,
+.div-select,
+.flex-col {
   flex-direction: column;
-  justify-content: center;
+}
+
+.flex-row,
+.flex-col,
+#cpf-rg-div,
+#selects,
+#tel-email,
+.mais-infos,
+.div-select {
   align-items: center;
+  justify-content: center;
 }
 
 .gap-1 {
@@ -42,8 +74,6 @@ body {
 }
 
 #header {
-  display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   background: var(--azul);
@@ -75,10 +105,6 @@ a:hover {
 #selects,
 #tel-email {
   margin-block: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   gap: 1rem;
 }
 
@@ -105,8 +131,6 @@ button {
 
 fieldset {
   border: none;
-  display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   border-radius: 1.5rem;
@@ -156,8 +180,6 @@ p {
 }
 
 #pesquisas-infos {
-  display: flex;
-  flex-direction: column;
   padding: 2rem;
   gap: 1rem;
 }
@@ -167,8 +189,6 @@ p {
 }
 
 .div-candiatos {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: var(--azul);
@@ -239,17 +259,8 @@ p {
 }
 
 main {
-  display: flex;
-  flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-}
-
-.mais-infos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .mais-infos span:nth-child(1) {
@@ -263,29 +274,6 @@ main {
 .mais-infos:hover {
   cursor: pointer;
   border-radius: 0.5rem;
-}
-
-#info1,
-#info2,
-#info3,
-#info4 {
-  display: none;
-}
-
-.accordion-body {
-  font-size: small;
-  max-width: 20rem;
-}
-
-button.accordion-button {
-  background: var(--verde1);
-  border-radius: 0.5rem;
-  margin-block: 1rem;
-}
-
-button.accordion-button {
-  background: red !important;
-  width: 20rem;
 }
 
 #logo-header img {
@@ -302,6 +290,7 @@ button.accordion-button {
   border: solid 1px black;
   height: 1.5rem;
   width: 50vw;
+  border-radius: 0.5rem;
 }
 
 #porcentagem-1,
@@ -312,6 +301,7 @@ button.accordion-button {
   height: 1.4rem;
   width: 0rem;
   transition: all 1s;
+  border-radius: 0.5rem;
 }
 
 label {
@@ -319,18 +309,7 @@ label {
   color: var(--azul);
 }
 
-.div-select {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 #selects {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   gap: 1rem;
 }
 

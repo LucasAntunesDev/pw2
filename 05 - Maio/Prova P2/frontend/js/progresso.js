@@ -16,5 +16,5 @@ $(document).ready(() => {
     p2.css("width", "25vw");
     p3.css("width", "4vw");
     p4.css("width", "2vw");
-  }, 1000);
+  }, 500);
 });
