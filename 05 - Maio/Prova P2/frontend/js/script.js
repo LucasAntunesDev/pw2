@@ -32,7 +32,7 @@ let candidatoExiste = false;
 const mostrarCandidato = (candidato, foto, partido) =>{
   $("#foto").attr("src", foto);
   $("#foto").css("visibility", "visible");
-  $("#nomeCandidato").html(candidato);
+  $("#nome-candidato").html(candidato);
   $("#partido").html(partido);
   candidatoExiste = true;
 }
@@ -85,10 +85,10 @@ function inserir(valor) {
 function corrige() {
  $("#numero").val("");
  $("#foto").attr("src","");
- $("#nomeCandidato").html("");
+ $("#nome-candidato").html("");
  $("#partido").html("");
  $("#foto").css("visibility", "hidden");
- $("#imgCandidato").css("visibility", "hidden");
+ $("#img-candidato").css("visibility", "hidden");
 }
 
 function votar() {

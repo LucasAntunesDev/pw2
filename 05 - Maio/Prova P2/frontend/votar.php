@@ -19,68 +19,66 @@
     session_start();
     $nome = $_SESSION['nome'];
 
-    //Redireciona para a página de cadastro caso
+    //Redireciona para a página de cadaslinhao caso
     //este não tenha sido feito
     if (!isset($_SESSION['nome'])) {
-        header(('location:cadastrar.php?erro=1'));
+        header(('location:cadastrar.html?erro=1'));
     }
     echo "<div id='pergunta-voto'>$nome, em quem você irá votar?</div>";
     ?>
 
-    <main id="container">
+    <main>
         <div id="esquerda">
             <div id="fim">
                 <p>FIM</p>
             </div>
-            <div id="infosCandidato">
-                <div id="numCandidato">
+            <div id="infos-candidato">
+                <div>
                     <h5>Número:</h5>
                     <div id="digitos">
-                        <form action="none">
-                            <input size="1" id="numero" value="" maxlength="1" type="text" readonly="readonly" />
-                        </form>
+                        <input size="1" id="numero" value="" maxlength="1" type="text" readonly="readonly" />
                     </div>
                     <div id="infos2">
                         <h5>Nome:</h5>
-                        <div id="nomeCandidato"></div>
+                        <div id="nome-candidato"></div>
                         <h5>Partido:</h5>
                         <div id="partido"></div>
                     </div>
                 </div>
 
             </div>
-            <div id="imgCandidato">
-                <img id="foto" height="180px" src="" alt="" srcset="">
+            <div id="img-candidato">
+                <img id="foto">
             </div>
 
         </div>
         <div id="direita">
             <div id="justica-eleitoral">
-                <img id="tseBrasao" src="../assets/TSE BW.svg" alt="">
+                <img id="tse-logo" src="../assets/TSE BW.svg" alt="">
                 JUSTIÇA<br>ELEITORAL
             </div>
-            <div class="tabela">
-                <div style="justify-content: center;" class="tr">
-                    <button id="botao1" onclick="inserir(1)" class="botao" type="button">1</button>
-                    <button id="botao2" onclick="inserir(2)" class="botao" type="button">2</button>
-                    <button id="botao3" onclick="inserir(3)" class="botao" type="button">3</button>
+            <div id="btns-digitos">
+                <div class="linha">
+                    <button onclick="inserir(1)" class="botao" type="button">1</button>
+                    <button onclick="inserir(2)" class="botao" type="button">2</button>
+                    <button onclick="inserir(3)" class="botao" type="button">3</button>
                 </div>
-                <div class="tr">
+                <div class="linha">
                     <button onclick="inserir(4)" class="botao" type="button">4</button>
                     <button onclick="inserir(5)" class="botao" type="button">5</button>
                     <button onclick="inserir(6)" class="botao" type="button">6</button>
                 </div>
-                <div class="tr">
+                <div class="linha">
                     <button onclick="inserir(7)" class="botao" type="button">7</button>
                     <button onclick="inserir(8)" class="botao" type="button">8</button>
                     <button onclick="inserir(9)" class="botao" type="button">9</button>
                 </div>
-                <div class="tr zero">
+                <div class="linha zero">
                     <button onclick="inserir(0)" class="botao" type="button">0</button>
                 </div>
             </div>
 
-            <div class="tr" id="branco-corrige-confirma">
+            <div class="linha" id="btns-div">
                 <button onclick="corrige()" id="corrige" type="button">CORRIGE</button>
                 <button id="confirma" onclick="votar()" type="button">CONFIRMA</button>
             </div>
