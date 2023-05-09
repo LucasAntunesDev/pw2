@@ -19,10 +19,6 @@
   list-style: none;
 }
 
-body {
-  color: var(--azul);
-}
-
 #header,
 #cpf-rg-div,
 #selects,
@@ -69,6 +65,11 @@ fieldset,
   justify-content: center;
 }
 
+#cpf-rg-div,
+#selects,
+#tel-email,
+#pesquisas-infos,
+#selects,
 .gap-1 {
   gap: 1rem;
 }
@@ -76,28 +77,53 @@ fieldset,
 #header {
   justify-content: space-around;
   align-items: center;
-  background: var(--azul);
-  color: white;
   height: 3.5rem;
+}
+
+#header,
+.div-candiatos {
+  background: var(--azul);
+}
+
+#header,
+header a,
+button,
+.div-candiatos {
+  color: white;
 }
 
 a {
   text-decoration: none;
+}
+
+body,
+a,
+label,
+#pesquisas-infos strong,
+input[type="text"],
+input[type="email"] {
   color: var(--azul);
-  transition: all 0.5s;
 }
 
 a:hover {
-  transition: all 0.5s;
   color: var(--azul2);
 }
 
-header a {
-  color: white;
+header a,
+.div-candiatos span:nth-child(2),
+label,
+#votar-link {
   font-weight: bold;
 }
 
-a:hover {
+a,
+a:hover,
+#header-links a,
+#header-links a:hover,
+.div-candiatos,
+.div-candiatos:hover,
+#logo-header img,
+#logo-header img:hover {
   transition: all 0.5s;
 }
 
@@ -105,7 +131,6 @@ a:hover {
 #selects,
 #tel-email {
   margin-block: 1rem;
-  gap: 1rem;
 }
 
 h1,
@@ -123,10 +148,21 @@ h1 {
 
 button {
   padding: 0.5rem;
-  border-radius: 0.5rem;
   border: none;
   background: var(--verde1);
-  color: white;
+}
+
+button,
+input[type="text"],
+input[type="email"],
+.div-candiatos,
+.mais-infos span:nth-child(1),
+#porcentagem-1,
+#porcentagem-2,
+#porcentagem-3,
+#porcentagem-4,
+.porcentagem {
+  border-radius: 0.5rem;
 }
 
 fieldset {
@@ -146,10 +182,8 @@ input[type="text"],
 input[type="email"] {
   padding: 0.4rem;
   border: none;
-  border-radius: 0.5rem;
   border: solid 1px var(--azul);
   background: none;
-  color: var(--azul);
 }
 
 input[type="text"]::placeholder,
@@ -158,17 +192,11 @@ input[type="email"] ::placeholder {
 }
 
 #header-links a {
-  transition: all 0.5s;
-}
-
-#header-links a {
   padding-bottom: 1.1rem;
 }
 
 #header-links a:hover {
-  transition: all 0.5s;
   color: var(--amarelo500);
-  transition: all 0.5s;
 }
 
 p {
@@ -181,27 +209,19 @@ p {
 
 #pesquisas-infos {
   padding: 2rem;
-  gap: 1rem;
-}
-
-#pesquisas-infos strong {
-  color: var(--azul);
 }
 
 .div-candiatos {
   justify-content: center;
   align-items: center;
-  background: var(--azul);
-  border-radius: 0.5rem;
   width: 20rem;
-  color: white;
-  transition: all 0.5s;
+
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 22%), 0 4px 6px -4px rgb(0 0 0 / 9%);
 }
 
 .div-candiatos:hover {
   background: var(--azul2);
-  transition: all 0.5s;
+
   cursor: pointer;
   box-shadow: 0 10px 15px -3px #64748b, 0 4px 6px -4px rgb(0 0 0 / 9%);
 }
@@ -214,7 +234,6 @@ p {
 .div-candiatos span:nth-child(2) {
   margin-bottom: 1.2rem;
   font-size: x-large;
-  font-weight: bold;
   text-shadow: 2px 3px 3px var(--slate900);
 }
 
@@ -238,26 +257,6 @@ p {
   background-size: contain;
 }
 
-#cd1 {
-  background-image: url(https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222);
-}
-
-#cd2 {
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Paul_McCartney_Headshot_%28cropped%29.jpg/170px-Paul_McCartney_Headshot_%28cropped%29.jpg);
-}
-
-#cd3 {
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4e/George_Harrison_1974_colorized.jpg);
-}
-
-#cd4 {
-  background-image: url(https://media.gq-magazine.co.uk/photos/5f03235bfcb5fd13a37e5c1d/1:1/w_1080,h_1080,c_limit/20200706-ringo-10.jpg);
-}
-
-.none {
-  visibility: hidden;
-}
-
 main {
   justify-content: space-around;
   flex-wrap: wrap;
@@ -267,22 +266,14 @@ main {
   background: var(--verde1);
   padding-inline: 1rem;
   padding-block: 0.5rem;
-  border-radius: 0.5rem;
   margin-block: 1rem;
-}
-
-.mais-infos:hover {
-  cursor: pointer;
-  border-radius: 0.5rem;
 }
 
 #logo-header img {
   height: 2.5rem;
-  transition: all 0.5s;
 }
 
 #logo-header img:hover {
-  transition: all 0.5s;
   scale: 1.1;
 }
 
@@ -290,7 +281,6 @@ main {
   border: solid 1px black;
   height: 1.5rem;
   width: 50vw;
-  border-radius: 0.5rem;
 }
 
 #porcentagem-1,
@@ -301,16 +291,6 @@ main {
   height: 1.4rem;
   width: 0rem;
   transition: all 1s;
-  border-radius: 0.5rem;
-}
-
-label {
-  font-weight: bold;
-  color: var(--azul);
-}
-
-#selects {
-  gap: 1rem;
 }
 
 .swal2-footer a {
@@ -323,7 +303,6 @@ label {
 
 #votar-link {
   margin-top: 2rem;
-  font-weight: bold;
 }
 
 #enviar {
