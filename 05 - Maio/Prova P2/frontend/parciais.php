@@ -62,6 +62,8 @@
         $("#cabecalho").load("cabecalho.html");
     </script>
     <script src="js/candidatos.js"></script>
+    <!-- JS para mostar as parciais de forma dinâmica -->
+    <script src="js/progresso.js"></script>
 </body>
 
 </html>

@@ -37,8 +37,3 @@ const foto3 = $("#foto3");
 foto3.attr("src", "https://upload.wikimedia.org/wikipedia/commons/4/4e/George_Harrison_1974_colorized.jpg");
 const foto4 = $("#foto4");
 foto4.attr("src", "https://media.gq-magazine.co.uk/photos/5f03235bfcb5fd13a37e5c1d/1:1/w_1080,h_1080,c_limit/20200706-ringo-10.jpg");
-
-const info = $(".mais-infos");
-info.click(function(){
-    $("#info1").css("display", "block")
-})

@@ -29,6 +29,7 @@ const validar = () => {
 
  const uf = $("#uf").val();
 
+ //Validação do nome
  if (nome.val().length == "" || nome.val() == null) {
   nome.css("background", "crimson");
   nome.focus();
@@ -45,6 +46,7 @@ const validar = () => {
   return false;
  }
 
+ //Validação do RG
  if (rg.val().length == "" || rg.val() == null) {
   rg.css("background", "crimson");
   Swal.fire({
@@ -67,6 +69,7 @@ const validar = () => {
   return false;
  }
 
+ //Validação do CPF
  if ($("#cpf").val().length == "" || $("#cpf").val() == null) {
   $("#cpf").css("background", "crimson");
   Swal.fire({
@@ -89,6 +92,7 @@ const validar = () => {
   return false;
  }
 
+ //Validação do sexo
  switch (sexo) {
   case masc:
    break;
@@ -104,6 +108,7 @@ const validar = () => {
    return false;
  }
 
+ //Validação da etnia
  switch (etnia) {
   case indigena:
    break;
@@ -121,6 +126,7 @@ const validar = () => {
    return false;
  }
 
+ //Validação da UF
  switch (uf) {
   case "ac":
    break;
@@ -187,6 +193,7 @@ const validar = () => {
    return false;
  }
 
+ //Validação do telefone
  if ($("#tel").val().length == "" || $("#tel").val() == null) {
   $("#tel").css("background", "crimson");
   Swal.fire({
@@ -209,6 +216,7 @@ const validar = () => {
   return false;
  }
 
+ //Validação do email
  if ($("#email").val().length == "" || $("#email").val() == null) {
   $("#email").css("background", "crimson");
   Swal.fire({
@@ -221,6 +229,8 @@ const validar = () => {
   return false;
  }
 
+ //Mensagem mostrada se todos os campos 
+ //forem completos corretamente
  Swal.fire({
   icon: "success",
   title: "Usuário Cadastrado",

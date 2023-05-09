@@ -278,7 +278,7 @@ main {
 }
 
 button.accordion-button {
-  background-color: var(--verde1);
+  background: var(--verde1);
   border-radius: 0.5rem;
   margin-block: 1rem;
 }
@@ -308,25 +308,10 @@ button.accordion-button {
 #porcentagem-2,
 #porcentagem-3,
 #porcentagem-4 {
-  background-color: var(--verde1);
+  background: var(--verde1);
   height: 1.4rem;
-  width: 30vw;
-}
-
-#porcentagem-1 {
-  width: 30vw;
-}
-
-#porcentagem-2 {
-  width: 25vw;
-}
-
-#porcentagem-3 {
-  width: 4vw;
-}
-
-#porcentagem-4 {
-  width: 2vw;
+  width: 0rem;
+  transition: all 1s;
 }
 
 label {
@@ -363,7 +348,7 @@ label {
 }
 
 #enviar {
-  width: -webkit-fill-available;
+  width: 10rem;
   box-shadow: 0 10px 15px -3px #04745123, 0 4px 6px -4px #04745123;
 }
 

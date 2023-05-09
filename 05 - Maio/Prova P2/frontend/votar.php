@@ -19,7 +19,7 @@
     session_start();
     $nome = $_SESSION['nome'];
 
-    //Redireciona para a página de cadaslinhao caso
+    //Redireciona para a página de cadatro caso
     //este não tenha sido feito
     if (!isset($_SESSION['nome'])) {
         header(('location:cadastrar.html?erro=1'));
@@ -91,7 +91,7 @@
     <script>
         $("#cabecalho").load("cabecalho.html");
     </script>
-    <script src="js/script.js"></script>
+    <script src="js/votar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
