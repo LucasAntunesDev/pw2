@@ -57,20 +57,34 @@ body {
 
 a {
  text-decoration: none;
+ color: var(--azul);
+ transition: all 0.5s;
+}
+
+a:hover{
+  transition: all 0.5s;
+  color: var(--azul2);
 }
 
 header a {
  color: white;
+ font-weight: bold;
 }
 
-a{
-  color: var(--azul);
+a:hover{
+  transition: all 0.5s;
 }
 
 #cpf-rg-div,
 #selects,
 #tel-email {
  margin-block: 1rem;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ gap: 1rem;
+
 }
 
 h1,
@@ -92,13 +106,14 @@ button {
  border: none;
  background: var(--verde1);
  color: white;
- box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+ box-shadow: 0 10px 15px -3px #04745123, 0 4px 6px -4px #04745123;
+ width: -webkit-fill-available;
 }
 
 button:hover {
  cursor: pointer;
  background: var(--verdeDark);
- box-shadow: 0 10px 15px -3px #0596683d, 0 4px 6px -4px #0596683d;
+ box-shadow: 0 10px 15px -3px #05966862, 0 4px 6px -4px #0596683d;
 }
 
 fieldset {
@@ -131,7 +146,7 @@ input[type="email"] ::placeholder{
 }
 
 #header-links a {
- transition: all 0.1s;
+ transition: all 0.5s;
 }
 
 #header-links a {
@@ -140,9 +155,9 @@ input[type="email"] ::placeholder{
 
 #header-links a:hover {
  /* font-weight: bold; */
- transition: all 0.1s;
+ transition: all 0.5s;
  color: var(--amarelo500);
- transition: all 0.1s;
+ transition: all 0.5s;
 
  /* text-decoration: underline 'yellow; */
 }
@@ -205,12 +220,13 @@ p {
 
 .candidato-foto {
  margin-block: 1.5rem;
- height: 15rem;
- width: 15rem;
- background: none;
- background-repeat: no-repeat;
- background-position-x: center;
- border-radius: 0.5rem;
+ height: 20.5rem;
+ width: 20rem;
+ /* background: none; */
+ /* background-repeat: no-repeat; */
+ /* background-position-x: center; */
+ /* border-radius: 0.5rem; */
+ background-size: 4px;
 }
 
 #cd1,
@@ -300,11 +316,11 @@ button.accordion-button {
 
 #logo-header img {
  height: 2.5rem;
- transition: all 0.1s;
+ transition: all 0.5s;
 }
 
 #logo-header img:hover {
- transition: all 0.1s;
+ transition: all 0.5s;
  scale: 1.1;
 }
 
@@ -370,8 +386,4 @@ label{
 #votar-link{
   margin-top: 2rem;
   font-weight: bold;
-}
-
-#votar-link:hover{
-  color: var(--azul2);
 }

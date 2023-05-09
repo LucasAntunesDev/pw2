@@ -8,7 +8,8 @@
     <title>Cadastro</title>
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="select2.min.css">
-    <link rel="shortcut icon" href="https://www.tse.jus.br/++theme++justica_eleitoral/imagens/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.tse.jus.br/++theme++justica_eleitoral/imagens/favicon.ico"
+        type="image/x-icon">
 </head>
 
 <body>
@@ -22,22 +23,28 @@
         <fieldset>
             <div id="cpf-rg-div">
                 <!-- Nome Completo -->
-                <label for="nome">
-                    Nome:
+                <div class="flex-col">
+                    <label for="nome">
+                        Nome
+                    </label>
                     <input type="text" name="nome" id="nome" placeholder="Digite o seu nome">
-                </label>
+                </div>
 
                 <!-- RG -->
-                <label for="rg">
-                    RG:
+                <div class="flex-col">
+                    <label for="rg">
+                        RG
+                    </label>
                     <input type="text" name="rg" id="rg" maxlength="14" placeholder="Digite o seu RG">
-                </label>
+                </div>
                 <!-- CPF -->
-                <label for="cpf">
-                    CPF:
-                    <input type="text" name="cpf" id="cpf" maxlength="14" placeholder="Ex.: 025.743.450-66">
+                <div class="flex-col">
+                    <label for="cpf">
+                        CPF
+                    </label>
 
-                </label>
+                    <input type="text" name="cpf" id="cpf" maxlength="14" placeholder="Ex.: 025.743.450-66">
+                </div>
 
             </div>
 
@@ -46,23 +53,23 @@
                 <!-- Sexo -->
                 <div class="div-select">
                     <label for="sexo">
-                        Sexo:
+                        Sexo
                     </label>
                     <select name="sexo" id="sexo">
-                    <option value="-1"></option>
-                    <option name="masc" value="masc" id="masc">Maculino</option>
-                    <option name="fem" value="fem" id="fem">Feminino</option>
-                </select>
+                        <option value="-1"></option>
+                        <option name="masc" value="masc" id="masc">Maculino</option>
+                        <option name="fem" value="fem" id="fem">Feminino</option>
+                    </select>
 
                 </div>
-                
+
                 <!-- Etnia -->
                 <div class="div-select">
                     <label for="etnia">
                         Etnia
                     </label>
                     <select name="etnia" id="etnia">
-                    <option value="-1"></option>
+                        <option value="-1"></option>
                         <option name="indigena" value="indigena" id="indigena">Indígena</option>
                         <option name="negro" value="negro" id="negro">Negro</option>
                         <option name="branco" value="branco" id="branco">Branco</option>
@@ -76,7 +83,7 @@
                         UF:
                     </label>
                     <select name="uf" id="uf">
-                    <option value="-1"></option>
+                        <option value="-1"></option>
                         <option value="ac" id="ac">Acre</option>
                         <option value="al" id="al">Alagoas</option>
                         <option value="ap" id="ap">Amapá</option>
@@ -97,7 +104,7 @@
                         <option value="pi" id="pi">Piauí</option>
                         <option name="rj id=" rj" value="rj" id="rj">Rio de Janeiro</option>
                         <option value="rn" id="rn">Rio Grande do Norte</option>
-                        <option name="rs" value="rs" id="rs">Rio Grande do Sul</option>
+                        <option name="rs" value="rs" id="rs">Rio Grande do Sul </option>
                         <option value="ro id=" ro">Rondônia</option>
                         <option value="rr id=" rr">Roraima</option>
                         <option value="sc id=" sc">Santa Catarina</option>
@@ -111,20 +118,28 @@
             </div>
 
             <div id="tel-email">
-                <!-- Telefone -->
-                <label for="tel">
-                    Telefone:
-                    <input type="text" name="tel" id="tel" placeholder="EX.: 99431746">
-                </label>
-                <!-- Email -->
-                <label for="email">
-                    Email:
-                    <input type="email" name="email" id="email" placeholder="EX.: fulano@gmail.com">
-                </label>
+                <div class="flex-col">
+                    <!-- Telefone -->
+                    <label for="tel">
+                        Telefone
+                        <input type="text" name="tel" id="tel" placeholder="EX.: 99431746">
+                    </label>
+                </div>
+
+                <div class="flex-col">
+                    <!-- Email -->
+                    <label for="email">
+                        Email
+                        <input type="email" name="email" id="email" placeholder="EX.: fulano@gmail.com">
+                    </label>
+                </div>
+
             </div>
+
+            <button type="submit">Enviar</button>
+
         </fieldset>
 
-        <button type="submit">Enviar</button>
     </form>
 
     <script src="js/jquery.js"></script>
