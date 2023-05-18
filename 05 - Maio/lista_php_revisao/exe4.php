@@ -15,7 +15,6 @@ $ginastas[3]["pais"] = "Romênia";
 $nomes = [];
 $notas = [];
 $acima_de_13 = [[]];
-$nota_mais_alta = '';
 
 foreach ($ginastas as $index) {
     if (array_key_exists('nome', $index)) array_push($nomes, $index['nome']);
@@ -41,12 +40,17 @@ foreach ($notas as $nota) {
     echo "<br>";
 }
 
+$maior_nota = sort($acima_de_13);
+
 echo "<br>";
 echo "<b>Atletas com nota acima de 13:</b> <br>";
 foreach ($acima_de_13 as $nome) {
     echo "- $nome";
     echo "<br>";
 }
+
+echo "<br>";
+echo "<b>Atletas com a maior nota:</b> <br> $maior_nota[2]";
 
 
 
