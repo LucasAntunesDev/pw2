@@ -2,8 +2,6 @@
 date_default_timezone_set('America/Sao_Paulo');
 $hora = date("H");
 
-var_dump($hora);
-
 $dia = $hora > "06" && $hora <= "12";
 $tarde = $hora > "12" && $hora <= "18";
 
