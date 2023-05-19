@@ -71,16 +71,17 @@ const validar = () => {
 
  //Validação do CPF
  if ($("#cpf").val().length == "" || $("#cpf").val() == null) {
-  $("#cpf").css("background", "crimson");
+  cpf.css("background", "crimson");
   Swal.fire({
    icon: "error",
    title: "Oops...",
    text: "O campo CPF está vazio!",
    confirmButtonColor: "#059669",
   });
-  $("#cpf").focus();
+  cpf.focus();
   return false;
- } else if ($("#cpf").val().length < 14) {
+ } 
+ else if ($("#cpf").val().length < 14) {
   $("#cpf").css("background", "crimson");
   Swal.fire({
    icon: "error",
