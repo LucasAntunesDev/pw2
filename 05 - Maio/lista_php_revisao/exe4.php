@@ -14,48 +14,33 @@ $ginastas[3]["pais"] = "Romênia";
 
 $nomes = [];
 $notas = [];
-$acima_de_13 = [[]];
 
 foreach ($ginastas as $index) {
-    if (array_key_exists('nome', $index)) array_push($nomes, $index['nome']);
-    if (array_key_exists('nota', $index)) array_push($notas, $index['nota']);
+    array_push($nomes, $index['nome']);
+    array_push($notas, $index['nota']);
 }
 
-echo "<b>Nomes:</b> <br>";
-foreach ($nomes as $nome) {
-    echo "- $nome";
-    echo "<br>";
-}
+$maior_nota = max($notas);
 
-echo "<br>";
-echo "<b>Notas:</b> <br>";
-foreach ($notas as $nota) {
-    for($i = 0; $i <= 2; $i++){
-        if($nota > 13) {
-            $acima_de_13[$i] = $nomes[$i];
-        }
+echo "<h1>Ginastas:</h1>";
+foreach ($nomes as $nome) echo "<li>$nome</li>";
+
+
+echo "<h1>Média das notas:</h1>";
+$soma = 0;
+foreach ($notas as $nota) $soma += $nota;
+echo round($soma / sizeof($notas), 2) . '<br/>';
+
+echo "<h1>Atletas com nota acima de 13:</h1>";
+foreach ($ginastas as $valor) {
+    if ($valor['nota'] > 13) {
+        echo '<li>' . $valor['nome'] . '</li>';
     }
 
-    echo "- $nota";
-    echo "<br>";
-}
+    if ($valor['nota'] === $maior_nota) {
+        $atleta_maior_nota = $valor['nome'];
+    }
+};
 
-$maior_nota = sort($acima_de_13);
-
-echo "<br>";
-echo "<b>Atletas com nota acima de 13:</b> <br>";
-foreach ($acima_de_13 as $nome) {
-    echo "- $nome";
-    echo "<br>";
-}
-
-echo "<br>";
-echo "<b>Atletas com a maior nota:</b> <br> $maior_nota[2]";
-
-
-
-// print_r($ginastas[0]);
-// print_r($nomes);
-// echo "</pre>";
-
-print_r($notas);
+echo "<h1>Ginasta com a maior nota:</h1>";
+echo $atleta_maior_nota;
