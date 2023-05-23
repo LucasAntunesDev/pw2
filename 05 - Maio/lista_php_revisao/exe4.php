@@ -15,9 +15,9 @@ $ginastas[3]["pais"] = "Romênia";
 $nomes = [];
 $notas = [];
 
-foreach ($ginastas as $index) {
-    array_push($nomes, $index['nome']);
-    array_push($notas, $index['nota']);
+foreach ($ginastas as $ginasta) {
+    array_push($nomes, $ginasta['nome']);
+    array_push($notas, $ginasta['nota']);
 }
 
 $maior_nota = max($notas);
