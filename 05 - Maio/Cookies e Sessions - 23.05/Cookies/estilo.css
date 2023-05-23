@@ -1,0 +1,29 @@
+body {
+  background: white;
+  color: black;
+  font-family: monospace;
+  text-align: center;
+  font-size: xx-large;
+}
+
+body.dark{
+    background: #0f172a;
+    color: #0ea5e9;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(70, 70, 70);
+}
+
+body.dark a{
+    color: #0ea5e9;
+}
+
+body.dark a:hover{
+    color: #7dd3fc;
+}
