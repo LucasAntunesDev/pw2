@@ -11,18 +11,17 @@ function delta ($a, $b, $c){
 }
 
 function bhaskara ($a,$b,$c){
-    if (delta ($a, $b, $c) < 0) {
-        return "Não existem raízes reais";
-    }
+    if (delta ($a, $b, $c) < 0) 
+    {return "Não existem raízes reais";}
+
     else if (delta ($a, $b, $c) > 0){
         $x1 = ((-$b) + sqrt(delta($a, $b, $c)))/2;
         $x2 = ((-$b) - sqrt(delta($a, $b, $c)))/2;
 
         return "X' = $x1;   X'' = $x2";
     }
-    else{
-        return ((-$b) + sqrt(delta($a, $b, $c)))/2;
-    }
+
+    else {return ((-$b) + sqrt(delta($a, $b, $c)))/2;}
 
 }
 

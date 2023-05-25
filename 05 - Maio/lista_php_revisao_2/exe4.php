@@ -23,12 +23,14 @@ foreach ($funcionarios as $valor) {
 
 #Tabela
 echo "<table border='1'>";
+echo "<tr>";
 echo "<th>Nome</th>";
 echo "<th>Salário</th>";
+echo "</tr>";
 
-foreach ($funcionarios as $index) {
+foreach ($funcionarios as $valor) {
     echo "<tr>";
-    foreach ($index as $item) echo "<td>$item</td>";
+    foreach ($valor as $item) echo "<td>$item</td>";
     echo "</tr>";
 }
 echo "</table>
@@ -39,15 +41,15 @@ $soma = 0;
 foreach ($salarios as $salario) {
     $soma += $salario;
 }
-echo "- A média dos salários é: <b>".
+echo "<h1> A média dos salários é: <b></h1>".
 round(($soma/sizeof($salarios)),2).
 "</b><br>";
 
 #Soma dos salários
-echo "- A soma dos salários é: <b>$soma</b><br>";
+echo "<h1> A soma dos salários é:</h1> <b>$soma</b>";
 
 
-echo "- Funcionários com salários maiores ou iguais a R$2000,00:<br>"; 
+echo "<h1> Funcionários com salários maiores ou iguais a R$2000,00:</h1>"; 
 foreach ($salarios_maiores_iguais_2000 as $nome) {
     echo "<li>$nome</li>";
 }
