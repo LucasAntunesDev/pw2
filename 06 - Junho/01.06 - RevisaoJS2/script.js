@@ -5,7 +5,7 @@ const conteudo = document.querySelector(".conteudo");
 const html = document.querySelector("html");
 
 btn.addEventListener("click", () => {
-  titulo.setAttribute("class", "titulo");
+  titulo.classList.add("titulo");
   titulo.innerHTML = "Hello World!";
   alert(html.getAttribute("lang"));
 });
@@ -13,13 +13,11 @@ btn.addEventListener("click", () => {
 btn2.addEventListener("click", () => {
   titulo.classList.remove("titulo");
 
-  const p = document.createElement('p');
-  p.innerHTML = 'parágrafo'
+  const p = document.createElement("p");
+  p.innerHTML = "Lucas";
   conteudo.appendChild(p);
-
-  console.log(p.name);
 });
 
 btn2.addEventListener("mouseover", () => {
-    btn2.setAttribute('class', 'blue')
-})
+  btn2.classList.add("text-sky-500");
+});
