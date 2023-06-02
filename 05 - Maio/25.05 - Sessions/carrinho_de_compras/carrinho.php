@@ -44,7 +44,7 @@
             foreach ($_SESSION['carrinho'] as $item) {
                 echo "<li class='text-[crimson] font-bold text-center'>$item</li>";
             }
-        } else echo "<li class='text-xl hover:cursor-pointer hover:text-[crimson]'>O carrinho está vazio!</li>";
+        } else echo "<li class='text-[crimson] font-bold text-center'>O carrinho está vazio!</li>";
         ?>
     </ul>
 
