@@ -46,10 +46,10 @@
             alt="Camisa Inter Home 2023">
 
             <p class="text-xl hover:cursor-pointer hover:text-red-200 dark:hover:text-[crimson]">
-
                 Camisa Inter Home 2023
-
             </p>
+            <p>R$ 350,00</p>
+
             <a href="adicionar.php?id=2" class="text-emerald-500">
                 <i class="fa-solid fa-plus hover:text-emerald-200 font-mono font-xl">
                     Adicionar ao carrinho
@@ -65,10 +65,10 @@
             alt="Camisa Inter Away 2023">
 
             <p class="text-xl hover:cursor-pointer hover:text-red-200 dark:hover:text-[crimson]">
-
                 Camisa Inter Away 2023
-
             </p>
+            <p>R$ 350,00</p>
+
             <a href="adicionar.php?id=3" class="text-emerald-500">
                 <i class="fa-solid fa-plus hover:text-emerald-200 font-mono font-xl">
                     Adicionar ao carrinho
@@ -83,10 +83,10 @@
             alt="Camisa Inter Third 2022">
 
             <p class="text-xl hover:cursor-pointer hover:text-red-200 dark:hover:text-[crimson]">
-
                 Camisa Inter Third 2022
-
             </p>
+            <p>R$ 300,00</p>
+
             <a href="adicionar.php?id=1" class="text-emerald-500">
                 <i class="fa-solid fa-plus hover:text-emerald-200 font-mono font-xl">
                     Adicionar ao carrinho
