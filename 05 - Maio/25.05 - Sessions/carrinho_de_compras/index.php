@@ -39,7 +39,7 @@
 
 
         <div class="flex flex-col justify-center items-center bg-[crimson] dark:bg-neutral-800 rounded-md
-        p-4 h-72 text-[crimson] font-bold text-white hover:scale-105 hover:cursor-pointer hover:bg-red-700
+        p-4 h-80 text-[crimson] font-bold text-white hover:scale-105 hover:cursor-pointer hover:bg-red-700
         dark:hover:bg-neutral-600 duration-100 shadow-md shadow-red-200 hover:shadow-xl dark:shadow-black">
             <img class="h-52 rounded-md" 
             src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/24339c14f74248a7a356afb0017c8c7f_9366/Camisa_1_SC_Internacional_23-24_Vermelho_HT7309_01_laydown.jpg" 
@@ -58,7 +58,7 @@
         </div>
 
         <div class="flex flex-col justify-center items-center bg-[crimson] dark:bg-neutral-800 rounded-md
-        p-4 h-72 text-[crimson] font-bold text-white hover:scale-105 hover:cursor-pointer hover:bg-red-700
+        p-4 h-80 text-[crimson] font-bold text-white hover:scale-105 hover:cursor-pointer hover:bg-red-700
         dark:hover:bg-neutral-600 duration-100 shadow-md shadow-red-200 hover:shadow-xl dark:shadow-black">
             <img class="h-52 rounded-md" 
             src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1c8f7bd609eb45eb8f56d18578e96fb6_9366/Camisa_2_Internacional_23-24_Branco_HS5334_01_laydown.jpg" 
@@ -76,7 +76,7 @@
             </a>
         </div>
         <div class="flex flex-col justify-center items-center bg-[crimson] dark:bg-neutral-800 rounded-md
-        p-4 h-72 text-[crimson] font-bold text-white hover:scale-105 hover:cursor-pointer hover:bg-red-700
+        p-4 h-80 text-[crimson] font-bold text-white hover:scale-105 hover:cursor-pointer hover:bg-red-700
         dark:hover:bg-neutral-600 duration-100 shadow-md shadow-red-200 hover:shadow-xl dark:shadow-black">
             <img class="h-52 rounded-md" 
             src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/868f091a7d61417fbfaeaeec002a5345_9366/Camisa_3_Internacional_22-23_Preto_HD3805_01_laydown.jpg" 
