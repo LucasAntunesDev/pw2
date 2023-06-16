@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 2</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
 
-    <form action="">
+    <form action="" onsubmit="return validar()">
         <label for="nome">
             Nome*
-            <input type="text" name="cpf" id="nome">
+            <input type="text" name="nome" id="nome">
         </label>
 
         <label for="cpf">
@@ -22,9 +23,10 @@
         </label>
         <label for="senha">
             Senha*
-            <input type="text" name="senha" id="senha">
-        
+            <input type="password" name="senha" id="senha">
         </label>
+        
+        <button type="submit">Enviar</button>
     </form>
 
 </body>
