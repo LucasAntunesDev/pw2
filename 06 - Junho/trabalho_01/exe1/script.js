@@ -1,11 +1,15 @@
 const form = document.getElementById('form')
 const btn = document.getElementById('btn')
-
+let cpf = document.getElementById('cpf')
+cpf.addEventListener('focus', () =>{
+    setInterval(() => document.querySelector('#span').setAttribute('id', 'show'), 100)
+})
 const validar = () => {
     const nome = document.getElementById('nome')
     const cpf = document.getElementById('cpf')
     const login = document.getElementById('login')
     const senha = document.getElementById('senha')
+
 
     if (nome.value.length <= 3) {
         alert('Você precisa digitar pelo menos três caracteres')
@@ -49,6 +53,5 @@ const validar = () => {
 
     return true
 }
-
 // form.addEventListener('submit', validar)
 // btn.addEventListener('click', validar)
