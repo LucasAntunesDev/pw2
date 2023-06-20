@@ -30,7 +30,7 @@ label>input:hover, label>input:focus{
     cursor: pointer;
 }
 
-.erro, .erro>input{
+.erro{
     border-color: crimson;
     color: crimson;
 }
@@ -47,4 +47,20 @@ button{
 button:hover{
     background: #047857;
     cursor: pointer;
+}
+
+h1{
+    text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    body{
+        background: rgb(25,25,25);
+        color: white;
+    }
+    label>input{
+        background: none;
+        color: white;
+        border-color: gray;
+    }
 }
