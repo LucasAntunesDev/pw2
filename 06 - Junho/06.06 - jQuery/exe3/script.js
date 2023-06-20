@@ -1,16 +1,18 @@
-// const validar = () => {
-    const nomeInput = $('#nome')
-    let nome = nomeInput.val()
-    const nomeLabel = $('#nomeLabel')
+//Não usei jQuery em alguns trechos porque com ele não funcionava, apenas
+//com JS vanilla
+const mudarNome = () =>{
+    document.getElementById('nomeLabel').innerHTML = 'aa'
+}
 
-    // if(nomeInput.val().length >= 3) {
-        console.log(nomeLabel.innerHTML)
-        nomeInput.focus(function () {
-            nomeLabel.HTML()  = nomeInput.val()
-            // alert('oi')
-        })
-    // }
-
-    // nomeLabel.innerHTML = ''
-    // return false
-// }
+$('#nome').focus(function() {
+    if($('#nome').val().length > 2){
+        document.getElementById('nomeLabel').innerHTML = document.getElementById('nome').value
+    }else{
+        // document.getElementById('nomeLabel').innerHTML = ''
+    }
+})
+$('#nome').focusout(function() {
+    if($('#nome').val().length > 2){
+        document.getElementById('nomeLabel').innerHTML = 'Nome'
+    }
+})

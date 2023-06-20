@@ -1,4 +1,4 @@
 const btn = $("#btn");
 btn.click(function() {
-    btn.hasClass("ativo") ? btn.removeClass("ativo") : btn.addClass("ativo");
+    btn.hasClass("active") ? btn.removeClass("active") : btn.addClass("active");
 })
