@@ -1,0 +1,9 @@
+#show{
+    transition: all 5s;
+    display: block;
+}
+/* 
+#cpf:focus-within{
+    display: block;
+    color: red;
+} */
