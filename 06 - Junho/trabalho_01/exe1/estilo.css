@@ -106,6 +106,39 @@ div>a{
     justify-content: center;
 }
 
+.fadeIn, .fadeOut {
+    opacity: 1;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+}
+
+.fadeIn{
+    animation-name: fadeInOpacity;
+}
+
+.fadeOut{
+    animation-name: fadeOutOpacity;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutOpacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
  body {
   background: var(--preto);

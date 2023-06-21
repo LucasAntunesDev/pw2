@@ -5,7 +5,9 @@ const span = document.querySelector('#span')
 
 cpf.addEventListener('focus', () => {
     span.setAttribute('id', 'show')
-    span.fadeIn()
+    span.removeAttribute('class', 'fadeOut')
+    span.setAttribute('class', 'fadeIn')
+    // span.fadeIn()
     // 'setTimeout(() => {
     //     span.setAttribute('id', 'show')
     //     // span.style.display = 'block'
@@ -15,6 +17,8 @@ cpf.addEventListener('focus', () => {
 cpf.addEventListener('focusout', () => {
     setTimeout(() => {
         span.removeAttribute('id', 'show')
+        span.removeAttribute('class', 'fadeIn')
+        span.setAttribute('class', 'fadeOut')
     }, 1000)
 })
 const validar = () => {
