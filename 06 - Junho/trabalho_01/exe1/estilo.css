@@ -1,9 +1,143 @@
-#show{
-    transition: all 5s;
-    display: block;
+:root {
+ --preto: #171717;
+ --verde0: #86efac;
+ --verde1: #059669;
+ --verde2: #047857;
+ --verde3: #065f46;
+ font-family: monospace;
 }
-/* 
-#cpf:focus-within{
-    display: block;
-    color: red;
-} */
+
+#show {
+ transition: display 5s;
+ display: block;
+}
+
+.input:nth-child(2) {
+ /* background: red; */
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+span{
+    margin-top: 1rem;
+    transition: display 2s;
+}
+
+h1 {
+ color: var(--verde1);
+ text-align: center;
+ font-size: 4rem;
+}
+
+div > form {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 0.5rem;
+}
+
+button {
+ background: var(--verde1);
+ border: none;
+ border-radius: 0.5rem;
+ padding: 0.5rem;
+ outline: none;
+ transition: background 1s;
+ color: white;
+}
+
+button:hover{
+    background: var(--verde3);
+}
+
+button:hover {
+ /* background: var(--verde3); */
+ cursor: pointer;
+}
+
+button:focus {
+ outline: 2px solid var(--verde0);
+}
+
+input[type="text"],
+input[type="password"] {
+ border: none;
+ border-radius: 0.5rem;
+ height: 1.5rem;
+ padding: 0.4rem;
+ border: solid 1px #404040;
+ color: #404040;
+ box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+input[type="text"]:hover,
+ input[type="text"]:focus,
+ input[type="password"]:hover,
+  input[type="password"]:focus {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  cursor: pointer;
+ }
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+    border: solid 2px;
+    border-color:var(--verde1) ;
+}
+
+ul{
+    list-style: none;
+    text-align: center;
+}
+
+a{
+    color: var(--verde1);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+div>a{
+    display: flex;
+    justify-content: center;
+}
+
+@media (prefers-color-scheme: dark) {
+ body {
+  background: var(--preto);
+  color: white;
+ }
+
+ button {
+  color: white;
+ }
+
+ button:hover {
+  background: var(--verde2);
+ }
+
+ input[type="text"],
+ input[type="password"] {
+  background: none;
+  color: white;
+  border: solid 1px #404040;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+ }
+
+ input[type="text"]:hover,
+ input[type="text"]:focus,
+ input[type="password"]:hover,
+  input[type="password"]:focus {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  cursor: pointer;
+ }
+
+ input[type="text"]::placeholder,
+ input[type="password"]::placeholder {
+  color: #919191;
+ }
+}

@@ -4,7 +4,7 @@ $cpf = $_GET['cpf'];
 $login = $_GET['login'];
 $senha = $_GET['senha'];
 
-
+echo "<link rel='stylesheet' href='estilo.css' />";
 echo "<ul>
         <li>$nome</li>  
         <li>$senha</li>  
@@ -13,4 +13,6 @@ echo "<ul>
       </ul>
 ";
 
-echo "<a href='index.html'>Voltar</a>";
+echo "<div>
+  <a href='index.html'>Voltar</a>
+</div";

@@ -1,8 +1,21 @@
 const form = document.getElementById('form')
 const btn = document.getElementById('btn')
 let cpf = document.getElementById('cpf')
-cpf.addEventListener('focus', () =>{
-    setInterval(() => document.querySelector('#span').setAttribute('id', 'show'), 100)
+const span = document.querySelector('#span')
+
+cpf.addEventListener('focus', () => {
+    span.setAttribute('id', 'show')
+    span.fadeIn()
+    // 'setTimeout(() => {
+    //     span.setAttribute('id', 'show')
+    //     // span.style.display = 'block'
+    // }, 1000)'
+})
+
+cpf.addEventListener('focusout', () => {
+    setTimeout(() => {
+        span.removeAttribute('id', 'show')
+    }, 1000)
 })
 const validar = () => {
     const nome = document.getElementById('nome')
@@ -53,5 +66,3 @@ const validar = () => {
 
     return true
 }
-// form.addEventListener('submit', validar)
-// btn.addEventListener('click', validar)
