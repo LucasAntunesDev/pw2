@@ -139,6 +139,12 @@ div>a{
     }
 }
 
+.error {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+}
+
 @media (prefers-color-scheme: dark) {
  body {
   background: var(--preto);
