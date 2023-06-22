@@ -6,29 +6,39 @@ const validar = () => {
     const login = $('#login');
     const senha = $('#senha');
 
-    const erros = [];
-
     if (nome.val().length <= 3) {
-        erros.push('Você precisa digitar pelo menos três caracteres no nome');
+        $("#erro1").removeClass('hide')
+        $("#erro1").addClass('show')
+    }else{
+        $("#erro1").removeClass('show')
+        $("#erro1").addClass('hide')
     }
 
     if (typeof cpf.val() !== 'number' && cpf.val().length !== 11) {
-        erros.push('Você precisa digitar onze caracteres no cpf');
+        $("#erro2").removeClass('hide')
+        $("#erro2").addClass('show')
+    }else{
+        $("#erro2").removeClass('show')
+        $("#erro2").addClass('hide')
     }
 
     if (login.val().length <= 3) {
-        erros.push('Você precisa digitar pelo menos três caracteres no login');
+        $("#erro3").removeClass('hide')
+        $("#erro3").addClass('show')
+    }else{
+        $("#erro3").removeClass('show')
+        $("#erro3").addClass('hide')
     }
 
     if (senha.val().length <= 8) {
-        erros.push('Você precisa digitar pelo menos oito caracteres na senha');
+        $("#erro4").removeClass('hide')
+        $("#erro4").addClass('show')
+    }else{
+        $("#erro4").removeClass('show')
+        $("#erro4").addClass('hide')
     }
 
-    const ul = $('#lista');
-    erros.forEach(texto => {
-        const li = $('<li></li>').html(texto);
-        ul.append(li);
-    });
+    $('#textoErros').css('display', 'block')
 
     return false;
 }

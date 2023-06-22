@@ -7,8 +7,7 @@
  font-family: monospace;
 }
 
-#show {
- transition: display 5s;
+.show {
  display: block;
 }
 
@@ -133,6 +132,25 @@ div>a{
     display: flex;
     flex-direction: column;
     width: min-content;
+}
+
+#textoErros{
+    display: none;
+}
+
+div>#lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#lista{
+    list-style: upper-roman;
+    text-align: left;
+}
+
+.hide{
+    display: none;
 }
 
 @media (prefers-color-scheme: dark) {
