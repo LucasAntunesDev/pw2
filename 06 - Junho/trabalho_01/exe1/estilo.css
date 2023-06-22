@@ -22,13 +22,18 @@
 
 span{
     margin-top: 1rem;
-    transition: display 2s;
+    /* transition: display 2s; */
+    transition: display 3s ease-in;
 }
 
 h1 {
  color: var(--verde1);
  text-align: center;
  font-size: 4rem;
+}
+
+h2{
+    text-align: center;
 }
 
 div > form {
@@ -54,12 +59,12 @@ button:hover{
 }
 
 button:hover {
- /* background: var(--verde3); */
  cursor: pointer;
 }
 
-button:focus {
+button:is(:hover,:focus) {
  outline: 2px solid var(--verde0);
+ outline-offset: 3px;
 }
 
 input[type="text"],
@@ -111,11 +116,10 @@ div>a{
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 0.5s;
-}
-
-.fadeIn{
     animation-name: fadeInOpacity;
 }
+
+
 
 .fadeOut{
     opacity: 0;
@@ -123,58 +127,6 @@ div>a{
     animation-name: fadeOutOpacity;
     animation-timing-function: ease-out;
     animation-duration: 0.5s;
-}
-
-input:focus~span{
-    display: block;
-
-    opacity: 1;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 0.5s;
-    animation-name: fadeInOpacity;
-
-    transition: display 2s;
-}
-
-input ~ span{
-    display: none;
-}
-/* inputy~span{
-    
-    opacity: 0;
-    animation-iteration-count: 1;
-    animation-name: fadeOutOpacity;
-    animation-timing-function: ease;
-    animation-duration: 0.5s;
-
-
-    display: none;
-    transition: display 2s;
-    background: red;
-} */
-
-@keyframes fadeInOpacity {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOutOpacity {
-    0% {
-        opacity: 1;
-    }
-
-    /* 50%{
-        opacity: 0.5;
-    } */
-
-    100% {
-        opacity: 0;
-    }
 }
 
 .error {

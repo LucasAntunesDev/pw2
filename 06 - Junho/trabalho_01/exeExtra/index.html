@@ -1,70 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Início</title>
-  <link rel="stylesheet" href="estilo.css" />
- </head>
 
- <body>
-  <form id="form" action="#" onsubmit="return validar()">
-   <div class="input">
-    <label for="nome"></label>
-    <input type="text" name="nome" id="nome" placeholder="Digite o nome" />
-   </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Início</title>
+    <link rel="stylesheet" href="../exe1/estilo.css" />
+</head>
 
-   <div class="input">
-    <label for="cpf"></label>
-    <input type="text" name="cpf" id="cpf" placeholder="Digite o CPF" />
-    <span
-     >Desconsiderar a pontuação do CPF, preenchendo apenas com números</span
-    >
-   </div>
+<body>
 
-   <div class="input">
-    <label for="login"></label>
-    <input type="text" name="login" id="login" placeholder="Digite o login" />
-   </div>
+    <h1>Login</h1>
 
-   <div class="input">
-    <label for="senha"></label>
-    <input
-     type="password"
-     name="senha"
-     id="senha"
-     placeholder="Digite a senha"
-    />
-   </div>
+    <div>
+        <form id="form" action="pagina.php" onsubmit="return validar()">
+            <div class="input">
+                <label for="nome"></label>
+                <input type="text" name="nome" id="nome" placeholder="Digite o nome" />
+            </div>
 
-   <button type="submit" id="btn">Enviar</button>
+            <div class="input">
+                <label for="cpf"></label>
+                <input type="text" name="cpf" id="cpf" placeholder="Digite o CPF" />
+                <span id="span">Desconsiderar a pontuação do CPF, preenchendo apenas com números</span>
+            </div>
 
-   <div>
-    <header id="header">
-     Não foi possível enviar! Alguns problemas foram encontrados:
-     <ul id="lista"></ul>
-    </header>
-   </div>
-  </form>
- </body>
+            <div class="input">
+                <label for="login"></label>
+                <input type="text" name="login" id="login" placeholder="Digite o login" />
+            </div>
 
- <script src="script.js"></script>
+            <div class="input">
+                <label for="senha"></label>
+                <input type="password" name="senha" id="senha" placeholder="Digite a senha" />
+            </div>
 
- <style>
-  .input {
-   margin-bottom: 10px;
-  }
+            <button type="submit" id="btn">Enviar</button>
+        </form>
 
-  .input span {
-   display: none;
-  }
 
-  .error input {
-   border: 3px solid #ff0000;
-  }
+        <div>
+            <h2>
+                Não foi possível enviar! Alguns problemas foram encontrados:
+            </h2>
+            <ul id="lista"></ul>
+        </div>
+        </form>
+    </div>
+</body>
 
-  .error {
-   color: #ff0000;
-  }
- </style>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+<script src="script.js"></script>
+
+<style>
+    .input {
+        margin-bottom: 10px;
+    }
+
+    .input span {
+        display: none;
+    }
+
+    .error input {
+        border: 3px solid #ff0000;
+    }
+
+    .error {
+        color: #ff0000;
+    }
+</style>
+
 </html>

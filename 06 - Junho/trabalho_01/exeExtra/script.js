@@ -1,34 +1,34 @@
-const btn = document.getElementById('btn')
+const btn = $('#btn');
 
 const validar = () => {
-    const nome = document.getElementById('nome')
-    const cpf = document.getElementById('cpf')
-    const login = document.getElementById('login')
-    const senha = document.getElementById('senha')
+    const nome = $('#nome');
+    const cpf = $('#cpf');
+    const login = $('#login');
+    const senha = $('#senha');
 
-    const erros = []
+    const erros = [];
 
-    if (nome.value.length <= 3) {
-        erros.push('Você precisa digitar pelo menos três caracteres no nome')
+    if (nome.val().length <= 3) {
+        erros.push('Você precisa digitar pelo menos três caracteres no nome');
     }
 
-    if (typeof cpf !== 'number' && cpf.value.length !== 11) {
-        erros.push('Você precisa digitar onze caracteres no cpf')
+    if (typeof cpf.val() !== 'number' && cpf.val().length !== 11) {
+        erros.push('Você precisa digitar onze caracteres no cpf');
     }
 
-    if (login.value.length <= 3) {
-        erros.push('Você precisa digitar pelo menos três caracteres no login')
+    if (login.val().length <= 3) {
+        erros.push('Você precisa digitar pelo menos três caracteres no login');
     }
 
-    if (senha.value.length <= 8) {
-        erros.push('Você precisa digitar pelo menos oito caracteres na senha')
+    if (senha.val().length <= 8) {
+        erros.push('Você precisa digitar pelo menos oito caracteres na senha');
     }
-    
+
+    const ul = $('#lista');
     erros.forEach(texto => {
-        const ul = document.getElementById('lista')
-        const li = document.createElement('li')
-        li.innerHTML = texto
-        ul.appendChild(li)
+        const li = $('<li></li>').html(texto);
+        ul.append(li);
     });
-    return false
+
+    return false;
 }
