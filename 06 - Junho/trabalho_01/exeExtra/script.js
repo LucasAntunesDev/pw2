@@ -1,6 +1,10 @@
 const btn = $('#btn');
 
+$('#cpf').focus(function() {$('#span').fadeIn()})
+$('#cpf').focusout(function() {$('#span').fadeOut()})
+
 const validar = () => {
+    
     const nome = $('#nome');
     const cpf = $('#cpf');
     const login = $('#login');
