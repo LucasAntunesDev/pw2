@@ -3,9 +3,9 @@
 require_once('Pessoa.php');
 
 $pessoa1 = new Pessoa('Lucas', 17);
-//O construct não impede de alterarmos os valores posteriormente. EX:
-// $pessoa1->setNome() = 'Lucas Antunes';
-
+//O construct não impede de alterarmos os valores posteriormente. 
+//EX:
+//$pessoa1->setNome() = 'Lucas Antunes';
 
 echo $pessoa1->getNome();
 echo '<br>';
