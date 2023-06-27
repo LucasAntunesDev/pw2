@@ -8,5 +8,6 @@ class Pessoa
     public function fazerAniversario()
     {
         $this->idade++;
+        //this se comporta como uma variável
     }
 }
