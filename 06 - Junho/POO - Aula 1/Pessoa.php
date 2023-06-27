@@ -5,6 +5,13 @@ class Pessoa
     private $nome;
     private $idade;
 
+    public function __construct($nome, $idade = 0)
+    {
+        $this->nome = $nome;
+        $this->idade = $idade;
+    }
+
+
     //setter
     public function setNome($nome)
     {
@@ -20,13 +27,7 @@ class Pessoa
     {
         return $this->idade;
     }
-
-    public function __construct($nome, $idade = 0)
-    {
-        $this->nome = $nome;
-        $this->idade = $idade;
-    }
-
+    
     public function fazerAniversario()
     {
         $this->idade++;
