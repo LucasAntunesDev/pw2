@@ -1,15 +1,14 @@
 <?php
 
-class Pessoa {
-    private $nome;
-    private $peso;
-
+class Pessoa
+{
+    private string $nome;
+    private float $peso;
     public function __construct($nome, $peso = 0)
     {
         $this->nome = $nome;
         $this->peso = $peso;
     }
-
     public function setNome($nome)
     {
         $this->nome = $nome;
@@ -18,21 +17,16 @@ class Pessoa {
     {
         return $this->nome;
     }
-
-    public function setPeso($peso)
-    {
-        $this->peso = $peso;
-    }
     public function getPeso()
     {
         return $this->peso;
     }
-
-    public function emagrecer(){
-        $this->peso--;
+    public function emagrecer($quilos)
+    {
+        $this->peso = $this->peso-$quilos;
     }
-
-    public function engordar(){
-        $this->peso++;
+    public function engordar($quilos)
+    {
+        $this->peso = $this->peso+$quilos;
     }
 }

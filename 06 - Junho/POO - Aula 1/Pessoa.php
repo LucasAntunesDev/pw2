@@ -11,7 +11,6 @@ class Pessoa
         $this->idade = $idade;
     }
 
-
     //setter
     public function setNome($nome)
     {
