@@ -4,6 +4,7 @@ class Pessoa
 {
     private string $nome;
     private float $peso;
+    
     public function __construct($nome, $peso = 0)
     {
         $this->nome = $nome;
