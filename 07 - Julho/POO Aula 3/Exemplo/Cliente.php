@@ -20,10 +20,10 @@ class Cliente {
     }
 
     public function getEmail(){
-        return $this->nome;       
+        return $this->email;       
     }
 
-    public function Email($email){
+    public function setEmail($email){
         $this->email = $email;
     }
 }

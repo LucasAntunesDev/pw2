@@ -13,11 +13,11 @@ class ClientePF extends Cliente
         $this->cpf = $cpf;
     }
 
-    public function getCPF(){
+    public function getCpf(){
         return $this->cpf;
     }
 
-    public function setCPF($cpf){
+    public function setCpf($cpf){
         $this->cpf = $cpf;
     }
 }

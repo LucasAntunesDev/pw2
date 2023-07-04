@@ -2,7 +2,7 @@
 
 require_once('Cliente.php');
 
-class ClienteJF extends Cliente
+class ClientePJ extends Cliente
 {
     private $cnpj;
 
@@ -13,11 +13,11 @@ class ClienteJF extends Cliente
         $this->cnpj = $cnpj;
     }
 
-    public function getCPNPJ(){
+    public function getCnpj(){
         return $this->cnpj;
     }
 
-    public function setCPNPJ($cnpj){
+    public function setCnpj($cnpj){
         $this->cnpj = $cnpj;
     }
 }
