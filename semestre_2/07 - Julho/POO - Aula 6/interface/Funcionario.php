@@ -1,8 +1,9 @@
 <?php
 
-class SistemaOperacional
+class Funcionario
 {
-    private $nome;
+
+    protected $nome;
 
     public function __construct($nome)
     {
