@@ -22,6 +22,6 @@ class Empresa
     }
 
     public function obterLucros(){
-        echo 'XCorp LTDA está obtendo lucros';
+        echo "$this->razaoSocial está obtendo lucros";
     }
 }
