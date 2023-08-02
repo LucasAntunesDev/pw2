@@ -5,7 +5,7 @@ include_once('Obra.php');
 
 class Serie extends Obra
 {
-    private $temporada;
+    private Temporada $temporadas;
 
     public function __construct($nome, $personagens, $temporadas)
     {
@@ -14,7 +14,16 @@ class Serie extends Obra
         $this->$temporadas = $temporadas;
     }
 
-    public function addTemporada($temporada){
-        $this->temporadas = 
+    public function getTemporadas(){
+        return $this->temporadas; 
     }
+
+    public function addTemporada(Temporada $temporada){
+        $this->temporadas = $temporada; 
+    }
+
+    public function obterNota(){
+
+    }
+
 }

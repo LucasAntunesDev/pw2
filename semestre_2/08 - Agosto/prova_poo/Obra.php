@@ -2,15 +2,18 @@
 
 include_once('Personagem.php');
 
-class Obra
+abstract class Obra
 {
     protected string $nome;
-    protected Personagem $personagens = [];
+    // protected $personagens = [];
+    protected $personagens = array();
+    // protected array $personagens;
 
     public function __construct($nome, $personagens)
     {
         $this->nome = $nome;
-        $this->personagens = $personagens;
+        // $this->personagens = $personagens;
+        array_push($this->personagens, $personagens);
     }
 
     public function getNome()
@@ -30,24 +33,29 @@ class Obra
 
     public function addPersonagem(Personagem $personagem)
     {
-        array_push($personagens, $personagem);
+        array_push($this->personagens, $personagem);
     }
 
-    public function obterProtagonistas($personagens)
+    public function obterProtagonistas()
     {
-        $protagonistas = [];
+        // $personagensArray = 
+        $protagonistas = array();
 
-        foreach ($personagens as $personagem) {
+        foreach ($this->getPersonagens() as $personagem) {
+            echo 'PERSONAGEM:';
+            print_r($personagem);
+            echo '<br>';
+            if($personagem[2])array_push($protagonistas, $personagem);
+            // foreach($personagem as $p){
+            //     if ($p->isPotagonista) {
+            //         array_push($protagonistas, $p);
+            //     }
+            // }
 
-            if ($personagem->isPotagonista) {
-                array_push($protagonistas, $personagem);
-            }
         }
 
         return $protagonistas;
     }
 
-    public function obterNota()
-    {
-    }
+    abstract function obterNota();
 }
