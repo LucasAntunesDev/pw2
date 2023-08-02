@@ -2,7 +2,7 @@
 
 class SistemaOperacional
 {
-    private $nome;
+    private string $nome;
 
     public function __construct($nome)
     {

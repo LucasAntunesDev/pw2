@@ -4,8 +4,8 @@ class TV
 {
     protected string $marca;
     protected int $polegadas;
-    protected $ligada;
-    protected $canal;
+    protected bool $ligada;
+    protected int $canal;
     protected int $volume;
 
     public function __construct(string $marca, int $polegadas)

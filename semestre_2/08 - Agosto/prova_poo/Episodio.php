@@ -7,9 +7,12 @@ implements Midia{
     private int $numero;
     private string $nome;
     private int $duracao;
-    public function __construct($numero, $nota, $duracao){
+    
+    //Professor se passou
+    // public function __construct(int $numero, float $nota, Episodio $episodios){
+    public function __construct(int $numero, string $nome, int $duracao){
         $this->numero = $numero;
-        $this->nota = $nota;
+        $this->nome = $nome;
         $this->duracao = $duracao;
     }
 
@@ -33,7 +36,7 @@ implements Midia{
         return $this->duracao;
     }
 
-    public function setDuraca($duracao){
+    public function setDuracao($duracao){
         $this->duracao = $duracao;
     }
 

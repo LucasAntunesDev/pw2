@@ -3,12 +3,12 @@
 class Temporada{
     private int $numero;
     private float $nota;
-    private int Episodio $episodios;
+    private $episodios = array();
 
-    public function __construct($numero, $nota, $episodio){
+    public function __construct($numero, $nota, $episodios){
         $this->numero = $numero;
         $this->nota = $nota;
-        $this->episodio = $episodio;
+        array_push($this->episodios);
     }
 
     public function getNumero(){
@@ -31,8 +31,9 @@ class Temporada{
         return $this->episodios;
     }
 
-    public function addEpisodio($episodio){
-        $this->episodio = $episodio;
+    public function addEpisodio(Episodio $episodio){
+        var_dump($this->episodios);
+        array_push($this->episodios, $episodio);
     }
 
 }

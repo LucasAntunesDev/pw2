@@ -3,6 +3,6 @@
 interface Midia{
 
     public function getDuracao();
-    public function setDuracao();
+    public function setDuracao($duracao);
 
 }
