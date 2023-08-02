@@ -42,10 +42,13 @@ abstract class Obra
         $protagonistas = array();
 
         foreach ($this->getPersonagens() as $personagem) {
-            echo 'PERSONAGEM:';
-            print_r($personagem);
-            echo '<br>';
-            if($personagem[2])array_push($protagonistas, $personagem);
+            
+            // print_r($personagem);
+            // echo '<br>';
+            if($personagem->isProtagonista() === true ){
+                array_push($protagonistas, $personagem);
+            }
+            
             // foreach($personagem as $p){
             //     if ($p->isPotagonista) {
             //         array_push($protagonistas, $p);
@@ -53,7 +56,7 @@ abstract class Obra
             // }
 
         }
-
+        echo 'PROTAGONISTAS:';
         return $protagonistas;
     }
 
