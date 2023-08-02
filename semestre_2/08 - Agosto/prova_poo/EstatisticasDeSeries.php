@@ -17,19 +17,14 @@ class EstatisticasDeSeries
     //     return $temporadas;
     //     // return $episodios;
     // }
-    public static function obterDuracaoDaSerie(Serie $serie)
+    public static function obterDuracaoDaSerie(Serie $serie): int
     {
       $duracaoTotal = 0;
       foreach ($serie->getTemporadas() as $temporada) {
-        foreach($temporada->getEpisodios() as $ep){
-            return $ep;
-            // $duracaoTotal += $ep;
-        }
-        
         // aqui você precisa acessar o elemento do array que é um objeto da classe Temporada
-        // $duracaoTotal += $temporada->getEpisodios()->getDuracao();
+        $duracaoTotal += $temporada->getEpisodios()->count();
       }
-    //   return $duracaoTotal;
+      return $duracaoTotal;
     }
 
     public static function obterTotalDeEpisodios(Serie $serie)

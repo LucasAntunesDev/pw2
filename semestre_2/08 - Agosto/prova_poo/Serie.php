@@ -11,7 +11,7 @@ class Serie extends Obra
     {
         $this->nome = $nome;
         $this->personagens = $personagens;
-        $this->$temporadas = $temporadas;
+        array_push($this->temporadas);
     }
 
     public function getTemporadas(){
