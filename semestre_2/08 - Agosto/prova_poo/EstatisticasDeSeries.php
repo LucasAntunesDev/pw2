@@ -9,11 +9,12 @@ class EstatisticasDeSeries
     {
         // $duracaoTotal = 0;
         // return $serie->getTemporadas();
+        
+        $episodios = array();
         foreach($serie->getTemporadas() as $temporada){
-            print_r($temporada);
-            // foreach($serie->getTemporadas()->getEpisodios() as $episodio){
-            // $duracaoTotal += $episodio->getDuracao();
-            // return $temporada;
+            // print_r($temporada);
+            var_dump($episodios, );
+
         }
         // }
         // return $temporada;
