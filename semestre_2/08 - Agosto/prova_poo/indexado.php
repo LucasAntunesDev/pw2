@@ -40,18 +40,29 @@ include_once('EstatisticasDeSeries.php');
 $rgb = new Ator('Bolaños', 40);
 $chaves = new Personagem('Chaves', $rgb, 1);
 $temp = new Temporada(1, 9.5,1);
+$serie = new Serie('Chaves', $chaves, 5);
+$serie->addTemporada($temp);
 $ep1 = new Episodio(3, 'bla', 60);
 $temp->addEpisodio($ep1);
 $ep2 = new Episodio(1, 'bf', 50);
 $temp->addEpisodio($ep2);
-$serie = new Serie('Chaves', $chaves, 5);
 // $ep1->setDuracao(60);
 
 
 
-
+echo '<pre>';
 $duracaoSerie = EstatisticasDeSeries::obterDuracaoDaSerie($serie);
+echo '<br></br>Temporadas:';
+// print_r( $serie->getTemporadas());
+// print_r($serie->getTemporadas()->getEpisodios());
+// print_r($temp->getEpisodios());
+echo '</pre>';
+
+
+echo "<br></br><pre>";
 echo '<br></br>Duração:';
-print_r( $serie->getTemporadas());
-// print_r( $duracaoSerie);
+// print_r(($ep1->getDuracao()) + ($ep2->getDuracao()));
+print_r(EstatisticasDeSeries::obterDuracaoDaSerie($serie));
+// print_r( $serie->getTemporadas());
 // echo $duracaoSerie;
+echo '</pre>';
