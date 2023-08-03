@@ -5,7 +5,7 @@ include_once('Episodio.php');
 class Temporada{
     private int $numero;
     private float $nota;
-    private $episodios = array();
+    private $episodios = [];
 
     public function __construct($numero, $nota, $episodios){
         $this->numero = $numero;

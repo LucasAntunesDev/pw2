@@ -1,7 +1,5 @@
 <?php
 
-// include_once('Personagem.php');
-
 include_once('Serie.php');
 include_once('Episodio.php');
 include_once('Filme.php');
@@ -37,23 +35,21 @@ include_once('EstatisticasDeSeries.php');
 // print_r($obra->obterProtagonistas());
 
 //Criação de série
-$rgb = new Ator('Bolaños', 40);
-$chaves = new Personagem('Chaves', $rgb, 1);
-$temp = new Temporada(1, 9.5,1);
-$serie = new Serie('Chaves', $chaves, 5);
+$ator1 = new Ator('Ator 1', 25);
+$personagem1= new Personagem('Personagem 1', $ator1 ,1);
+$ep1 = new Episodio(3, 'ep1', 60);
+$temp = new Temporada(1, 9.5,$ep1);
+$serie = new Serie('Série 1', $personagem1, 5);
 $serie->addTemporada($temp);
-$ep1 = new Episodio(3, 'bla', 60);
-$temp->addEpisodio($ep1);
-$ep2 = new Episodio(1, 'bf', 50);
+$ep2 = new Episodio(1, 'ep2', 50);
 $temp->addEpisodio($ep2);
 // $ep1->setDuracao(60);
 
 
 
 echo '<pre>';
-$duracaoSerie = EstatisticasDeSeries::obterDuracaoDaSerie($serie);
 echo '<br></br>Temporadas:';
-// print_r( $serie->getTemporadas());
+// var_dump($serie->getTemporadas()->getEpisodios());
 // print_r($serie->getTemporadas()->getEpisodios());
 // print_r($temp->getEpisodios());
 echo '</pre>';
@@ -62,7 +58,10 @@ echo '</pre>';
 echo "<br></br><pre>";
 echo '<br></br>Duração:';
 // print_r(($ep1->getDuracao()) + ($ep2->getDuracao()));
-print_r(EstatisticasDeSeries::obterDuracaoDaSerie($serie));
+$episodios = $serie->getTemporadas()->getEpisodios();
+var_dump($episodios);
+var_dump(EstatisticasDeSeries::obterDuracaoDaSerie($serie));
+// print_r(EstatisticasDeSeries::obterDuracaoDaSerie($serie));
 // print_r( $serie->getTemporadas());
 // echo $duracaoSerie;
 echo '</pre>';
