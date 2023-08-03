@@ -45,21 +45,16 @@ $serie->addTemporada($temporada2);
 
 
 echo '<pre>';
-echo '<br></br>
+echo '<br>
 <strong>Número de Temporadas:</strong>';
 // var_dump($serie->getTemporadas());
 echo count($serie->getTemporadas());
 // print_r($serie->getTemporadas());
-echo '</pre>';
+echo ' temporadas</pre>';
 
 
-echo "<br></br><pre>";
-echo '<br></br>Duração:';
+echo '<br><strong>Duração:</strong>';
 echo EstatisticasDeSeries::obterDuracaoDaSerie($serie);
-// print_r(EstatisticasDeSeries::obterDuracaoDaSerie($serie));
-// var_dump(EstatisticasDeSeries::obterTotalDeEpisodios($serie));
 
-
-// echo '<br> <strong>Nota: </strong>';
-// $serie->obterNota();
-// echo '</pre>';
+echo '<br><strong>Total de Episódios:</strong>';
+echo EstatisticasDeSeries::obterTotalDeEpisodios($serie);
