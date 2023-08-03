@@ -10,7 +10,8 @@ abstract class Obra
     public function __construct($nome, $personagens)
     {
         $this->nome = $nome;
-        array_push($this->personagens, $personagens);
+        // array_push($this->personagens, $personagens);
+        $this->personagens =$personagens;
     }
 
     public function getNome()
