@@ -3,14 +3,15 @@
 include_once('Episodio.php');
 
 class Temporada{
-    private int $numero;
-    private float $nota;
-    private $episodios = [];
+    private $numero;
+    private $nota;
+    private $episodios;
 
     public function __construct($numero, $nota, $episodios){
         $this->numero = $numero;
         $this->nota = $nota;
-        array_push($this->episodios, $episodios);
+        $this->episodios = $episodios;
+        // array_push($this->episodios, $episodios);
     }
 
     public function getNumero(){
@@ -34,16 +35,8 @@ class Temporada{
     }
 
     public function addEpisodio(Episodio $episodio){
-        // var_dump($this->episodios);
-        array_push($this->episodios, $episodio);
-        
-        // echo '<pre> TESTE';
-        // var_dump($this->episodios);
-        // print_r($this->episodios);
-        // echo '</pre>';
-
-        // echo '<br>';
-        // print_r($this->episodios);
+        $this->episodios = $episodio;
+        // array_push($this->episodios, $episodio);
     }
 
 }

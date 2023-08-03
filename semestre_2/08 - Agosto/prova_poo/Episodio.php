@@ -4,11 +4,11 @@ include_once('Midia.php');
 
 class Episodio
 implements Midia{
-    private int $numero;
-    private string $nome;
-    private int $duracao;
+    private $numero;
+    private $nome;
+    private $duracao;
     
-    public function __construct(int $numero, string $nome, int $duracao){
+    public function __construct ($numero, $nome, $duracao){
         $this->numero = $numero;
         $this->nome = $nome;
         $this->duracao = $duracao;

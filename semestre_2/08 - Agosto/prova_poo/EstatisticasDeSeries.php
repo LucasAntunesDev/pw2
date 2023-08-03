@@ -7,12 +7,17 @@ class EstatisticasDeSeries
 
     public static function obterDuracaoDaSerie($serie)
     {
-        $duracaoTotal = 0;
-
-        foreach($serie->getTemporadas()->getEpisodios() as $episodio){
-            $duracaoTotal += $episodio->getDuracao();
+        // $duracaoTotal = 0;
+        // return $serie->getTemporadas();
+        foreach($serie->getTemporadas() as $temporada){
+            print_r($temporada);
+            // foreach($serie->getTemporadas()->getEpisodios() as $episodio){
+            // $duracaoTotal += $episodio->getDuracao();
+            // return $temporada;
         }
-        return $duracaoTotal;
+        // }
+        // return $temporada;
+        // return $duracaoTotal;
 
         
         }
@@ -21,10 +26,6 @@ class EstatisticasDeSeries
     {
         $total = 0;
         $total = count($serie->getTemporadas()->getEpisodios());
-
-        // foreach($serie->getTemporadas()->getEpisodios() as $t){
-        //     $total += 1;
-        // }
         return $total;
     }
 }

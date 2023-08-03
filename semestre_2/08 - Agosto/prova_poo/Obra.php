@@ -4,8 +4,8 @@ include_once('Personagem.php');
 
 abstract class Obra
 {
-    protected string $nome;
-    protected $personagens = array();
+    protected $nome;
+    protected $personagens;
 
     public function __construct($nome, $personagens)
     {

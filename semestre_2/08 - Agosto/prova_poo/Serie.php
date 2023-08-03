@@ -5,25 +5,29 @@ include_once('Obra.php');
 
 class Serie extends Obra
 {
-    private $temporadas = array();
+    private $temporadas;
 
     public function __construct($nome, $personagens, $temporadas)
     {
         $this->nome = $nome;
         $this->personagens = $personagens;
-        array_push($this->temporadas, $temporadas);
+        $this->temporadas = $temporadas;
+        // array_push($this->temporadas, $temporadas);
     }
 
-    public function getTemporadas(){
-        return $this->temporadas; 
+    public function getTemporadas()
+    {
+        return $this->temporadas;
     }
 
-    public function addTemporada($temporada){
-        $this->temporadas = $temporada; 
+    public function addTemporada($temporada)
+    {
+        array_push($this->temporadas, $temporada);
     }
 
-    public function obterNota(){
-
+    public function obterNota()
+    {
+        $temporadas = $this->getTemporadas();
+        print_r($temporadas);
     }
-
 }

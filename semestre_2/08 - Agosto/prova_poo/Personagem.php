@@ -4,9 +4,9 @@ include_once('Ator.php');
 
 class Personagem{
 
-    private string $nome;
-    private Ator $ator;
-    private bool $protagonista;
+    private $nome;
+    private $ator;
+    private $protagonista;
 
     public function __construct($nome, $ator, $protagonista){
         $this->nome = $nome;

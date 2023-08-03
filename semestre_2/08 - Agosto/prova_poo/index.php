@@ -38,12 +38,13 @@ include_once('EstatisticasDeSeries.php');
 $ator1 = new Ator('Ator 1', 25);
 $personagem1= new Personagem('Personagem 1', $ator1 ,1);
 $ep1 = new Episodio(3, 'ep1', 60);
-$temp = new Temporada(1, 9.5,$ep1);
-$serie = new Serie('Série 1', $personagem1, 5);
-$serie->addTemporada($temp);
+$temp1 = new Temporada(1, 9.5,$ep1);
+$serie = new Serie('Série 1', [$personagem1], [$temp1]);
 $ep2 = new Episodio(1, 'ep2', 50);
-$temp->addEpisodio($ep2);
-// $ep1->setDuracao(60);
+$temp1->addEpisodio($ep2);
+$ep1->setDuracao(60);
+$temp2 = new Temporada(2, 5.5,[$ep1]);
+$serie->addTemporada($temp2);
 
 
 
@@ -51,18 +52,20 @@ echo '<pre>';
 echo '<br></br>Temporadas:';
 // var_dump($serie->getTemporadas()->getEpisodios());
 // print_r($serie->getTemporadas()->getEpisodios());
-// print_r($temp->getEpisodios());
+// print_r($temp1->getEpisodios());
 echo '</pre>';
 
 
 echo "<br></br><pre>";
 echo '<br></br>Duração:';
 // print_r(($ep1->getDuracao()) + ($ep2->getDuracao()));
-$episodios = $serie->getTemporadas()->getEpisodios();
+// $episodios = $serie->getTemporadas();
 // var_dump($episodios);
-var_dump(EstatisticasDeSeries::obterDuracaoDaSerie($serie));
-var_dump(EstatisticasDeSeries::obterTotalDeEpisodios($serie));
+EstatisticasDeSeries::obterDuracaoDaSerie($serie);
 // print_r(EstatisticasDeSeries::obterDuracaoDaSerie($serie));
-// print_r( $serie->getTemporadas());
-// echo $duracaoSerie;
-echo '</pre>';
+// var_dump(EstatisticasDeSeries::obterTotalDeEpisodios($serie));
+
+
+// echo '<br> <strong>Nota: </strong>';
+// $serie->obterNota();
+// echo '</pre>';
