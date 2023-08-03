@@ -61,6 +61,7 @@ echo '<br></br>Duração:';
 $episodios = $serie->getTemporadas()->getEpisodios();
 // var_dump($episodios);
 var_dump(EstatisticasDeSeries::obterDuracaoDaSerie($serie));
+var_dump(EstatisticasDeSeries::obterTotalDeEpisodios($serie));
 // print_r(EstatisticasDeSeries::obterDuracaoDaSerie($serie));
 // print_r( $serie->getTemporadas());
 // echo $duracaoSerie;
