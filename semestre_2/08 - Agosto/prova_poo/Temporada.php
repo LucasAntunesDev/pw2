@@ -35,8 +35,8 @@ class Temporada{
     }
 
     public function addEpisodio($episodio){
-        $this->episodios = $episodio;
-        // array_push($this->episodios, $episodio);
+        // $this->episodios = $episodio;
+        array_push($this->episodios, $episodio);
     }
 
 }

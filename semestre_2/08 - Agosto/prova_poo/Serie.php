@@ -22,8 +22,8 @@ class Serie extends Obra
 
     public function addTemporada($temporada)
     {
-        // array_push($this->temporadas, $temporada);
-        $this->temporadas = $temporada;
+        array_push($this->temporadas, $temporada);
+        // $this->temporadas = $temporada;
     }
 
     public function obterNota()

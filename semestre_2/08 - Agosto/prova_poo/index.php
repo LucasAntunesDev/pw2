@@ -35,11 +35,12 @@ $personagem1= new Personagem('Personagem 1', $ator1 ,1);
 $episodio1 = new Episodio(3, 'ep1', 60);
 $episodio2 = new Episodio(1, 'ep2', 50);
 $temporada1 = new Temporada(1, 9.5,[$episodio1]);
-$temporada1->addEpisodio([$episodio2]);
+// $temporada1->addEpisodio([$episodio2]);
+$temporada1->addEpisodio($episodio2);
 $serie = new Serie('Série 1', [$personagem1], [$temporada1]);
 
 $temporada2 = new Temporada(2, 5.5,[$episodio1]);
-$serie->addTemporada([$temporada2]);
+$serie->addTemporada($temporada2);
 
 
 
@@ -48,14 +49,13 @@ echo '<br></br>
 <strong>Número de Temporadas:</strong>';
 // var_dump($serie->getTemporadas());
 echo count($serie->getTemporadas());
-// print_r($serie->getTemporadas()->getEpisodios());
-// print_r($temporada1->getEpisodios());
+// print_r($serie->getTemporadas());
 echo '</pre>';
 
 
 echo "<br></br><pre>";
 echo '<br></br>Duração:';
-EstatisticasDeSeries::obterDuracaoDaSerie($serie);
+echo EstatisticasDeSeries::obterDuracaoDaSerie($serie);
 // print_r(EstatisticasDeSeries::obterDuracaoDaSerie($serie));
 // var_dump(EstatisticasDeSeries::obterTotalDeEpisodios($serie));
 
