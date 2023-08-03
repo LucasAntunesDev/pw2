@@ -59,7 +59,7 @@ echo "<br></br><pre>";
 echo '<br></br>Duração:';
 // print_r(($ep1->getDuracao()) + ($ep2->getDuracao()));
 $episodios = $serie->getTemporadas()->getEpisodios();
-var_dump($episodios);
+// var_dump($episodios);
 var_dump(EstatisticasDeSeries::obterDuracaoDaSerie($serie));
 // print_r(EstatisticasDeSeries::obterDuracaoDaSerie($serie));
 // print_r( $serie->getTemporadas());

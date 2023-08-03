@@ -8,16 +8,21 @@ class EstatisticasDeSeries
     public static function obterDuracaoDaSerie($serie)
     {
         $episodios = $serie->getTemporadas()->getEpisodios();
+        $duracaoTotal = 0;
 
-        return $episodios;
-        $temporadas = array();
+        // return $episodios;
+        // return $episodios;
+        // $temporadas = array();
         //Percorrer o vetor de temporadas 
         //Percorrer o vetor de episódios 
         //Somar a duração de todos 
 
-        foreach($serie->getTemporadas() as $temporada){
-            array_push($temporadas, $temporada);
+        foreach($serie->getTemporadas()->getEpisodios() as $episodio){
+            $duracaoTotal += $episodio->getDuracao();
+            // return $episodio->getDuracao();
+            // array_push($temporadas, $temporada);
         }
+        return $duracaoTotal;
 
         
         }

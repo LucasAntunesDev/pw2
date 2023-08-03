@@ -8,8 +8,6 @@ implements Midia{
     private string $nome;
     private int $duracao;
     
-    //Professor se passou
-    // public function __construct(int $numero, float $nota, Episodio $episodios){
     public function __construct(int $numero, string $nome, int $duracao){
         $this->numero = $numero;
         $this->nome = $nome;
