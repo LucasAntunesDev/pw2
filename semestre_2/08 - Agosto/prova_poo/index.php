@@ -9,7 +9,7 @@ include_once('EstatisticasDeSeries.php');
 $murphy = new Ator('Cillian Murphy', 47);
 $rdj = new Ator('Robert Downey Jr.', 58);
 $oppenheimer = new Personagem('Oppenheimer', $murphy, true);
-$obra = new Filme('Oppenheimer', [$oppenheimer], 180, 10.git 00);
+$obra = new Filme('Oppenheimer', [$oppenheimer], 180, 1000);
 
 $strauss = new Personagem('Levi Strauss', $rdj, false);
 $obra->addPersonagem($strauss);
