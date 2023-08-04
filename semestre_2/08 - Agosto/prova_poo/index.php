@@ -30,7 +30,6 @@
         echo '<h3>Personagens: </h3>';
         // echo '<pre>';
         foreach ($filme->getPersonagens() as $personagem) {
-            // print_r($personagem);
             echo '- ';
             echo $personagem->getNome();
             echo '<br>';
@@ -62,8 +61,7 @@
         $temporada2 = new Temporada(2, 5.5, [$episodio1]);
         $serie->addTemporada($temporada2);
 
-        echo '<h2>Série: </h2>';
-        echo $serie->getNome();
+        echo '<h2>Série: '. $serie->getNome() .'</h2>';
 
         echo '<br>
         <h3>Número de Temporadas:</h3>';
@@ -72,13 +70,12 @@
 
 
         echo '<br><h3>Duração: </h3>';
-        echo EstatisticasDeSeries::obterDuracaoDaSerie($serie);
+        echo EstatisticasDeSeries::obterDuracaoDaSerie($serie). ' minutos';
 
         echo '<br><h3>Total de Episódios: </h3>';
-        echo EstatisticasDeSeries::obterTotalDeEpisodios($serie);
+        echo EstatisticasDeSeries::obterTotalDeEpisodios($serie). ' episódios';
 
         echo '<h3>Nota</h3>';
-        // echo $serie->obterNota();
         echo $serie->obterNota();
         ?>
     </main>

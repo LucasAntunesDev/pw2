@@ -14,7 +14,7 @@ class EstatisticasDeSeries
                 $duracaoTotal += $episodio->getDuracao();
             }
         }
-        return $duracaoTotal . ' minutos';
+        return $duracaoTotal;
         
         }
 
@@ -23,10 +23,10 @@ class EstatisticasDeSeries
         $total = 0;
         foreach($serie->getTemporadas() as $temporada){
             foreach($temporada->getEpisodios() as $episodio){
-                $total += 1;
+                $total ++;
             }
         }
-        return $total . ' episódios';
+        return $total;
         
     }
 }
