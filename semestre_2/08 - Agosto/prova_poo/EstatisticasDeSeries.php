@@ -5,7 +5,7 @@ include_once('Serie.php');
 class EstatisticasDeSeries
 {
 
-    public static function obterDuracaoDaSerie($serie)
+    public static function obterDuracaoDaSerie(Serie $serie)
     {
         $duracaoTotal = 0;
         
@@ -18,7 +18,7 @@ class EstatisticasDeSeries
         
         }
 
-    public static function obterTotalDeEpisodios($serie)
+    public static function obterTotalDeEpisodios(Serie $serie)
     {
         $total = 0;
         foreach($serie->getTemporadas() as $temporada){
@@ -28,7 +28,5 @@ class EstatisticasDeSeries
         }
         return $total . ' episódios';
         
-        // $total = count($serie->getTemporadas()->getEpisodios());
-        // return $total;
     }
 }

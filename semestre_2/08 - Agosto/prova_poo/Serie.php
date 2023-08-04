@@ -12,7 +12,6 @@ class Serie extends Obra
         $this->nome = $nome;
         $this->personagens = $personagens;
         $this->temporadas = $temporadas;
-        // array_push($this->temporadas, $temporadas);
     }
 
     public function getTemporadas()
@@ -23,12 +22,17 @@ class Serie extends Obra
     public function addTemporada($temporada)
     {
         array_push($this->temporadas, $temporada);
-        // $this->temporadas = $temporada;
     }
 
     public function obterNota()
     {
-        $temporadas = $this->getTemporadas();
-        print_r($temporadas);
+
+        $somaNotas = 0;
+
+        foreach ($this->getTemporadas() as $temporada) {
+            $somaNotas += $temporada->getNota();
+        }
+
+        return ($somaNotas / count($this->getTemporadas()));
     }
 }

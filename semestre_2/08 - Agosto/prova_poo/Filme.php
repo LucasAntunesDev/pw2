@@ -6,7 +6,7 @@ include_once('Midia.php');
 class Filme extends Obra
 implements Midia{
     private $duracao;
-    private $nota;
+    private float $nota;
 
     public function __construct($nome, $personagens, $duracao, 
     float $nota){
@@ -23,7 +23,7 @@ implements Midia{
         $this->duracao = $duracao;
     }
 
-    public function setNota($nota){
+    public function setNota(float $nota){
         $this->nota = $nota;
     }
     public function obterNota(){

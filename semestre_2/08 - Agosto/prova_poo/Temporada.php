@@ -11,7 +11,6 @@ class Temporada{
         $this->numero = $numero;
         $this->nota = $nota;
         $this->episodios = $episodios;
-        // array_push($this->episodios, $episodios);
     }
 
     public function getNumero(){
@@ -35,7 +34,6 @@ class Temporada{
     }
 
     public function addEpisodio($episodio){
-        // $this->episodios = $episodio;
         array_push($this->episodios, $episodio);
     }
 
