@@ -1,8 +1,7 @@
-<?php 
+<?php
 
-interface Midia{
+interface Midia {
 
     public function getDuracao();
     public function setDuracao($duracao);
-
 }

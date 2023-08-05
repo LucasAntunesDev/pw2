@@ -2,49 +2,40 @@
 
 include_once('Personagem.php');
 
-abstract class Obra
-{
+abstract class Obra {
     protected $nome;
     protected $personagens;
 
-    public function __construct($nome, $personagens)
-    {
+    public function __construct($nome, $personagens) {
         $this->nome = $nome;
-        // array_push($this->personagens, $personagens);
-        $this->personagens =$personagens;
+        $this->personagens = $personagens;
     }
 
-    public function getNome()
-    {
+    public function getNome() {
         return $this->nome;
     }
 
-    public function setNome($nome)
-    {
+    public function setNome($nome) {
         $this->nome = $nome;
     }
 
-    public function getPersonagens()
-    {
+    public function getPersonagens() {
         return $this->personagens;
     }
 
-    public function addPersonagem(Personagem $personagem)
-    {
+    public function addPersonagem($personagem) {
         array_push($this->personagens, $personagem);
     }
 
-    public function obterProtagonistas()
-    {
+    public function obterProtagonistas() {
 
         $protagonistas = array();
 
         foreach ($this->getPersonagens() as $personagem) {
 
-            if($personagem->isProtagonista()) array_push($protagonistas, $personagem);
-
+            if ($personagem->isProtagonista()) array_push($protagonistas, $personagem);
         }
-        
+
         return $protagonistas;
     }
 

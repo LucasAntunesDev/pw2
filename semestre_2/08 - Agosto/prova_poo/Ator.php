@@ -1,28 +1,27 @@
 <?php
 
-class Ator{
-    private string $nome;
-    private int $idade;
+class Ator {
+    private $nome;
+    private $idade;
 
-    public function __construct(string $nome, int $idade)
-    {
+    public function __construct($nome, $idade) {
         $this->nome = $nome;
         $this->idade = $idade;
     }
 
-    public function getNome(): string{
+    public function getNome() {
         return $this->nome;
     }
-    
-    public function setNome($nome){
+
+    public function setNome($nome) {
         $this->nome = $nome;
     }
 
-    public function getIdade(): int{
+    public function getIdade() {
         return $this->idade;
     }
-    
-    public function setIdade($idade){
+
+    public function setIdade($idade) {
         $this->idade = $idade;
     }
 }
