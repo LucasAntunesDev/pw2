@@ -1,5 +1,10 @@
 {
     "require": {
         "mpdf/mpdf": "8.*"
+    },
+    "autoload":{
+        "psr-4":{
+            "App\\" : "classes/"
+        }
     }
 }
