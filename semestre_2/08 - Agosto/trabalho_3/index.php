@@ -34,7 +34,9 @@
             $link = $_SESSION['links'];
 
             $info = Embed::create($link);
-            echo '<div class="flex flex-col w-64 bg-zinc-200 rounded-md py-4 justify-center">';
+            
+            if($_SESSION['links']){
+                echo '<div class="flex flex-col w-64 bg-zinc-200 rounded-md py-4 justify-center">';
             
             echo "<img src='$info->image' class='h-40 rounded-md'>" ;
             echo '<br>';
@@ -53,10 +55,10 @@
             text-white hover:bg-emerald-800w-min">
             <a href='.$info->url.' target="_blank">Acessar</a>
             </button>';
-
+            
             echo '<button class="bg-red-600 p-2 rounded-full 
             text-white hover:bg-emerald-800w-min">
-            Excluir
+            <a href="apagar_links.php">Excluir</a>
             </button>';
 
             echo '<div>';
@@ -69,6 +71,8 @@
             //     echo $link;
             //     echo '<br>';
             // }
+            }
+
         ?>
         <!-- <div>Teste</div>
         <div>Teste</div>
