@@ -2,17 +2,34 @@
 
 session_start();
 
-$link = $_POST['link'];
 
-$_SESSION['links'] = '';
+if(isset($_GET['link'])){
+    
+    $link = $_GET['link'];
 
-array_push($_SESSION['links'], $link);
-// $_SESSION['links'] = $link;
+    $_SESSION['links'] = array();
+
+    $sessao = $_SESSION['links'];
+    
+    array_push($sessao, $link);
+
+    // $_GET['link']['teste'] = $link;
+}
+
+// print_r($sessao);
+
 
 
 header('location:index.php');
-// header('location:acessar_links.php');
 
-// foreach($_SESSION['links'] as $link){
-//     echo $link. '<br>';
-// }
+// $link = $_GET['link'];
+
+// $teste = array();
+
+// array_push($teste, $link);
+
+// $_SESSION['links'] = $teste;
+
+// print_r($_SESSION['links']);
+
+// header('location:index.php');
