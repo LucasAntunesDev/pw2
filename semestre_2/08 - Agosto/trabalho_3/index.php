@@ -11,44 +11,61 @@
         tailwind.config = {
             darkMode: 'class'
         }
+
+        const html = document.querySelector('html')
+        const icon = document.querySelector('#icon')
+        const dark = window.matchMedia('(prefers-color-scheme: dark)')
+
+        if (dark) {
+            html.setAttribute('class', 'dark')
+            icon.innerHTML = 'light_mode'
+
+        } else {
+            html.setAttribute('class', '')
+            icon.innerHTML = 'dark_mode'
+        }
     </script>
 </head>
+
 <body class="font-mono antialiased dark:bg-slate-900 duration-300 ease-in-out">
 
     <header class="flex justify-end">
-        <button id="tema" class="dark:text-zinc-50 pt-4 pr-4 align-self-end transtion duration-300 ease-in-out
+        <button id="tema" class="dark:text-zinc-50 pt-4 pr-8 align-self-end transtion duration-300 ease-in-out
         text-zinc-800">
-            <span class="material-symbols-outlined" id="icon">
+            <span class="material-symbols-outlined text-4xl dark:hover:text-zinc-50/50 hover:hover:text-neutral-900/50" id="icon">
                 dark_mode
             </span>
         </button>
     </header>
 
-    <h1 class="text-4xl text-center text-sky-500 my-8 font-bold">
+    <h1 class="text-4xl text-center text-sky-500 mb-8 font-bold">
         Repoistório de Links
     </h1>
 
     <form action="links_gravar.php" method="post" class="flex justify-center items-center gap-x-8 mb-4">
 
-        <div class="flex flex-col justify-center w-min">
-            <label for="link" class="text-sky-500 font-bold">Digie o link</label>
-
-            <input type="text" name="link" id="link" placeholder="Digite o link" class="w-[40rem] rounded-md 
+        <input type="text" name="link" id="link" placeholder="Digite o link" class="w-[40rem] rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
             focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
             outline-none">
-        </div>
 
         <button class="bg-emerald-600 p-2 rounded-full text-zinc-50 hover:bg-emerald-800
         flex items-center">
-        <span class="material-symbols-outlined">
+            <span class="material-symbols-outlined">
                 add
-            </span>    
-        
-        Adicionar
+            </span>
+            <span>Adicionar</span>
         </button>
-
+    
     </form>
+
+    <a class="bg-red-600 p-2 rounded-full text-zinc-50 hover:bg-red-800
+    flex items-center w-64 mx-auto mb-4 justify-center gap-x-2" href="limpar_sessao.php">
+        <span class="material-symbols-outlined">
+            delete
+        </span>
+        <span>Limpar todos os links</span>
+    </a>
 
     <h2 class="text-2xl text-center text-sky-500 mb-8 font-bold">Meus links</h2>
 
@@ -57,10 +74,11 @@
         session_start();
 
         require_once('vendor/autoload.php');
+
         use Embed\Embed;
 
 
-        if (!isset($_SESSION['links'])) {
+        if (!isset($_SESSION['links']) || empty($_SESSION['links'])) {
             $_SESSION['links'] = [];
         }
 
@@ -90,7 +108,7 @@
                     <div class='px-6 pt-4 pb-2'>
                       <span class='inline-block bg-gray-200 rounded-full px-3 
                       py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
-                        #$info->keyword
+                        #$info->tags
                       </span>
                     </div>";
                 }
@@ -111,39 +129,14 @@
 
                 </div>";
             }
-
         }
 
         ?>
     </section>
 
-    <!-- <div style="display: flex; flex-direction:row; justify-content:center; gap:5px;">
-        <p>
-            <button>
-                <a href="links_esvaziar.php">Esvaziar lista</a>
-            </button>
-        </p>
 
-        <p>
-            <button>
-                <a href="apagar_ultimo.php">Apagar o último</a>
-            </button>
-        </p>
 
-        <p>
-            <button>
-                <a href="apagar_primeiro.php">Apagar o primeiro</a>
-            </button>
-        </p>
-    </div> -->
-
-    
     <script>
-        tailwind.config = {
-            darkMode: 'class'
-        }
-
-
         const tema = document.querySelector('#tema')
         tema.addEventListener('click', () => {
             const html = document.querySelector('html')
@@ -151,11 +144,11 @@
 
             if (html.classList.contains('dark')) {
                 html.setAttribute('class', '')
-                icon.innerHTML = 'dark_mode'
+                icon.innerHTML = 'light_mode'
                 
             } else {
                 html.setAttribute('class', 'dark')
-                icon.innerHTML = 'light_mode'
+                icon.innerHTML = 'dark_mode'
             }
         })
     </script>
