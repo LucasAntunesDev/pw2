@@ -56,7 +56,7 @@
             </span>
             <span>Adicionar</span>
         </button>
-    
+
     </form>
 
     <a class="bg-red-600 p-2 rounded-full text-zinc-50 hover:bg-red-800
@@ -101,27 +101,29 @@
                   <p class='text-gray-700 dark:text-zinc-50 text-base'>
                     $info->description
                   </p>
-                </div>
-";
-                if (isset($info->keyword)) {
+                </div>";
+
+                echo "<div class='flex flex-row flex-wrap justify-center items-center pb-4'>";
+                foreach ($info->tags as $tag) {
                     echo "
-                    <div class='px-6 pt-4 pb-2'>
-                      <span class='inline-block bg-gray-200 rounded-full px-3 
-                      py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
-                        #$info->tags
-                      </span>
+                    <div>
+                        <span class='inline-block bg-gray-200 hover:bg-gray-300 rounded-full px-3 
+                        py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
+                            #$tag
+                        </span>
                     </div>";
                 }
+                echo "</div>";
 
                 echo "<div class='flex flex-row gap-x-4 justify-start pl-8 items-center mb-4'>
 
                         <button class='bg-emerald-600 p-2 rounded-full 
-                        text-zinc-50 hover:bg-emerald-800 w-min'>
+                        text-zinc-50 hover:bg-emerald-800 dark:hover:bg-emerald-400 w-min'>
                             <a href=' $info->url '  target='_blank'>Acessar</a>
                         </button>
 
                         <button class='bg-red-600 p-2 rounded-full 
-                        text-zinc-50 hover:bg-red-800 w-min'>
+                        text-zinc-50 hover:bg-red-800 dark:hover:bg-red-400 w-min'>
                             <a href='apagar_link.php?link=$link'>Excluir</a>
                         </button>
 
@@ -135,6 +137,7 @@
     </section>
 
 
+    <script src="script.js"></script>
 
     <script>
         const tema = document.querySelector('#tema')
@@ -145,7 +148,7 @@
             if (html.classList.contains('dark')) {
                 html.setAttribute('class', '')
                 icon.innerHTML = 'light_mode'
-                
+
             } else {
                 html.setAttribute('class', 'dark')
                 icon.innerHTML = 'dark_mode'
