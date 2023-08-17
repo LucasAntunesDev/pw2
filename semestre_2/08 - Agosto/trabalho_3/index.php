@@ -123,8 +123,8 @@
                         </button>
 
                         <button class='bg-red-600 p-2 rounded-full 
-                        text-zinc-50 hover:bg-red-800 dark:hover:bg-red-400 w-min exluir'>
-                            <a href='apagar_link.php?link=$link'>Excluir</a>
+                        text-zinc-50 hover:bg-red-800 dark:hover:bg-red-400 w-min'>
+                            <a href='apagar_link.php?link=$link' onClick='excluirLink()'>Excluir</a>
                         </button>
 
                     </div>
@@ -159,9 +159,9 @@
             confirm('Você REALMENTE deseja exluir tudo?') == 1 ? window.location.replace('limpar_sessao.php') : ''
         })
 
-        document.querySelectorAll('.exluir').addEventListener('click', () => {
+        const excluirLink = () => {
             confirm('Você REALMENTE deseja exluir o link?') == 1 ? window.location.replace('limpar_sessao.php') : ''
-        })
+        }
 
     </script>
 </body>
