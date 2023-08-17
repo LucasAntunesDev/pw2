@@ -50,7 +50,7 @@
             outline-none">
 
         <button class="bg-emerald-600 p-2 rounded-full text-zinc-50 hover:bg-emerald-800
-        flex items-center">
+        flex items-center dark:hover:bg-emerald-400">
             <span class="material-symbols-outlined">
                 add
             </span>
@@ -59,13 +59,13 @@
 
     </form>
 
-    <a class="bg-red-600 p-2 rounded-full text-zinc-50 hover:bg-red-800
-    flex items-center w-64 mx-auto mb-4 justify-center gap-x-2" href="limpar_sessao.php">
-        <span class="material-symbols-outlined">
-            delete
-        </span>
-        <span>Limpar todos os links</span>
-    </a>
+    <button id="limparRepositorio" class="bg-red-600 p-2 rounded-full text-zinc-50 hover:bg-red-800
+            flex items-center w-64 mb-4 justify-center gap-x-2 dark:hover:bg-red-400 mx-auto">
+            <span class="material-symbols-outlined">
+                delete
+            </span>
+            <span>Limpar repositório</span>
+    </button>
 
     <h2 class="text-2xl text-center text-sky-500 mb-8 font-bold">Meus links</h2>
 
@@ -153,6 +153,10 @@
                 html.setAttribute('class', 'dark')
                 icon.innerHTML = 'dark_mode'
             }
+        })
+
+        document.querySelector('#limparRepositorio').addEventListener('click', () => {
+            confirm('Você REALMENTE deseja exluir tudo?') == 1 ? window.location.replace('limpar_sessao.php') : ''
         })
     </script>
 </body>
