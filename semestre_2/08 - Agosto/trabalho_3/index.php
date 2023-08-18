@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script>
+        //Checa o tema padrão do dispositivo quando a página inicia
         tailwind.config = {
             darkMode: 'class'
         }
@@ -30,16 +31,17 @@
 <body class="font-mono antialiased dark:bg-slate-900 duration-300 ease-in-out">
 
     <header class="flex justify-end">
-        <button id="tema" class="dark:text-zinc-50 pt-4 pr-8 align-self-end transtion duration-300 ease-in-out
-        text-zinc-800">
-            <span class="material-symbols-outlined text-4xl dark:hover:text-zinc-50/50 hover:hover:text-neutral-900/50" id="icon">
+        <button id="tema" class="dark:text-zinc-50 pt-4 pr-8 align-self-end transtion duration-300 
+        ease-in-out text-zinc-800">
+            <span class="material-symbols-outlined text-4xl dark:hover:text-zinc-50/50 
+            hover:hover:text-neutral-900/50" id="icon">
                 dark_mode
             </span>
         </button>
     </header>
 
     <h1 class="text-4xl text-center text-sky-500 mb-8 font-bold">
-        Repoistório de Links
+        Repositório de Links
     </h1>
 
     <form action="links_gravar.php" method="post" class="flex justify-center items-center gap-x-8 mb-4">
@@ -47,7 +49,7 @@
         <input type="text" name="link" id="link" placeholder="Digite o link" class="w-[40rem] rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
             focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
-            outline-none">
+            outline-none dark:text-zinc-300">
 
         <button class="bg-emerald-600 p-2 rounded-full text-zinc-50 hover:bg-emerald-800
         flex items-center dark:hover:bg-emerald-400">
@@ -61,15 +63,16 @@
 
     <button id="limparRepositorio" class="bg-red-600 p-2 rounded-full text-zinc-50 hover:bg-red-800
             flex items-center w-64 mb-4 justify-center gap-x-2 dark:hover:bg-red-400 mx-auto">
-            <span class="material-symbols-outlined">
-                delete
-            </span>
-            <span>Limpar repositório</span>
+        <span class="material-symbols-outlined">
+            delete
+        </span>
+        <span>Limpar repositório</span>
     </button>
 
     <h2 class="text-2xl text-center text-sky-500 mb-8 font-bold">Meus links</h2>
 
-    <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-y-8 items-start">
+    <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-y-8 
+    items-start">
         <?php
         session_start();
 
@@ -87,8 +90,8 @@
             foreach ($_SESSION['links'] as $link) {
                 $info = Embed::create($link);
                 echo "
-                <div class='max-w-sm rounded-md overflow-hidden shadow-lg h-min max-h-auto dark:bg-slate-800
-                hover:cursor-pointer hover:bg-zinc-50 dark:hover:bg-slate-700'>
+                <div class='max-w-sm rounded-md overflow-hidden shadow-lg h-min max-h-auto 
+                dark:bg-slate-800 hover:cursor-pointer hover:bg-zinc-50 dark:hover:bg-slate-700'>
                 
                 <img class='w-full' src='$info->image' loading='lazy'>
 
@@ -136,9 +139,6 @@
         ?>
     </section>
 
-
-    <script src="script.js"></script>
-
     <script>
         const tema = document.querySelector('#tema')
         tema.addEventListener('click', () => {
@@ -162,7 +162,6 @@
         const excluirLink = () => {
             confirm('Você REALMENTE deseja exluir o link?') == 1 ? window.location.replace('limpar_sessao.php') : ''
         }
-
     </script>
 </body>
 

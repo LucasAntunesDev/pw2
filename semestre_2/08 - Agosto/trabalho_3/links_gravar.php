@@ -1,15 +1,17 @@
 <?php
-//links_gravar.php
-    //Adiciona o item na lista
-    session_start();
-    if (isset($_POST['link']) && 
-        !empty($_POST['link'])
-        && !in_array($_POST['link'],
-        $_SESSION['links'])) {
-        $_SESSION['links'][] = $_POST['link'];
+session_start();
+if (
+    isset($_POST['link']) &&
+    !empty($_POST['link'])
+    && !in_array(
+        $_POST['link'],
+        $_SESSION['links']
+    )
+) {
+    //garante que só sejam adicionados links válidos na sessão
+    if(filter_var($_POST['link'],FILTER_VALIDATE_URL)){
+    $_SESSION['links'][] = $_POST['link'];
     }
+}
 
-    //Manda a pessoa para a página links.php (redirecionamento)
-    header('location:index.php')
-    
-?>
+header('location:index.php');
