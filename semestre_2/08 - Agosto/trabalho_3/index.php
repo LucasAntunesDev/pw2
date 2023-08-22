@@ -120,15 +120,19 @@
 
                 echo "<div class='flex flex-row gap-x-4 justify-start pl-8 items-center mb-4'>
 
-                        <button class='bg-emerald-600 p-2 rounded-full 
-                        text-zinc-50 hover:bg-emerald-800 dark:hover:bg-emerald-400 w-min'>
-                            <a href=' $info->url '  target='_blank'>Acessar</a>
-                        </button>
+                        <a href=' $info->url '  target='_blank'>
+                            <button class='bg-emerald-600 p-2 rounded-full 
+                            text-zinc-50 hover:bg-emerald-800 dark:hover:bg-emerald-400 w-min'>
+                                Acessar
+                            </button>
+                        </a>
 
-                        <button class='bg-red-600 p-2 rounded-full 
-                        text-zinc-50 hover:bg-red-800 dark:hover:bg-red-400 w-min'>
-                            <a href='apagar_link.php?link=$link' onClick='excluirLink()'>Excluir</a>
-                        </button>
+                        <a href='apagar_link.php?link=$link' onClick='excluirLink()'>
+                            <button class='bg-red-600 p-2 rounded-full 
+                            text-zinc-50 hover:bg-red-800 dark:hover:bg-red-400 w-min'>
+                                Excluir
+                            </button>
+                        </a>
 
                     </div>
 
@@ -155,13 +159,13 @@
             }
         })
 
-        document.querySelector('#limparRepositorio').addEventListener('click', () => {
-            confirm('Você REALMENTE deseja excluir tudo?') == 1 ? window.location.replace('limpar_sessao.php') : ''
-        })
+        // document.querySelector('#limparRepositorio').addEventListener('click', () => {
+        //     confirm('Você REALMENTE deseja excluir tudo?') == 1 ? window.location.replace('limpar_sessao.php') : ''
+        // })
 
-        const excluirLink = () => {
-            confirm('Você REALMENTE deseja excluir o link?') == 1 ? window.location.replace('limpar_sessao.php') : ''
-        }
+        // const excluirLink = () => {
+        //     confirm('Você REALMENTE deseja excluir o link?') == 1 ? window.location.replace('limpar_sessao.php') : ''
+        // }
     </script>
 </body>
 
