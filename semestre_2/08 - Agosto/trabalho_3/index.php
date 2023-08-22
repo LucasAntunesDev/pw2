@@ -28,7 +28,7 @@
     </script>
 </head>
 
-<body class="font-mono antialiased dark:bg-slate-900 duration-300 ease-in-out text-zinc-50">
+<body class="font-mono antialiased dark:bg-slate-900 duration-300 ease-in-out text-zinc-50 pb-8">
 
     <header class="flex justify-end">
         <button id="tema" class="dark:text-zinc-50 pt-4 pr-8 align-self-end transtion duration-300 
@@ -144,6 +144,7 @@
     </section>
 
     <script>
+        //Muda o tema e o ícone de tema quando clicar para trocá-lo
         const tema = document.querySelector('#tema')
         tema.addEventListener('click', () => {
             const html = document.querySelector('html')
