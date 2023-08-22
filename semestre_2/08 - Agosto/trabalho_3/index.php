@@ -158,14 +158,6 @@
                 icon.innerHTML = 'dark_mode'
             }
         })
-
-        // document.querySelector('#limparRepositorio').addEventListener('click', () => {
-        //     confirm('Você REALMENTE deseja excluir tudo?') == 1 ? window.location.replace('limpar_sessao.php') : ''
-        // })
-
-        // const excluirLink = () => {
-        //     confirm('Você REALMENTE deseja excluir o link?') == 1 ? window.location.replace('limpar_sessao.php') : ''
-        // }
     </script>
 </body>
 
