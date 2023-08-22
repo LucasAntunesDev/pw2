@@ -28,7 +28,7 @@
     </script>
 </head>
 
-<body class="font-mono antialiased dark:bg-slate-900 duration-300 ease-in-out">
+<body class="font-mono antialiased dark:bg-slate-900 duration-300 ease-in-out text-zinc-50">
 
     <header class="flex justify-end">
         <button id="tema" class="dark:text-zinc-50 pt-4 pr-8 align-self-end transtion duration-300 
