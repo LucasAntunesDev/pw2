@@ -127,7 +127,7 @@
                             </button>
                         </a>
 
-                        <a href='apagar_link.php?link=$link' onClick='excluirLink()'>
+                        <a href='apagar_link.php?link=$link' onClick='return excluirLink()'>
                             <button class='bg-red-600 p-2 rounded-full 
                             text-zinc-50 hover:bg-red-800 dark:hover:bg-red-400 w-min'>
                                 Excluir
@@ -164,6 +164,11 @@
         limparRepositorio.addEventListener('click', () =>{
             if(confirm('Você deseja excluir TUDO?!')) location.replace('limpar_sessao.php') 
         })
+
+        const excluirLink = () =>{
+            if(confirm('Você realmente deseja excluir o link?')) return
+            else return false
+        }
     </script>
 </body>
 
