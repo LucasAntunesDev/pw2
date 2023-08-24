@@ -9,3 +9,6 @@ Este repositório é referante à matéria de **Programação Web II** do curso 
   <img alt="JQuery" src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
   <img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white">
 </div>
+
+## Destaques ✅
+- ### [Repositório de Links](https://github.com/LucasAntunes06/pw2/tree/main/semestre_2/08%20-%20Agosto/trabalho_3)
