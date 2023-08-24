@@ -15,7 +15,7 @@
 
         const html = document.querySelector('html')
         const icon = document.querySelector('#icon')
-        const dark = window.matchMedia('(prefers-color-scheme: dark)')
+        const dark = window.matchMedia('(prefers-color-scheme: dark)').matches
         
         if (dark) {
             html.setAttribute('class', 'dark')
@@ -145,6 +145,7 @@
 
     <script>
        const tema = document.querySelector('#tema')
+       
         tema.addEventListener('click', () => {
             const html = document.querySelector('html')
             const icon = document.querySelector("#icon")
@@ -157,6 +158,11 @@
                 html.setAttribute('class', 'dark')
                 icon.innerHTML = 'dark_mode'
             }
+        })
+
+        const limparRepositorio = document.querySelector('#limparRepositorio')
+        limparRepositorio.addEventListener('click', () =>{
+            if(confirm('Você deseja excluir TUDO?!')) location.replace('limpar_sessao.php') 
         })
     </script>
 </body>
