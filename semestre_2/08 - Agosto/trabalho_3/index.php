@@ -16,7 +16,7 @@
         const html = document.querySelector('html')
         const icon = document.querySelector('#icon')
         const dark = window.matchMedia('(prefers-color-scheme: dark)')
-
+        
         if (dark) {
             html.setAttribute('class', 'dark')
             icon.innerHTML = 'light_mode'
@@ -32,7 +32,7 @@
 
     <header class="flex justify-end">
         <button id="tema" class="dark:text-zinc-50 pt-4 pr-8 align-self-end transtion duration-300 
-        ease-in-out text-zinc-800">
+        ease-in-out text-zinc-800 outline-none">
             <span class="material-symbols-outlined text-4xl dark:hover:text-zinc-50/50 
             hover:hover:text-neutral-900/50" id="icon">
                 dark_mode
@@ -144,8 +144,7 @@
     </section>
 
     <script>
-        //Muda o tema e o ícone de tema quando clicar para trocá-lo
-        const tema = document.querySelector('#tema')
+       const tema = document.querySelector('#tema')
         tema.addEventListener('click', () => {
             const html = document.querySelector('html')
             const icon = document.querySelector("#icon")
