@@ -1,0 +1,47 @@
+{
+	"if ternário":{
+		"prefix" : "trn",
+		"body": [
+			"$$1 = $2 ? $3 : $4"
+		]
+	},
+	"abre php":{
+		"prefix" : "!p",
+		"body": [
+			"<?php
+			
+			"
+		]
+	},
+	"print_r":{
+		"prefix" : "pr",
+		"body": [
+			"print_r($1);"
+		]
+	},
+	"print":{
+		"prefix" : "pr",
+		"body": [
+			"print($1);"
+		]
+	},
+	"var_dump":{
+		"prefix" : "pr",
+		"body": [
+			"var_dump($1);"
+		]
+	},
+	"definir getter":{
+		"prefix" : "gtt",
+		"body": [
+			"public function get$1() {\nreturn $$this->$2;\n}"
+		]
+	},
+	"definir setter":{
+		"prefix" : "stt",
+		"body": [
+			"public function set$1($$2){\n$$this->$2 = $$2;\n}"
+		]
+	},
+
+}
