@@ -43,5 +43,41 @@
 			"public function set$1($$2){\n$$this->$2 = $$2;\n}"
 		]
 	},
+	"cria uma classe":{
+		"prefix" : "cl",
+		"body": [
+			"class $1{\n$2	\n}"
+		]
+	},
+	"cria o construct":{
+		"prefix" : "__",
+		"body": [
+			"public function __construct($1){\n\n}"
+		]
+	},
+	"include":{
+		"prefix" : "inc",
+		"body": [
+			"include('$1');"
+		]
+	},
+	"include_once":{
+		"prefix" : "inco",
+		"body": [
+			"include('$1');"
+		]
+	},
+	"require":{
+		"prefix" : "rqr",
+		"body": [
+			"require('$1');"
+		]
+	},
+	"require once":{
+		"prefix" : "rqro",
+		"body": [
+			"require_once('$1');"
+		]
+	},
 
 }

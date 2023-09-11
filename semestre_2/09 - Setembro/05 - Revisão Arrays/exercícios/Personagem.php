@@ -1,0 +1,38 @@
+<?php
+//Persongaem.php
+
+class Personagem {
+    private string $nome;
+    private string $ator;
+    private bool $protagonista;
+
+    public function __construct(string $nome, string $ator, bool $protagonista) {
+        $this->nome = $nome;
+        $this->ator = $ator;
+        $this->protagonista = $protagonista;
+    }
+
+    public function getNome() {
+        return $this->nome;
+    }
+
+    public function setNome($nome) {
+        $this->nome = $nome;
+    }
+
+    public function getAtor() {
+        return $this->ator;
+    }
+
+    public function setAtor($ator) {
+        $this->ator = $ator;
+    }
+
+    public function isProtagonista() {
+        return $this->protagonista;
+    }
+
+    public function setProtagonista($protagonista) {
+        $this->protagonista = $protagonista;
+    }
+}
