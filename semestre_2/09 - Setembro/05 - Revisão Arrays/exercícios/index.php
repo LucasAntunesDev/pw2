@@ -45,3 +45,8 @@ echo '<table border="1">';
     }
     echo '</tbody';
 echo '</table>';
+
+echo '<h2>Protagonistas de Oppenheimer<h2>';
+foreach($oppenhimer->obterProtagonistas() as $protagonista){
+    echo "- " .$protagonista->getNome();
+}
