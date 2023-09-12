@@ -79,5 +79,11 @@
 			"require_once('$1');"
 		]
 	},
+	"foreach":{
+		"prefix" : "fre",
+		"body": [
+			"foreach('$$1 as $$2'){\n\n}"
+		]
+	},
 
 }
