@@ -1,6 +1,6 @@
 <?php
 //Filme.php
-require_once('Personagem.php');
+
 class Filme {
     private $nome;
     private $duracao;
@@ -39,7 +39,8 @@ class Filme {
 
         foreach ($this->getPersonagens() as $personagem) {
 
-            if ($personagem->isProtagonista()) array_push($protagonistas, $personagem);
+            if ($personagem->isProtagonista()) 
+            array_push($protagonistas, $personagem);
         }
         return $protagonistas;
     }

@@ -1,5 +1,5 @@
 <?php
-//Persongaem.php
+//Personagem.php
 
 class Personagem {
     private $nome;
