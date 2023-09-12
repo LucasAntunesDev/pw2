@@ -2,11 +2,11 @@
 //Persongaem.php
 
 class Personagem {
-    private string $nome;
-    private string $ator;
-    private bool $protagonista;
+    private $nome;
+    private  $ator;
+    private $protagonista;
 
-    public function __construct(string $nome, string $ator, bool $protagonista) {
+    public function __construct($nome, $ator,  $protagonista) {
         $this->nome = $nome;
         $this->ator = $ator;
         $this->protagonista = $protagonista;
