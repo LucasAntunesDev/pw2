@@ -85,5 +85,17 @@
 			"foreach('$$1 as $$2'){\n\n}"
 		]
 	},
+	"$_POST[]":{
+		"prefix" : "pst",
+		"body": [
+			"$$_POST[$1];"
+		]
+	},
+	"$GET[]":{
+		"prefix" : "get",
+		"body": [
+			"$$_GET[$1];"
+		]
+	},
 
 }
