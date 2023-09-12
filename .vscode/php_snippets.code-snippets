@@ -97,5 +97,11 @@
 			"$$_GET[$1];"
 		]
 	},
+	"$statement"{
+		"prefix" : "stmt",
+		"body": [
+			"$$statement = ;"
+		]
+	},
 
 }
