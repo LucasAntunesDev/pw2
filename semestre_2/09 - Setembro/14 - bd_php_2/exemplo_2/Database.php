@@ -37,7 +37,16 @@ final class Database {
         $stmt = $this->connection->prepare($query);
 
         foreach ($binds as $attr => $value) $stmt->bindValue($attr, $value);
-        
+
         return $stmt->execute();
+    }
+
+    public function getLastInsertedId() {
+        return $this->connection->lastInsertId();
+    }
+
+    //fechando a conexão do bd
+    public function __destruct() {
+        $this->connection = null;
     }
 }
