@@ -19,12 +19,6 @@
 			"print_r($1);"
 		]
 	},
-	"print":{
-		"prefix" : "pr",
-		"body": [
-			"print($1);"
-		]
-	},
 	"var_dump":{
 		"prefix" : "pr",
 		"body": [
