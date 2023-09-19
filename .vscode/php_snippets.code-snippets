@@ -103,5 +103,11 @@
 			"$$statement = ;"
 		]
 	},
+	"tailwind link":{
+		"prefix" : "tailwind",
+		"body": [
+			"<script src='https://cdn.tailwindcss.com'></script>"
+		]
+	}
 
 }
