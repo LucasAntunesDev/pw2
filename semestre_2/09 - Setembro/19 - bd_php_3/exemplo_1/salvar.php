@@ -45,9 +45,4 @@ if ($_POST['id'] > 0) {
 
 $success = $db->execute($query, $binds);
 
-if ($success) {
-    header('location:index.php');
-} else {
-    echo 'Deu erro :(';
-}
-// echo $success ? header('location:index.php') : 'Deu erro :(';
+echo $success ? header('location:index.php') : 'Deu erro :(';
