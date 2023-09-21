@@ -42,12 +42,12 @@
                     echo '<td class="px-2">' . $obra['genero'] . '</td>';
                     echo '<td class="px-2">' . $obra['assistida'] . '</td>';
                     echo '<td class="px-2">';
-                        echo '<a href="formulario.php?id='. $obra['id'].'" 
+                        echo '<a href="formulario.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'" 
                         class="text-emerald-600 hover:underline">
                             Editar
                         </a><br>';
 
-                        echo '<a href="excluir.php?id='. $obra['id'].'"
+                        echo '<a href="excluir.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'"
                         class="text-red-600 hover:underline">
                          Excluir
                         </a>';

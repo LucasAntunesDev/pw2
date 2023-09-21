@@ -56,19 +56,21 @@ if (isset($_GET['id'])) {
         class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
         py-1 text-center placeholder:text-center">
         
-        <!-- <select placeholder="tipo" value="<?php echo $tipo;?>" -->
+        <!-- <select placeholder="tipo" value="<?php //echo $tipo;?>" -->
         <select placeholder="tipo" name="tipo"
         class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
         py-1 text-center placeholder:text-center">
            
 
-            <option value='Filem'></option>
-            <option value='Série'></option>
+            <option value='filme'>Filme</option>
+            <option value='série'>Série</option>
             <?php
 
-                //foreach($tipo as $t){
-                //    echo " <option value='$t'></option>";
-                //}
+                /*foreach($tipo as $t){
+                   echo " <option value='$t' class='capitalize'>
+                        $t
+                   </option>";
+                }*/
 
             ?>
 
@@ -78,7 +80,11 @@ if (isset($_GET['id'])) {
         class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
         py-1 text-center placeholder:text-center">
         
-        <input type="text" name="assistida" placeholder="assistida" value="<?php echo $assistida;?>"
+        <input type="text" name="assistida" placeholder="assistida" value="
+        <?php 
+            echo $assistida ? 'Sim' : 'Não';
+        ?>
+        "
         class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
         py-1 text-center placeholder:text-center">
         
