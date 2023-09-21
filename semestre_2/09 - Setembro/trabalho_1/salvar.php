@@ -5,6 +5,12 @@ require_once('Database.php');
 $db = new Database();
 
 if ($_POST['id'] > 0) {
+
+    // if(!isset($_GET['tipo'])) {
+    //     header('location:index.php');
+    //     die;
+    // }
+
     $query = 'UPDATE obras 
     SET 
         nome = :nome,

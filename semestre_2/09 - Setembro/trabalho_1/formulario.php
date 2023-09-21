@@ -15,6 +15,7 @@ if (isset($_GET['id'])) {
     $nome = $obra[0]['nome'];
     $sinopse = $obra[0]['sinopse'];
     $tipo = $obra[0]['tipo'];
+    // $tipo = $_GET['tipo'];
     $genero = $obra[0]['genero'];
     $assistida = $obra[0]['assistida'];
 } else {
@@ -62,9 +63,28 @@ if (isset($_GET['id'])) {
         py-1 text-center placeholder:text-center">
            
 
-            <option value='filme'>Filme</option>
-            <option value='série'>Série</option>
+            <!-- <option value='filme'>Filme</option>
+            <option value='série'>Série</option> -->
             <?php
+
+                if($tipo === 'filme') {
+                    echo "<option value='Filme' class='capitalize'>";
+                        echo 'Filme';
+                   echo "</option>";
+                    
+                   echo "<option value='Série' class='capitalize'>";
+                        echo 'Série';
+                   echo "</option>";
+                }else{
+                    echo "<option value='Série' class='capitalize'>";
+                    echo 'Série';
+                    echo "</option>";
+                    
+                    echo "<option value='Filme' class='capitalize'>";
+                    echo 'Filme';
+                    echo "</option>";
+
+                }
 
                 /*foreach($tipo as $t){
                    echo " <option value='$t' class='capitalize'>
