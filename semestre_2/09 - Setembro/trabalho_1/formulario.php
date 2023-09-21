@@ -1,13 +1,13 @@
 <?php
 //formulario.php
+
 if (isset($_GET['id'])) {
     #É edição
     require_once('Database.php');
 
     $db = new Database();
     $obra = $db->select(
-        'SELECT * FROM obras 
-                        WHERE id = :id',
+        'SELECT * FROM obras WHERE id = :id',
         [':id' => $_GET['id']]
     );
 
@@ -26,6 +26,8 @@ if (isset($_GET['id'])) {
     $tipo = '';
     $genero = '';
     $assistida = '';
+
+    $adicao = 1;
 }
 
 ?>
@@ -51,11 +53,11 @@ if (isset($_GET['id'])) {
         
         <input type="text" name="nome" placeholder="nome" value="<?php echo $nome;?>"
         class="bg-slate-900 border-[2px] border-slate-700 rounded-md
-         py-1 text-center placeholder:text-center">
+         py-1 text-center placeholder:text-center <?php ?>">
 
         <input type="text" name="sinopse" placeholder="sinopse" value="<?php echo $sinopse;?>"
         class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
-        py-1 text-center placeholder:text-center">
+        py-1 text-center placeholder:text-center <?php ?>">
         
         <!-- <select placeholder="tipo" value="<?php //echo $tipo;?>" -->
         <select placeholder="tipo" name="tipo"
@@ -98,7 +100,7 @@ if (isset($_GET['id'])) {
         
         <input type="text" name="genero" placeholder="genero" value="<?php echo $genero;?>"
         class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
-        py-1 text-center placeholder:text-center">
+        py-1 text-center placeholder:text-center <?php ?>">
         
         <input type="text" name="assistida" placeholder="assistida" value="
         <?php 
@@ -106,7 +108,7 @@ if (isset($_GET['id'])) {
         ?>
         "
         class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
-        py-1 text-center placeholder:text-center">
+        py-1 text-center placeholder:text-center <?php ?>">
         
         <button type="submit" class="bg-emerald-600 rounded-full py-1 
         px-4 hover:bg-emerald-800">Salvar</button>

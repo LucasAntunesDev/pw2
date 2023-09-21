@@ -11,8 +11,9 @@
 <body class="bg-slate-900 font-mono text-zinc-50">
 
     <h1 class="text-5xl text-sky-500 text-center my-2">
-        Obras para assistir
+        Obras
     </h1>
+    <a href="formulario.php" class="text-xl my-2 text-center block hover:underline">Novo carro</a>
 
     <table class="mx-auto border-[1px] border-slate-700 my-4">
         <thead>
