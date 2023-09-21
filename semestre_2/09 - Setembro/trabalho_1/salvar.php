@@ -17,7 +17,7 @@ if ($_POST['id'] > 0) {
         sinopse = :sinopse,
         tipo = :tipo,
         genero =  :genero,
-        assistida = :assistida,
+        assistida = :assistida
     WHERE 
         id = :id';
 
