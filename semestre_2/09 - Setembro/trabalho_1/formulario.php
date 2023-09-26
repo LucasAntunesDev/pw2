@@ -51,11 +51,11 @@ if (isset($_GET['id'])) {
 
         <input type="hidden" name="id" value="<?php echo $id;?>">
         
-        <input type="text" name="nome" placeholder="nome" value="<?php echo $nome;?>"
+        <input type="text" name="nome" placeholder="Nome" value="<?php echo $nome;?>"
         class="bg-slate-900 border-[2px] border-slate-700 rounded-md
          py-1 text-center placeholder:text-center <?php ?>">
 
-        <input type="text" name="sinopse" placeholder="sinopse" value="<?php echo $sinopse;?>"
+        <input type="text" name="sinopse" placeholder="Sinopse" value="<?php echo $sinopse;?>"
         class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
         py-1 text-center placeholder:text-center <?php ?>">
         
@@ -88,21 +88,15 @@ if (isset($_GET['id'])) {
 
                 }
 
-                /*foreach($tipo as $t){
-                   echo " <option value='$t' class='capitalize'>
-                        $t
-                   </option>";
-                }*/
-
             ?>
 
         </select>
         
-        <input type="text" name="genero" placeholder="genero" value="<?php echo $genero;?>"
+        <input type="text" name="genero" placeholder="Gênero" value="<?php echo $genero;?>"
         class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
         py-1 text-center placeholder:text-center <?php ?>">
         
-        <input type="text" name="assistida" placeholder="assistida" value="
+        <input type="text" name="assistida" placeholder="Assistida" value="
         <?php 
             echo $assistida ? 'Sim' : 'Não';
         ?>

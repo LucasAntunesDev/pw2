@@ -14,9 +14,11 @@
     <h1 class="text-5xl text-sky-500 text-center my-2">
         Obras
     </h1>
-    <a href="formulario.php" class="text-xl my-2 text-center block hover:underline">Adicionar obra</a>
-    <!-- <a href="avaliacoes.php" class="text-xl my-2 text-center block hover:underline">Ver avaliações</a> -->
-    <a href="formularioAvaliacao.php" class="text-xl my-2 text-center block hover:underline">Adicionar avaliação</a>
+
+    <a href="formulario.php" class="text-xl my-2 text-center block hover:underline">
+        Adicionar obra
+        <i class="fa-solid fa-film"></i>
+    </a>
 
     <table class="mx-auto border-[1px] border-slate-700 my-4">
         <thead>
@@ -58,15 +60,20 @@
                         </a>';
                     echo '</td>';
                 }
-                
-                // foreach($avaliacoes as $avaliacao){
-                //     echo '<td class="px-2">' . $avaliacao['nota'] . '</td>';
-                // }
 
                 echo '</tr>';
             ?>
         </thead>
     </table>
+
+    <h1 class="text-5xl text-sky-500 text-center my-2">
+        Avaliações
+    </h1>
+
+    <a href="formularioAvaliacao.php" class="text-xl my-2 text-center block hover:underline">
+        Adicionar avaliação
+        <i class="fa-regular fa-star"></i>
+    </a>
 
     <table class="mx-auto border-[1px] border-slate-700 my-4">
         <thead>
@@ -75,15 +82,11 @@
                 <th class="border-[1px] border-slate-700 px-2">Id da Obra</th>
                 <th class="border-[1px] border-slate-700 px-2">Nota</th>
                 <th class="border-[1px] border-slate-700 px-2">Observações</th>
-                <th class="border-[1px] border-slate-700 px-2">Editar</th>
+                <th class="border-[1px] border-slate-700 px-2">Ação</th>
             </tr>
 
             <?php
             
-            require_once('Database.php');
-
-            $db = new Database();
-            // $obras = $db->select('SELECT * FROM obras');
             $avaliacoes = $db->select('SELECT * FROM avaliacoes');
 
             

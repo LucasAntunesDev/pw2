@@ -35,6 +35,7 @@ if (isset($_GET['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliar obra</title>
     <script src='https://cdn.tailwindcss.com'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-slate-900 text-zinc-50">
@@ -55,29 +56,31 @@ if (isset($_GET['id'])) {
         <div class="flex flex-row justify-center items-center gap-2">
             <label for="1">
                 <input type='radio' name='nota' value='1'>
+                <!-- <i class="fa-regular fa-star"></i> -->
                 1
             </label>
             <label for="2">
                 <input type='radio' name='nota' value='2'>
+                <!-- <i class="fa-regular fa-star"></i> -->
                 2
             </label>
             <label for="3">
                 <input type='radio' name='nota' value='3'>
+                <!-- <i class="fa-regular fa-star"></i> -->
                 3
             </label>
             <label for="4">
                 <input type='radio' name='nota' value='4'>
+                <!-- <i class="fa-regular fa-star"></i> -->
                 4
             </label>
             <label for="5">
                 <input type='radio' name='nota' value='5'>
+                <!-- <i class="fa-regular fa-star"></i> -->
                 5
             </label>
         </div>
 
-        <!-- <input type="text" name="observacoes" placeholder="observacoes" value="<?php echo $observacoes; ?>"
-        class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
-        py-1 text-center placeholder:text-center"> -->
         <textarea name="observacoes" value="<?php echo $observacoes; ?>" cols=" 30" rows="10"></textarea>
 
         <button type="submit" class="bg-emerald-600 rounded-full py-1 
