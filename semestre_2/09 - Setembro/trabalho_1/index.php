@@ -88,9 +88,9 @@
                     echo '</td>';
                 }
                 
-                foreach($avaliacoes as $avaliacao){
-                    echo '<td class="px-2">' . $avaliacao['nota'] . '</td>';
-                }
+                // foreach($avaliacoes as $avaliacao){
+                //     echo '<td class="px-2">' . $avaliacao['nota'] . '</td>';
+                // }
 
                 echo '</tr>';
             ?>

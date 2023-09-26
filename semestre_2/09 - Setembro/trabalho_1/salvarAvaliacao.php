@@ -8,7 +8,7 @@ if ($_POST['id'] > 0) {
 
     $query = 'UPDATE avaliacoes 
     SET 
-        obra_id = :obras_id,
+        obras_id = :obras_id,
         nota = :nota,
         observacoes = :observacoes
         -- genero =  :genero,

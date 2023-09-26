@@ -13,7 +13,7 @@
 <h1 class="text-5xl text-sky-500 text-center my-2">
         Obras
     </h1>
-    <a href="formulario.php" class="text-xl my-2 text-center block hover:underline">Adicionar obra</a>
+    <a href="index.php" class="text-xl my-2 text-center block hover:underline">Ver obras</a>
 
     <table class="mx-auto border-[1px] border-slate-700 my-4">
         <thead>
@@ -31,39 +31,17 @@
             $db = new Database();
             // $obras = $db->select('SELECT * FROM obras');
             $avaliacoes = $db->select('SELECT * FROM avaliacoes');
-            
-            // foreach($obras as $obra){
-            //     echo '<tr class="border-[1px] border-slate-700">';
-            //         echo '<td class="px-2">' . $obra['id'] . '</td>';
-            //         echo '<td class="px-2">' . $obra['nome'] . '</td>';
-            //         echo '<td class="px-2">' . $obra['sinopse'] . '</td>';
-            //         echo '<td class="px-2">' . $obra['tipo'] . '</td>';
-            //         echo '<td class="px-2">' . $obra['genero'] . '</td>';
-            //         echo '<td class="px-2">' . $obra['assistida'] . '</td>';
-            //         echo '<td class="px-2">';
-            //             echo '<a href="formulario.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'" 
-            //             class="text-emerald-600 hover:underline">
-            //                 Editar
-            //             </a><br>';
-                    
-            //             echo '<a href="excluir.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'"
-            //             class="text-red-600 hover:underline">
-            //              Excluir
-            //             </a>';
-            //         echo '</td>';
-            //         echo '<td class="px-2">';
-            //         echo '<a href="formularioAvaliacao.php?id=' . $obra['id'] . '">Adicionar avaliação</a>';
-            //         echo '</td>';
-            //     }
-                
-                foreach($avaliacoes as $avaliacao){
-                    echo '<td class="px-2">' . $avaliacao['id'] . '</td>';
-                    echo '<td class="px-2">' . $avaliacao['obras_id'] . '</td>';
-                    echo '<td class="px-2">' . $avaliacao['nota'] . '</td>';
-                    echo '<td class="px-2">' . $avaliacao['observacoes'] . '</td>';
-                }
 
-                echo '</tr>';
+            
+            foreach($avaliacoes as $avaliacao){
+                    echo '<tr>';
+                            echo '<td class="px-2">' . $avaliacao['id'] . '</td>';
+                            echo '<td class="px-2">' . $avaliacao['obras_id'] . '</td>';
+                            echo '<td class="px-2">' . $avaliacao['nota'] . '</td>';
+                            echo '<td class="px-2">' . $avaliacao['observacoes'] . '</td>';
+                        echo '</tr>';
+                    }
+
             ?>
         </thead>
     </table>
