@@ -44,7 +44,10 @@ if (isset($_GET['id'])) {
 
 <body class="bg-slate-900 text-zinc-50">
 
-    <h1 class="text-sky-500 text-6xl text-center mt-2">Formulário de obra</h1>
+    <h1 class="text-sky-500 text-6xl text-center mt-2">
+        Formulário de obra
+        <i class="fa-solid fa-film"></i>
+    </h1>
     <a href="index.php" class="text-center mx-auto text-emerald-600 block">Voltar</a>
 
     <form action="salvar.php" method="post" class="flex flex-col justify-center items-center gap-2">
@@ -52,17 +55,23 @@ if (isset($_GET['id'])) {
         <input type="hidden" name="id" value="<?php echo $id;?>">
         
         <input type="text" name="nome" placeholder="Nome" value="<?php echo $nome;?>"
-        class="bg-slate-900 border-[2px] border-slate-700 rounded-md
-         py-1 text-center placeholder:text-center <?php ?>">
+        class=" rounded-md 
+            border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
+            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
+            outline-none dark:text-zinc-300 <?php ?>">
 
         <input type="text" name="sinopse" placeholder="Sinopse" value="<?php echo $sinopse;?>"
-        class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
-        py-1 text-center placeholder:text-center <?php ?>">
+        class=" rounded-md 
+            border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
+            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
+            outline-none dark:text-zinc-300 <?php ?>">
         
         <!-- <select placeholder="tipo" value="<?php //echo $tipo;?>" -->
         <select placeholder="tipo" name="tipo"
-        class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
-        py-1 text-center placeholder:text-center">
+        class="rounded-md 
+            border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
+            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
+            outline-none dark:text-zinc-300">
            
 
             <!-- <option value='filme'>Filme</option>
@@ -93,16 +102,20 @@ if (isset($_GET['id'])) {
         </select>
         
         <input type="text" name="genero" placeholder="Gênero" value="<?php echo $genero;?>"
-        class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
-        py-1 text-center placeholder:text-center <?php ?>">
+        class=" rounded-md 
+            border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
+            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
+            outline-none dark:text-zinc-300 <?php ?>">
         
         <input type="text" name="assistida" placeholder="Assistida" value="
         <?php 
             echo $assistida ? 'Sim' : 'Não';
         ?>
         "
-        class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
-        py-1 text-center placeholder:text-center <?php ?>">
+        class=" rounded-md 
+            border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
+            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
+            outline-none dark:text-zinc-300 <?php ?>">
         
         <button type="submit" class="bg-emerald-600 rounded-full py-1 
         px-4 hover:bg-emerald-800">Salvar</button>

@@ -40,19 +40,22 @@ if (isset($_GET['id'])) {
 
 <body class="bg-slate-900 text-zinc-50">
 
-    <h1 class="text-sky-500 text-6xl text-center mt-2">Avaliar obra</h1>
+    <h1 class="text-sky-500 text-6xl text-center mt-2">
+        Avaliar obra
+        <i class="fa-regular fa-star"></i>
+    </h1>
     <a href="index.php" class="text-center mx-auto text-emerald-600 block">Voltar</a>
 
     <form action="salvarAvaliacao.php" method="post" class="flex flex-col justify-center items-center gap-2">
 
         <input type="hidden" name="id" value="<?php echo $id; ?>">
 
-        <input type="text" name="obras_id" placeholder="Id da Obra" value="<?php echo $obras_id; ?>" class="bg-slate-900 border-[2px] border-slate-700 rounded-md
-         py-1 text-center placeholder:text-center <?php ?>">
+        <input type="text" name="obras_id" placeholder="Id da Obra" value="<?php echo $obras_id; ?>" 
+        class="rounded-md 
+            border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
+            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
+            outline-none dark:text-zinc-300 <?php ?>">
 
-        <!-- <input type="text" name="nota" placeholder="nota" value="<?php echo $nota; ?>"
-        class="bg-slate-900 border-[2px] border-slate-700 rounded-md 
-        py-1 text-center placeholder:text-center"> -->
         <div class="flex flex-row justify-center items-center gap-2">
             <label for="1">
                 <input type='radio' name='nota' value='1'>
@@ -81,7 +84,11 @@ if (isset($_GET['id'])) {
             </label>
         </div>
 
-        <textarea name="observacoes" value="<?php echo $observacoes; ?>" cols=" 30" rows="10"></textarea>
+        <textarea name="observacoes" value="<?php echo $observacoes; ?>" cols=" 30" rows="10"
+        class="rounded-md 
+            border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
+            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
+            outline-none dark:text-zinc-300"></textarea>
 
         <button type="submit" class="bg-emerald-600 rounded-full py-1 
         px-4 hover:bg-emerald-800">Salvar</button>

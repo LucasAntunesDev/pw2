@@ -97,12 +97,13 @@
                             echo '<td class="px-2">' . $avaliacao['nota'] . '</td>';
                             echo '<td class="px-2">' . $avaliacao['observacoes'] . '</td>';
                             echo '<td class="px-2">';
-                            echo '<a href="formularioAvaliacao.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'" 
+                            // echo '<a href="formularioAvaliacao.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'" 
+                            echo '<a href="formularioAvaliacao.php" 
                             class="text-emerald-600 hover:underline">
                                 Editar
                             </a><br>';
                         
-                            echo '<a href="excluirAvaliacao.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'"
+                            echo '<a href="excluirAvaliacao.php"
                             class="text-red-600 hover:underline">
                              Excluir
                             </a>';
