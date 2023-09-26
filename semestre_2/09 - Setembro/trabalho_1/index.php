@@ -13,7 +13,7 @@
     <h1 class="text-5xl text-sky-500 text-center my-2">
         Obras
     </h1>
-    <a href="formulario.php" class="text-xl my-2 text-center block hover:underline">Novo carro</a>
+    <a href="formulario.php" class="text-xl my-2 text-center block hover:underline">Adicionar obra</a>
 
     <table class="mx-auto border-[1px] border-slate-700 my-4">
         <thead>
@@ -25,6 +25,7 @@
                 <th class="border-[1px] border-slate-700 px-2">Gênero</th>
                 <th class="border-[1px] border-slate-700 px-2">Assistida</th>
                 <th class="border-[1px] border-slate-700 px-2">Ação</th>
+                <th class="border-[1px] border-slate-700 px-2">Avaliação</th>
             </tr>
 
             <?php
@@ -53,11 +54,18 @@
                          Excluir
                         </a>';
                     echo '</td>';
+                    echo '<td class="px-2">';
+                        echo '<a href="salvarAvaliacao.php?id='. $obra['id'] . '">';
+                        // echo "<input type='radio' name='1$obra'['id']' value='1'>";
+                        // echo "<input type='radio' name='2$obra'['id']' value='2'>";
+                        // echo "<input type='radio' name='3$obra'['id']' value='3'>";
+                        // echo "<input type='radio' name='4$obra'['id']' value='4'>";
+                        // echo "<input type='radio' name='5$obra'['id']' value='5'>";
+                    echo '</td>';
                 echo '</tr>';
             }
 
             ?>
-        
         </thead>
     </table>
 
