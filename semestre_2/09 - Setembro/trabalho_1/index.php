@@ -15,7 +15,8 @@
         Obras
     </h1>
     <a href="formulario.php" class="text-xl my-2 text-center block hover:underline">Adicionar obra</a>
-    <a href="avaliacoes.php" class="text-xl my-2 text-center block hover:underline">Ver avaliações</a>
+    <!-- <a href="avaliacoes.php" class="text-xl my-2 text-center block hover:underline">Ver avaliações</a> -->
+    <a href="formularioAvaliacao.php" class="text-xl my-2 text-center block hover:underline">Adicionar avaliação</a>
 
     <table class="mx-auto border-[1px] border-slate-700 my-4">
         <thead>
@@ -27,7 +28,6 @@
                 <th class="border-[1px] border-slate-700 px-2">Gênero</th>
                 <th class="border-[1px] border-slate-700 px-2">Assistida</th>
                 <th class="border-[1px] border-slate-700 px-2">Ação</th>
-                <th class="border-[1px] border-slate-700 px-2">Avaliação</th>
             </tr>
 
             <?php
@@ -57,35 +57,6 @@
                          Excluir
                         </a>';
                     echo '</td>';
-                    echo '<td class="px-2">';
-                    echo '<a href="formularioAvaliacao.php?id=' . $obra['id'] . '">Adicionar avaliação</a>';
-                    //     echo '<a href="salvarAvaliacao.php?nota=1?obra='.$obra['id'].'">
-                    //         <i class="fa-regular fa-star"></i>
-                    //     </a>';
-
-                    //     echo '<a href="salvarAvaliacao.php?nota=2?obra='.$obra['id'].'">
-                    //         <i class="fa-regular fa-star"></i>
-                    //     </a>';
-
-                    //     echo '<a href="salvarAvaliacao.php?nota=3?obra='.$obra['id'].'">
-                    //         <i class="fa-regular fa-star"></i>
-                    //     </a>';
-
-                    //     echo '<a href="salvarAvaliacao.php?nota=4?obra='.$obra['id'].'">
-                    //         <i class="fa-regular fa-star"></i>
-                    //     </a>';
-
-                    //     echo '<a href="salvarAvaliacao.php?nota=5?obra='.$obra['id'].'">
-                    //         <i class="fa-regular fa-star"></i>
-                    //     </a>';
-
-
-                        // echo "<input type='radio' name='1$obra'['id']' value='1'>";
-                        // echo "<input type='radio' name='2$obra'['id']' value='2'>";
-                        // echo "<input type='radio' name='3$obra'['id']' value='3'>";
-                        // echo "<input type='radio' name='4$obra'['id']' value='4'>";
-                        // echo "<input type='radio' name='5$obra'['id']' value='5'>";
-                    echo '</td>';
                 }
                 
                 // foreach($avaliacoes as $avaliacao){
@@ -93,6 +64,37 @@
                 // }
 
                 echo '</tr>';
+            ?>
+        </thead>
+    </table>
+
+    <table class="mx-auto border-[1px] border-slate-700 my-4">
+        <thead>
+            <tr class="font-bold border-[1px] border-slate-700 bg-slate-800">
+                <th class="border-[1px] border-slate-700 px-2">ID</th>
+                <th class="border-[1px] border-slate-700 px-2">Id da Obra</th>
+                <th class="border-[1px] border-slate-700 px-2">Nota</th>
+                <th class="border-[1px] border-slate-700 px-2">Observações</th>
+            </tr>
+
+            <?php
+            
+            require_once('Database.php');
+
+            $db = new Database();
+            // $obras = $db->select('SELECT * FROM obras');
+            $avaliacoes = $db->select('SELECT * FROM avaliacoes');
+
+            
+            foreach($avaliacoes as $avaliacao){
+                    echo '<tr>';
+                            echo '<td class="px-2">' . $avaliacao['id'] . '</td>';
+                            echo '<td class="px-2">' . $avaliacao['obras_id'] . '</td>';
+                            echo '<td class="px-2">' . $avaliacao['nota'] . '</td>';
+                            echo '<td class="px-2">' . $avaliacao['observacoes'] . '</td>';
+                        echo '</tr>';
+                    }
+
             ?>
         </thead>
     </table>

@@ -11,8 +11,6 @@ if ($_POST['id'] > 0) {
         obras_id = :obras_id,
         nota = :nota,
         observacoes = :observacoes
-        -- genero =  :genero,
-        -- assistida = :assistida
     WHERE 
         id = :id';
 
