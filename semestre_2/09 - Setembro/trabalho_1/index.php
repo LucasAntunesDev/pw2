@@ -13,11 +13,12 @@
 
     <h1 class="text-5xl text-sky-500 text-center my-2">
         Obras
+        <i class="fa-solid fa-film"></i>
     </h1>
 
     <a href="formulario.php" class="text-xl my-2 text-center block hover:underline">
-        Adicionar obra
-        <i class="fa-solid fa-film"></i>
+        <!-- Adicionar obra -->
+        <i class="fa-solid fa-plus text-emerald-600 hover:text-emerald-400"></i>
     </a>
 
     <table class="mx-auto border-[1px] border-slate-700 my-4">
@@ -68,11 +69,12 @@
 
     <h1 class="text-5xl text-sky-500 text-center my-2">
         Avaliações
+        <i class="fa-regular fa-star"></i>
     </h1>
 
     <a href="formularioAvaliacao.php" class="text-xl my-2 text-center block hover:underline">
-        Adicionar avaliação
-        <i class="fa-regular fa-star"></i>
+        <!-- Adicionar avaliação -->
+        <i class="fa-solid fa-plus text-emerald-600 hover:text-emerald-400"></i>
     </a>
 
     <table class="mx-auto border-[1px] border-slate-700 my-4">
