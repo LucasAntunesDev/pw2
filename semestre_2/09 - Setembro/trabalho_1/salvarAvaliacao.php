@@ -6,7 +6,7 @@ $db = new Database();
 
 if ($_POST['id'] > 0) {
 
-    $query = 'UPDATE avaliacaos 
+    $query = 'UPDATE avaliacoes 
     SET 
         obra_id = :obras_id,
         nota = :nota,
@@ -23,17 +23,15 @@ if ($_POST['id'] > 0) {
         ':id' => $_POST['id']
     ];
 } else {
-    $query = 'INSERT INTO avaliacaos 
+    $query = 'INSERT INTO avaliacoes 
         (obras_id, nota, observacoes)
     VALUES 
         (:obras_id, :nota, :observacoes)';
 
     $binds = [
-        ':nome' => $_POST['nome'],
-        ':sinopse' => $_POST['sinopse'],
-        ':tipo' => $_POST['tipo'],
-        ':genero' => $_POST['genero'],
-        ':assistida' => $_POST['assistida']
+        ':obras_id' => $_POST['obras_id'],
+        ':nota' => $_POST['nota'],
+        ':observacoes' => $_POST['observacoes']
     ];
 }
 

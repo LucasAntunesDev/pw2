@@ -15,6 +15,7 @@
         Obras
     </h1>
     <a href="formulario.php" class="text-xl my-2 text-center block hover:underline">Adicionar obra</a>
+    <a href="avaliacoes.php" class="text-xl my-2 text-center block hover:underline">Ver avaliações</a>
 
     <table class="mx-auto border-[1px] border-slate-700 my-4">
         <thead>
@@ -35,6 +36,7 @@
 
             $db = new Database();
             $obras = $db->select('SELECT * FROM obras');
+            $avaliacoes = $db->select('SELECT * FROM avaliacoes');
             
             foreach($obras as $obra){
                 echo '<tr class="border-[1px] border-slate-700">';
@@ -49,41 +51,48 @@
                         class="text-emerald-600 hover:underline">
                             Editar
                         </a><br>';
-
+                    
                         echo '<a href="excluir.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'"
                         class="text-red-600 hover:underline">
                          Excluir
                         </a>';
                     echo '</td>';
                     echo '<td class="px-2">';
-                        echo '<a href="salvarAvaliacao.php?nota=1?obra='.$obra['id'].'">
-                            <i class="fa-regular fa-star"></i>
-                        </a>';
+                    echo '<a href="formularioAvaliacao.php?id=' . $obra['id'] . '">Adicionar avaliação</a>';
+                    //     echo '<a href="salvarAvaliacao.php?nota=1?obra='.$obra['id'].'">
+                    //         <i class="fa-regular fa-star"></i>
+                    //     </a>';
 
-                        echo '<a href="salvarAvaliacao.php?nota=2?obra='.$obra['id'].'">
-                            <i class="fa-regular fa-star"></i>
-                        </a>';
+                    //     echo '<a href="salvarAvaliacao.php?nota=2?obra='.$obra['id'].'">
+                    //         <i class="fa-regular fa-star"></i>
+                    //     </a>';
 
-                        echo '<a href="salvarAvaliacao.php?nota=3?obra='.$obra['id'].'">
-                            <i class="fa-regular fa-star"></i>
-                        </a>';
+                    //     echo '<a href="salvarAvaliacao.php?nota=3?obra='.$obra['id'].'">
+                    //         <i class="fa-regular fa-star"></i>
+                    //     </a>';
 
-                        echo '<a href="salvarAvaliacao.php?nota=4?obra='.$obra['id'].'">
-                            <i class="fa-regular fa-star"></i>
-                        </a>';
+                    //     echo '<a href="salvarAvaliacao.php?nota=4?obra='.$obra['id'].'">
+                    //         <i class="fa-regular fa-star"></i>
+                    //     </a>';
 
-                        echo '<a href="salvarAvaliacao.php?nota=5?obra='.$obra['id'].'">
-                            <i class="fa-regular fa-star"></i>
-                        </a>';
+                    //     echo '<a href="salvarAvaliacao.php?nota=5?obra='.$obra['id'].'">
+                    //         <i class="fa-regular fa-star"></i>
+                    //     </a>';
+
+
                         // echo "<input type='radio' name='1$obra'['id']' value='1'>";
                         // echo "<input type='radio' name='2$obra'['id']' value='2'>";
                         // echo "<input type='radio' name='3$obra'['id']' value='3'>";
                         // echo "<input type='radio' name='4$obra'['id']' value='4'>";
                         // echo "<input type='radio' name='5$obra'['id']' value='5'>";
                     echo '</td>';
-                echo '</tr>';
-            }
+                }
+                
+                foreach($avaliacoes as $avaliacao){
+                    echo '<td class="px-2">' . $avaliacao['nota'] . '</td>';
+                }
 
+                echo '</tr>';
             ?>
         </thead>
     </table>
