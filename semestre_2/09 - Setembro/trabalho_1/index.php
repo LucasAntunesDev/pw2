@@ -75,6 +75,7 @@
                 <th class="border-[1px] border-slate-700 px-2">Id da Obra</th>
                 <th class="border-[1px] border-slate-700 px-2">Nota</th>
                 <th class="border-[1px] border-slate-700 px-2">Observações</th>
+                <th class="border-[1px] border-slate-700 px-2">Editar</th>
             </tr>
 
             <?php
@@ -92,6 +93,17 @@
                             echo '<td class="px-2">' . $avaliacao['obras_id'] . '</td>';
                             echo '<td class="px-2">' . $avaliacao['nota'] . '</td>';
                             echo '<td class="px-2">' . $avaliacao['observacoes'] . '</td>';
+                            echo '<td class="px-2">';
+                            echo '<a href="formularioAvaliacao.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'" 
+                            class="text-emerald-600 hover:underline">
+                                Editar
+                            </a><br>';
+                        
+                            echo '<a href="excluirAvaliacao.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'"
+                            class="text-red-600 hover:underline">
+                             Excluir
+                            </a>';
+                        echo '</td>';
                         echo '</tr>';
                     }
 
