@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-slate-900 font-mono text-zinc-50">
@@ -55,7 +56,25 @@
                         </a>';
                     echo '</td>';
                     echo '<td class="px-2">';
-                        echo '<a href="salvarAvaliacao.php?id='. $obra['id'] . '">';
+                        echo '<a href="salvarAvaliacao.php?nota=1?obra='.$obra['id'].'">
+                            <i class="fa-regular fa-star"></i>
+                        </a>';
+
+                        echo '<a href="salvarAvaliacao.php?nota=2?obra='.$obra['id'].'">
+                            <i class="fa-regular fa-star"></i>
+                        </a>';
+
+                        echo '<a href="salvarAvaliacao.php?nota=3?obra='.$obra['id'].'">
+                            <i class="fa-regular fa-star"></i>
+                        </a>';
+
+                        echo '<a href="salvarAvaliacao.php?nota=4?obra='.$obra['id'].'">
+                            <i class="fa-regular fa-star"></i>
+                        </a>';
+
+                        echo '<a href="salvarAvaliacao.php?nota=5?obra='.$obra['id'].'">
+                            <i class="fa-regular fa-star"></i>
+                        </a>';
                         // echo "<input type='radio' name='1$obra'['id']' value='1'>";
                         // echo "<input type='radio' name='2$obra'['id']' value='2'>";
                         // echo "<input type='radio' name='3$obra'['id']' value='3'>";
