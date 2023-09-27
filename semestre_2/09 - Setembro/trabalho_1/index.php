@@ -39,7 +39,12 @@
 
             $db = new Database();
             $obras = $db->select('SELECT * FROM obras');
-            $avaliacoes = $db->select('SELECT * FROM avaliacoes');
+            // $avaliacoes = $db->select('SELECT * FROM avaliacoes');
+            // $avaliacoes = $db->select("SELECT avaliacoes.id, avaliacoes.obras_id, avaliacoes.nota, avaliacoes.observacoes, obras.nome 
+            //                         FROM avaliacoes
+            //                         JOIN obras ON
+            //                         avaliacoes.obras_id = obras.id
+            //                         WHERE avaliacoes.obras_id = obras.id");
             
             foreach($obras as $obra){
                 echo '<tr class="border-[1px] border-slate-700">';
@@ -81,6 +86,7 @@
         <thead>
             <tr class="font-bold border-[1px] border-slate-700 bg-slate-800">
                 <th class="border-[1px] border-slate-700 px-2">ID</th>
+                <th class="border-[1px] border-slate-700 px-2">Nome</th>
                 <th class="border-[1px] border-slate-700 px-2">Id da Obra</th>
                 <th class="border-[1px] border-slate-700 px-2">Nota</th>
                 <th class="border-[1px] border-slate-700 px-2">Observações</th>
@@ -89,12 +95,18 @@
 
             <?php
             
-            $avaliacoes = $db->select('SELECT * FROM avaliacoes');
+            $avaliacoes = $db->select("SELECT avaliacoes.id, avaliacoes.obras_id, 
+                                    avaliacoes.nota, avaliacoes.observacoes, obras.nome 
+                                    FROM avaliacoes
+                                    JOIN obras ON
+                                    avaliacoes.obras_id = obras.id
+                                    WHERE avaliacoes.obras_id = obras.id");
 
             
             foreach($avaliacoes as $avaliacao){
                     echo '<tr>';
                             echo '<td class="px-2">' . $avaliacao['id'] . '</td>';
+                            echo '<td class="px-2">' . $avaliacao['nome'] . '</td>';
                             echo '<td class="px-2">' . $avaliacao['obras_id'] . '</td>';
                             echo '<td class="px-2">' . $avaliacao['nota'] . '</td>';
                             echo '<td class="px-2">' . $avaliacao['observacoes'] . '</td>';
