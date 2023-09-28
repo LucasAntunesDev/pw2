@@ -23,9 +23,9 @@ if (isset($_GET['id'])) {
     $nota = '';
     $observacoes = '';
     $obras = $db->select("SELECT * FROM obras 
-                        WHERE assistida = 1 
-                        and id not in
-                        (SELECT obras_id FROM avaliacoes)");
+                    WHERE assistida = 1 
+                    and id not in
+                    (SELECT obras_id FROM avaliacoes)");
 
     // $adicao = 1;
 }
