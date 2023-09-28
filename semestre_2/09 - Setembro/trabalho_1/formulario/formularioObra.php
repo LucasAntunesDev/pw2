@@ -52,73 +52,90 @@ if (isset($_GET['id'])) {
 
     <form action="../salvar/salvar.php" method="post" class="flex flex-col justify-center items-center gap-2">
 
-        <input type="hidden" name="id" value="<?php echo $id;?>">
-        
-        <input type="text" name="nome" placeholder="Nome" value="<?php echo $nome;?>"
-        class=" rounded-md 
+        <input type="hidden" name="id" value="<?php echo $id; ?>">
+
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" placeholder="Nome" value="<?php echo $nome; ?>" class=" rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
             focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
             outline-none dark:text-zinc-300 <?php ?>">
 
-        <input type="text" name="sinopse" placeholder="Sinopse" value="<?php echo $sinopse;?>"
-        class=" rounded-md 
+        <label for="sinopse">Sinopse</label>
+        <input type="text" name="sinopse" id="sinopse" placeholder="Sinopse" value="<?php echo $sinopse; ?>" class=" rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
             focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
             outline-none dark:text-zinc-300 <?php ?>">
-        
-        <!-- <select placeholder="tipo" value="<?php //echo $tipo;?>" -->
-        <select placeholder="tipo" name="tipo"
-        class="rounded-md 
+
+        <!-- <select placeholder="tipo" value="<?php //echo $tipo;
+                                                ?>" -->
+        <label for="tipo">Tipo</label>
+        <select placeholder="tipo" name="tipo" id="tipo" class="rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
             focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
             outline-none dark:text-zinc-300">
-           
 
+           
             <!-- <option value='filme'>Filme</option>
             <option value='série'>Série</option> -->
             <!-- ,echo $tipo == 'F' ? 'selected: '' -->
             <!-- echo $tipo == 'F' ? 'checked: '' -->
-                <?php
+            <?php
 
-                // if($tipo === 'filme') {
-                //     echo "<option value='Filme' class='capitalize'>";
-                //         echo 'Filme';
-                //    echo "</option>";
-                    
-                //    echo "<option value='Série' class='capitalize'>";
-                //         echo 'Série';
-                //    echo "</option>";
-                // }else{
-                //     echo "<option value='Série' class='capitalize'>";
-                //     echo 'Série';
-                //     echo "</option>";
-                    
-                //     echo "<option value='Filme' class='capitalize'>";
-                //     echo 'Filme';
-                //     echo "</option>";
+            if($tipo === 'filme') {
+                echo "<option value='Filme' class='capitalize'>";
+                    echo 'Filme';
+               echo "</option>";
 
-                // }
+               echo "<option value='Série' class='capitalize'>";
+                    echo 'Série';
+               echo "</option>";
+            }else{
+                echo "<option value='Série' class='capitalize'>";
+                echo 'Série';
+                echo "</option>";
+
+                echo "<option value='Filme' class='capitalize'>";
+                echo 'Filme';
+                echo "</option>";
+
+            }
 
             ?>
 
         </select>
-        
-        <input type="text" name="genero" placeholder="Gênero" value="<?php echo $genero;?>"
-        class=" rounded-md 
+
+        <label for="genero">Genero</label>
+        <input type="text" name="genero" id="genero" placeholder="Gênero" value="<?php echo $genero; ?>" class=" rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
             focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
             outline-none dark:text-zinc-300 <?php ?>">
-        
-        <input type="text" name="assistida" placeholder="Assistida" value="
-        <?php 
-            echo $assistida ? 'Sim' : 'Não';
+
+        <!-- <input type="text" name="assistida" placeholder="Assistida" value="
+        <?php
+        // echo $assistida ? 'Sim' : 'Não';
         ?>
         "
         class=" rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
             focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
-            outline-none dark:text-zinc-300 <?php ?>">
-        
+            outline-none dark:text-zinc-300 <?php ?>"> -->
+        <div class="flex flex-col justify-center items-center">
+            <span class="text-sky-600 text-xl">
+                Já assistiu?
+            </span>
+
+            <div class="flex flex-row justify-center items-center gap-x-4">
+                <label for="1">
+                    <input type='radio' name='assistida' value='1' id='1'>
+                    Sim
+                </label>
+                <label for="0">
+                    <input type='radio' name='assistida' value='0' id='0'>
+                    Não
+                </label>
+            </div>
+        </div>
+
         <button type="submit" class="bg-emerald-600 rounded-full py-1 
         px-4 hover:bg-emerald-800">Salvar</button>
     </form>

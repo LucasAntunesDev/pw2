@@ -16,7 +16,7 @@
         <i class="fa-solid fa-film"></i>
     </h1>
 
-    <a href="formulario/formulario.php" class="text-xl my-2 text-center block hover:underline">
+    <a href="formulario/formularioObra.php" class="text-xl my-2 text-center block hover:underline">
         <i class="fa-solid fa-plus text-emerald-600 hover:text-emerald-400"></i>
     </a>
 
@@ -48,7 +48,7 @@
                     echo '<td class="px-2 capitalize">' . $obra['genero'] . '</td>';
                     echo '<td class="px-2 capitalize">' . $obra['assistida']  . '</td>';
                     echo '<td class="px-2">';
-                        echo '<a href="formulario/formulario.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'" 
+                        echo '<a href="formulario/formularioObra.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'" 
                         class="text-emerald-600 hover:underline">
                             Editar
                         </a><br>';
