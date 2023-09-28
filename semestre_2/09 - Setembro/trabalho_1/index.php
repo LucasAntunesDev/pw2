@@ -11,7 +11,7 @@
 
 <body class="bg-slate-900 font-mono text-zinc-50">
 
-    <h1 class="text-5xl text-sky-500 text-center my-2">
+    <h1 class="text-5xl text-sky-500 text-center mt-4 mb-2">
         Obras
         <i class="fa-solid fa-film"></i>
     </h1>
@@ -41,12 +41,12 @@
             
             foreach($obras as $obra){
                 echo '<tr class="border-[1px] border-slate-700">';
-                    echo '<td class="px-2">' . $obra['id'] . '</td>';
-                    echo '<td class="px-2">' . $obra['nome'] . '</td>';
-                    echo '<td class="px-2">' . $obra['sinopse'] . '</td>';
-                    echo '<td class="px-2">' . $obra['tipo'] . '</td>';
-                    echo '<td class="px-2">' . $obra['genero'] . '</td>';
-                    echo '<td class="px-2">' . $obra['assistida']  . '</td>';
+                    echo '<td class="px-2 capitalize">' . $obra['id'] . '</td>';
+                    echo '<td class="px-2 capitalize">' . $obra['nome'] . '</td>';
+                    echo '<td class="px-2 capitalize">' . $obra['sinopse'] . '</td>';
+                    echo '<td class="px-2 capitalize">' . $obra['tipo'] . '</td>';
+                    echo '<td class="px-2 capitalize">' . $obra['genero'] . '</td>';
+                    echo '<td class="px-2 capitalize">' . $obra['assistida']  . '</td>';
                     echo '<td class="px-2">';
                         echo '<a href="formulario/formulario.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'" 
                         class="text-emerald-600 hover:underline">
@@ -96,12 +96,13 @@
             
             foreach($avaliacoes as $avaliacao){
                     echo '<tr>';
-                            echo '<td class="px-2">' . $avaliacao['id'] . '</td>';
-                            echo '<td class="px-2">' . $avaliacao['nome'] . '</td>';
-                            echo '<td class="px-2">' . $avaliacao['obras_id'] . '</td>';
-                            echo '<td class="px-2">' . $avaliacao['nota'] . '</td>';
-                            echo '<td class="px-2 text-ellipsis break-words max-w-sm">' . $avaliacao['observacoes'] . '</td>';
-                            echo '<td class="px-2">';
+                            echo '<td class="px-2 capitalize">' . $avaliacao['id'] . '</td>';
+                            echo '<td class="px-2 capitalize">' . $avaliacao['nome'] . '</td>';
+                            echo '<td class="px-2 capitalize">' . $avaliacao['obras_id'] . '</td>';
+                            echo '<td class="px-2 capitalize">' . $avaliacao['nota'] . '</td>';
+                            echo '<td class="px-2 capitalize 
+                            text-ellipsis break-words max-w-sm">' . $avaliacao['observacoes'] . '</td>';
+                            echo '<td class="px-2 capitalize">';
                             echo '<a href="formulario/formularioAvaliacao.php?id='. $avaliacao['id'].'" 
                             class="text-emerald-600 hover:underline">
                                 Editar
