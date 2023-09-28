@@ -52,6 +52,7 @@ if (isset($_GET['id'])) {
 
         <input type="hidden" name="id" value="<?php echo $id; ?>">
 
+        <label for="obras_id">Nome</label>
         <select name="obras_id"  value="<?php echo $obras_id; ?>" 
         class="rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
@@ -72,12 +73,14 @@ if (isset($_GET['id'])) {
 
         </select>
 
-        <input type="number" name="nota" min="0" max="10" 
+        <label for="nota">Nota</label>
+        <input type="number" name="nota" id="nota" min="0" max="10" 
             class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
             focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
             outline-none dark:text-zinc-300">
 
-        <textarea name="observacoes" value="<?php echo $observacoes; ?>" cols=" 30" rows="10"
+        <label for="observacoes">Observações</label>
+        <textarea name="observacoes" id="observacoes" value="<?php echo $observacoes; ?>" cols=" 30" rows="10"
         class="rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
             focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
