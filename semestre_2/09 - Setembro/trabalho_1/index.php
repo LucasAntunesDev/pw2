@@ -100,7 +100,7 @@
                             echo '<td class="px-2">' . $avaliacao['nome'] . '</td>';
                             echo '<td class="px-2">' . $avaliacao['obras_id'] . '</td>';
                             echo '<td class="px-2">' . $avaliacao['nota'] . '</td>';
-                            echo '<td class="px-2">' . $avaliacao['observacoes'] . '</td>';
+                            echo '<td class="px-2 text-ellipsis break-words max-w-sm">' . $avaliacao['observacoes'] . '</td>';
                             echo '<td class="px-2">';
                             echo '<a href="formulario/formularioAvaliacao.php?id='. $avaliacao['id'].'" 
                             class="text-emerald-600 hover:underline">
