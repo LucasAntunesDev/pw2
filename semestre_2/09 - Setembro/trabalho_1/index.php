@@ -53,7 +53,7 @@
                     echo '<td class="px-2">' . $obra['sinopse'] . '</td>';
                     echo '<td class="px-2">' . $obra['tipo'] . '</td>';
                     echo '<td class="px-2">' . $obra['genero'] . '</td>';
-                    echo '<td class="px-2">' . $obra['assistida'] . '</td>';
+                    echo '<td class="px-2">' . $obra['assistida']  . '</td>';
                     echo '<td class="px-2">';
                         echo '<a href="formulario.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'" 
                         class="text-emerald-600 hover:underline">
@@ -95,8 +95,7 @@
 
             <?php
             
-            $avaliacoes = $db->select("SELECT avaliacoes.id, avaliacoes.obras_id, 
-                                    avaliacoes.nota, avaliacoes.observacoes, obras.nome 
+            $avaliacoes = $db->select("SELECT avaliacoes.*, obras.nome 
                                     FROM avaliacoes
                                     JOIN obras ON
                                     avaliacoes.obras_id = obras.id
