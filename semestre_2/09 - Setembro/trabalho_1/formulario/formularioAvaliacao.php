@@ -72,33 +72,10 @@ if (isset($_GET['id'])) {
 
         </select>
 
-        <div class="flex flex-row justify-center items-center gap-2">
-            <label for="1">
-                <input type='radio' name='nota' value='1'>
-                <!-- <i class="fa-regular fa-star"></i> -->
-                1
-            </label>
-            <label for="2">
-                <input type='radio' name='nota' value='2'>
-                <!-- <i class="fa-regular fa-star"></i> -->
-                2
-            </label>
-            <label for="3">
-                <input type='radio' name='nota' value='3'>
-                <!-- <i class="fa-regular fa-star"></i> -->
-                3
-            </label>
-            <label for="4">
-                <input type='radio' name='nota' value='4'>
-                <!-- <i class="fa-regular fa-star"></i> -->
-                4
-            </label>
-            <label for="5">
-                <input type='radio' name='nota' value='5'>
-                <!-- <i class="fa-regular fa-star"></i> -->
-                5
-            </label>
-        </div>
+        <input type="number" name="nota" min="0" max="10" 
+            class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
+            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
+            outline-none dark:text-zinc-300">
 
         <textarea name="observacoes" value="<?php echo $observacoes; ?>" cols=" 30" rows="10"
         class="rounded-md 
