@@ -15,14 +15,17 @@ if (isset($_GET['id'])) {
     $obras_id = $avaliacao[0]['obras_id'];
     $nota = $avaliacao[0]['nota'];
     $observacoes = $avaliacao[0]['observacoes'];
-    $obras = $db->select('SELECT * FROM obras WHERE assistida = 1 and id not in(SELECT obras_id FROM avaliacoes)');
+    $obras = $db->select('SELECT * FROM obras');
 } else {
     #É inserção
     $id = 0;
     $obras_id = '';
     $nota = '';
     $observacoes = '';
-    $obras = $db->select('SELECT * FROM obras WHERE assistida = 1');
+    $obras = $db->select("SELECT * FROM obras 
+                        WHERE assistida = 1 
+                        and id not in
+                        (SELECT obras_id FROM avaliacoes)");
 
     // $adicao = 1;
 }
