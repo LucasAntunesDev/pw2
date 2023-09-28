@@ -1,7 +1,7 @@
 <?php
 //salvar.php
 
-require_once('Database.php');
+require_once('../Database.php');
 $db = new Database();
 
 if ($_POST['id'] > 0) {
@@ -46,4 +46,4 @@ if ($_POST['id'] > 0) {
 
 $success = $db->execute($query, $binds);
 
-echo $success ? header('location:index.php') : 'Deu erro :(';
+echo $success ? header('location:../index.php') : 'Deu erro :(';

@@ -3,7 +3,7 @@
 
 if (isset($_GET['id'])) {
     #É edição
-    require_once('Database.php');
+    require_once('../Database.php');
 
     $db = new Database();
     $obra = $db->select(
@@ -48,9 +48,9 @@ if (isset($_GET['id'])) {
         Formulário de obra
         <i class="fa-solid fa-film"></i>
     </h1>
-    <a href="index.php" class="text-center mx-auto text-emerald-600 block">Voltar</a>
+    <a href="../index.php" class="text-center mx-auto text-emerald-600 block">Voltar</a>
 
-    <form action="salvar.php" method="post" class="flex flex-col justify-center items-center gap-2">
+    <form action="../salvar/salvar.php" method="post" class="flex flex-col justify-center items-center gap-2">
 
         <input type="hidden" name="id" value="<?php echo $id;?>">
         

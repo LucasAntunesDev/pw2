@@ -16,8 +16,7 @@
         <i class="fa-solid fa-film"></i>
     </h1>
 
-    <a href="formulario.php" class="text-xl my-2 text-center block hover:underline">
-        <!-- Adicionar obra -->
+    <a href="formulario/formulario.php" class="text-xl my-2 text-center block hover:underline">
         <i class="fa-solid fa-plus text-emerald-600 hover:text-emerald-400"></i>
     </a>
 
@@ -39,12 +38,6 @@
 
             $db = new Database();
             $obras = $db->select('SELECT * FROM obras');
-            // $avaliacoes = $db->select('SELECT * FROM avaliacoes');
-            // $avaliacoes = $db->select("SELECT avaliacoes.id, avaliacoes.obras_id, avaliacoes.nota, avaliacoes.observacoes, obras.nome 
-            //                         FROM avaliacoes
-            //                         JOIN obras ON
-            //                         avaliacoes.obras_id = obras.id
-            //                         WHERE avaliacoes.obras_id = obras.id");
             
             foreach($obras as $obra){
                 echo '<tr class="border-[1px] border-slate-700">';
@@ -55,12 +48,12 @@
                     echo '<td class="px-2">' . $obra['genero'] . '</td>';
                     echo '<td class="px-2">' . $obra['assistida']  . '</td>';
                     echo '<td class="px-2">';
-                        echo '<a href="formulario.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'" 
+                        echo '<a href="formulario/formulario.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'" 
                         class="text-emerald-600 hover:underline">
                             Editar
                         </a><br>';
                     
-                        echo '<a href="excluir.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'"
+                        echo '<a href="excluir/excluir.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'"
                         class="text-red-600 hover:underline">
                          Excluir
                         </a>';
@@ -77,8 +70,7 @@
         <i class="fa-regular fa-star"></i>
     </h1>
 
-    <a href="formularioAvaliacao.php" class="text-xl my-2 text-center block hover:underline">
-        <!-- Adicionar avaliação -->
+    <a href="formulario/formularioAvaliacao.php" class="text-xl my-2 text-center block hover:underline">
         <i class="fa-solid fa-plus text-emerald-600 hover:text-emerald-400"></i>
     </a>
 
@@ -110,13 +102,12 @@
                             echo '<td class="px-2">' . $avaliacao['nota'] . '</td>';
                             echo '<td class="px-2">' . $avaliacao['observacoes'] . '</td>';
                             echo '<td class="px-2">';
-                            // echo '<a href="formularioAvaliacao.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'" 
-                            echo '<a href="formularioAvaliacao.php" 
+                            echo '<a href="formulario/formularioAvaliacao.php?id='. $avaliacao['id'].'" 
                             class="text-emerald-600 hover:underline">
                                 Editar
                             </a><br>';
                         
-                            echo '<a href="excluirAvaliacao.php"
+                            echo '<a href="excluir/excluirAvaliacao.php?id='. $avaliacao['id'].'"
                             class="text-red-600 hover:underline">
                              Excluir
                             </a>';

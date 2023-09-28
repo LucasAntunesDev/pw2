@@ -1,11 +1,11 @@
 <?php
 //excluir.php
 
-require_once('Database.php');
+require_once('../Database.php');
 $db = new Database();
 
 if(!isset($_GET['id'])) {
-    header('location:index.php');
+    header('location:../index.php');
     die;
 }
 
@@ -15,4 +15,4 @@ $binds = [':id' => $_GET['id']];
 
 $success = $db->execute($query, $binds);
 
-echo $success ? header('location:index.php') : 'Deu erro :(';
+echo $success ? header('location:../index.php') : 'Deu erro :(';
