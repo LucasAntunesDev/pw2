@@ -69,7 +69,7 @@
         Avaliações
         <i class="fa-regular fa-star"></i>
     </h1>
-
+    
     <a href="formulario/formularioAvaliacao.php" class="text-xl my-2 text-center block hover:underline">
         <i class="fa-solid fa-plus text-emerald-600 hover:text-emerald-400"></i>
     </a>

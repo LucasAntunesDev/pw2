@@ -1,11 +1,11 @@
 <?php
 //formulario.php
 
+require_once('../Database.php');
+
+$db = new Database();
 if (isset($_GET['id'])) {
     #É edição
-    require_once('../Database.php');
-
-    $db = new Database();
     $avaliacao = $db->select(
         'SELECT * FROM avaliacoes WHERE id = :id',
         [':id' => $_GET['id']]
@@ -15,12 +15,14 @@ if (isset($_GET['id'])) {
     $obras_id = $avaliacao[0]['obras_id'];
     $nota = $avaliacao[0]['nota'];
     $observacoes = $avaliacao[0]['observacoes'];
+    $obras = $db->select('SELECT * FROM obras');
 } else {
     #É inserção
     $id = 0;
     $obras_id = '';
     $nota = '';
     $observacoes = '';
+    $obras = $db->select('SELECT * FROM obras');
 
     // $adicao = 1;
 }
@@ -50,11 +52,25 @@ if (isset($_GET['id'])) {
 
         <input type="hidden" name="id" value="<?php echo $id; ?>">
 
-        <input type="text" name="obras_id" placeholder="Id da Obra" value="<?php echo $obras_id; ?>" 
+        <select name="obras_id"  value="<?php echo $obras_id; ?>" 
         class="rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
             focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
-            outline-none dark:text-zinc-300 <?php ?>">
+            outline-none dark:text-zinc-300">
+
+
+            <?php foreach($obras as $obra){?>
+                <option value="<?php echo $obra['id']; ?>"
+                    <?php if ($obras_id === $obra['id']) echo 'selected'?>
+                >
+
+                <?php echo $obra['nome'];?>
+
+                </option>
+            <?php  }?>
+            
+
+        </select>
 
         <div class="flex flex-row justify-center items-center gap-2">
             <label for="1">

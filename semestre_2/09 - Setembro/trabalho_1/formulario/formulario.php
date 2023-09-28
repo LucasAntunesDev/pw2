@@ -76,26 +76,28 @@ if (isset($_GET['id'])) {
 
             <!-- <option value='filme'>Filme</option>
             <option value='série'>Série</option> -->
-            <?php
+            <!-- ,echo $tipo == 'F' ? 'selected: '' -->
+            <!-- echo $tipo == 'F' ? 'checked: '' -->
+                <?php
 
-                if($tipo === 'filme') {
-                    echo "<option value='Filme' class='capitalize'>";
-                        echo 'Filme';
-                   echo "</option>";
+                // if($tipo === 'filme') {
+                //     echo "<option value='Filme' class='capitalize'>";
+                //         echo 'Filme';
+                //    echo "</option>";
                     
-                   echo "<option value='Série' class='capitalize'>";
-                        echo 'Série';
-                   echo "</option>";
-                }else{
-                    echo "<option value='Série' class='capitalize'>";
-                    echo 'Série';
-                    echo "</option>";
+                //    echo "<option value='Série' class='capitalize'>";
+                //         echo 'Série';
+                //    echo "</option>";
+                // }else{
+                //     echo "<option value='Série' class='capitalize'>";
+                //     echo 'Série';
+                //     echo "</option>";
                     
-                    echo "<option value='Filme' class='capitalize'>";
-                    echo 'Filme';
-                    echo "</option>";
+                //     echo "<option value='Filme' class='capitalize'>";
+                //     echo 'Filme';
+                //     echo "</option>";
 
-                }
+                // }
 
             ?>
 
