@@ -48,12 +48,12 @@
                     echo '<td class="px-2 capitalize">' . $obra['genero'] . '</td>';
                     echo '<td class="px-2 capitalize">' . $obra['assistida']  . '</td>';
                     echo '<td class="px-2">';
-                        echo '<a href="formulario/formularioObra.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'" 
+                        echo '<a href="formulario/formularioObra.php?id='. $obra['id'].'&tipo=' . $obra['tipo'].'&assistida=' . $obra['assistida'].'" 
                         class="text-emerald-600 hover:underline">
                             Editar
                         </a><br>';
                     
-                        echo '<a href="excluir/excluir.php?id='. $obra['id'].'tipo=' . $obra['tipo'].'"
+                        echo '<a href="excluir/excluir.php?id='. $obra['id'].'&tipo=' . $obra['tipo'].'&assistida=' . $obra['assistida'].'"
                         class="text-red-600 hover:underline">
                          Excluir
                         </a>';

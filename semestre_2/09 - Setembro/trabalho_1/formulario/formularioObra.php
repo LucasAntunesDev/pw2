@@ -30,6 +30,9 @@ if (isset($_GET['id'])) {
     $adicao = 1;
 }
 
+if(isset($_GET['tipo'])) $tipo = $_GET['tipo'];
+if(isset($_GET['assistida'])) $assistida = $_GET['assistida'];
+
 ?>
 
 <!DOCTYPE html>
@@ -57,68 +60,32 @@ if (isset($_GET['id'])) {
         <label for="nome">Nome</label>
         <input type="text" name="nome" id="nome" placeholder="Nome" value="<?php echo $nome; ?>" class=" rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
-            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
-            outline-none dark:text-zinc-300 <?php ?>">
+            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 bg-slate-800
+            outline-none text-zinc-300 <?php ?>">
 
         <label for="sinopse">Sinopse</label>
         <input type="text" name="sinopse" id="sinopse" placeholder="Sinopse" value="<?php echo $sinopse; ?>" class=" rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
-            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
-            outline-none dark:text-zinc-300 <?php ?>">
+            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 bg-slate-800
+            outline-none text-zinc-300 <?php ?>">
 
-        <!-- <select placeholder="tipo" value="<?php //echo $tipo;
-                                                ?>" -->
         <label for="tipo">Tipo</label>
         <select placeholder="tipo" name="tipo" id="tipo" class="rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
-            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
-            outline-none dark:text-zinc-300">
+            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 bg-slate-800
+            outline-none text-zinc-300 bg-slate-800">
 
-           
-            <!-- <option value='filme'>Filme</option>
-            <option value='série'>Série</option> -->
-            <!-- ,echo $tipo == 'F' ? 'selected: '' -->
-            <!-- echo $tipo == 'F' ? 'checked: '' -->
-            <?php
-
-            if($tipo === 'filme') {
-                echo "<option value='Filme' class='capitalize'>";
-                    echo 'Filme';
-               echo "</option>";
-
-               echo "<option value='Série' class='capitalize'>";
-                    echo 'Série';
-               echo "</option>";
-            }else{
-                echo "<option value='Série' class='capitalize'>";
-                echo 'Série';
-                echo "</option>";
-
-                echo "<option value='Filme' class='capitalize'>";
-                echo 'Filme';
-                echo "</option>";
-
-            }
-
-            ?>
+           <option value="filme" <?php echo $tipo == 'filme' ? 'selected' : ''?>>Filme</option>
+           <option value="filme" <?php echo $tipo == 'série' ? 'selected' : ''?>>Série</option>
 
         </select>
 
         <label for="genero">Genero</label>
         <input type="text" name="genero" id="genero" placeholder="Gênero" value="<?php echo $genero; ?>" class=" rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
-            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
-            outline-none dark:text-zinc-300 <?php ?>">
+            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 bg-slate-800
+            outline-none text-zinc-300 <?php ?>">
 
-        <!-- <input type="text" name="assistida" placeholder="Assistida" value="
-        <?php
-        // echo $assistida ? 'Sim' : 'Não';
-        ?>
-        "
-        class=" rounded-md 
-            border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
-            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 dark:bg-slate-800
-            outline-none dark:text-zinc-300 <?php ?>"> -->
         <div class="flex flex-col justify-center items-center">
             <span class="text-sky-600 text-xl">
                 Já assistiu?
@@ -126,11 +93,13 @@ if (isset($_GET['id'])) {
 
             <div class="flex flex-row justify-center items-center gap-x-4">
                 <label for="1">
-                    <input type='radio' name='assistida' value='1' id='1'>
+                    <input type='radio' name='assistida' value='1' id='1' 
+                    <?php echo $assistida == true ? 'checked' : ''?>>
                     Sim
                 </label>
                 <label for="0">
-                    <input type='radio' name='assistida' value='0' id='0'>
+                    <input type='radio' name='assistida' value='0' id='0' 
+                    <?php echo $assistida == true ? '' : 'checked'?>>
                     Não
                 </label>
             </div>
