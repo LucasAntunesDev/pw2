@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
+    <title>Página Incial</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -43,7 +43,7 @@
                 echo '<tr class="border-[1px] border-slate-700">';
                     echo '<td class="px-2 capitalize">' . $obra['id'] . '</td>';
                     echo '<td class="px-2 capitalize">' . $obra['nome'] . '</td>';
-                    echo '<td class="px-2 capitalize">' . $obra['sinopse'] . '</td>';
+                    echo '<td class="px-2 capitalize max-w-[22rem]">' . $obra['sinopse'] . '</td>';
                     echo '<td class="px-2 capitalize">' . $obra['tipo'] . '</td>';
                     echo '<td class="px-2 capitalize">' . $obra['genero'] . '</td>';
                     echo '<td class="px-2 capitalize">' . $obra['assistida']  . '</td>';
@@ -53,7 +53,7 @@
                             Editar
                         </a><br>';
                     
-                        echo '<a href="excluir/excluir.php?id='. $obra['id'].'&tipo=' . $obra['tipo'].'&assistida=' . $obra['assistida'].'"
+                        echo '<a href="excluir/excluirObra.php?id='. $obra['id'].'&tipo=' . $obra['tipo'].'&assistida=' . $obra['assistida'].'"
                         class="text-red-600 hover:underline">
                          Excluir
                         </a>';

@@ -1,15 +1,10 @@
 <?php
-//salvar.php
+//salvarObra.php
 
 require_once('../Database.php');
 $db = new Database();
 
 if ($_POST['id'] > 0) {
-
-    // if(!isset($_GET['tipo'])) {
-    //     header('location:index.php');
-    //     die;
-    // }
 
     $query = 'UPDATE obras 
     SET 
@@ -31,9 +26,9 @@ if ($_POST['id'] > 0) {
     ];
 } else {
     $query = 'INSERT INTO obras 
-        (nome, sinopse, tipo, genero, assistida, cor)
+        (nome, sinopse, tipo, genero, assistida)
     VALUES 
-        (:nome, :sinopse, :tipo, :genero, :assistida, :cor)';
+        (:nome, :sinopse, :tipo, :genero, :assistida)';
 
     $binds = [
         ':nome' => $_POST['nome'],

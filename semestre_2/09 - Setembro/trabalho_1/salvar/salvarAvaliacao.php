@@ -1,5 +1,5 @@
 <?php
-//salvar.php
+//salvarAvaliacao.php
 
 require_once('../Database.php');
 $db = new Database();

@@ -1,8 +1,7 @@
 <?php
-//formulario.php
+//formularioObra.php
 
 if (isset($_GET['id'])) {
-    #É edição
     require_once('../Database.php');
 
     $db = new Database();
@@ -19,15 +18,12 @@ if (isset($_GET['id'])) {
     $genero = $obra[0]['genero'];
     $assistida = $obra[0]['assistida'];
 } else {
-    #É inserção
     $id = 0;
     $nome = '';
     $sinopse = '';
     $tipo = '';
     $genero = '';
     $assistida = '';
-
-    $adicao = 1;
 }
 
 if(isset($_GET['tipo'])) $tipo = $_GET['tipo'];
@@ -53,7 +49,7 @@ if(isset($_GET['assistida'])) $assistida = $_GET['assistida'];
     </h1>
     <a href="../index.php" class="text-center mx-auto text-emerald-600 block">Voltar</a>
 
-    <form action="../salvar/salvar.php" method="post" class="flex flex-col justify-center items-center gap-2">
+    <form action="../salvar/salvarObra.php" method="post" class="flex flex-col justify-center items-center gap-2">
 
         <input type="hidden" name="id" value="<?php echo $id; ?>">
 
@@ -73,7 +69,7 @@ if(isset($_GET['assistida'])) $assistida = $_GET['assistida'];
         <select placeholder="tipo" name="tipo" id="tipo" class="rounded-md 
             border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
             focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 bg-slate-800
-            outline-none text-zinc-300 bg-slate-800">
+            outline-none text-zinc-300 bg-slate-800 w-56">
 
            <option value="filme" <?php echo $tipo == 'filme' ? 'selected' : ''?>>Filme</option>
            <option value="filme" <?php echo $tipo == 'série' ? 'selected' : ''?>>Série</option>
@@ -93,12 +89,12 @@ if(isset($_GET['assistida'])) $assistida = $_GET['assistida'];
 
             <div class="flex flex-row justify-center items-center gap-x-4">
                 <label for="1">
-                    <input type='radio' name='assistida' value='1' id='1' 
+                    <input type='radio' name='assistida' value='1' id='1' class="caret-sky-600" 
                     <?php echo $assistida == true ? 'checked' : ''?>>
                     Sim
                 </label>
                 <label for="0">
-                    <input type='radio' name='assistida' value='0' id='0' 
+                    <input type='radio' name='assistida' value='0' id='0' class="caret-sky-600" 
                     <?php echo $assistida == true ? '' : 'checked'?>>
                     Não
                 </label>

@@ -5,7 +5,6 @@ require_once('../Database.php');
 
 $db = new Database();
 if (isset($_GET['id'])) {
-    #É edição
     $avaliacao = $db->select(
         'SELECT * FROM avaliacoes WHERE id = :id',
         [':id' => $_GET['id']]
@@ -17,7 +16,6 @@ if (isset($_GET['id'])) {
     $observacoes = $avaliacao[0]['observacoes'];
     $obras = $db->select('SELECT * FROM obras');
 } else {
-    #É inserção
     $id = 0;
     $obras_id = '';
     $nota = '';
@@ -58,17 +56,15 @@ if (isset($_GET['id'])) {
         <label for="obras_id">Nome</label>
         <select name="obras_id"  value="<?php echo $obras_id; ?>" 
         class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
-        focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 bg-slate-800outline-none 
-        text-zinc-300  bg-slate-800">
+        focus:ring-2 focus:ring-inset focus:ring-sky-600 bg-slate-800outline-none 
+        text-zinc-300  bg-slate-800 w-56">
 
 
             <?php foreach($obras as $obra){?>
                 <option value="<?php echo $obra['id']; ?>"
                     <?php if ($obras_id === $obra['id']) echo 'selected'?>
                 >
-
-                <?php echo $obra['nome'];?>
-
+                     <?php echo $obra['nome'];?>
                 </option>
             <?php  }?>
             
@@ -77,16 +73,16 @@ if (isset($_GET['id'])) {
 
         <label for="nota">Nota</label>
         <input type="number" name="nota" id="nota" min="0" max="10" 
-            class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
-            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 bg-slate-800
-            outline-none text-zinc-300">
+            class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+            placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 bg-slate-800
+            outline-none text-zinc-300 w-56">
 
         <label for="observacoes">Observações</label>
         <textarea name="observacoes" id="observacoes" value="<?php echo $observacoes; ?>" cols=" 30" rows="10"
         class="rounded-md 
-            border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
-            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 bg-slate-800
-            outline-none text-zinc-300"></textarea>
+            border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+            placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 bg-slate-800
+            outline-none text-zinc-300 w-56"></textarea>
 
         <button type="submit" class="bg-emerald-600 rounded-full py-1 
         px-4 hover:bg-emerald-800">Salvar</button>
