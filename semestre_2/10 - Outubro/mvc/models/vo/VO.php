@@ -4,7 +4,7 @@
 namespace Model\VO;
 
 abstract class VO {
-    private $id;
+    protected $id;
 
     public function __construct($id) {
         $this->id = $id;
