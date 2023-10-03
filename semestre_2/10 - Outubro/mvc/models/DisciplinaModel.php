@@ -14,7 +14,7 @@ final class DisciplinaModel extends Model{
 
         foreach($data as $row){
             $vo = new DisciplinaVO($row['id'],$row['nome']);
-            array_push($array, $vo);
+            array_push($array, $vo = null) ;
         }
 
         return $array;
