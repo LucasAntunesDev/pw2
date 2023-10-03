@@ -1,7 +1,9 @@
 <?php
 //Database.php
 
-require_once('config.php');
+namespace Util;
+
+use \PDO;
 
 final class Database {
 
