@@ -8,7 +8,7 @@ use Model\VO\DisciplinaVO;
 
 
 final class DisciplinaController extends Controller {
-    public function list(): void {
+    public function list() {
         $model  = new DisciplinaModel();
         $data = $model->selectAll();
 
@@ -17,12 +17,12 @@ final class DisciplinaController extends Controller {
         ]);
     }
 
-    public function get(): void {
+    public function get() {
     }
 
-    public function save(): void {
+    public function save() {
     }
 
-    public function remove(): void {
+    public function remove() {
     }
 }

@@ -6,7 +6,7 @@ use Model\VO\DisciplinaVO;
 use Util\Database;
 
 final class DisciplinaModel extends Model{
-    public function selectAll($vo){
+    public function selectAll($vo = null){
         $db = new Database();
         $data = $db->select('SELECT * FROM disciplinas');
 
@@ -14,7 +14,7 @@ final class DisciplinaModel extends Model{
 
         foreach($data as $row){
             $vo = new DisciplinaVO($row['id'],$row['nome']);
-            array_push($array, $vo = null) ;
+            array_push($array, $vo) ;
         }
 
         return $array;
