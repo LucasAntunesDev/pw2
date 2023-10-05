@@ -33,7 +33,7 @@
                 echo '<td class="border-[1px] border-neutral-900">';
                 echo "<a href='disciplina.php?=id" . $disciplina->getId() . "'>Editar</a>";
                 echo '<br>';
-                echo "<a href='excluirDisciplina.php?id" . $disciplina->getId() . "'>Excluir</a>";
+                echo "<a href='excluirDisciplina.php?id=" . $disciplina->getId() . "'>Excluir</a>";
                 echo '</td>';
                 echo '</tr>';
             }
