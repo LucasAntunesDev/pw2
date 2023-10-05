@@ -10,6 +10,8 @@
 
 <body class="font-mono">
 
+    <?php include('views/includes/menu.php')?>
+
     <h1 class="font-bold text-4xl text-sky-500">Lista de Disciplinas</h1>
     <a href="disciplina.php" class="text-emerald-600 hover:underline">Inserir Nova Disciplina</a>
 
