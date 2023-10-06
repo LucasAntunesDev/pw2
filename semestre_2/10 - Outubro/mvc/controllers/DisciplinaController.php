@@ -23,7 +23,7 @@ final class DisciplinaController extends Controller {
         $id = $_GET['id'] ?? null;
 
         //versões menores que 7.2
-        $id = (isset($_GET['id'])) ? $_GET['id'] : null;
+        // $id = (isset($_GET['id'])) ? $_GET['id'] : null;
 
         if (empty($id)) {
             $vo = new DisciplinaVO();
@@ -33,9 +33,7 @@ final class DisciplinaController extends Controller {
             $vo = $model->selectOne(new DisciplinaVO($id));
         }
 
-        $this->loadView('formDisciplina', [
-            $disciplina = $vo
-        ]);
+        $this->loadView('formDisciplina', ['disciplina' => $vo]);
     }
 
     public function save() {

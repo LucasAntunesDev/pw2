@@ -31,7 +31,7 @@
                 echo '<td class="border-[1px] border-neutral-900">' . $disciplina->getId() . '</td>';
                 echo '<td class="border-[1px] border-neutral-900">' . $disciplina->getNome() . '</td>';
                 echo '<td class="border-[1px] border-neutral-900">';
-                echo "<a href='disciplina.php?=id" . $disciplina->getId() . "'>Editar</a>";
+                echo "<a href='disciplina.php?id=" . $disciplina->getId() . "'>Editar</a>";
                 echo '<br>';
                 echo "<a href='excluirDisciplina.php?id=" . $disciplina->getId() . "'>Excluir</a>";
                 echo '</td>';

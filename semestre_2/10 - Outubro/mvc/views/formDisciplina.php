@@ -10,25 +10,22 @@
 
 <body class="font-mono">
 
-<?php include('views/includes/menu.php')?>
+    <?php include('views/includes/menu.php'); ?>
 
     <h1 class="font-bold text-4xl text-sky-500">Formulário de Disciplina</h1>
     <a href="disciplinas.php" class="text-emerald-600 hover:underline">Voltar para a listagem</a>
+       <fieldset>
+        <legend>Dados da disciplina</legend>
 
-    <form action="disciplina.php" method="POST">
-        <fieldset>
-            <legend>
-                Dados da disciplina
-            </legend>
-            <input type="hidden" name="id" value="<?php echo $diciplina->getId(); ?>">
-            <label for="nome">Nome></label>
-            <br>
-            <input type="text" name="Nome" id="Nome" placeholder="Nome da Disciplina"
-                value="<?php echo $disciplina->getNome(); ?>">
-            <br>
-            <button type="submit">Salvar</button>
+        <form action="disciplinas.php" method="post">
+            <input type="hidden" value='<?php echo $disciplina->getId();?>'>
+           <label for="nome">
+            <input type="text" id="nome" value='<?php echo $disciplina->getNome();?>' placeholder="Nome da Disciplina">
+           </label>
+        </form>
+        <button type="submit">Salvar</button>
+       </fieldset>
 
-        </fieldset>
     </form>
 
 </body>
