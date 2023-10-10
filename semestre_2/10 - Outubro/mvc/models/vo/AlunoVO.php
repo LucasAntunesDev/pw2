@@ -1,5 +1,5 @@
 <?php
-//DisciplinaVO.php
+//AlunoVO.php
 
 namespace Model\VO;
 

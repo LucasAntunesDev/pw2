@@ -28,12 +28,19 @@ final class DisciplinaModel extends Model {
         $binds = [':id' => $vo->getId()];
         $data = $db->select($query, $binds);
 
-        if(count($data) === 0) return null;
+        if (count($data) === 0) return null;
 
         return new DisciplinaVO($data[0]['id'], $data[0]['nome']);
     }
 
     public function insert($vo = null) {
+        $db = new Database();
+        $query = 'INSERT INTO disciplinas (nome) VALUES (:nome)';
+        $binds = [':nome' => $vo->getNome()];
+
+        $success = $db->execute($query, $binds);
+
+        return $success ? $db->getLastInsertedId() : null;
     }
 
     public function delete($vo = null) {
