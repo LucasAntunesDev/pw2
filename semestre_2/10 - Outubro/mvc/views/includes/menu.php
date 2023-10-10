@@ -4,7 +4,7 @@ h-16 bg-emerald-600 text-zinc-50">
 <p>Olá Usuário!</p>
 <ul class="flex flex-row gap-x-4">
     <li class="w-min flex hover:underline transition duration-300 ease-in-out">
-        <a href="disciplina.php">Disciplinas</a>
+        <a href="disciplinas.php">Disciplinas</a>
     </li>
 
     <li class="w-min flex hover:underline transition duration-300 ease-in-out">
