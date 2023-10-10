@@ -3,6 +3,7 @@
 
 namespace Controller;
 
+use Embed\Http\Redirects;
 use Model\DisciplinaModel;
 use Model\VO\DisciplinaVO;
 
@@ -27,8 +28,7 @@ final class DisciplinaController extends Controller {
 
         if (empty($id)) {
             $vo = new DisciplinaVO();
-        }
-        else {
+        } else {
             $model = new DisciplinaModel();
             $vo = $model->selectOne(new DisciplinaVO($id));
         }
@@ -37,6 +37,13 @@ final class DisciplinaController extends Controller {
     }
 
     public function save() {
+        $id = $_POST['id'];
+        $vo = new DisciplinaVO($_POST['id'], $_POST['nome']);
+        $model = new DisciplinaModel();
+
+        empty($id) ? $return = $model->insert($vo) : $return = $model->update($vo);
+
+        $this->redirect('disciplinas.php');
     }
 
     public function remove() {

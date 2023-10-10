@@ -86,7 +86,7 @@
 		]
 	},
 	"$_POST[]":{
-		"prefix" : "pst",
+		"prefix" : "post",
 		"body": [
 			"$$_POST[$1];"
 		]
