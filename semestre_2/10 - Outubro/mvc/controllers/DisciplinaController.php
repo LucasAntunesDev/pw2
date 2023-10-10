@@ -47,5 +47,6 @@ final class DisciplinaController extends Controller {
     }
 
     public function remove() {
+        
     }
 }

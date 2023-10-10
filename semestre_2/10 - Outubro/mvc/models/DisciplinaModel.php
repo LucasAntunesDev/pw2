@@ -54,10 +54,13 @@ final class DisciplinaModel extends Model {
         ];
 
         return $db->execute($query, $binds);
-
-        // return $success ? $db->getLastInsertedId() : null;
     }
 
     public function delete($vo = null) {
+        $db = new Database();
+        $query = 'DELETE FROM disciplinas WHERE id = :id';
+        $binds = [':id' => $vo->getId()];
+
+        return $db->execute($query, $binds);
     }
 }
