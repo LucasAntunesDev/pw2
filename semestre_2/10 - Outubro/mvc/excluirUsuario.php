@@ -1,10 +1,10 @@
 <?php
-//salvarDisiciplina.php
+//excluirDisciplina.php
 
-use Controller\UsuarioController;
+use Controller\UsuarioControlller;
 
 require('config.php');
 require('vendor/autoload.php');
 
 $controller = new Controller\UsuarioController();
-$controller->save();
+$controller->remove();
