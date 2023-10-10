@@ -41,7 +41,7 @@ final class DisciplinaController extends Controller {
         $vo = new DisciplinaVO($_POST['id'], $_POST['nome']);
         $model = new DisciplinaModel();
 
-        empty($id) ? $return = $model->insert($vo) : $return = $model->update($vo);
+        $return = empty($id) ? $model->insert($vo) : $model->update($vo);
 
         $this->redirect('disciplinas.php');
     }

@@ -20,12 +20,12 @@
         <fieldset class="bg-[#EEF6F0] shadow-md p-10 rounded-md w-[40rem]">
             <legend class="text-[#006c4a] font-bold text-center text-xl">Dados da disciplina</legend>
 
-            <form action="disciplinas.php" method="post" class="flex flex-col j
+            <form action="salvarDisciplina.php" method="post" class="flex flex-col j
             ustify-center items-center gap-2">
-                <input type="hidden" value='<?php echo $disciplina->getId(); ?>'>
+                <input type="hidden" name="id" value='<?php echo $disciplina->getId(); ?>'>
 
                 <label for="nome"></label>
-                <input type="text" id="nome" value='<?php echo $disciplina->getNome(); ?>' 
+                <input type="text" id="nome" name="nome" value='<?php echo $disciplina->getNome(); ?>' 
                 placeholder="Nome da Disciplina" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
