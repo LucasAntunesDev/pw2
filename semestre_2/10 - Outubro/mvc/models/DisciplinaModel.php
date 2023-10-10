@@ -43,9 +43,21 @@ final class DisciplinaModel extends Model {
         return $success ? $db->getLastInsertedId() : null;
     }
 
-    public function delete($vo = null) {
+    public function update($vo = null) {
+        $db = new Database();
+        $query = 'UPDATE disciplinas 
+                    SET nome = :nome 
+                    WHERE id = :id';
+        $binds = [
+            ':nome' => $vo->getNome(),
+            ':id' => $vo->getId()
+        ];
+
+        return $db->execute($query, $binds);
+
+        // return $success ? $db->getLastInsertedId() : null;
     }
 
-    public function update($vo = null) {
+    public function delete($vo = null) {
     }
 }
