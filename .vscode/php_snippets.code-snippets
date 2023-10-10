@@ -88,13 +88,13 @@
 	"$_POST[]":{
 		"prefix" : "post",
 		"body": [
-			"$$_POST[$1];"
+			"$$_POST[$1]"
 		]
 	},
 	"$GET[]":{
 		"prefix" : "get",
 		"body": [
-			"$$_GET[$1];"
+			"$$_GET[$1]"
 		]
 	},
 	"$statement"{

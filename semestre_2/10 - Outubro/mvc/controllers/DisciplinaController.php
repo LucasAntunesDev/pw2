@@ -47,6 +47,12 @@ final class DisciplinaController extends Controller {
     }
 
     public function remove() {
-        
+        if(empty($_GET['id'])) die('Necessário passar o ID');
+
+        $model = new DisciplinaModel();
+
+        $return = $model->delete(new DisciplinaVO($_GET['id']));
+
+        $this->redirect('disciplinas.php');
     }
 }
