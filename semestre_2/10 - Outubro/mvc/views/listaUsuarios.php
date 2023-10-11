@@ -31,6 +31,8 @@
                 <tr>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">ID</th>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Nome</th>
+                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Login</th>
+                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Senha</th>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Ações</th>
                 </tr>
             </thead>
@@ -62,24 +64,7 @@
                             Excluir
                         </a>";
 
-                        echo "<a href='excluirUsuario.php?id=" . $usuario->getLogin() . "' 
-                        class='bg-[#FFDAD6] rounded-full p-2 text-[#410002] 
-                        shadow-md hover:shadow-[#A9ACA7] px-4 flex items-center 
-                        gap-x-1 mb-2 transition duration-300 ease-in-out mb-2'>
-
-                        <span class='material-symbols-outlined'>delete</span>
-                            Excluir
-                        </a>";
-
-                        echo "<a href='excluirUsuario.php?id=" . $usuario->getSenha() . "' 
-                        class='bg-[#FFDAD6] rounded-full p-2 text-[#410002] 
-                        shadow-md hover:shadow-[#A9ACA7] px-4 flex items-center 
-                        gap-x-1 mb-2 transition duration-300 ease-in-out mb-2'>
-
-                        <span class='material-symbols-outlined'>delete</span>
-                            Excluir
-                        </a>";
-                    echo '</td>';
+                        echo '</td>';
                     echo '</tr>';
                 }
                 ?>

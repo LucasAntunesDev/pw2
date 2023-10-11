@@ -1,4 +1,5 @@
 <?php
+
 namespace Model;
 
 use Model\VO\UsuarioVO;
@@ -12,7 +13,7 @@ final class UsuarioModel extends Model {
         $array = [];
 
         foreach ($data as $row) {
-            $vo = new UsuarioVO($row['id'], $row['nome']);
+            $vo = new UsuarioVO($row['id'], $row['nome'], $row['login'], $row['senha']);
             array_push($array, $vo);
         }
 
@@ -33,8 +34,12 @@ final class UsuarioModel extends Model {
 
     public function insert($vo = null) {
         $db = new Database();
-        $query = 'INSERT INTO usuarios (nome) VALUES (:nome)';
-        $binds = [':nome' => $vo->getNome()];
+        $query = 'INSERT INTO usuarios (nome, login, senha) VALUES (:nome, :login, :senha)';
+        $binds = [
+            ':nome' => $vo->getNome(),
+            ':login' => $vo->getLogin(),
+            ':senha' => $vo->getSenha()
+        ];
 
         $success = $db->execute($query, $binds);
 
@@ -44,11 +49,15 @@ final class UsuarioModel extends Model {
     public function update($vo = null) {
         $db = new Database();
         $query = 'UPDATE usuarios 
-                    SET nome = :nome 
+                    SET nome = :nome, 
+                    login = :login,
+                   senha = :senha
                     WHERE id = :id';
         $binds = [
             ':nome' => $vo->getNome(),
-            ':id' => $vo->getId()
+            ':id' => $vo->getId(),
+            ':login' => $vo->getLogin(),
+            ':senha' => $vo->getSenha(),
         ];
 
         return $db->execute($query, $binds);

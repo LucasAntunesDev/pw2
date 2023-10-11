@@ -1,4 +1,5 @@
 <?php
+
 namespace Model\VO;
 
 final class UsuarioVO extends VO {
@@ -6,7 +7,7 @@ final class UsuarioVO extends VO {
     private $login;
     private $senha;
 
-    public function __construct($id = 0, $nome = '', $login, $senha) {
+    public function __construct($id = 0, $nome = '', $login = '', $senha = '') {
         parent::__construct($id);
         $this->nome = $nome;
         $this->login = $login;

@@ -20,13 +20,23 @@
         <fieldset class="bg-[#EEF6F0] shadow-md p-10 rounded-md w-[40rem]">
             <legend class="text-[#006c4a] font-bold text-center text-xl">Dados do usuário</legend>
 
-            <form action="salvarDisciplina.php" method="post" class="flex flex-col j
+            <form action="salvarUsuario.php" method="post" class="flex flex-col j
             ustify-center items-center gap-2">
                 <input type="hidden" name="id" value='<?php echo $usuario->getId(); ?>'>
 
                 <label for="nome"></label>
                 <input type="text" id="nome" name="nome" value='<?php echo $usuario->getNome(); ?>' 
                 placeholder="Nome do Usuário" class="border-[1px] border-slate-600 rounded-md 
+                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+
+                <label for="login"></label>
+                <input type="text" id="login" name="login" value='<?php echo $usuario->getLogin(); ?>' 
+                placeholder="Login" class="border-[1px] border-slate-600 rounded-md 
+                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+
+                <label for="senha"></label>
+                <input type="text" id="senha" name="senha" value='<?php echo $usuario->getSenha(); ?>' 
+                placeholder="Senha" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
                 <button type="submit" class="bg-[#006C4A] rounded-full

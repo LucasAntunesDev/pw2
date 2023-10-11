@@ -1,10 +1,10 @@
 <?php
 //salvarDisiciplina.php
 
-use Controller\UsuarioController;
+use Controller\DisciplinaController;
 
 require('config.php');
 require('vendor/autoload.php');
 
-$controller = new Controller\UsuarioController();
+$controller = new Controller\DisciplinaController();
 $controller->save();
