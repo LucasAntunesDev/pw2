@@ -28,17 +28,43 @@ final class AlunoModel extends Model {
         $binds = [':id' => $vo->getId()];
         $data = $db->select($query, $binds);
 
-        if(count($data) === 0) return null;
+        if (count($data) === 0) return null;
 
         return new AlunoVO($data[0]['id'], $data[0]['nome'], $data[0]['matricula']);
     }
-
     public function insert($vo = null) {
-    }
+        $db = new Database();
+        $query = 'INSERT INTO alunos (nome, matriucla) VALUES (:nome, :matriucla)';
+        $binds = [
+            ':nome' => $vo->getNome(),
+            ':matricula' => $vo->getMatricula()
+        ];
 
-    public function delete($vo = null) {
+        $success = $db->execute($query, $binds);
+
+        return $success ? $db->getLastInsertedId() : null;
     }
 
     public function update($vo = null) {
+        $db = new Database();
+        $query = 'UPDATE alunos 
+                    SET nome = :nome,
+                    matricula = :matricula 
+                    WHERE id = :id';
+        $binds = [
+            ':nome' => $vo->getNome(),
+            ':matricula' => $vo->getMatricula(),
+            ':id' => $vo->getId()
+        ];
+
+        return $db->execute($query, $binds);
+    }
+
+    public function delete($vo = null) {
+        $db = new Database();
+        $query = 'DELETE FROM alunos WHERE id = :id';
+        $binds = [':id' => $vo->getId()];
+
+        return $db->execute($query, $binds);
     }
 }
