@@ -1,5 +1,5 @@
 <?php
-//salvarDisiciplina.php
+//salvarAluno.php
 
 use Controller\AlunoController;
 

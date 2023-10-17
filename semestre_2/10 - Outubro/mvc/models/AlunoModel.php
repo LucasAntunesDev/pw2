@@ -34,7 +34,7 @@ final class AlunoModel extends Model {
     }
     public function insert($vo = null) {
         $db = new Database();
-        $query = 'INSERT INTO alunos (nome, matriucla) VALUES (:nome, :matriucla)';
+        $query = 'INSERT INTO alunos (nome, matricula) VALUES (:nome, :matricula)';
         $binds = [
             ':nome' => $vo->getNome(),
             ':matricula' => $vo->getMatricula()
@@ -49,7 +49,7 @@ final class AlunoModel extends Model {
         $db = new Database();
         $query = 'UPDATE alunos 
                     SET nome = :nome,
-                    matricula = :matricula 
+                    matricula = :matricula
                     WHERE id = :id';
         $binds = [
             ':nome' => $vo->getNome(),
