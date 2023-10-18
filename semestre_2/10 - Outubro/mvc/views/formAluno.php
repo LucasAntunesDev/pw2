@@ -27,7 +27,7 @@
                 <label for="nome"></label>
                 <input type="text" id="nome" name="nome" value='<?php echo $aluno->getNome(); ?>' 
                 placeholder="Nome do aluno" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+               px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
                 <label for="matricula"></label>
                 <input type="number" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' 

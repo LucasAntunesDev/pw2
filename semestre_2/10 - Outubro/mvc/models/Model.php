@@ -1,6 +1,4 @@
 <?php
-//Model.php
-
 namespace Model;
 
 abstract class Model {

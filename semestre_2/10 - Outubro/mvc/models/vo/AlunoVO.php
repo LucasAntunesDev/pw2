@@ -1,6 +1,4 @@
 <?php
-//AlunoVO.php
-
 namespace Model\VO;
 
 final class AlunoVO extends VO {

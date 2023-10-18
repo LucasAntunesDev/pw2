@@ -1,6 +1,4 @@
 <?php
-//VO.php
-
 namespace Model\VO;
 
 abstract class VO {

@@ -1,5 +1,4 @@
 <?php
-
 namespace Model\VO;
 
 final class UsuarioVO extends VO {

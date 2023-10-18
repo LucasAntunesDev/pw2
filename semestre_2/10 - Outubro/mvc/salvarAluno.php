@@ -1,6 +1,4 @@
 <?php
-//salvarAluno.php
-
 use Controller\AlunoController;
 
 require('config.php');

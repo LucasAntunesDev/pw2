@@ -1,6 +1,4 @@
 <?php
-//salvarDisiciplina.php
-
 use Controller\UsuarioController;
 
 require('config.php');

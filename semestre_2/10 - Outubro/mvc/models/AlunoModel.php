@@ -1,6 +1,4 @@
 <?php
-//AlunoModel.php
-
 namespace Model;
 
 use Model\VO\AlunoVO;

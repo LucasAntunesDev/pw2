@@ -1,6 +1,4 @@
 <?php
-//Controller.php
-
 namespace Controller;
 
 abstract class Controller{

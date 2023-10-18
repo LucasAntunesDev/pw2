@@ -1,6 +1,4 @@
 <?php
-//DisciplinaController.php
-
 namespace Controller;
 
 use Embed\Http\Redirects;

@@ -1,6 +1,4 @@
 <?php
-//UsuarioController.php
-
 namespace Controller;
 
 use Embed\Http\Redirects;

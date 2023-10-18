@@ -1,6 +1,4 @@
 <?php
-//excluirDisciplina.php
-
 use Controller\UsuarioControlller;
 
 require('config.php');

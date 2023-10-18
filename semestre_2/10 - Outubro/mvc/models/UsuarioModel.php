@@ -1,5 +1,4 @@
 <?php
-
 namespace Model;
 
 use Model\VO\UsuarioVO;

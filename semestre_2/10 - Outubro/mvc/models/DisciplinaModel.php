@@ -1,6 +1,4 @@
 <?php
-//DisciplinaModel.php
-
 namespace Model;
 
 use Model\VO\DisciplinaVO;

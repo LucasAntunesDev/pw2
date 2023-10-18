@@ -1,6 +1,4 @@
 <?php
-//excluirDisciplina.php
-
 use Controller\AlunoController;
 
 require('config.php');
