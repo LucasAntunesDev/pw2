@@ -32,7 +32,6 @@
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">ID</th>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Nome</th>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Login</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Senha</th>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Ações</th>
                 </tr>
             </thead>
@@ -44,7 +43,6 @@
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $usuario->getId() . '</td>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $usuario->getNome() . '</td>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $usuario->getLogin() . '</td>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $usuario->getSenha() . '</td>';
                     echo '<td class="border-[1px]  px-4 flex flex-col">';
 
                     echo "<a href='usuario.php?id=" . $usuario->getId() . "' 
