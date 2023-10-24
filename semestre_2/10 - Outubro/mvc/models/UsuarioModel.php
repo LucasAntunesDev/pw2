@@ -47,17 +47,26 @@ final class UsuarioModel extends Model {
 
     public function update($vo = null) {
         $db = new Database();
-        $query = 'UPDATE usuarios 
-                    SET nome = :nome, 
-                    login = :login,
-                   senha = :senha
-                    WHERE id = :id';
         $binds = [
             ':nome' => $vo->getNome(),
-            ':id' => $vo->getId(),
             ':login' => $vo->getLogin(),
-            ':senha' => $vo->getSenha(),
+            ':id' => $vo->getId(),
         ];
+
+        if(empty($vo->getSenha())){
+            $query = 'UPDATE usuarios 
+                    SET nome = :nome, 
+                    login = :login
+                    WHERE id = :id';
+        }else{
+            $binds['senha'] = sha1($vo->getSenha());
+
+            $query = 'UPDATE usuarios 
+                    SET nome = :nome, 
+                    login = :login,
+                    senha = :senha
+                    WHERE id = :id';
+        }
 
         return $db->execute($query, $binds);
     }
