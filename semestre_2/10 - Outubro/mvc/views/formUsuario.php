@@ -15,7 +15,7 @@
 
     <div class="flex flex-col justify-center items-center gap-2">
         <h1 class="font-bold text-4xl text-emerald-500 my-4">Formulário de Usuário</h1>
-        <a href="disciplinas.php" class="text-emerald-600 hover:underline">Voltar para a listagem</a>
+        <a href="usuarios.php" class="text-emerald-600 hover:underline">Voltar para a listagem</a>
 
         <fieldset class="bg-[#EEF6F0] shadow-md p-10 rounded-md w-[40rem]">
             <legend class="text-[#006c4a] font-bold text-center text-xl">Dados do usuário</legend>
