@@ -35,7 +35,7 @@
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
                 <label for="senha"></label>
-                <input type="text" id="senha" name="senha" value='<?php echo $usuario->getSenha(); ?>' 
+                <input type="password" id="senha" name="senha" value='<?php echo $usuario->getSenha(); ?>' 
                 placeholder="Senha" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
