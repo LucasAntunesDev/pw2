@@ -1,4 +1,5 @@
 <?php
+
 namespace Model;
 
 use Model\VO\UsuarioVO;
@@ -53,12 +54,12 @@ final class UsuarioModel extends Model {
             ':id' => $vo->getId(),
         ];
 
-        if(empty($vo->getSenha())){
+        if (empty($vo->getSenha())) {
             $query = 'UPDATE usuarios 
                     SET nome = :nome, 
                     login = :login
                     WHERE id = :id';
-        }else{
+        } else {
             $binds['senha'] = sha1($vo->getSenha());
 
             $query = 'UPDATE usuarios 
@@ -77,5 +78,29 @@ final class UsuarioModel extends Model {
         $binds = [':id' => $vo->getId()];
 
         return $db->execute($query, $binds);
+    }
+
+    public function doLogin($vo) {
+        $db = new Database();
+        $query = 'SELECT * FROM usuarios WHERE login =:login AND senha = :senha';
+        $binds = [
+            ':login' => $vo->getLogin(),
+            ':login' => sha1($vo->getSenha())
+        ];
+
+        $data = $db->select($query, $binds);
+
+        if (count($data) == 0) return false;
+
+        $usuario = new UsuarioVO(
+            $data[0]['id'],
+            $data[0]['nome'],
+            $data[0]['login'],
+            $data[0]['senha']
+        );
+
+        $_SESSION['usuario'] = $usuario;
+
+        return true;
     }
 }
