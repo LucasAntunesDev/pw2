@@ -85,7 +85,7 @@ final class UsuarioModel extends Model {
         $query = 'SELECT * FROM usuarios WHERE login = :login AND senha = :senha';
         $binds = [
             ':login' => $vo->getLogin(),
-            ':login' => sha1($vo->getSenha())
+            ':senha' => sha1($vo->getSenha())
         ];
 
         $data = $db->select($query, $binds);
