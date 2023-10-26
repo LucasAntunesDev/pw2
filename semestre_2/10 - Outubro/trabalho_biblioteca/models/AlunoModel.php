@@ -12,14 +12,13 @@ final class AlunoModel extends Model {
         $array = [];
 
         foreach ($data as $row) {
-            $vo = new AlunoVO($row['id'], $row['nome'], $row['matricula']);
+            $vo = new AlunoVO($row['id'], $row['nome'], $row['curso'],  $row['matricula'],  $row['cpf']);
             array_push($array, $vo);
         }
 
         return $array;
     }
 
-    //conecta no bd, executa a query e retorna os dados
     public function selectOne($vo = null) {
         $db = new Database();
         $query = 'SELECT * FROM alunos WHERE id = :id';
@@ -32,10 +31,12 @@ final class AlunoModel extends Model {
     }
     public function insert($vo = null) {
         $db = new Database();
-        $query = 'INSERT INTO alunos (nome, matricula) VALUES (:nome, :matricula)';
+        $query = 'INSERT INTO alunos (nome, curso, matricula, cpf) VALUES (:nome, :curso, :matricula, :cpf)';
         $binds = [
             ':nome' => $vo->getNome(),
-            ':matricula' => $vo->getMatricula()
+            ':curso' => $vo->getCurso(),
+            ':matricula' => $vo->getMatricula(),
+            ':cpf' => $vo->getCPF()
         ];
 
         $success = $db->execute($query, $binds);
@@ -47,11 +48,15 @@ final class AlunoModel extends Model {
         $db = new Database();
         $query = 'UPDATE alunos 
                     SET nome = :nome,
-                    matricula = :matricula
+                    curso = :curso
+                    matricula = :matricula,
+                    cpf = :cpf
                     WHERE id = :id';
         $binds = [
             ':nome' => $vo->getNome(),
+            ':curso' => $vo->getCurso(),
             ':matricula' => $vo->getMatricula(),
+            ':cpf' => $vo->getCPF(),
             ':id' => $vo->getId()
         ];
 
