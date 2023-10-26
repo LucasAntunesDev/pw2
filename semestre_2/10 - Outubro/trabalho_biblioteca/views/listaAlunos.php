@@ -31,7 +31,9 @@
                 <tr>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">ID</th>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Nome</th>
+                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Curso</th>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Matricula</th>
+                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">CPF</th>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Ações</th>
                 </tr>
             </thead>
@@ -42,7 +44,9 @@
                     echo '<tr>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $aluno->getId() . '</td>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $aluno->getNome() . '</td>';
+                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $aluno->getCurso() . '</td>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $aluno->getMatricula() . '</td>';
+                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $aluno->getCPF() . '</td>';
                     echo '<td class="border-[1px]  px-4 flex flex-col">';
 
                     echo "<a href='aluno.php?id=" . $aluno->getId() . "' 
