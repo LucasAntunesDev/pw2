@@ -16,13 +16,8 @@ final class AlunoController extends Controller {
         ]);
     }
 
-    //monta o formulário
     public function get() {
-        //versões maiores que 7.2
         $id = $_GET['id'] ?? null;
-
-        //versões menores que 7.2
-        // $id = (isset($_GET['id'])) ? $_GET['id'] : null;
 
         if (empty($id)) {
             $vo = new AlunoVO();
@@ -37,7 +32,7 @@ final class AlunoController extends Controller {
 
     public function save() {
         $id = $_POST['id'];
-        $vo = new AlunoVO($_POST['id'], $_POST['nome'], $_POST['matricula']);
+        $vo = new AlunoVO($_POST['id'], $_POST['nome'], $_POST['curso'], $_POST['matricula'], $_POST['cpf']);
         $model = new AlunoModel();
 
         $return = empty($id) ? $model->insert($vo) : $model->update($vo);
