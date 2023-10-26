@@ -106,9 +106,6 @@ final class UsuarioAdmnistrativoModel extends Model {
 
     public function checkLogin() {
         return (empty($_SESSION['usuario'])) ? false : true;
-
-        // if(empty($_SESSION['usuario'])) return false;
-        // return true
     }
 
     public function logout() {
