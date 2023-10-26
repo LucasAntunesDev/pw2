@@ -2,10 +2,10 @@
 
 namespace Model;
 
-use Model\VO\UsuarioVO;
+use Model\VO\UsuarioAdmnistrativoVO;
 use Util\Database;
 
-final class UsuarioModel extends Model {
+final class UsuarioAdmnistrativoModel extends Model {
     public function selectAll($vo = null) {
         $db = new Database();
         $data = $db->select('SELECT * FROM usuarios');
@@ -13,7 +13,7 @@ final class UsuarioModel extends Model {
         $array = [];
 
         foreach ($data as $row) {
-            $vo = new UsuarioVO($row['id'], $row['nome'], $row['login'], $row['senha']);
+            $vo = new UsuarioAdmnistrativoVO($row['id'], $row['nome'], $row['login'], $row['senha']);
             array_push($array, $vo);
         }
 
@@ -29,7 +29,7 @@ final class UsuarioModel extends Model {
 
         if (count($data) === 0) return null;
 
-        return new UsuarioVO($data[0]['id'], $data[0]['nome'], $data[0]['login'], $data[0]['senha']);
+        return new UsuarioAdmnistrativoVO($data[0]['id'], $data[0]['nome'], $data[0]['login'], $data[0]['senha']);
     }
 
     public function insert($vo = null) {
@@ -92,7 +92,7 @@ final class UsuarioModel extends Model {
 
         if (count($data) == 0) return false;
 
-        $usuario = new UsuarioVO(
+        $usuario = new UsuarioAdmnistrativoVO(
             $data[0]['id'],
             $data[0]['nome'],
             $data[0]['login'],
