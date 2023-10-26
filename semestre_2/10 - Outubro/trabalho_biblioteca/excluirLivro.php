@@ -1,8 +1,8 @@
 <?php
-use Controller\DisciplinaController;
+use Controller\LivroController;
 
 require('config.php');
 require('vendor/autoload.php');
 
-$controller = new Controller\DisciplinaController();
+$controller = new Controller\LivroController();
 $controller->remove();
