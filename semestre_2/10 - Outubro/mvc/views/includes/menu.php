@@ -1,7 +1,7 @@
 <div class="flex flex-row items-center pl-4 shadow-md gap-x-4 
 h-16 bg-emerald-600 text-zinc-50 border-b-[3px] border-emerald-400">
 
-<p>Olá Usuário!</p>
+<p>Olá, Usuário!</p>
 <ul class="flex flex-row gap-x-4">
     <li class="w-min flex hover:underline transition duration-300 ease-in-out">
         <a href="disciplinas.php">Disciplinas</a>

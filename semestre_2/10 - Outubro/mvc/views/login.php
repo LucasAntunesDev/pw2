@@ -17,10 +17,9 @@
 
         <h1 class="font-bold text-4xl text-emerald-500 my-4">Login</h1>
 
-        <form action="fazerLogin.php" method="POST" class="flex flex-col j
-            ustify-center items-center gap-2">
+        <form action="fazerLogin.php" method="POST" class="flex flex-col justify-center items-center gap-2">
 
-            <fieldset class="bg-[#EEF6F0] shadow-md p-10 rounded-md w-[40rem]">
+            <fieldset class="bg-[#EEF6F0] shadow-md p-10 rounded-md w-[40rem] flex flex-col justify-center items-center">
 
                 <input type="text" name="login" id="login" placeholder="Login" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
