@@ -1,7 +1,7 @@
 <?php
 namespace Model\VO;
 
-final class UsuarioVO extends VO {
+final class UsuarioAdmnistrativoVO extends VO {
     private $nome;
     private $login;
     private $senha;
