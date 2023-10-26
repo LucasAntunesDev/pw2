@@ -34,6 +34,18 @@
                 placeholder="Número da matricula" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
+                
+                <label for="curso"></label>
+                <input type="number" id="curso" name="curso" value='<?php echo $aluno->getCurso(); ?>' 
+                placeholder="Curso" class="border-[1px] border-slate-600 rounded-md 
+                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+
+                <label for="cpf"></label>
+                <input type="number" id="cpf" name="cpf" value='<?php echo $aluno->getCPF(); ?>' 
+                placeholder="Número do cpf" class="border-[1px] border-slate-600 rounded-md 
+                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+
+
                 <button type="submit" class="bg-[#006C4A] rounded-full
                 p-2 text-zinc-50 shadow-md hover:shadow-[#A9ACA7] px-4 flex 
                 items-center gap-x-1 transition duration-300 ease-in-out mt-2">
