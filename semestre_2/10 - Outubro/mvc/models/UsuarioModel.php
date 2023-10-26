@@ -104,11 +104,14 @@ final class UsuarioModel extends Model {
         return true;
     }
 
-    public function checkLogin(){
+    public function checkLogin() {
         return (empty($_SESSION['usuario'])) ? false : true;
 
         // if(empty($_SESSION['usuario'])) return false;
         // return true
     }
 
+    public function logout() {
+        $_SESSION['usuario'] = null;
+    }
 }

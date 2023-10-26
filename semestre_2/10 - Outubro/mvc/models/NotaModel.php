@@ -48,14 +48,14 @@ final class NotaModel extends Model {
         $db = new Database();
         $query = 'UPDATE notas 
                     SET idaluno = :idaluno,
-                    iddisciplina = :iddisciplina,
-                    nota = :nota,
+                        iddisciplina = :iddisciplina,
+                        nota = :nota
                     WHERE id = :id';
         $binds = [
-            ':id' => $vo->getId(),
             ':idaluno' => $vo->getIdAluno(),
             ':iddisciplina' => $vo->getIdDisciplina(), 
-            ':nota' => $vo->getNota()
+            ':nota' => $vo->getNota(),
+            ':id' => $vo->getId()
         ];
 
         return $db->execute($query, $binds);

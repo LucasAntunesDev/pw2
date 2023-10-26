@@ -35,7 +35,7 @@
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
                 <label for="nota"></label>
-                <input type="text" id="nota" name="nota" value='<?php echo $nota->getNota(); ?>' 
+                <input type="number" step="0.1" id="nota" name="nota" value='<?php echo $nota->getNota(); ?>' 
                 placeholder="Nota" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
