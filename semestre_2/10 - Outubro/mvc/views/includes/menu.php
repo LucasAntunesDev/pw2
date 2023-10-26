@@ -19,7 +19,7 @@ h-16 bg-emerald-600 text-zinc-50 border-b-[3px] border-emerald-400">
         <a href="usuarios.php">Usuarios</a>
     </li>
     
-    <li class="w-min flex hover:underline transition duration-300 ease-in-out">
+    <li class="w-min flex hover:underline hover:text-red-600 transition duration-300 ease-in-out">
         <a href="logout.php">Sair</a>
     </li>
 </ul>
