@@ -2,17 +2,17 @@
 namespace Controller;
 
 use Embed\Http\Redirects;
-use Model\NotaModel;
-use Model\VO\NotaVO;
+use Model\RetiradaModel;
+use Model\VO\RetiradaVO;
 
 
 final class RetiradaController extends Controller {
     public function list() {
-        $model  = new NotaModel();
+        $model  = new RetiradaModel();
         $data = $model->selectAll();
 
-        $this->loadView('listaNotas', [
-            'notas' => $data
+        $this->loadView('listaRetiradas', [
+            'retiradas' => $data
         ]);
     }
     public function get() {
@@ -23,32 +23,32 @@ final class RetiradaController extends Controller {
         $id = (isset($_GET['id'])) ? $_GET['id'] : null;
 
         if (empty($id)) {
-            $vo = new NotaVO();
+            $vo = new RetiradaVO();
         } else {
-            $model = new NotaModel();
-            $vo = $model->selectOne(new NotaVO($id));
+            $model = new RetiradaModel();
+            $vo = $model->selectOne(new RetiradaVO($id));
         }
 
-        $this->loadView('formNota', ['nota' => $vo]);
+        $this->loadView('formRetirada', ['retirada' => $vo]);
     }
 
     public function save() {
         $id = $_POST['id'];
-        $vo = new NotaVO($_POST['id'], $_POST['id_aluno'], $_POST['id_disciplina'], $_POST['nota']);
-        $model = new NotaModel();
+        $vo = new RetiradaVO($_POST['id'], $_POST['id_aluno'], $_POST['id_disciplina'], $_POST['retirada']);
+        $model = new RetiradaModel();
 
         $return = empty($id) ? $model->insert($vo) : $model->update($vo);
 
-        $this->redirect('notas.php');
+        $this->redirect('retiradas.php');
     }
 
     public function remove() {
         if (empty($_GET['id'])) die('Necessário passar o ID');
 
-        $model = new NotaModel();
+        $model = new RetiradaModel();
 
-        $return = $model->delete(new NotaVO($_GET['id']));
+        $return = $model->delete(new RetiradaVO($_GET['id']));
 
-        $this->redirect('notas.php');
+        $this->redirect('retiradas.php');
     }
 }

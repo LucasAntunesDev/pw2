@@ -24,7 +24,7 @@
             ustify-center items-center gap-2">
                 <input type="hidden" name="id" value='<?php echo $disciplina->getId(); ?>'>
 
-                <label for="nome"></label>
+                <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" value='<?php echo $disciplina->getNome(); ?>' 
                 placeholder="Nome da Disciplina" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">

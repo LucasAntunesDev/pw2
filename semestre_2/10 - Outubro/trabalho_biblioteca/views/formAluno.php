@@ -21,23 +21,23 @@
             <legend class="text-[#006c4a] font-bold text-center text-xl">Dados do aluno</legend>
 
             <form action="salvarAluno.php" method="post" class="flex flex-col j
-            ustify-center items-center gap-2">
+            ustify-center items-center gap-y-1">
                 <input type="hidden" name="id" value='<?php echo $aluno->getId(); ?>'>
 
-                <label for="nome"></label>
+                <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" value='<?php echo $aluno->getNome(); ?>' placeholder="Nome do aluno" class="border-[1px] border-slate-600 rounded-md 
                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
-                <label for="matricula"></label>
+                <label for="matricula">Matrícula</label>
                 <input type="number" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' placeholder="Número da matricula" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
 
-                <label for="curso"></label>
+                <label for="curso">Curso</label>
                 <select placeholder="curso" name="curso" id="curso" value="curso" class="rounded-md 
-            border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
-            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 bg-slate-800
-            outline-none text-neutral-900 bg-zinc-50 w-56">
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
+                focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 bg-slate-800
+                outline-none text-neutral-900 bg-zinc-50 w-auto">
 
                     <option value="Agropecuária" >Agropecuária</option>
                     <option value="Admnistração" >Admnistração</option>
@@ -55,7 +55,7 @@
                 placeholder="Curso" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]"> -->
 
-                <label for="cpf"></label>
+                <label for="cpf">CPF</label>
                 <input type="number" id="cpf" name="cpf" value='<?php echo $aluno->getCPF(); ?>' placeholder="Número do cpf" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
