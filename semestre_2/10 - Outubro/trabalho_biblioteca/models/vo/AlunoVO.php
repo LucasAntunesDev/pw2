@@ -7,10 +7,12 @@ final class AlunoVO extends VO {
     private $matricula;
     private $cpf;
 
-    public function __construct($id = 0, $nome = '', $matricula = 0) {
+    public function __construct($id = 0, $nome = '', $curso = '', $matricula = 0, $cpf = 0) {
         parent::__construct($id);
         $this->nome = $nome;
+        $this->curso = $curso;
         $this->matricula = $matricula;
+        $this->cpf = $cpf;
     }
 
     public function getNome() {
@@ -22,7 +24,7 @@ final class AlunoVO extends VO {
     }
     
     public function getCurso() {
-        return $this->matricula;
+        return $this->curso;
     }
 
     public function setCurso($curso) {
@@ -38,7 +40,7 @@ final class AlunoVO extends VO {
     }
 
     public function getCPF() {
-        return $this->matricula;
+        return $this->cpf;
     }
 
     public function setCPF($cpf) {
