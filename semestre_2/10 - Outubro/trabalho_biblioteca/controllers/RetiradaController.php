@@ -6,7 +6,7 @@ use Model\NotaModel;
 use Model\VO\NotaVO;
 
 
-final class NotaController extends Controller {
+final class RetiradaController extends Controller {
     public function list() {
         $model  = new NotaModel();
         $data = $model->selectAll();
