@@ -25,24 +25,38 @@
                 <input type="hidden" name="id" value='<?php echo $aluno->getId(); ?>'>
 
                 <label for="nome"></label>
-                <input type="text" id="nome" name="nome" value='<?php echo $aluno->getNome(); ?>' 
-                placeholder="Nome do aluno" class="border-[1px] border-slate-600 rounded-md 
+                <input type="text" id="nome" name="nome" value='<?php echo $aluno->getNome(); ?>' placeholder="Nome do aluno" class="border-[1px] border-slate-600 rounded-md 
                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
                 <label for="matricula"></label>
-                <input type="number" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' 
-                placeholder="Número da matricula" class="border-[1px] border-slate-600 rounded-md 
+                <input type="number" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' placeholder="Número da matricula" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
-                
+
                 <label for="curso"></label>
-                <input type="number" id="curso" name="curso" value='<?php echo $aluno->getCurso(); ?>' 
+                <select placeholder="curso" name="curso" id="curso" value="curso" class="rounded-md 
+            border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
+            focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 bg-slate-800
+            outline-none text-neutral-900 bg-zinc-50 w-56">
+
+                    <option value="agro" >Agropecuária</option>
+                    <option value="adm" >Admnistração</option>
+                    <option value="eno" >Enologia</option>
+                    <option value="Informática" >Informática</option>
+                    <option value="meio" >Meio Ambiente</option>
+                    <!-- <option value="filme" <?php echo $curso == 'Agropecuária' ? 'selected' : '' ?>>Agropecuária</option>
+                    <option value="filme" <?php echo $curso == 'Admnistração' ? 'selected' : '' ?>>Admnistração</option>
+                    <option value="filme" <?php echo $curso == 'Enologia' ? 'selected' : '' ?>>Enologia</option>
+                    <option value="filme" <?php echo $curso == 'Informática' ? 'selected' : '' ?>>Informática</option>
+                    <option value="filme" <?php echo $curso == 'Meio Ambiente' ? 'selected' : '' ?>>Meio Ambiente</option> -->
+
+                </select>
+                <!-- <input type="number" id="curso" name="curso" value='<?php echo $aluno->getCurso(); ?>' 
                 placeholder="Curso" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]"> -->
 
                 <label for="cpf"></label>
-                <input type="number" id="cpf" name="cpf" value='<?php echo $aluno->getCPF(); ?>' 
-                placeholder="Número do cpf" class="border-[1px] border-slate-600 rounded-md 
+                <input type="number" id="cpf" name="cpf" value='<?php echo $aluno->getCPF(); ?>' placeholder="Número do cpf" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
 

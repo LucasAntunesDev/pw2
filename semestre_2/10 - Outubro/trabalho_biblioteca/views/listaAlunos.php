@@ -48,7 +48,6 @@
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $aluno->getMatricula() . '</td>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $aluno->getCPF() . '</td>';
                     echo '<td class="border-[1px]  px-4 flex flex-col">';
-
                     echo "<a href='aluno.php?id=" . $aluno->getId() . "' 
                         class='bg-[#CFE9D9] rounded-full p-2 text-[#30483B] 
                         shadow-md hover:shadow-[#A9ACA7] px-4 flex items-center 

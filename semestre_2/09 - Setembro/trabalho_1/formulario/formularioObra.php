@@ -48,7 +48,7 @@ if(isset($_GET['assistida'])) $assistida = $_GET['assistida'];
         <i class="fa-solid fa-film"></i>
     </h1>
     <a href="../index.php" class="text-center mx-auto text-emerald-600 block">Voltar</a>
-
+focusoption
     <form action="../salvar/salvarObra.php" method="post" class="flex flex-col justify-center items-center gap-2">
 
         <input type="hidden" name="id" value="<?php echo $id; ?>">
