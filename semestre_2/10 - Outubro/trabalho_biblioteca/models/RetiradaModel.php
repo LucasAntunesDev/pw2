@@ -4,7 +4,7 @@ namespace Model;
 use Model\VO\NotaVO;
 use Util\Database;
 
-final class NotaModel extends Model {
+final class RetiradaModel extends Model {
     public function selectAll($vo = null) {
         $db = new Database();
         $data = $db->select('SELECT * FROM notas');
