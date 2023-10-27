@@ -1,7 +1,7 @@
 <?php
 namespace Model\VO;
 
-final class NotaVO extends VO {
+final class RetiradaVO extends VO {
     private $id_aluno;
     private $id_disciplina;
     private $nota;
