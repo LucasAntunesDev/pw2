@@ -22,7 +22,7 @@
             <span class="material-symbols-outlined">
                 add
             </span>
-            Inserir Nova Livro
+            Inserir Novo Livro
 
         </a>
 

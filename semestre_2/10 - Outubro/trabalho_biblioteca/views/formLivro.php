@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Disciplina</title>
+    <title>Formulário de Livro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
@@ -13,20 +13,20 @@
 
     <?php include('views/includes/menu.php'); ?>
 
-    <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-sky-500 my-4">Formulário de Disciplina</h1>
-        <a href="disciplinas.php" class="text-sky-600 hover:underline">Voltar para a listagem</a>
+    <div class="flex flex-col justify-center items-center gap-1">
+        <h1 class="font-bold text-4xl text-sky-500 my-4">Formulário de Livro</h1>
+        <a href="livros.php" class="text-sky-600 hover:underline">Voltar para a listagem</a>
 
         <fieldset class="bg-sky-50 shadow-md p-10 rounded-md w-[40rem]">
-            <legend class="text-[#006c4a] font-bold text-center text-xl">Dados da disciplina</legend>
+            <legend class="text-[#006c4a] font-bold text-center text-xl">Dados da livro</legend>
 
-            <form action="salvarDisciplina.php" method="post" class="flex flex-col j
+            <form action="salvarLivro.php" method="post" class="flex flex-col j
             ustify-center items-center gap-2">
-                <input type="hidden" name="id" value='<?php echo $disciplina->getId(); ?>'>
+                <input type="hidden" name="id" value='<?php echo $livro->getId(); ?>'>
 
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" value='<?php echo $disciplina->getNome(); ?>' 
-                placeholder="Nome da Disciplina" class="border-[1px] border-slate-600 rounded-md 
+                <input type="text" id="nome" name="nome" value='<?php echo $livro->getNome(); ?>' 
+                placeholder="Nome da Livro" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
                 <button type="submit" class="bg-[#006C4A] rounded-full
