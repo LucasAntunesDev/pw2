@@ -1,21 +1,30 @@
 <?php
+
 namespace Model\VO;
+
+date_default_timezone_set("America/sao_paulo");
 
 final class LivroVO extends VO {
     private $titulo;
     private $autores;
     private $editora;
     private $qtd_exemplares;
-    private $data_retirada;
-    private $data_devolucao;
     private $isbn;
 
     public function __construct(
-                                $id = 0, $titulo = '', $autores = '', $editora = '', 
-                                $qtd_exemplares = '', $data_retirada = '', $data_devolucao = '', $isbn = ''
-                                ) {
+        $id = 0,
+        $titulo = '',
+        $autores = '',
+        $editora = '',
+        $qtd_exemplares = '',
+        $isbn = ''
+    ) {
         parent::__construct($id);
         $this->titulo = $titulo;
+        $this->autores = $autores;
+        $this->editora = $editora;
+        $this->qtd_exemplares = $qtd_exemplares;
+        $this->isbn = $isbn;
     }
 
     public function getTitulo() {
@@ -49,21 +58,6 @@ final class LivroVO extends VO {
         $this->qtd_exemplares = $qtd_exemplares;
     }
 
-    public function getDataRetirada() {
-        return $this->data_retirada;
-    }
-
-    public function setDataRetirada($data_retirada) {
-        $this->data_retirada = $data_retirada;
-    }
-
-    public function getDataDevolucao() {
-        return $this->data_devolucao;
-    }
-
-    public function setDataDevolucao($data_devolucao) {
-        $this->data_devolucao = $data_devolucao;
-    }
 
     public function getISBN() {
         return $this->isbn;

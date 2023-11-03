@@ -33,7 +33,7 @@ final class LivroController extends Controller {
         $id = $_POST['id'];
         $vo = new LivroVO(
                             $_POST['id'], $_POST['titulo'], $_POST['autores'], $_POST['editora'], 
-                            $_POST['qtd_exmemplares'], $_POST['data_retirada'], $_POST['data_devolucao'], $_POST['isbn']
+                            $_POST['qtd_exemplares'], $_POST['isbn']
                         );
         $model = new LivroModel();
 

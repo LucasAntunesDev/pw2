@@ -12,21 +12,44 @@
 <body>
 
     <?php include('views/includes/menu.php'); ?>
-
     <div class="flex flex-col justify-center items-center gap-1">
         <h1 class="font-bold text-4xl text-sky-500 my-4">Formulário de Livro</h1>
         <a href="livros.php" class="text-sky-600 hover:underline">Voltar para a listagem</a>
-
+        
         <fieldset class="bg-sky-50 shadow-md p-10 rounded-md w-[40rem]">
-            <legend class="text-[#006c4a] font-bold text-center text-xl">Dados da livro</legend>
-
-            <form action="salvarLivro.php" method="post" class="flex flex-col j
-            ustify-center items-center gap-2">
+            <legend class="text-[#006c4a] font-bold text-center text-xl">Dados do livro</legend>
+            <form action="salvarLivro.php" method="post" class="flex flex-col justify-center 
+            items-center gap-2">
+        <!-- <?php
+            date_default_timezone_set("America/sao_paulo");
+            echo date('d/m/y');
+        ?> -->
                 <input type="hidden" name="id" value='<?php echo $livro->getId(); ?>'>
 
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" value='<?php echo $livro->getNome(); ?>' 
-                placeholder="Nome da Livro" class="border-[1px] border-slate-600 rounded-md 
+                <label for="titulo">Titulo</label>
+                <input type="text" id="titulo" name="titulo" value='<?php echo $livro->getTitulo(); ?>' 
+                placeholder="Titulo do Livro" class="border-[1px] border-slate-600 rounded-md 
+                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                
+                <label for="titulo">Autores</label>
+                <input type="text" id="autores" name="autores" value='<?php echo $livro->getAutores(); ?>' 
+                placeholder="Autores do Livro" class="border-[1px] border-slate-600 rounded-md 
+                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                
+                <label for="titulo">Editora</label>
+                <input type="text" id="editora" name="editora" value='<?php echo $livro->getEditora(); ?>' 
+                placeholder="Editora do Livro" class="border-[1px] border-slate-600 rounded-md 
+                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                
+                <label for="titulo">Exemplares</label>
+                <input type="text" id="qtd_exemplares" name="qtd_exemplares" value='<?php echo $livro->getQuantidadeExemplares(); ?>' 
+                placeholder="Quantidade de exemplares" class="border-[1px] border-slate-600 rounded-md 
+                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+
+                
+                <label for="titulo">ISBN</label>
+                <input type="text" id="isbn" name="isbn" value='<?php echo $livro->getISBN(); ?>' 
+                placeholder="ISBN" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
                 <button type="submit" class="bg-[#006C4A] rounded-full

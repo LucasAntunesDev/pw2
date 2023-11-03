@@ -34,8 +34,8 @@
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Autores</th>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Editora</th>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Quantidade de Exemplares</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Data de retirada</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Data de devolução</th>
+                    <!-- <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Data de retirada</th>
+                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Data de devolução</th> -->
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">ISBN</th>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Ações</th>
                 </tr>
@@ -51,7 +51,7 @@
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $livro->getAutores() . '</td>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $livro->getEditora() . '</td>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $livro->getQuantidadeExemplares() . '</td>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $livro->getDataRetirada() . '</td>';
+                    // echo '<td class="border-[1px] border-neutral-900 px-4">' . $livro->getDataRetirada() . '</td>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $livro->getISBN() . '</td>';
                     echo '<td class="border-[1px]  px-4 flex flex-col">';
 
