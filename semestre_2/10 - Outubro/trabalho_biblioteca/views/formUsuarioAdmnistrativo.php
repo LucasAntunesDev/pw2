@@ -15,26 +15,26 @@
 
     <div class="flex flex-col justify-center items-center gap-2">
         <h1 class="font-bold text-4xl text-sky-500 my-4">Formulário de Usuário</h1>
-        <a href="usuarios.php" class="text-sky-600 hover:underline">Voltar para a listagem</a>
+        <a href="usuariosAdmnistrativos.php" class="text-sky-600 hover:underline">Voltar para a listagem</a>
 
         <fieldset class="bg-sky-50 shadow-md p-10 rounded-md w-[40rem]">
             <legend class="text-[#006c4a] font-bold text-center text-xl">Dados do usuário</legend>
 
-            <form action="salvarUsuario.php" method="post" class="flex flex-col j
+            <form action="salvarUsuarioAdmnistrativo.php" method="post" class="flex flex-col j
             ustify-center items-center gap-2">
                 <input type="hidden" name="id" value='<?php echo $usuario->getId(); ?>'>
 
-                <label for="nome"></label>
+                <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" value='<?php echo $usuario->getNome(); ?>' 
                 placeholder="Nome do Usuário" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
-                <label for="login"></label>
+                <label for="login">Login</label>
                 <input type="text" id="login" name="login" value='<?php echo $usuario->getLogin(); ?>' 
                 placeholder="Login" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
 
-                <label for="senha"></label>
+                <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha" value=""
                 placeholder="Senha" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">

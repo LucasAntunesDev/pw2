@@ -11,8 +11,8 @@ final class UsuarioAdmnistrativoController extends Controller {
         $model  = new UsuarioAdmnistrativoModel();
         $data = $model->selectAll();
 
-        $this->loadView('listaUsuarioAdmnistrativos', [
-            'usuarios' => $data
+        $this->loadView('listaUsuariosAdmnistrativos', [
+            'usuariosAdmnistrativos' => $data
         ]);
     }
 
@@ -41,7 +41,7 @@ final class UsuarioAdmnistrativoController extends Controller {
 
         $return = empty($id) ? $model->insert($vo) : $model->update($vo);
 
-        $this->redirect('usuarios.php');
+        $this->redirect('usuariosAdmnistrativos.php');
     }
 
     public function remove() {
@@ -51,6 +51,6 @@ final class UsuarioAdmnistrativoController extends Controller {
 
         $return = $model->delete(new UsuarioAdmnistrativoVO($_GET['id']));
 
-        $this->redirect('usuarios.php');
+        $this->redirect('usuariosAdmnistrativos.php');
     }
 }

@@ -8,7 +8,7 @@ use Util\Database;
 final class UsuarioAdmnistrativoModel extends Model {
     public function selectAll($vo = null) {
         $db = new Database();
-        $data = $db->select('SELECT * FROM usuarios');
+        $data = $db->select('SELECT * FROM usuarios_administrativos');
 
         $array = [];
 
@@ -23,7 +23,7 @@ final class UsuarioAdmnistrativoModel extends Model {
     //conecta no bd, executa a query e retorna os dados
     public function selectOne($vo = null) {
         $db = new Database();
-        $query = 'SELECT * FROM usuarios WHERE id = :id';
+        $query = 'SELECT * FROM usuarios_administrativos WHERE id = :id';
         $binds = [':id' => $vo->getId()];
         $data = $db->select($query, $binds);
 
@@ -34,7 +34,7 @@ final class UsuarioAdmnistrativoModel extends Model {
 
     public function insert($vo = null) {
         $db = new Database();
-        $query = 'INSERT INTO usuarios (nome, login, senha) VALUES (:nome, :login, :senha)';
+        $query = 'INSERT INTO usuarios_administrativos (nome, login, senha) VALUES (:nome, :login, :senha)';
         $binds = [
             ':nome' => $vo->getNome(),
             ':login' => $vo->getLogin(),
@@ -55,14 +55,14 @@ final class UsuarioAdmnistrativoModel extends Model {
         ];
 
         if (empty($vo->getSenha())) {
-            $query = 'UPDATE usuarios 
+            $query = 'UPDATE usuarios_administrativos 
                     SET nome = :nome, 
                     login = :login
                     WHERE id = :id';
         } else {
             $binds['senha'] = sha1($vo->getSenha());
 
-            $query = 'UPDATE usuarios 
+            $query = 'UPDATE usuarios_administrativos 
                     SET nome = :nome, 
                     login = :login,
                     senha = :senha
@@ -74,7 +74,7 @@ final class UsuarioAdmnistrativoModel extends Model {
 
     public function delete($vo = null) {
         $db = new Database();
-        $query = 'DELETE FROM usuarios WHERE id = :id';
+        $query = 'DELETE FROM usuarios_administrativos WHERE id = :id';
         $binds = [':id' => $vo->getId()];
 
         return $db->execute($query, $binds);
@@ -82,7 +82,7 @@ final class UsuarioAdmnistrativoModel extends Model {
 
     public function doLogin($vo) {
         $db = new Database();
-        $query = 'SELECT * FROM usuarios WHERE login = :login AND senha = :senha';
+        $query = 'SELECT * FROM usuarios_administrativos WHERE login = :login AND senha = :senha';
         $binds = [
             ':login' => $vo->getLogin(),
             ':senha' => sha1($vo->getSenha())
