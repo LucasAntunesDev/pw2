@@ -41,8 +41,8 @@
                 </tr>
             </thead>
 
-            <tbody> 
-              
+            <tbody>
+
                 <?php
                 foreach ($livros as $livro) {
                     echo '<tr>';

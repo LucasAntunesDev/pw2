@@ -1,4 +1,5 @@
 <?php
+
 namespace Controller;
 
 use Embed\Http\Redirects;
@@ -34,7 +35,11 @@ final class RetiradaController extends Controller {
 
     public function save() {
         $id = $_POST['id'];
-        $vo = new RetiradaVO($_POST['id'], $_POST['id_aluno'], $_POST['id_disciplina'], $_POST['retirada']);
+        $vo = new RetiradaVO(
+            $_POST['id'],
+            $_POST['id_aluno'],
+            $_POST['id_livro']
+        );
         $model = new RetiradaModel();
 
         $return = empty($id) ? $model->insert($vo) : $model->update($vo);

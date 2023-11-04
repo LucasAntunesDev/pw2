@@ -2,5 +2,5 @@
 require_once('config.php');
 require_once('vendor/autoload.php');
 
-$controller = new Controller\NotaController();
+$controller = new Controller\RetiradaController();
 $controller->get();

@@ -1,16 +1,27 @@
 <?php
+
 namespace Model\VO;
+
+date_default_timezone_set("America/sao_paulo");
 
 final class RetiradaVO extends VO {
     private $id_aluno;
-    private $id_disciplina;
-    private $nota;
+    private $id_livro;
+    private $data_retirada;
+    private $data_devolucao;
 
-    public function __construct($id = 0, $id_aluno = 0, $id_disciplina = 0, $nota = 0) {
+    public function __construct(
+        $id = 0,
+        $id_aluno = 0,
+        $id_livro = 0,
+        $data_retirada = 0,
+        $data_devolucao =0
+    ) {
         parent::__construct($id);
         $this->id_aluno = $id_aluno;
-        $this->id_disciplina = $id_disciplina;
-        $this->nota = $nota;
+        $this->id_livro = $id_livro;
+        $this->data_retirada = date('Y-m-d');
+        $this->data_devolucao = date('Y-m-d', strtotime(date('Y-m-d') . ' + 1 week'));
     }
 
     public function getIdAluno() {
@@ -21,19 +32,19 @@ final class RetiradaVO extends VO {
         $this->id_aluno = $id_aluno;
     }
 
-    public function getIdDisciplina() {
-        return $this->id_disciplina;
+    public function getIdLivro() {
+        return $this->id_livro;
     }
 
-    public function setIdDisciplina($id_disciplina) {
-        $this->id_disciplina = $id_disciplina;
+    public function setIdLivro($id_livro) {
+        $this->id_livro = $id_livro;
     }
 
-    public function getNota() {
-        return $this->nota;
+    public function getDataRetirada() {
+        return $this->data_retirada;
     }
 
-    public function setNota($nota) {
-        $this->nota = $nota;
+    public function getDataDevolucao() {
+        return $this->data_devolucao;
     }
 }
