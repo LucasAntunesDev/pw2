@@ -97,17 +97,12 @@
 			"$$_GET[$1]"
 		]
 	},
-	"$statement"{
+	"$statement":{
 		"prefix" : "stmt",
 		"body": [
 			"$$statement = ;"
 		]
 	},
-	"tailwind link":{
-		"prefix" : "tailwind",
-		"body": [
-			"<script src='https://cdn.tailwindcss.com'></script>"
-		]
-	}
+
 
 }
