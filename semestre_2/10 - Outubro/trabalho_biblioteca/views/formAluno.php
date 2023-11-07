@@ -54,9 +54,7 @@
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
 
-                <button type="submit" class="bg-[#006C4A] rounded-full
-                p-2 text-zinc-50 shadow-md hover:shadow-[#A9ACA7] px-4 flex 
-                items-center gap-x-1 transition duration-300 ease-in-out mt-2">
+                <button type="submit" class="bg-emerald-600 rounded-full py-1 px-24 hover:bg-emerald-800 text-zinc-50">
                     <span class="material-symbols-outlined">
                         add
                     </span>

@@ -69,9 +69,7 @@
                 <input type="text" id="data_devolucao" name="data_devolucao" value='<?php echo $retirada->getDataDevolucao(); ?>' placeholder="Retirada" class="border-[1px] border-slate-600 rounded-md 
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]" disabled readonly> -->
 
-                <button type="submit" class="bg-[#006C4A] rounded-full
-                p-2 text-zinc-50 shadow-md hover:shadow-[#A9ACA7] px-4 flex 
-                items-center gap-x-1 transition duration-300 ease-in-out mt-2">
+                <button type="submit" class="bg-emerald-600 rounded-full py-1 px-24 hover:bg-emerald-800 text-zinc-50">
                     <span class="material-symbols-outlined">
                         add
                     </span>
