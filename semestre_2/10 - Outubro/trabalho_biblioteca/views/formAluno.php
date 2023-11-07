@@ -39,12 +39,12 @@
                 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 bg-slate-800
                 outline-none text-neutral-900 bg-zinc-50 w-auto">
 
-                    <option value="Agropecuária" >Agropecuária</option>
-                    <option value="Admnistração" >Admnistração</option>
-                    <option value="Enologia" >Enologia</option>
-                    <option value="Informática" >Informática</option>
-                    <option value="Meio Ambiente" >Meio Ambiente</option>
-                    <!-- <option value="filme" <?php echo $curso == 'Agropecuária' ? 'selected' : '' ?>>Agropecuária</option>
+                    <option value="Agropecuária" <?php echo $aluno->getCurso() == 'Agropecuária' ? 'selected' : '' ?>>Agropecuária</option>
+                    <option value="Admnistração" <?php echo $aluno->getCurso() == 'Admnistração' ? 'selected' : '' ?>>Admnistração</option>
+                    <option value="Enologia" <?php echo $aluno->getCurso() == 'Enologia' ? 'selected' : '' ?>>Enologia</option>
+                    <option value="Informática" <?php echo $aluno->getCurso() == 'Informática' ? 'selected' : '' ?>>Informática</option>
+                    <option value="Meio Ambiente" <?php echo $aluno->getCurso() == 'Meio Ambiente' ? 'selected' : '' ?>>Meio Ambiente</option>
+                    <!-- <option value="filme" <?php echo $aluno->getCurso() == 'Agropecuária' ? 'selected' : '' ?>>Agropecuária</option>
                     <option value="filme" <?php echo $curso == 'Admnistração' ? 'selected' : '' ?>>Admnistração</option>
                     <option value="filme" <?php echo $curso == 'Enologia' ? 'selected' : '' ?>>Enologia</option>
                     <option value="filme" <?php echo $curso == 'Informática' ? 'selected' : '' ?>>Informática</option>
