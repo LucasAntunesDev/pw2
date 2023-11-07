@@ -64,7 +64,6 @@ final class RetiradaModel extends Model {
         $query = 'UPDATE retiradas 
                     SET id_aluno = :id_aluno,
                         id_livro = :id_livro
-                        -- retirada = :retirada
                     WHERE id = :id';
         $binds = [
             ':id_aluno' => $vo->getIdAluno(),

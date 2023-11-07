@@ -15,6 +15,7 @@
     <?php
 
     use Model\VO\AlunoVO;
+use Model\VO\RetiradaVO;
 
     include('views/includes/menu.php'); ?>
 
@@ -28,50 +29,53 @@
         <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md w-[40rem]">
             <legend class="text-gray-900 font-bold text-center text-xl">Dados da retirada</legend>
 
-            <form action="salvarRetirada.php" method="post" class="flex flex-col j
-            ustify-center items-center gap-2">
+            <form action="salvarRetirada.php" method="post" class="flex flex-col justify-center items-center gap-2">
                 <input type="hidden" name="id" value='<?php echo $retirada->getId(); ?>'>
 
                 <label for="id_aluno">Id do Aluno</label>
-                <input type="text" id="id_aluno" name="id_aluno" value='<?php echo $retirada->getIdAluno(); ?>' placeholder="Id do Aluno" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                <input type="number" id="id_aluno" name="id_aluno" value='<?php echo $retirada->getIdAluno(); ?>'
+                 class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
-                <!-- <select name="id_aluno" id="id_aluno"> -->
-                    <!-- <option value=" --><?php 
-                                    // $db = new Database();
-                                    // $alunos = $db->select("SELECT nome FROM alunos");
-
-                                    // foreach ($alunos as $aluno) {
-                                    //     var_dump($aluno);
-                                    //     // echo $aluno;
-                                    // }
-                                    // ?>
-                                    </option>
-                <!-- </select> -->
-                <!--                 
-                <input type="text" id="id_aluno" name="id_aluno" 
-                value='<?php
-                        // $alunos = "SELECT nome FROM alunos";
-                        // foreach($alunos as $aluno){
-                        //     echo $aluno;
-                        // }
-                        // echo $retirada->getIdAluno();
-                        ?>'  -->
-                <!-- placeholder="Id do Aluno" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]"> -->
 
                 <label for="id_livro">Id do Livro</label>
-                <input type="text" id="id_livro" name="id_livro" value='<?php echo $retirada->getIdLivro(); ?>' placeholder="Id do Livro" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                <input type="number" id="id_livro" name="id_livro" value='<?php echo $retirada->getIdLivro(); ?>'
+                 class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
-                <!-- <label for="retirada">Data de Retirada</label>
-                <input type="text" id="data_retirada" name="data_retirada" value='<?php echo $retirada->getDataRetirada(); ?>' placeholder="Retirada" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]" disabled readonly>
+                <?php
+                   use Util\Database;
 
-                <label for="devolucao">Data de Devolução</label>
-                <input type="text" id="data_devolucao" name="data_devolucao" value='<?php echo $retirada->getDataDevolucao(); ?>' placeholder="Retirada" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]" disabled readonly> -->
+                   $db = new Database();
+                   $data = $db->select('SELECT titulo FROM livros');
+
+                   echo '<pre>';
+                       print_r($data);
+                   echo '</pre>';
+
+                ?>
+                <label for="id_livro">Livro</label>
+                <select  name="livro" id="livro" value="livro" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
+                
+                <?php
+                    // use Util\Database;
+
+                    $db = new Database();
+                    $data = $db->select('SELECT titulo FROM livros');
+
+                    echo '<pre>';
+                        print_r($data);
+                    echo '</pre>';
+                foreach ($data as $titulo => $t) {
+                    foreach ($t as $k) {
+                        echo "<option>$k</option>";
+                    }
+                }
+
+                ?>
+
+                </select>
 
                 <button type="submit" class="bg-emerald-600 rounded-full py-1 px-24 hover:bg-emerald-800 text-zinc-50 flex items-center mt-4">
                     <span class="material-symbols-outlined">
