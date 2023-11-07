@@ -1,4 +1,5 @@
 <?php
+
 namespace Model;
 
 use Model\VO\AlunoVO;
@@ -12,7 +13,13 @@ final class AlunoModel extends Model {
         $array = [];
 
         foreach ($data as $row) {
-            $vo = new AlunoVO($row['id'], $row['nome'], $row['curso'],  $row['matricula'],  $row['cpf']);
+            $vo = new AlunoVO(
+                $row['id'],
+                $row['nome'],
+                $row['curso'],
+                $row['matricula'],
+                $row['cpf']
+            );
             array_push($array, $vo);
         }
 
@@ -27,7 +34,13 @@ final class AlunoModel extends Model {
 
         if (count($data) === 0) return null;
 
-        return new AlunoVO($data[0]['id'], $data[0]['nome'], $data[0]['matricula']);
+        return new AlunoVO(
+            $data[0]['id'],
+            $data[0]['nome'],
+            $data[0]['curso'],
+            $data[0]['matricula'],
+            $data[0]['cpf'],
+        );
     }
     public function insert($vo = null) {
         $db = new Database();

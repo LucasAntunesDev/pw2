@@ -1,4 +1,5 @@
 <?php
+
 namespace Model\VO;
 
 final class AlunoVO extends VO {
@@ -7,7 +8,13 @@ final class AlunoVO extends VO {
     private $matricula;
     private $cpf;
 
-    public function __construct($id = 0, $nome = '', $curso = '', $matricula = 0, $cpf = 0) {
+    public function __construct(
+        $id = 0,
+        $nome = '',
+        $curso = '',
+        $matricula = '',
+        $cpf = ''
+    ) {
         parent::__construct($id);
         $this->nome = $nome;
         $this->curso = $curso;
@@ -22,7 +29,7 @@ final class AlunoVO extends VO {
     public function setNome($nome) {
         $this->nome = $nome;
     }
-    
+
     public function getCurso() {
         return $this->curso;
     }
