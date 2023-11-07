@@ -37,10 +37,10 @@ use Model\VO\RetiradaVO;
                  class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
-                <label for="id_livro">Id do Livro</label>
+                <!-- <label for="id_livro">Id do Livro</label>
                 <input type="number" id="id_livro" name="id_livro" value='<?php echo $retirada->getIdLivro(); ?>'
                  class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
-                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800"> -->
 
                 <?php
                    #use Util\Database;
@@ -54,7 +54,7 @@ use Model\VO\RetiradaVO;
 #
                 ?>
                 <label for="id_livro">Livro</label>
-                <select  name="livro" id="livro" value="livro" class="rounded-md 
+                <select  name="id_livro" id="id_livro" value="id_livro" class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
                 
@@ -62,13 +62,10 @@ use Model\VO\RetiradaVO;
                     use Util\Database;
 
                     $db = new Database();
-                    $data = $db->select('SELECT titulo FROM livros');
+                    $data = $db->select('SELECT * FROM livros');
 
-                    //echo '<pre>';
-                    //    print_r($data);
-                    //echo '</pre>';
                 foreach ($data as $titulo => $t) {
-                    echo "<option>$t[0]</option>";
+                    echo "<option value='$t[0]<'>$t[1]</option>";
                 }
 
                 ?>
