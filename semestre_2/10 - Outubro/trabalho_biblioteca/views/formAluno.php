@@ -44,16 +44,8 @@
                     <option value="Enologia" <?php echo $aluno->getCurso() == 'Enologia' ? 'selected' : '' ?>>Enologia</option>
                     <option value="Informática" <?php echo $aluno->getCurso() == 'Informática' ? 'selected' : '' ?>>Informática</option>
                     <option value="Meio Ambiente" <?php echo $aluno->getCurso() == 'Meio Ambiente' ? 'selected' : '' ?>>Meio Ambiente</option>
-                    <!-- <option value="filme" <?php echo $aluno->getCurso() == 'Agropecuária' ? 'selected' : '' ?>>Agropecuária</option>
-                    <option value="filme" <?php echo $curso == 'Admnistração' ? 'selected' : '' ?>>Admnistração</option>
-                    <option value="filme" <?php echo $curso == 'Enologia' ? 'selected' : '' ?>>Enologia</option>
-                    <option value="filme" <?php echo $curso == 'Informática' ? 'selected' : '' ?>>Informática</option>
-                    <option value="filme" <?php echo $curso == 'Meio Ambiente' ? 'selected' : '' ?>>Meio Ambiente</option> -->
 
                 </select>
-                <!-- <input type="number" id="curso" name="curso" value='<?php echo $aluno->getCurso(); ?>' 
-                placeholder="Curso" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]"> -->
 
                 <label for="cpf">CPF</label>
                 <input type="number" id="cpf" name="cpf" value='<?php echo $aluno->getCPF(); ?>' placeholder="Número do cpf" class="border-[1px] border-slate-600 rounded-md 
