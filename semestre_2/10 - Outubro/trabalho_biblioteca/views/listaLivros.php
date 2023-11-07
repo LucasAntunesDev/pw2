@@ -15,9 +15,9 @@
 
     <div class="flex flex-col justify-center items-center gap-2">
         <h1 class="font-bold text-4xl text-sky-500 py-4">Lista de Livros</h1>
-        <a href="livro.php" class="bg-[#006C4A] rounded-full
-        p-2 text-zinc-50 shadow-md hover:shadow-[#A9ACA7] px-4 flex 
-        items-center gap-x-1 transition duration-300 ease-in-out mb-2">
+        <a href="livro.php" class="bg-emerald-600 rounded-full
+         text-zinc-50 shadow-md hover:bg-emerald-800 p-2 flex 
+        items-center transition duration-300 ease-in-out mb-2"">
 
             <span class="material-symbols-outlined">
                 add
