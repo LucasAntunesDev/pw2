@@ -43,15 +43,15 @@ use Model\VO\RetiradaVO;
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
                 <?php
-                   use Util\Database;
-
-                   $db = new Database();
-                   $data = $db->select('SELECT titulo FROM livros');
-
-                   echo '<pre>';
-                       print_r($data);
-                   echo '</pre>';
-
+                   #use Util\Database;
+#
+                   #$db = new Database();
+                   #$data = $db->select('SELECT titulo FROM livros');
+#
+                   #echo '<pre>';
+                   #    print_r($data);
+                   #echo '</pre>';
+#
                 ?>
                 <label for="id_livro">Livro</label>
                 <select  name="livro" id="livro" value="livro" class="rounded-md 
@@ -59,18 +59,16 @@ use Model\VO\RetiradaVO;
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
                 
                 <?php
-                    // use Util\Database;
+                    use Util\Database;
 
                     $db = new Database();
                     $data = $db->select('SELECT titulo FROM livros');
 
-                    echo '<pre>';
-                        print_r($data);
-                    echo '</pre>';
+                    //echo '<pre>';
+                    //    print_r($data);
+                    //echo '</pre>';
                 foreach ($data as $titulo => $t) {
-                    foreach ($t as $k) {
-                        echo "<option>$k</option>";
-                    }
+                    echo "<option>$t[0]</option>";
                 }
 
                 ?>
