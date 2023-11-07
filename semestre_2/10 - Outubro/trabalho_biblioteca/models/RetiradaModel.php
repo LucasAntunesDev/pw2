@@ -63,14 +63,14 @@ final class RetiradaModel extends Model {
         $db = new Database();
         $query = 'UPDATE retiradas 
                     SET id_aluno = :id_aluno,
-                        id_livro = :id_livro,
-                        retirada = :retirada
+                        id_livro = :id_livro
+                        -- retirada = :retirada
                     WHERE id = :id';
         $binds = [
             ':id_aluno' => $vo->getIdAluno(),
             ':id_livro' => $vo->getIdLivro(),
-            ':data_retirada' => $vo->getDataRetirada(),
-            ':data_devolucao' => $vo->getDataDevolucao(),
+            // ':data_retirada' => $vo->getDataRetirada(),
+            // ':data_devolucao' => $vo->getDataDevolucao(),
             ':id' => $vo->getId()
         ];
 
