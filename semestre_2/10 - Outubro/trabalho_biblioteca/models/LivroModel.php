@@ -70,14 +70,15 @@ final class LivroModel extends Model {
                         autores = :autores,
                         editora = :editora,
                         qtd_exemplares = :qtd_exemplares,
-                        isbn = :isbn,
+                        isbn = :isbn
                     WHERE id = :id';
         $binds = [
             ':titulo' => $vo->getTitulo(),
             ':autores' => $vo->getAutores(),
             ':editora' => $vo->getEditora(),
             ':qtd_exemplares' => $vo->getQuantidadeExemplares(),
-            ':isbn' => $vo->getISBN()
+            ':isbn' => $vo->getISBN(),
+            ':id' => $vo->getId()
         ];
 
         return $db->execute($query, $binds);

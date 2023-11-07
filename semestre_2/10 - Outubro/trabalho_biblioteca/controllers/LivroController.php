@@ -1,4 +1,5 @@
 <?php
+
 namespace Controller;
 
 use Embed\Http\Redirects;
@@ -32,9 +33,13 @@ final class LivroController extends Controller {
     public function save() {
         $id = $_POST['id'];
         $vo = new LivroVO(
-                            $_POST['id'], $_POST['titulo'], $_POST['autores'], $_POST['editora'], 
-                            $_POST['qtd_exemplares'], $_POST['isbn']
-                        );
+            $_POST['id'],
+            $_POST['titulo'],
+            $_POST['autores'],
+            $_POST['editora'],
+            $_POST['qtd_exemplares'],
+            $_POST['isbn']
+        );
         $model = new LivroModel();
 
         $return = empty($id) ? $model->insert($vo) : $model->update($vo);
@@ -43,7 +48,7 @@ final class LivroController extends Controller {
     }
 
     public function remove() {
-        if(empty($_GET['id'])) die('Necessário passar o ID');
+        if (empty($_GET['id'])) die('Necessário passar o ID');
 
         $model = new LivroModel();
 

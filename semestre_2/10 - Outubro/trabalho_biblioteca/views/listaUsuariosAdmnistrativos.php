@@ -22,7 +22,7 @@
             <span class="material-symbols-outlined">
                 add
             </span>
-            Inserir Novo usuario
+            Inserir Novo Usuário
 
         </a>
 

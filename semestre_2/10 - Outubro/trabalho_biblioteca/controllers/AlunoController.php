@@ -1,4 +1,5 @@
 <?php
+
 namespace Controller;
 
 use Aluno;
@@ -32,7 +33,13 @@ final class AlunoController extends Controller {
 
     public function save() {
         $id = $_POST['id'];
-        $vo = new AlunoVO($_POST['id'], $_POST['nome'], $_POST['curso'], $_POST['matricula'], $_POST['cpf']);
+        $vo = new AlunoVO(
+            $_POST['id'],
+            $_POST['nome'],
+            $_POST['curso'],
+            $_POST['matricula'],
+            $_POST['cpf']
+        );
         $model = new AlunoModel();
 
         $return = empty($id) ? $model->insert($vo) : $model->update($vo);
