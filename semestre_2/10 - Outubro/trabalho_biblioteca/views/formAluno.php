@@ -14,7 +14,10 @@
     <?php include('views/includes/menu.php'); ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-sky-500 my-4">Formulário de Aluno</h1>
+        <h1 class="font-bold text-4xl text-sky-500 my-4">
+            <i class="fa-solid fa-graduation-cap"></i>
+            Formulário de Aluno
+        </h1>
         <a href="alunos.php" class="text-sky-600 hover:underline">Voltar para a listagem</a>
 
         <fieldset class="bg-sky-50 shadow-md p-10 rounded-md w-[40rem]">
