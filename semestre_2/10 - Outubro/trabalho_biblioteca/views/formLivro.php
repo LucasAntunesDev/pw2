@@ -28,29 +28,34 @@
 
                 <label for="titulo">Titulo</label>
                 <input type="text" id="titulo" name="titulo" value='<?php echo $livro->getTitulo(); ?>' 
-                placeholder="Titulo do Livro" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                placeholder="Titulo do Livro" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
                 
                 <label for="titulo">Autores</label>
                 <input type="text" id="autores" name="autores" value='<?php echo $livro->getAutores(); ?>' 
-                placeholder="Autores do Livro" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                placeholder="Autores do Livro" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
                 
                 <label for="titulo">Editora</label>
                 <input type="text" id="editora" name="editora" value='<?php echo $livro->getEditora(); ?>' 
-                placeholder="Editora do Livro" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                placeholder="Editora do Livro" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
                 
                 <label for="titulo">Exemplares</label>
                 <input type="text" id="qtd_exemplares" name="qtd_exemplares" value='<?php echo $livro->getQuantidadeExemplares(); ?>' 
-                placeholder="Quantidade de exemplares" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                placeholder="Quantidade de exemplares" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
                 
                 <label for="titulo">ISBN</label>
                 <input type="text" id="isbn" name="isbn" value='<?php echo $livro->getISBN(); ?>' 
-                placeholder="ISBN" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                placeholder="ISBN" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
                 <button type="submit" class="bg-[#006C4A] rounded-full
                 p-2 text-zinc-50 shadow-md hover:shadow-[#A9ACA7] px-4 flex 

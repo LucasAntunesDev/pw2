@@ -26,18 +26,21 @@
 
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" value='<?php echo $usuario->getNome(); ?>' 
-                placeholder="Nome do Usuário" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                placeholder="Nome do Usuário" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
                 <label for="login">Login</label>
                 <input type="text" id="login" name="login" value='<?php echo $usuario->getLogin(); ?>' 
-                placeholder="Login" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                placeholder="Login" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha" value=""
-                placeholder="Senha" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                placeholder="Senha" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
                 <button type="submit" class="bg-[#006C4A] rounded-full
                 p-2 text-zinc-50 shadow-md hover:shadow-[#A9ACA7] px-4 flex 

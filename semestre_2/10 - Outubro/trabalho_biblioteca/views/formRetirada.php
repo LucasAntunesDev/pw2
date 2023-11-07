@@ -29,8 +29,9 @@
                 <input type="hidden" name="id" value='<?php echo $retirada->getId(); ?>'>
 
                 <label for="id_aluno">Id do Aluno</label>
-                <input type="text" id="id_aluno" name="id_aluno" value='<?php echo $retirada->getIdAluno(); ?>' placeholder="Id do Aluno" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                <input type="text" id="id_aluno" name="id_aluno" value='<?php echo $retirada->getIdAluno(); ?>' placeholder="Id do Aluno" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
                 <!-- <select name="id_aluno" id="id_aluno"> -->
                     <!-- <option value=" --><?php 
                                     // $db = new Database();
@@ -56,8 +57,9 @@
                 px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]"> -->
 
                 <label for="id_livro">Id do Livro</label>
-                <input type="text" id="id_livro" name="id_livro" value='<?php echo $retirada->getIdLivro(); ?>' placeholder="Id do Livro" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                <input type="text" id="id_livro" name="id_livro" value='<?php echo $retirada->getIdLivro(); ?>' placeholder="Id do Livro" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
                 <!-- <label for="retirada">Data de Retirada</label>
                 <input type="text" id="data_retirada" name="data_retirada" value='<?php echo $retirada->getDataRetirada(); ?>' placeholder="Retirada" class="border-[1px] border-slate-600 rounded-md 

@@ -25,19 +25,20 @@
                 <input type="hidden" name="id" value='<?php echo $aluno->getId(); ?>'>
 
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" value='<?php echo $aluno->getNome(); ?>' placeholder="Nome do aluno" class="border-[1px] border-slate-600 rounded-md 
-               px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                <input type="text" id="nome" name="nome" value='<?php echo $aluno->getNome(); ?>' placeholder="Nome do aluno" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
                 <label for="matricula">Matrícula</label>
-                <input type="number" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' placeholder="Número da matricula" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                <input type="number" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' placeholder="Número da matricula" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
 
                 <label for="curso">Curso</label>
                 <select placeholder="curso" name="curso" id="curso" value="curso" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 
-                focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6 bg-slate-800
-                outline-none text-neutral-900 bg-zinc-50 w-auto">
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
                     <option value="Agropecuária" <?php echo $aluno->getCurso() == 'Agropecuária' ? 'selected' : '' ?>>Agropecuária</option>
                     <option value="Admnistração" <?php echo $aluno->getCurso() == 'Admnistração' ? 'selected' : '' ?>>Admnistração</option>
@@ -48,8 +49,9 @@
                 </select>
 
                 <label for="cpf">CPF</label>
-                <input type="number" id="cpf" name="cpf" value='<?php echo $aluno->getCPF(); ?>' placeholder="Número do cpf" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                <input type="number" id="cpf" name="cpf" value='<?php echo $aluno->getCPF(); ?>' placeholder="Número do cpf" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
 
                 <button type="submit" class="bg-[#006C4A] rounded-full
