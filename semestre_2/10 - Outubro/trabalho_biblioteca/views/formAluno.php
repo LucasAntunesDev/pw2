@@ -24,8 +24,7 @@
         <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md w-[40rem]">
             <legend class="text-gray-900 font-bold text-center text-xl">Dados do aluno</legend>
 
-            <form action="salvarAluno.php" method="post" class="flex flex-col j
-            ustify-center items-center gap-y-1">
+            <form action="salvarAluno.php" method="post" class="flex flex-col justify-center items-center gap-y-1">
                 <input type="hidden" name="id" value='<?php echo $aluno->getId(); ?>'>
 
                 <label for="nome">Nome</label>

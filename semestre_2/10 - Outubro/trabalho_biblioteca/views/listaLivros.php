@@ -55,12 +55,12 @@
                     echo '<td class="border-[1px] border-zinc-300 px-4">' . $livro->getISBN() . '</td>';
                     echo '<td class="border-[1px]  px-4 flex flex-col">';
 
-                    echo "<a href='aluno.php?id=" . $livro->getId() . "' class=' bg-emerald-600 rounded-md py-1 px-4 hover:bg-emerald-800
+                    echo "<a href='livro.php?id=" . $livro->getId() . "' class=' bg-emerald-600 rounded-md py-1 px-4 hover:bg-emerald-800
                      text-zinc-50 flex items-center mt-4 gap-x-2 justify-center'>
                         Editar
                         <span class='material-symbols-outlined'>edit</span>
                         </a>";
-                    echo "<a href='excluirAluno.php?id=" . $livro->getId() . "' class=' bg-red-600 rounded-md py-1 px-4 hover:bg-red-800
+                    echo "<a href='excluirLivro.php?id=" . $livro->getId() . "' class=' bg-red-600 rounded-md py-1 px-4 hover:bg-red-800
                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center mb-4'>
                         Excluir
                         <span class='material-symbols-outlined'>delete</span>
