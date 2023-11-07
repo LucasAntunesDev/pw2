@@ -26,18 +26,18 @@
 
         </a>
 
-        <table class="border-[1px] border-neutral-900 px-4">
+        <table class="border-[1px] border-zinc-300 px-4">
             <thead>
                 <tr>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">ID</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Título</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Autores</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Editora</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Quantidade de Exemplares</th>
-                    <!-- <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Data de retirada</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Data de devolução</th> -->
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">ISBN</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Ações</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">ID</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Título</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Autores</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Editora</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Quantidade de Exemplares</th>
+                    <!-- <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Data de retirada</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Data de devolução</th> -->
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">ISBN</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Ações</th>
                 </tr>
             </thead>
 
@@ -46,13 +46,13 @@
                 <?php
                 foreach ($livros as $livro) {
                     echo '<tr>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $livro->getId() . '</td>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $livro->getTitulo() . '</td>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $livro->getAutores() . '</td>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $livro->getEditora() . '</td>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $livro->getQuantidadeExemplares() . '</td>';
-                    // echo '<td class="border-[1px] border-neutral-900 px-4">' . $livro->getDataRetirada() . '</td>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $livro->getISBN() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $livro->getId() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $livro->getTitulo() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $livro->getAutores() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $livro->getEditora() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $livro->getQuantidadeExemplares() . '</td>';
+                    // echo '<td class="border-[1px] border-zinc-300 px-4">' . $livro->getDataRetirada() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $livro->getISBN() . '</td>';
                     echo '<td class="border-[1px]  px-4 flex flex-col">';
 
                     echo "<a href='livro.php?id=" . $livro->getId() . "' 

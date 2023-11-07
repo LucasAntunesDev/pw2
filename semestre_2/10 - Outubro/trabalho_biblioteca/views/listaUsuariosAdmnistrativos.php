@@ -26,13 +26,13 @@
 
         </a>
 
-        <table class="border-[1px] border-neutral-900 px-4">
+        <table class="border-[1px] border-zinc-300 px-4">
             <thead>
                 <tr>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">ID</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Nome</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Login</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Ações</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">ID</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Nome</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Login</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Ações</th>
                 </tr>
             </thead>
 
@@ -40,9 +40,9 @@
                 <?php
                 foreach ($usuariosAdmnistrativos as $usuarioAdmnistrativo) {
                     echo '<tr>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $usuarioAdmnistrativo->getId() . '</td>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $usuarioAdmnistrativo->getNome() . '</td>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $usuarioAdmnistrativo->getLogin() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $usuarioAdmnistrativo->getId() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $usuarioAdmnistrativo->getNome() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $usuarioAdmnistrativo->getLogin() . '</td>';
                     echo '<td class="border-[1px]  px-4 flex flex-col">';
 
                     echo "<a href='usuarioAdmnistrativo.php?id=" . $usuarioAdmnistrativo->getId() . "' 

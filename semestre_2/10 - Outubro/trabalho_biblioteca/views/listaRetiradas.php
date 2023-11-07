@@ -26,15 +26,15 @@
 
         </a>
 
-        <table class="border-[1px] border-neutral-900 px-4">
+        <table class="border-[1px] border-zinc-300 px-4">
             <thead>
                 <tr>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">ID</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">ID do Aluno</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">ID da Livro</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Data de Retirada</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Data de Devolução</th>
-                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Ações</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">ID</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">ID do Aluno</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">ID da Livro</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Data de Retirada</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Data de Devolução</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Ações</th>
                 </tr>
             </thead>
 
@@ -42,11 +42,11 @@
                 <?php
                 foreach ($retiradas as $retirada) {
                     echo '<tr>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $retirada->getId() . '</td>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $retirada->getIdAluno() . '</td>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $retirada->getIdLivro() . '</td>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $retirada->getDataRetirada() . '</td>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4">' . $retirada->getDataDevolucao() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $retirada->getId() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $retirada->getIdAluno() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $retirada->getIdLivro() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $retirada->getDataRetirada() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $retirada->getDataDevolucao() . '</td>';
                     echo '<td class="border-[1px]  px-4 flex flex-col">';
 
                     echo "<a href='retirada.php?id=" . $retirada->getId() . "' 

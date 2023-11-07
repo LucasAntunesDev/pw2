@@ -41,8 +41,7 @@ CREATE TABLE `alunos` (
 
 INSERT INTO `alunos` (`id`, `nome`, `curso`, `matricula`, `cpf`) VALUES
 (1, 'Lucas', 'Informática', '577567567', 66668),
-(4, 'Bernardo Zanette', 'Informática', '666', 666),
-(11, 'Laura Sendeski da Campo', 'Enologia', '34534522', 353535);
+(4, 'Bernardo Zanette', 'Informática', '666', 666);
 
 -- --------------------------------------------------------
 
