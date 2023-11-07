@@ -47,4 +47,5 @@ final class RetiradaVO extends VO {
     public function getDataDevolucao() {
         return $this->data_devolucao;
     }
+
 }

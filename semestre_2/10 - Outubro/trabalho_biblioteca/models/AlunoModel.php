@@ -48,7 +48,7 @@ final class AlunoModel extends Model {
         $db = new Database();
         $query = 'UPDATE alunos 
                     SET nome = :nome,
-                    curso = :curso
+                    curso = :curso,
                     matricula = :matricula,
                     cpf = :cpf
                     WHERE id = :id';
