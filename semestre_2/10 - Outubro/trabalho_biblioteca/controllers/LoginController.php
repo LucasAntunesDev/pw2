@@ -22,7 +22,7 @@ final class LoginController extends Controller {
         $success = $model->doLogin($vo);
 
         if ($success) {
-            $this->redirect('disciplinas.php');
+            $this->redirect('livros.php');
         } else {
             $this->redirect('login.php');
         }
