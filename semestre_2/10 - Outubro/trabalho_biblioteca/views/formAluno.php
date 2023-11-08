@@ -15,11 +15,11 @@
     <?php include('views/includes/menu.php'); ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-sky-500 my-4">
+        <h1 class="font-bold text-4xl text-[#EF5D58] my-4">
             <i class="fa-solid fa-graduation-cap"></i>
             Formulário de Aluno
         </h1>
-        <a href="alunos.php" class="text-sky-600 hover:underline">Voltar para a listagem</a>
+        <a href="alunos.php" class="text-gray-900 font-bold hover:text-gray-700">Voltar para a listagem</a>
 
         <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md w-[40rem]">
             <legend class="text-gray-900 font-bold text-center text-xl">Dados do aluno</legend>
@@ -30,18 +30,18 @@
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" value='<?php echo $aluno->getNome(); ?>' class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
+                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
 
                 <label for="matricula">Matrícula</label>
                 <input type="number" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
+                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
 
 
                 <label for="curso">Curso</label>
                 <select  name="curso" id="curso" value="curso" class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
+                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
 
                     <option value="Agropecuária" <?php echo $aluno->getCurso() == 'Agropecuária' ? 'selected' : '' ?>>Agropecuária</option>
                     <option value="Admnistração" <?php echo $aluno->getCurso() == 'Admnistração' ? 'selected' : '' ?>>Admnistração</option>
@@ -54,7 +54,7 @@
                 <label for="cpf">CPF</label>
                 <input type="number" id="cpf" name="cpf" value='<?php echo $aluno->getCPF(); ?>' class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
+                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
 
 
                 <button type="submit" class="bg-emerald-600 rounded-full py-1 px-24 hover:bg-emerald-800 text-zinc-50 flex items-center mt-4">

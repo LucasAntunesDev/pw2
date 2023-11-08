@@ -21,7 +21,7 @@
                 }
             </style>
 
-            <h1 class="font-bold text-4xl text-sky-500 my-4">
+            <h1 class="font-bold text-4xl text-[#EF5D58] my-4">
                 <i class="fa-solid fa-book-open"></i>
                 Login
             </h1>
@@ -36,7 +36,7 @@
                         mb-2">Login</label>
                         <input type="text" name="login" id="login" class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset 
                         ring-gray-500 focus:ring-2 focus:ring-inset
-                        focus:ring-sky-500 outline-none text-zinc-800">
+                        focus:ring-[#EF5D58] outline-none text-zinc-800">
                     </div>
 
                     <div>
@@ -44,7 +44,7 @@
                         mb-2">Senha</label>
                         <input type="password" name="senha" id="senha" " class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset 
                         ring-gray-500 focus:ring-2 focus:ring-inset
-                        focus:ring-sky-500 outline-none text-zinc-800">
+                        focus:ring-[#EF5D58] outline-none text-zinc-800">
                     </div>
                     <button type="submit" class="bg-emerald-600 rounded-md py-1 px-24 
                     hover:bg-emerald-800 text-zinc-50 font-bold">

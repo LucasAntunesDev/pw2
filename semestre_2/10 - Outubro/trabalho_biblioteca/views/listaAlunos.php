@@ -14,7 +14,7 @@
     <?php include('views/includes/menu.php') ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-sky-500 py-4">
+        <h1 class="font-bold text-4xl text-[#EF5D58] py-4">
         <i class="fa-solid fa-graduation-cap"></i>
             Alunos
         </h1>

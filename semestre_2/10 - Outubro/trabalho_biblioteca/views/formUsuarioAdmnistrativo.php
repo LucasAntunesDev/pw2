@@ -15,11 +15,11 @@
     <?php include('views/includes/menu.php'); ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-sky-500 my-4">
+        <h1 class="font-bold text-4xl text-[#EF5D58] my-4">
             <i class="fa-solid fa-circle-user"></i>
             Formulário de Usuário
         </h1>
-        <a href="usuariosAdmnistrativos.php" class="text-sky-600 hover:underline">Voltar para a listagem</a>
+        <a href="usuariosAdmnistrativos.php" class="text-gray-900 font-bold hover:text-gray-700">Voltar para a listagem</a>
 
         <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md w-[40rem]">
             <legend class="text-gray-900 font-bold text-center text-xl">Dados do usuário</legend>
@@ -30,21 +30,21 @@
                     <label for="nome" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Nome</label>
                     <input type="text" id="nome" name="nome" value='<?php echo $usuario->getNome(); ?>' class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
+                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
                 <div>
                     <label for="login" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Login</label>
                     <input type="text" id="login" name="login" value='<?php echo $usuario->getLogin(); ?>' class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
+                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
                 <div>
                     <label for="senha" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Senha</label>
                     <input type="password" id="senha" name="senha" value="" class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
+                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
                 <div>
