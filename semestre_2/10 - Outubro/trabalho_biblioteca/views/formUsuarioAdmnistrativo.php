@@ -29,21 +29,21 @@
                 <div>
                     <label for="nome" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Nome</label>
                     <input type="text" id="nome" name="nome" value='<?php echo $usuario->getNome(); ?>' class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
                 </div>
 
                 <div>
                     <label for="login" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Login</label>
                     <input type="text" id="login" name="login" value='<?php echo $usuario->getLogin(); ?>' class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
                 </div>
 
                 <div>
                     <label for="senha" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Senha</label>
                     <input type="password" id="senha" name="senha" value="" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
                 </div>
 

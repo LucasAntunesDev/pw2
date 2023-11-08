@@ -14,13 +14,16 @@
     <?php include('views/includes/menu.php') ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-sky-500 py-4">Lista de Retiradas</h1>
+        <h1 class="font-bold text-4xl text-sky-500 py-4">
+            <i class="fa-solid fa-list-check"></i>1
+            Retiradas
+        </h1>
         <a href="retirada.php" class="bg-emerald-600 rounded-full
          text-zinc-50 shadow-md hover:bg-emerald-800 p-2 flex 
         items-center transition duration-300 ease-in-out mb-2"">
 
-            <span class="material-symbols-outlined">
-                add
+            <span class=" material-symbols-outlined">
+            add
             </span>
             Inserir Nova Retirada
 

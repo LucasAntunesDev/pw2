@@ -28,19 +28,19 @@
                 <input type="hidden" name="id" value='<?php echo $aluno->getId(); ?>'>
 
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" value='<?php echo $aluno->getNome(); ?>' placeholder="Nome do aluno" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                <input type="text" id="nome" name="nome" value='<?php echo $aluno->getNome(); ?>' class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
                 <label for="matricula">Matrícula</label>
-                <input type="number" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' placeholder="Número da matricula" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                <input type="number" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
 
                 <label for="curso">Curso</label>
-                <select placeholder="curso" name="curso" id="curso" value="curso" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                <select  name="curso" id="curso" value="curso" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
                     <option value="Agropecuária" <?php echo $aluno->getCurso() == 'Agropecuária' ? 'selected' : '' ?>>Agropecuária</option>
@@ -52,8 +52,8 @@
                 </select>
 
                 <label for="cpf">CPF</label>
-                <input type="number" id="cpf" name="cpf" value='<?php echo $aluno->getCPF(); ?>' placeholder="Número do cpf" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-zinc-500
+                <input type="number" id="cpf" name="cpf" value='<?php echo $aluno->getCPF(); ?>' class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
 
 

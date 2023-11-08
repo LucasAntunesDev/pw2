@@ -14,7 +14,10 @@
     <?php include('views/includes/menu.php') ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-sky-500 py-4">Lista de Alunos</h1>
+        <h1 class="font-bold text-4xl text-sky-500 py-4">
+        <i class="fa-solid fa-graduation-cap"></i>
+            Alunos
+        </h1>
         
         <a href="aluno.php" class="bg-emerald-600 rounded-full
          text-zinc-50 shadow-md hover:bg-emerald-800 p-2 flex 

@@ -32,7 +32,7 @@ use Model\VO\RetiradaVO;
             <form action="salvarRetirada.php" method="post" class="flex flex-col justify-center items-center gap-2">
                 <input type="hidden" name="id" value='<?php echo $retirada->getId(); ?>'>
 
-                <label for="id_aluno">Id do Aluno</label>
+                <label for="id_aluno" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Id do Aluno</label>
                 <input type="number" id="id_aluno" name="id_aluno" value='<?php echo $retirada->getIdAluno(); ?>'
                  class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
@@ -53,7 +53,7 @@ use Model\VO\RetiradaVO;
                    #echo '</pre>';
 #
                 ?>
-                <label for="id_livro">Livro</label>
+                <label for="id_livro" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Livro</label>
                 <select  name="id_livro" id="id_livro" value="id_livro" class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
                 focus:ring-2 focus:ring-inset focus:ring-sky-500 outline-none text-zinc-800">
