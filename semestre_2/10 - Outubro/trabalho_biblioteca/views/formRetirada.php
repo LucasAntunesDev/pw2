@@ -15,7 +15,7 @@
     <?php
 
     use Model\VO\AlunoVO;
-use Model\VO\RetiradaVO;
+    use Model\VO\RetiradaVO;
 
     include('views/includes/menu.php'); ?>
 
@@ -32,43 +32,44 @@ use Model\VO\RetiradaVO;
             <form action="salvarRetirada.php" method="post" class="flex flex-col justify-center items-center gap-2">
                 <input type="hidden" name="id" value='<?php echo $retirada->getId(); ?>'>
 
-                <label for="id_aluno" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Id do Aluno</label>
-                <input type="number" id="id_aluno" name="id_aluno" value='<?php echo $retirada->getIdAluno(); ?>'
-                 class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
-                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
-
-                <!-- <label for="id_livro">Id do Livro</label>
-                <input type="number" id="id_livro" name="id_livro" value='<?php echo $retirada->getIdLivro(); ?>'
-                 class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
-                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800"> -->
-
-                <?php
-                   #use Util\Database;
-#
-                   #$db = new Database();
-                   #$data = $db->select('SELECT titulo FROM livros');
-#
-                   #echo '<pre>';
-                   #    print_r($data);
-                   #echo '</pre>';
-#
-                ?>
-                <label for="id_livro" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Livro</label>
-                <select  name="id_livro" id="id_livro" value="id_livro" class="rounded-md 
+                <label for="id_aluno" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Aluno</label>
+                <select name="id_aluno" id="id_aluno" value="id_aluno" class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
-                
-                <?php
+
+                    <?php
+
                     use Util\Database;
 
                     $db = new Database();
-                    $data = $db->select('SELECT * FROM livros');
+                    $data_alunos = $db->select('SELECT * FROM alunos');
 
-                foreach ($data as $titulo => $t) {
-                    echo "<option value='$t[0]<'>$t[1]</option>";
-                }
+                    foreach ($data_alunos as $alunos => $aluno) {
+                        echo "<option value='$aluno[0]<'>$aluno[1]</option>";
+                    }
 
-                ?>
+                    ?>
+
+                </select>
+
+                <label for="data_retirada" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Data de retirada</label>
+                <input type="date" id="data_retirada" name="data_retirada" value="<?php echo $retirada->getDataRetirada(); ?>"
+                class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
+                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
+
+               
+                <label for="id_livro" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Livro</label>
+                <select name="id_livro" id="id_livro" value="id_livro" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
+                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
+
+                    <?php
+                    $data_livros = $db->select('SELECT * FROM livros');
+
+                    foreach ($data_livros as $livros => $livro) {
+                        echo "<option value='$livro[0]<'>$livro[1]</option>";
+                    }
+                    ?>
 
                 </select>
 
@@ -83,6 +84,7 @@ use Model\VO\RetiradaVO;
 
         </form>
     </div>
+
 
 </body>
 

@@ -38,7 +38,8 @@ final class RetiradaController extends Controller {
         $vo = new RetiradaVO(
             $_POST['id'],
             $_POST['id_aluno'],
-            $_POST['id_livro']
+            $_POST['id_livro'],
+            $_POST['data_retirada']
         );
         $model = new RetiradaModel();
 

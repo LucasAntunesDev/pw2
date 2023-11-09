@@ -3,8 +3,7 @@
 <div class="flex flex-row justify-between items-center pl-4 shadow-md gap-x-4 
 h-16 bg-[#325453] text-zinc-50 border-b-[3px] border-[#517174]">
 
-
-<p class="pl-10">👋 Olá <?php  echo isset($_SESSION['usuario']) ? ', ' . $_SESSION['usuario']->getNome() : '' ?></p>
+<!-- <p class="pl-10">👋 Olá <?php  //echo (isset($_SESSION['usuario']) && !empty($_SESSION['usuario'])) ? ', ' . $_SESSION['usuario']->getNome() : '' ?></p> -->
 
 <ul class="flex flex-row gap-x-4 pr-10">
     
