@@ -9,6 +9,8 @@ final class RetiradaVO extends VO {
     private $id_livro;
     private $data_retirada;
     private $data_devolucao;
+    private $nome_aluno;
+    private $nome_livro;
 
     public function __construct(
         $id = 0,
@@ -46,6 +48,22 @@ final class RetiradaVO extends VO {
 
     public function getDataDevolucao() {
         return $this->data_devolucao;
+    }
+
+    public function getNomeAluno(){
+        return $this->nome_aluno;
+    }
+
+    public function setNomeAluno($nome_aluno){
+    $this->nome_aluno = $nome_aluno;
+    }
+
+    public function getNomeLivro(){
+        return $this->nome_livro;
+    }
+
+    public function setNomeLivro($nome_livro){
+    $this->nome_livro = $nome_livro;
     }
 
 }
