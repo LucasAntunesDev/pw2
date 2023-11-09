@@ -15,7 +15,7 @@ final class RetiradaVO extends VO {
         $id = 0,
         $id_aluno = 0,
         $id_livro = 0,
-        $data_retirada = 0,
+        $data_retirada = '',
         $data_devolucao = 0,
     ) {
         parent::__construct($id);

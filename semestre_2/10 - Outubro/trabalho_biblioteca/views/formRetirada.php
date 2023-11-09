@@ -85,7 +85,19 @@
         </form>
     </div>
 
-
 </body>
+
+<script>
+    const dataRetirada = document.querySelector('#data_retirada')
+    console.log('2022-01-01' < dataRetirada)
+    console.log(dataRetirada.value)
+    // dataRetirada.addEventListener('change', (dataRetirada)=>{
+    //     console.log(dataRetirada.value)
+    // })
+
+
+</script>
+
+<!-- <script src="validarData.js"></script> -->
 
 </html>
