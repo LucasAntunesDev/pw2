@@ -29,7 +29,7 @@
         <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md w-[40rem]">
             <legend class="text-gray-900 font-bold text-center text-xl">Dados da retirada</legend>
 
-            <form action="salvarRetirada.php" method="post" class="flex flex-col justify-center items-center gap-2">
+            <form action="salvarRetirada.php" method="post" class="flex flex-col justify-center items-center gap-2" id="form">
                 <input type="hidden" name="id" value='<?php echo $retirada->getId(); ?>'>
 
                 <label for="id_aluno" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Aluno</label>
@@ -53,11 +53,10 @@
                 </select>
 
                 <label for="data_retirada" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Data de retirada</label>
-                <input type="date" id="data_retirada" name="data_retirada" value="<?php echo $retirada->getDataRetirada(); ?>"
-                class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
+                <input type="date" id="data_retirada" name="data_retirada" value="<?php echo $retirada->getDataRetirada(); ?>" class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
 
-               
+
                 <label for="id_livro" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Livro</label>
                 <select name="id_livro" id="id_livro" value="id_livro" class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500
@@ -88,14 +87,43 @@
 </body>
 
 <script>
-    const dataRetirada = document.querySelector('#data_retirada')
-    console.log('2022-01-01' < dataRetirada)
-    console.log(dataRetirada.value)
+    var form = document.getElementById("form");
+
+    // Adicionar um evento de envio ao formulário
+    form.addEventListener("submit", function(event) {
+        // Obter o elemento do input date
+        var dataRetirada = document.getElementById("data_retirada");
+
+        // Obter o valor do input date
+        var data = dataRetirada.value;
+
+        // Criar um objeto Date a partir do valor do input date
+        var dataObjeto = new Date(data);
+
+        // Criar um objeto Date com a data atual
+        var dataAtual = new Date();
+
+        // Comparar os dois objetos Date
+        if (dataObjeto < dataAtual) {
+            // Se a data do input for anterior à data atual, cancelar o envio do formulário
+            event.preventDefault();
+            // Mostrar uma mensagem de erro
+            alert("A data deve ser igual ou posterior à data atual.");
+        } else {
+            // Se a data do input for igual ou posterior à data atual, permitir o envio do formulário
+            // Mostrar uma mensagem de sucesso
+            alert("O formulário foi enviado com sucesso.");
+        }
+    });
+
+
+    // const dataRetirada = document.querySelector('#data_retirada')
+    // console.log('2022-01-01' < dataRetirada)
+    // console.log(dataRetirada.value)
+    //-----
     // dataRetirada.addEventListener('change', (dataRetirada)=>{
     //     console.log(dataRetirada.value)
     // })
-
-
 </script>
 
 <!-- <script src="validarData.js"></script> -->
