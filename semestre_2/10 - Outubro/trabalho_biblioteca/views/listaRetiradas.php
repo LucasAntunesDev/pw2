@@ -34,7 +34,7 @@
                 <tr>
                     <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">ID</th>
                     <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">ID do Aluno</th>
-                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">ID da Livro</th>
+                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">ID do Livro</th>
                     <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Data de Retirada</th>
                     <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Data de Devolução</th>
                     <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Ações</th>
@@ -48,8 +48,8 @@
                     echo '<td class="border-[1px] border-zinc-300 px-4">' . $retirada->getId() . '</td>';
                     echo '<td class="border-[1px] border-zinc-300 px-4">' . $retirada->getIdAluno() . '</td>';
                     echo '<td class="border-[1px] border-zinc-300 px-4">' . $retirada->getIdLivro() . '</td>';
-                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $retirada->getDataRetirada() . '</td>';
-                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $retirada->getDataDevolucao() . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . date('d/m/Y', strtotime($retirada->getDataRetirada())) . '</td>';
+                    echo '<td class="border-[1px] border-zinc-300 px-4">' . date('d/m/Y', strtotime($retirada->getDataDevolucao())) . '</td>';
                     echo '<td class="border-[1px]  px-4 flex flex-col">';
 
                     echo "<a href='retirada.php?id=" . $retirada->getId() . "' class=' bg-emerald-600 rounded-md py-1 px-4 hover:bg-emerald-800
