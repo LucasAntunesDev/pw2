@@ -84,37 +84,12 @@
         </form>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="views/validarData.js"></script>
 </body>
 
 <script>
-    var form = document.getElementById("form");
-
-    // Adicionar um evento de envio ao formulário
-    form.addEventListener("submit", function(event) {
-        // Obter o elemento do input date
-        var dataRetirada = document.getElementById("data_retirada");
-
-        // Obter o valor do input date
-        var data = dataRetirada.value;
-
-        // Criar um objeto Date a partir do valor do input date
-        var dataObjeto = new Date(data);
-
-        // Criar um objeto Date com a data atual
-        var dataAtual = new Date();
-
-        // Comparar os dois objetos Date
-        if (dataObjeto < dataAtual) {
-            // Se a data do input for anterior à data atual, cancelar o envio do formulário
-            event.preventDefault();
-            // Mostrar uma mensagem de erro
-            alert("A data deve ser igual ou posterior à data atual.");
-        } else {
-            // Se a data do input for igual ou posterior à data atual, permitir o envio do formulário
-            // Mostrar uma mensagem de sucesso
-            alert("O formulário foi enviado com sucesso.");
-        }
-    });
+    
 
 
     // const dataRetirada = document.querySelector('#data_retirada')
