@@ -41,7 +41,7 @@
                 <?php
                 foreach ($alunos as $aluno) {
                     echo '<tr>';
-                    echo '<td class="border-[1px] border-neutral-900 px-4"><img class="w-40 rounded-full" src="uploads/' . $aluno->getURLFoto() . '"></td>';
+                    echo '<td class="border-[1px] border-neutral-900 px-4 py-2"><img class="w-40 rounded-full" src="uploads/' . $aluno->getURLFoto() . '"></td>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $aluno->getId() . '</td>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $aluno->getNome() . '</td>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $aluno->getMatricula() . '</td>';
