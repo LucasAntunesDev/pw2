@@ -20,19 +20,27 @@
         <fieldset class="bg-[#EEF6F0] shadow-md p-10 rounded-md w-[40rem]">
             <legend class="text-[#006c4a] font-bold text-center text-xl">Dados do aluno</legend>
 
-            <form action="salvarAluno.php" method="post" class="flex flex-col j
-            ustify-center items-center gap-2">
+            <form action="salvarAluno.php" method="post" class="flex flex-col justify-center items-center gap-2"
+            enctype="multipart/form-data">
                 <input type="hidden" name="id" value='<?php echo $aluno->getId(); ?>'>
 
-                <label for="nome"></label>
+                <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" value='<?php echo $aluno->getNome(); ?>' 
-                placeholder="Nome do aluno" class="border-[1px] border-slate-600 rounded-md 
-               px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                placeholder="Nome do aluno" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
 
-                <label for="matricula"></label>
+                <label for="matricula">Matricula</label>
                 <input type="number" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' 
-                placeholder="Número da matricula" class="border-[1px] border-slate-600 rounded-md 
-                px-1 py-3 placeholder:pl-2 focus:outline-[#006C4A]">
+                placeholder="Número da matricula" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
+                
+                <label for="foto">Foto</label>
+                <input type="file" id="foto" name="foto" value='<?php echo $aluno->getURLFoto(); ?>' 
+                placeholder="Número da matricula" class="rounded-md 
+                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
 
                 <button type="submit" class="bg-[#006C4A] rounded-full
                 p-2 text-zinc-50 shadow-md hover:shadow-[#A9ACA7] px-4 flex 

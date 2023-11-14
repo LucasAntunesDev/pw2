@@ -4,11 +4,13 @@ namespace Model\VO;
 final class AlunoVO extends VO {
     private $nome;
     private $matricula;
+    private $url_foto;
 
-    public function __construct($id = 0, $nome = '', $matricula = 0) {
+    public function __construct($id = 0, $nome = '', $matricula = 0, $url_foto = '') {
         parent::__construct($id);
         $this->nome = $nome;
         $this->matricula = $matricula;
+        $this->url_foto= $url_foto;
     }
 
     public function getNome() {
@@ -25,5 +27,12 @@ final class AlunoVO extends VO {
 
     public function setMatricula($matricula) {
         $this->matricula = $matricula;
+    }
+    public function getURLFoto() {
+        return $this->url_foto;
+    }
+
+    public function setURLFoto($url_foto) {
+        $this->url_foto = $url_foto;
     }
 }
