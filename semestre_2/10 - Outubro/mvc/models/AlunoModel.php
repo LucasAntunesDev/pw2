@@ -32,6 +32,7 @@ final class AlunoModel extends Model
         if (count($data) === 0)
             return null;
 
+        // return new AlunoVO($data[0]['id'], $data[0]['nome'], $data[0]['matricula'], $data['url_foto']);
         return new AlunoVO($data[0]['id'], $data[0]['nome'], $data[0]['matricula']);
     }
     public function insert($vo = null)

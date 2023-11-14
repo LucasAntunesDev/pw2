@@ -29,6 +29,7 @@
         <table class="border-[1px] border-neutral-900 px-4">
             <thead>
                 <tr>
+                    <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Foto</th>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">ID</th>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Nome</th>
                     <th class="text-xl font-bold border-[1px] border-neutral-900 px-4">Matricula</th>
@@ -40,6 +41,7 @@
                 <?php
                 foreach ($alunos as $aluno) {
                     echo '<tr>';
+                    echo '<td class="border-[1px] border-neutral-900 px-4"><img class="w-40 rounded-full" src="uploads/' . $aluno->getURLFoto() . '"></td>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $aluno->getId() . '</td>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $aluno->getNome() . '</td>';
                     echo '<td class="border-[1px] border-neutral-900 px-4">' . $aluno->getMatricula() . '</td>';
